@@ -409,6 +409,7 @@
 				6AD5A31619C6C95E00606826 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6AD5A31719C6C95E00606826 /* Build configuration list for PBXNativeTarget "adaptive-tab-barTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +418,7 @@
 				6AD5A31919C6C95E00606826 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
