@@ -7,57 +7,59 @@
 //
 
 import UIKit
-let defaultSmallTitleModeFont = UIFont(name: "Helvetica", size: 10.0)
-let defaultSmallTitleModeImageInsets = UIEdgeInsetsMake(6,  0,  -6,  0)
-let defaultImageModeInsets = UIEdgeInsetsMake(-3, -8,-13, -8)
-let defaultSmallTitleModeOffset = UIOffsetMake(0, -2)
 
-let twoWeaks:Double = 14
-let month:Double = 31
+
 
 extension UITabBar{
     
     
-    func  launchDefaultTabBarAdaptivity(startDate:NSDate){
-        
-        let todayDate = NSDate()
-        
-        self.launchTabBarAdaptivity(startDate,currentDate:todayDate,smallTitleModeFont:defaultSmallTitleModeFont,smallTitleModeImageInsets:defaultSmallTitleModeImageInsets,imageModeInsets:defaultImageModeInsets,smallTitleModeOffset:defaultSmallTitleModeOffset,daysForSmallTitleMode:twoWeaks,daysForImageMode:month)
-        
-    }
     
-    func  launchTabBarAdaptivity(startDate:NSDate,currentDate:NSDate,smallTitleModeFont: UIFont,smallTitleModeImageInsets:UIEdgeInsets,imageModeInsets:UIEdgeInsets,smallTitleModeOffset:UIOffset,daysForSmallTitleMode:Double,daysForImageMode:Double ){
-        
-        var currentDate = NSDate()
+    func  launchTabBarAdaptivityForDateSettings(dateSetings:TimeSettingsObject, itemSettings:AdaptiveTabBarSettingsObject){
         
         
-        var days =  Double(currentDate.daysBetween(startDate,dayTo:currentDate))
+        var mode:TabMode = dateSetings.tabModeForElapsedTime()
+        
+        var tabTitleFont : UIFont = itemSettings.defaultModeFont
+        var tabImageInset: UIEdgeInsets = UIEdgeInsetsMake(0,0,0,0)
+        var tabTitleOffset: UIOffset = UIOffsetMake(0, 0)
+        var itemImagesArray = itemSettings.imageNamesArray as [String]!
         
         
-        if days > daysForSmallTitleMode && days < daysForImageMode{
+        if(mode == TabMode.SmallTextMode){
             
-            self.setTabItems(smallTitleModeFont , state:UIControlState.Normal,imageInsets:smallTitleModeImageInsets,offset:smallTitleModeOffset)
+            tabTitleFont = itemSettings.smallTitleModeFont
+            tabTitleOffset = itemSettings.smallTitleModeOffset
+            tabImageInset = itemSettings.smallTitleModeImageInsets
+            itemImagesArray = itemSettings.smallTitleImageNamesArray
             
-        }else if days > daysForImageMode{
-            self.setTabItems(smallTitleModeFont , state:UIControlState.Normal,imageInsets:imageModeInsets,offset:UIOffsetMake(0,-20))
+        }else if(mode == TabMode.ImageMode){
+            
+            tabTitleOffset = UIOffsetMake(0,50)
+            tabImageInset = itemSettings.onlyImageModeInsets
+            itemImagesArray = itemSettings.imageModeImageNamesArray
+           
         }
         
         
-    }
-    
-    
-    func setTabItems(font:UIFont,state: UIControlState,imageInsets:UIEdgeInsets,offset:UIOffset){
-        
-        for item  in self.items!{
-            var itemTabBar: UITabBarItem = item as UITabBarItem
+        var tabBarItemArray = self.items as [UITabBarItem]
+        for var index = 0; index < tabBarItemArray.count; ++index {
+            println("index is \(index)")
             
-            item.setTitleTextAttributes(NSDictionary(objects: [font], forKeys: [NSFontAttributeName]), forState: state)
-            itemTabBar.setTitlePositionAdjustment(offset)
-            itemTabBar.imageInsets = imageInsets
-            // itemTabBar.layer
+            var itemTabBar = tabBarItemArray[index]
+            
+            itemTabBar.setTitleTextAttributes(NSDictionary(objects: [tabTitleFont], forKeys: [NSFontAttributeName]), forState: UIControlState.Normal)
+            itemTabBar.setTitlePositionAdjustment(tabTitleOffset)
+            itemTabBar.imageInsets = tabImageInset
+            var imageName:String = itemImagesArray[index]
+            itemTabBar.image = UIImage(named: imageName)
+            itemTabBar.selectedImage = UIImage(named: imageName)
         }
+
         
     }
+    
+    
+   
     
 }
 

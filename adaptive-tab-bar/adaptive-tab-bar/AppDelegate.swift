@@ -7,84 +7,61 @@
 //
 
 import UIKit
+import CoreGraphics
+import QuartzCore
+//import AdaptiveTabBarExtension
 
 //struct UIEdgeInsets { var top: CGFloat var left: CGFloat var bottom: CGFloat var right: CGFloat }
 
-let defaultSmallTitleModeFont = UIFont(name: "Helvetica", size: 10.0)
-let defaultSmallTitleModeImageInsets = UIEdgeInsetsMake(-5,  -5,  -5,  -5)
-let defaultImageModeInsets = UIEdgeInsetsMake(-3, -8,-13, -8)
-let defaultSmallTitleModeOffset = UIOffsetMake(0, -2)
 
-let twoWeaks:Double = 14
-let month:Double = 31
 
-extension NSDate{
-    convenience
-    
-    init(dateString:String) {
-        let dateStringFormatter = NSDateFormatter()
-        dateStringFormatter.dateFormat = "yyyy-MM-dd"
-        dateStringFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
-        let d = dateStringFormatter.dateFromString(dateString)
-        self.init(timeInterval:0, sinceDate:d!)
-    }
-    
-    func daysBetween(dayFrom:NSDate,dayTo:NSDate) -> Int{
-        
-        let cal = NSCalendar.currentCalendar()
-        
-        let unit:NSCalendarUnit = .DayCalendarUnit
-        
-        let components = cal.components(unit, fromDate: dayFrom, toDate: dayTo, options: nil)
-        
-        return components.day+1;
-    }
-    
-}
 
-extension UITabBar{
-    
-    
-    func  launchDefaultTabBarAdaptivity(startDate:NSDate){
-        
-        let todayDate = NSDate()
-        
-        self.launchTabBarAdaptivity(startDate,currentDate:todayDate,smallTitleModeFont:defaultSmallTitleModeFont,smallTitleModeImageInsets:defaultSmallTitleModeImageInsets,imageModeInsets:defaultImageModeInsets,smallTitleModeOffset:defaultSmallTitleModeOffset,daysForSmallTitleMode:twoWeaks,daysForImageMode:month)
 
-    }
-    
-    func  launchTabBarAdaptivity(startDate:NSDate,currentDate:NSDate,smallTitleModeFont: UIFont,smallTitleModeImageInsets:UIEdgeInsets,imageModeInsets:UIEdgeInsets,smallTitleModeOffset:UIOffset,daysForSmallTitleMode:Double,daysForImageMode:Double ){
-        
-        var currentDate = NSDate()
-       
-       
-        var days =  Double(currentDate.daysBetween(startDate,dayTo:currentDate))
-        
-        
-        if days > daysForSmallTitleMode && days < daysForImageMode{
-          
-            self.setTabItems(smallTitleModeFont , state:UIControlState.Normal,imageInsets:smallTitleModeImageInsets,offset:smallTitleModeOffset)
-        
-        }else if days > daysForImageMode{
-            self.setTabItems(smallTitleModeFont , state:UIControlState.Normal,imageInsets:imageModeInsets,offset:UIOffsetMake(0,-20))
-        }
-        
-        
-    }
-    
-    
-    func setTabItems(font:UIFont,state: UIControlState,imageInsets:UIEdgeInsets,offset:UIOffset){
-        
-        for item  in self.items!{
-            var itemTabBar: UITabBarItem = item as UITabBarItem
-            itemTabBar.imageInsets = imageInsets
-            item.setTitleTextAttributes(NSDictionary(objects: [font], forKeys: [NSFontAttributeName]), forState: state)
-            itemTabBar.setTitlePositionAdjustment(offset)
-        }
-        
-    }
-    
-}
+//extension UITabBar{
+//    
+//    
+//    func  launchDefaultTabBarAdaptivity(startDate:NSDate){
+//        
+//        let todayDate = NSDate()
+//        
+//        self.launchTabBarAdaptivity(startDate,currentDate:todayDate,smallTitleModeFont:defaultSmallTitleModeFont,smallTitleModeImageInsets:defaultSmallTitleModeImageInsets,imageModeInsets:defaultImageModeInsets,smallTitleModeOffset:defaultSmallTitleModeOffset,daysForSmallTitleMode:twoWeaks,daysForImageMode:month)
+//
+//    }
+//    
+//    func  launchTabBarAdaptivity(startDate:NSDate,currentDate:NSDate,smallTitleModeFont: UIFont,smallTitleModeImageInsets:UIEdgeInsets,imageModeInsets:UIEdgeInsets,smallTitleModeOffset:UIOffset,daysForSmallTitleMode:Double,daysForImageMode:Double ){
+//        
+//        var currentDate = NSDate()
+//       
+//       
+//        var days =  Double(currentDate.daysBetween(startDate,dayTo:currentDate))
+//        
+//        
+//        if days > daysForSmallTitleMode && days < daysForImageMode{
+//          
+//            self.setTabItems(smallTitleModeFont , state:UIControlState.Normal,imageInsets:smallTitleModeImageInsets,offset:smallTitleModeOffset)
+//        
+//        }else if days > daysForImageMode{
+//            self.setTabItems(smallTitleModeFont , state:UIControlState.Normal,imageInsets:imageModeInsets,offset:UIOffsetMake(0,-20))
+//        }
+//        
+//        
+//    }
+//    
+//    
+//    func setTabItems(font:UIFont,state: UIControlState,imageInsets:UIEdgeInsets,offset:UIOffset){
+//        
+//        for item  in self.items!{
+//            var itemTabBar: UITabBarItem = item as UITabBarItem
+//            
+//            item.setTitleTextAttributes(NSDictionary(objects: [font], forKeys: [NSFontAttributeName]), forState: state)
+//            itemTabBar.setTitlePositionAdjustment(offset)
+//            itemTabBar.imageInsets = imageInsets
+//           // itemTabBar.layer
+//        }
+//        
+//    }
+//    
+//}
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -97,13 +74,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var tabBarController:UITabBarController = self.window?.rootViewController as UITabBarController
         
         var tabBar:UITabBar = tabBarController.tabBar
-        var items = tabBar.items
         
-        var startDate = NSDate(dateString:"2014-09-01")
+        var installDate = NSDate(dateString:"2014-09-01")
+
+        var imagesArray:Array<String> = ["watch","man"]
         
-        tabBar.launchDefaultTabBarAdaptivity(startDate )
+        tabBar.launchTabBarAdaptivityForDateSettings(TimeSettingsObject(startDate: installDate),itemSettings: AdaptiveTabBarSettingsObject(imagesArray: imagesArray ) )
+        
+        
+        
         tabBar.barTintColor = UIColor(red: 169/255, green: 79/255, blue: 152/255, alpha: 1.0)
-        
+
         return true
     }
     

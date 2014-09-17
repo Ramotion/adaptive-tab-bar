@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:adaptive-tab-bar.xcodeproj">
+      location = "group:AdaptiveTabBarExtension/AdaptiveTabBarExtension.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "container:adaptive-tab-bar/adaptive-tab-bar.xcodeproj">
    </FileRef>
 </Workspace>
