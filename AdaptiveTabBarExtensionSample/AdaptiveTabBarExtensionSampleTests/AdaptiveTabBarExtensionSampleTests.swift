@@ -1,6 +1,6 @@
 //
-//  AdaptiveTabBarExtensionTests.swift
-//  AdaptiveTabBarExtensionTests
+//  AdaptiveTabBarExtensionSampleTests.swift
+//  AdaptiveTabBarExtensionSampleTests
 //
 //  Created by Arcilite on 18.09.14.
 //  Copyright (c) 2014 Ramotion. All rights reserved.
@@ -9,7 +9,7 @@
 import UIKit
 import XCTest
 
-class AdaptiveTabBarExtensionTests: XCTestCase {
+class AdaptiveTabBarExtensionSampleTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
