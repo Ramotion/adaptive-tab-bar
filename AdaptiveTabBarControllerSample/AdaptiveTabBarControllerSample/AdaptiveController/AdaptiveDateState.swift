@@ -8,6 +8,45 @@
 
 import UIKit
 
-class AdaptiveDateState: NSObject {
+let kSmallTitleAdaptiveState = "kImageAdaptiveState"
+let kImageAdaptiveState = "kNormalImageAdaptiveState"
+class AdaptiveDateState: AdaptiveState {
    
+    
+    override init(){
+        super.init()
+        super.addNewCustomAdaptiveStates([kSmallTitleAdaptiveState,kImageAdaptiveState])
+    }
+    
+    convenience init(installDate:NSDate, currentDate:NSDate,countDaysToSmallTextState:Int,countDaysToImageState:Int) {
+        self.init()
+        
+        var remainsDays = self.daysBetweenDates(installDate,currentDate: currentDate)
+        self.currentItemState =  self.stateRemainDays(remainsDays,countDaysToSmallTextState:countDaysToSmallTextState,countDaysToImageState:countDaysToImageState)
+    }
+    
+    
+    private func daysBetweenDates(installDate:NSDate, currentDate:NSDate) -> Int{
+        
+        let cal = NSCalendar.currentCalendar()
+        
+        let unit:NSCalendarUnit = .DayCalendarUnit
+        
+        let components = cal.components(unit, fromDate: installDate, toDate: currentDate, options: nil)
+        
+        return components.day+1;
+    }
+    
+    private func stateRemainDays (remainDays:Int,countDaysToSmallTextState:Int,countDaysToImageState:Int)->String{
+        
+        var mode:String = kDefaultAdaptiveState
+        
+        if remainDays > countDaysToSmallTextState && remainDays < countDaysToImageState{
+            mode = kSmallTitleAdaptiveState
+        }else if remainDays > countDaysToImageState {
+            mode = kImageAdaptiveState
+        }
+        
+        return mode
+    }
 }

@@ -10,6 +10,8 @@ import UIKit
 
 class AdaptiveTabBarController: UIViewController {
 
+    var curentController:UITableViewController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

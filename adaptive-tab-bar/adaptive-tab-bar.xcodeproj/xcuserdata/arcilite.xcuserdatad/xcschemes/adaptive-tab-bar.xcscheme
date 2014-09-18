@@ -34,6 +34,20 @@
                ReferencedContainer = "container:adaptive-tab-bar.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6A9D84B819CAB231006EA201"
+               BuildableName = "AdaptiveTabBarExtensionTests.xctest"
+               BlueprintName = "AdaptiveTabBarExtensionTests"
+               ReferencedContainer = "container:adaptive-tab-bar.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -49,6 +63,16 @@
                BlueprintIdentifier = "6AD5A30919C6C95E00606826"
                BuildableName = "adaptive-tab-barTests.xctest"
                BlueprintName = "adaptive-tab-barTests"
+               ReferencedContainer = "container:adaptive-tab-bar.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6A9D84B819CAB231006EA201"
+               BuildableName = "AdaptiveTabBarExtensionTests.xctest"
+               BlueprintName = "AdaptiveTabBarExtensionTests"
                ReferencedContainer = "container:adaptive-tab-bar.xcodeproj">
             </BuildableReference>
          </TestableReference>

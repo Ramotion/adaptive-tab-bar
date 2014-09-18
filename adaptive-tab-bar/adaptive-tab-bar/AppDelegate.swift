@@ -9,8 +9,7 @@
 import UIKit
 import CoreGraphics
 import QuartzCore
-//import AdaptiveTabBarExtension
-
+import AdaptiveTabBarExtension
 //struct UIEdgeInsets { var top: CGFloat var left: CGFloat var bottom: CGFloat var right: CGFloat }
 
 

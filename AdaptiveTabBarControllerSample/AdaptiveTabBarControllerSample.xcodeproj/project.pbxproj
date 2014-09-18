@@ -13,10 +13,18 @@
 		6A9D848919C9E00F006EA201 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A9D848819C9E00F006EA201 /* Images.xcassets */; };
 		6A9D848C19C9E00F006EA201 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A9D848A19C9E00F006EA201 /* LaunchScreen.xib */; };
 		6A9D849819C9E010006EA201 /* AdaptiveTabBarControllerSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9D849719C9E010006EA201 /* AdaptiveTabBarControllerSampleTests.swift */; };
-		6A9D84A319C9E04C006EA201 /* AdaptiveController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9D84A219C9E04C006EA201 /* AdaptiveController.swift */; };
+		6A9D84A319C9E04C006EA201 /* AdaptiveState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9D84A219C9E04C006EA201 /* AdaptiveState.swift */; };
 		6A9D84A519C9E717006EA201 /* AdaptiveTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9D84A419C9E717006EA201 /* AdaptiveTabBarController.swift */; };
 		6A9D84A719C9E757006EA201 /* AdaptiveTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9D84A619C9E757006EA201 /* AdaptiveTabBarView.swift */; };
 		6A9D84A919C9E78E006EA201 /* AdabtiveTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9D84A819C9E78E006EA201 /* AdabtiveTabBarItem.swift */; };
+		6AA8344519CAC7260026038C /* ClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA8344419CAC7260026038C /* ClockViewController.swift */; };
+		6AA8344819CAC7C00026038C /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA8344719CAC7C00026038C /* ChatViewController.swift */; };
+		6AA8344A19CAC8BC0026038C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA8344919CAC8BC0026038C /* ProfileViewController.swift */; };
+		6AA8344C19CAC8EA0026038C /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA8344B19CAC8EA0026038C /* MoreViewController.swift */; };
+		6AA8344E19CAC8FA0026038C /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA8344D19CAC8FA0026038C /* MenuViewController.swift */; };
+		6AA8345119CACD430026038C /* AdaptiveButtonsStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA8345019CACD430026038C /* AdaptiveButtonsStateManager.swift */; };
+		6AA8345319CAD3980026038C /* AdaptiveButtonApperance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA8345219CAD3980026038C /* AdaptiveButtonApperance.swift */; };
+		6AA8345719CAD6DB0026038C /* AdaptiveDateState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA8345619CAD6DB0026038C /* AdaptiveDateState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,10 +48,18 @@
 		6A9D849119C9E010006EA201 /* AdaptiveTabBarControllerSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdaptiveTabBarControllerSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A9D849619C9E010006EA201 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A9D849719C9E010006EA201 /* AdaptiveTabBarControllerSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveTabBarControllerSampleTests.swift; sourceTree = "<group>"; };
-		6A9D84A219C9E04C006EA201 /* AdaptiveController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdaptiveController.swift; path = AdaptiveTabBarController/AdaptiveController.swift; sourceTree = "<group>"; };
+		6A9D84A219C9E04C006EA201 /* AdaptiveState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdaptiveState.swift; path = AdaptiveTabBarController/AdaptiveState.swift; sourceTree = "<group>"; };
 		6A9D84A419C9E717006EA201 /* AdaptiveTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdaptiveTabBarController.swift; path = AdaptiveTabBarController/AdaptiveTabBarController.swift; sourceTree = "<group>"; };
 		6A9D84A619C9E757006EA201 /* AdaptiveTabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdaptiveTabBarView.swift; path = AdaptiveTabBarController/AdaptiveTabBarView.swift; sourceTree = "<group>"; };
 		6A9D84A819C9E78E006EA201 /* AdabtiveTabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdabtiveTabBarItem.swift; path = AdaptiveTabBarController/AdabtiveTabBarItem.swift; sourceTree = "<group>"; };
+		6AA8344419CAC7260026038C /* ClockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClockViewController.swift; path = UIControlers/ClockViewController.swift; sourceTree = "<group>"; };
+		6AA8344719CAC7C00026038C /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatViewController.swift; path = AdaptiveTabBarController/ChatViewController.swift; sourceTree = "<group>"; };
+		6AA8344919CAC8BC0026038C /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = UIControlers/ProfileViewController.swift; sourceTree = "<group>"; };
+		6AA8344B19CAC8EA0026038C /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoreViewController.swift; path = AdaptiveTabBarController/MoreViewController.swift; sourceTree = "<group>"; };
+		6AA8344D19CAC8FA0026038C /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = AdaptiveTabBarController/MenuViewController.swift; sourceTree = "<group>"; };
+		6AA8345019CACD430026038C /* AdaptiveButtonsStateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdaptiveButtonsStateManager.swift; path = AdaptiveController/AdaptiveButtonsStateManager.swift; sourceTree = "<group>"; };
+		6AA8345219CAD3980026038C /* AdaptiveButtonApperance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdaptiveButtonApperance.swift; path = AdaptiveController/AdaptiveButtonApperance.swift; sourceTree = "<group>"; };
+		6AA8345619CAD6DB0026038C /* AdaptiveDateState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdaptiveDateState.swift; path = AdaptiveController/AdaptiveDateState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +101,8 @@
 		6A9D847E19C9E00F006EA201 /* AdaptiveTabBarControllerSample */ = {
 			isa = PBXGroup;
 			children = (
+				6AA8344F19CACAAD0026038C /* AdaptiveController */,
+				6AA8344619CAC72C0026038C /* UIControllers */,
 				6A9D84A119C9E015006EA201 /* AdaptiveTabBarConroller */,
 				6A9D848119C9E00F006EA201 /* AppDelegate.swift */,
 				6A9D848319C9E00F006EA201 /* ViewController.swift */,
@@ -124,12 +142,50 @@
 		6A9D84A119C9E015006EA201 /* AdaptiveTabBarConroller */ = {
 			isa = PBXGroup;
 			children = (
-				6A9D84A219C9E04C006EA201 /* AdaptiveController.swift */,
 				6A9D84A419C9E717006EA201 /* AdaptiveTabBarController.swift */,
 				6A9D84A619C9E757006EA201 /* AdaptiveTabBarView.swift */,
 				6A9D84A819C9E78E006EA201 /* AdabtiveTabBarItem.swift */,
 			);
 			name = AdaptiveTabBarConroller;
+			sourceTree = "<group>";
+		};
+		6AA8344619CAC72C0026038C /* UIControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6AA8344419CAC7260026038C /* ClockViewController.swift */,
+				6AA8344719CAC7C00026038C /* ChatViewController.swift */,
+				6AA8344919CAC8BC0026038C /* ProfileViewController.swift */,
+				6AA8344B19CAC8EA0026038C /* MoreViewController.swift */,
+				6AA8344D19CAC8FA0026038C /* MenuViewController.swift */,
+			);
+			name = UIControllers;
+			sourceTree = "<group>";
+		};
+		6AA8344F19CACAAD0026038C /* AdaptiveController */ = {
+			isa = PBXGroup;
+			children = (
+				6AA8345419CAD5050026038C /* BaseAdaptiveController */,
+				6AA8345519CAD5450026038C /* CustomAdaptiveController */,
+			);
+			name = AdaptiveController;
+			sourceTree = "<group>";
+		};
+		6AA8345419CAD5050026038C /* BaseAdaptiveController */ = {
+			isa = PBXGroup;
+			children = (
+				6A9D84A219C9E04C006EA201 /* AdaptiveState.swift */,
+				6AA8345019CACD430026038C /* AdaptiveButtonsStateManager.swift */,
+				6AA8345219CAD3980026038C /* AdaptiveButtonApperance.swift */,
+			);
+			name = BaseAdaptiveController;
+			sourceTree = "<group>";
+		};
+		6AA8345519CAD5450026038C /* CustomAdaptiveController */ = {
+			isa = PBXGroup;
+			children = (
+				6AA8345619CAD6DB0026038C /* AdaptiveDateState.swift */,
+			);
+			name = CustomAdaptiveController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,10 +290,18 @@
 			files = (
 				6A9D84A519C9E717006EA201 /* AdaptiveTabBarController.swift in Sources */,
 				6A9D84A719C9E757006EA201 /* AdaptiveTabBarView.swift in Sources */,
+				6AA8344819CAC7C00026038C /* ChatViewController.swift in Sources */,
+				6AA8345719CAD6DB0026038C /* AdaptiveDateState.swift in Sources */,
+				6AA8345119CACD430026038C /* AdaptiveButtonsStateManager.swift in Sources */,
 				6A9D848419C9E00F006EA201 /* ViewController.swift in Sources */,
+				6AA8344E19CAC8FA0026038C /* MenuViewController.swift in Sources */,
+				6AA8344519CAC7260026038C /* ClockViewController.swift in Sources */,
+				6AA8345319CAD3980026038C /* AdaptiveButtonApperance.swift in Sources */,
+				6AA8344C19CAC8EA0026038C /* MoreViewController.swift in Sources */,
 				6A9D848219C9E00F006EA201 /* AppDelegate.swift in Sources */,
+				6AA8344A19CAC8BC0026038C /* ProfileViewController.swift in Sources */,
 				6A9D84A919C9E78E006EA201 /* AdabtiveTabBarItem.swift in Sources */,
-				6A9D84A319C9E04C006EA201 /* AdaptiveController.swift in Sources */,
+				6A9D84A319C9E04C006EA201 /* AdaptiveState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +493,7 @@
 				6A9D849D19C9E010006EA201 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6A9D849E19C9E010006EA201 /* Build configuration list for PBXNativeTarget "AdaptiveTabBarControllerSampleTests" */ = {
 			isa = XCConfigurationList;
@@ -437,6 +502,7 @@
 				6A9D84A019C9E010006EA201 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

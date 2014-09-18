@@ -7,44 +7,33 @@
 //
 
 import UIKit
-enum TabBarItemState: Int {
-    case DefaultTabBarItemState = 1, SmallTextModeTabBarItemState, ImageModeTabBarItemState
-}
 
-class AdaptiveController: NSObject {
+
+let kDefaultAdaptiveState:String = "DefaultAdaptiveState"
+
+
+class AdaptiveState: NSObject {
    
-    var currentTabBarItemState:TabBarItemState?
+      var currentItemState:NSString = kDefaultAdaptiveState
     
-    convenience init(installDate:NSDate, currentDate:NSDate,countDaysToSmallTextState:Int,countDaysToImageState:Int) {
-        self.init()
-        
-       var remainsDays = self.daysBetweenDates(installDate,currentDate: currentDate)
-       self.currentTabBarItemState =  self.tabModeForRemainDays(remainsDays,countDaysToSmallTextState:countDaysToSmallTextState,countDaysToImageState:countDaysToImageState)
-    }
-    
-    
-   private func daysBetweenDates(installDate:NSDate, currentDate:NSDate) -> Int{
-        
-        let cal = NSCalendar.currentCalendar()
-        
-        let unit:NSCalendarUnit = .DayCalendarUnit
-        
-        let components = cal.components(unit, fromDate: installDate, toDate: currentDate, options: nil)
-        
-        return components.day+1;
-    }
-    
-    private func tabModeForRemainDays (remainDays:Int,countDaysToSmallTextState:Int,countDaysToImageState:Int)->TabBarItemState{
-        
-        var mode:TabBarItemState = .DefaultTabBarItemState
-        
-        if remainDays > countDaysToSmallTextState && remainDays < countDaysToImageState{
-            mode = .SmallTextModeTabBarItemState
-        }else if remainDays > countDaysToImageState {
-            mode = .ImageModeTabBarItemState
+    var  buttonStates:[String] {
+        get {
+            return self.buttonStates
         }
-        
-        return mode
     }
+    
+    override init(){
+        super.init()
+        self.addNewCustomAdaptiveStates([kDefaultAdaptiveState])
+    }
+    
+    internal func addNewCustomAdaptiveStates(customAdaptiveStates:Array<String>){
+         self.buttonStates+customAdaptiveStates
+    }
+    
+   
+    
+    
+ 
     
 }
