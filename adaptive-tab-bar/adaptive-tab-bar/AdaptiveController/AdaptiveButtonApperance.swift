@@ -47,16 +47,21 @@ class AdaptiveButtonApperance: NSObject {
         buttonsImageForStateDictionary.updateValue(image, forKey:state)
     }
     
-    func getButonImageForState(state:NSString)->UIImage{
-        return buttonsImageForStateDictionary[state]!
+    func getButonImageForState(state:NSString)->UIImage!{
+        var image:UIImage? = buttonsImageForStateDictionary[state]
+        
+        if(image == nil){
+            image = buttonsImageForStateDictionary[kDefaultAdaptiveState]?
+        }
+        return image?
     }
     
     func setBackgroundButonImage(image:UIImage, state:String){
         buttonsImageForStateDictionary.updateValue(image, forKey:state)
     }
     
-    func getBackgroundImageForState(state:NSString)->UIImage{
-        return buttonsImageForStateDictionary[state]!
+    func getBackgroundImageForState(state:NSString)->UIImage?{
+        return buttonsImageForStateDictionary[state]?
     }
     
     
@@ -73,7 +78,11 @@ class AdaptiveButtonApperance: NSObject {
     }
     
     func getTitleOffsetForState(state:NSString)->UIOffset{
-        return buttonsTitleInsetsForStateDictionary[state]!
+        var offset:UIOffset? = buttonsTitleInsetsForStateDictionary[state]
+        if(offset == nil){
+            offset = buttonsTitleInsetsForStateDictionary[kDefaultAdaptiveState]?
+        }
+        return offset!
     }
     
 }

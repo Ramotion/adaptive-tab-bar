@@ -14,16 +14,15 @@ let kDefaultAdaptiveState:String = "DefaultAdaptiveState"
 
 class AdaptiveState: NSObject {
    
-      var currentItemState:NSString = kDefaultAdaptiveState
+    var currentItemState:NSString? //= kDefaultAdaptiveState
     
-    var  buttonStates:[String] {
-        get {
-            return self.buttonStates
-        }
-    }
+    
+    var  buttonStates:[String] = [String]()
+     
     
     override init(){
         super.init()
+        self.currentItemState = kDefaultAdaptiveState
         self.addNewCustomAdaptiveStates([kDefaultAdaptiveState])
     }
     

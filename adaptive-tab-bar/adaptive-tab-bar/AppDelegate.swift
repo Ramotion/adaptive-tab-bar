@@ -10,57 +10,15 @@ import UIKit
 import CoreGraphics
 import QuartzCore
 import AdaptiveTabBarExtension
-//struct UIEdgeInsets { var top: CGFloat var left: CGFloat var bottom: CGFloat var right: CGFloat }
 
+let countDaysToSmallTextState = 14
+let countDaysToImageState = 30
 
-
-
-
-//extension UITabBar{
-//    
-//    
-//    func  launchDefaultTabBarAdaptivity(startDate:NSDate){
-//        
-//        let todayDate = NSDate()
-//        
-//        self.launchTabBarAdaptivity(startDate,currentDate:todayDate,smallTitleModeFont:defaultSmallTitleModeFont,smallTitleModeImageInsets:defaultSmallTitleModeImageInsets,imageModeInsets:defaultImageModeInsets,smallTitleModeOffset:defaultSmallTitleModeOffset,daysForSmallTitleMode:twoWeaks,daysForImageMode:month)
-//
-//    }
-//    
-//    func  launchTabBarAdaptivity(startDate:NSDate,currentDate:NSDate,smallTitleModeFont: UIFont,smallTitleModeImageInsets:UIEdgeInsets,imageModeInsets:UIEdgeInsets,smallTitleModeOffset:UIOffset,daysForSmallTitleMode:Double,daysForImageMode:Double ){
-//        
-//        var currentDate = NSDate()
-//       
-//       
-//        var days =  Double(currentDate.daysBetween(startDate,dayTo:currentDate))
-//        
-//        
-//        if days > daysForSmallTitleMode && days < daysForImageMode{
-//          
-//            self.setTabItems(smallTitleModeFont , state:UIControlState.Normal,imageInsets:smallTitleModeImageInsets,offset:smallTitleModeOffset)
-//        
-//        }else if days > daysForImageMode{
-//            self.setTabItems(smallTitleModeFont , state:UIControlState.Normal,imageInsets:imageModeInsets,offset:UIOffsetMake(0,-20))
-//        }
-//        
-//        
-//    }
-//    
-//    
-//    func setTabItems(font:UIFont,state: UIControlState,imageInsets:UIEdgeInsets,offset:UIOffset){
-//        
-//        for item  in self.items!{
-//            var itemTabBar: UITabBarItem = item as UITabBarItem
-//            
-//            item.setTitleTextAttributes(NSDictionary(objects: [font], forKeys: [NSFontAttributeName]), forState: state)
-//            itemTabBar.setTitlePositionAdjustment(offset)
-//            itemTabBar.imageInsets = imageInsets
-//           // itemTabBar.layer
-//        }
-//        
-//    }
-//    
-//}
+let defaultFont = UIFont(name: "Helvetica", size: 14.0)
+let defaultSmallTitleModeFont = UIFont(name: "Helvetica", size: 10.0)
+let defaultSmallTitleModeImageInsets = UIEdgeInsetsMake(6,  0,  -6,  0)
+let defaultImageModeInsets = UIEdgeInsetsMake(-3, -8,-13, -8)
+let defaultSmallTitleModeOffset = UIOffsetMake(0, -2)
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -78,7 +36,66 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         var imagesArray:Array<String> = ["watch","man"]
         
-        tabBar.launchTabBarAdaptivityForDateSettings(TimeSettingsObject(startDate: installDate),itemSettings: AdaptiveTabBarSettingsObject(imagesArray: imagesArray ) )
+       
+        var adaptiveState = AdaptiveDateState(installDate: installDate,currentDate:NSDate(),countDaysToSmallTextState:countDaysToSmallTextState,countDaysToImageState:countDaysToImageState)
+        
+        var watchAperance = AdaptiveButtonApperance();
+        
+        watchAperance.setButonTitle("watch", state: kDefaultAdaptiveState)
+        watchAperance.setButonTitle("watch", state: kSmallTitleAdaptiveState)
+        watchAperance.setButonTitle("watch", state: kImageAdaptiveState)
+        
+        watchAperance.setButonTitleFontForState(defaultFont, state: kDefaultAdaptiveState)
+        watchAperance.setButonTitleFontForState(defaultSmallTitleModeFont, state: kSmallTitleAdaptiveState)
+        
+        watchAperance.setButonTitle("watch", state: kSmallTitleAdaptiveState)
+        watchAperance.setButonTitle("watch", state: kSmallTitleAdaptiveState)
+        
+        watchAperance.setButtonImage(UIImage(named: "watch"), state: kDefaultAdaptiveState)
+        watchAperance.setButtonImage(UIImage(named: "watch"), state: kSmallTitleAdaptiveState)
+        watchAperance.setButtonImage(UIImage(named: "watch"), state: kImageAdaptiveState)
+       
+        watchAperance.setBackgroundButonImage(UIImage(named: " "), state: kSmallTitleAdaptiveState)
+     
+        
+        watchAperance.setImageInsets(defaultSmallTitleModeImageInsets, state: kDefaultAdaptiveState);
+        watchAperance.setImageInsets(defaultSmallTitleModeImageInsets, state: kSmallTitleAdaptiveState);
+        
+        watchAperance.setTitleOffset(defaultSmallTitleModeOffset, state: kDefaultAdaptiveState)
+        
+        
+        var userAperance = AdaptiveButtonApperance();
+        
+        userAperance.setButonTitle("watch", state: kDefaultAdaptiveState)
+        userAperance.setButonTitle("watch", state: kSmallTitleAdaptiveState)
+        userAperance.setButonTitle("watch", state: kImageAdaptiveState)
+        
+        userAperance.setButonTitleFontForState(defaultFont, state: kDefaultAdaptiveState)
+        userAperance.setButonTitleFontForState(defaultSmallTitleModeFont, state: kSmallTitleAdaptiveState)
+        
+        userAperance.setButonTitle("watch", state: kSmallTitleAdaptiveState)
+        userAperance.setButonTitle("watch", state: kSmallTitleAdaptiveState)
+        
+        userAperance.setButtonImage(UIImage(named: "watch"), state: kDefaultAdaptiveState)
+        userAperance.setButtonImage(UIImage(named: "watch"), state: kSmallTitleAdaptiveState)
+        userAperance.setButtonImage(UIImage(named: "watch"), state: kImageAdaptiveState)
+        
+        userAperance.setBackgroundButonImage(UIImage(named: " "), state: kSmallTitleAdaptiveState)
+        
+        
+        userAperance.setImageInsets(defaultSmallTitleModeImageInsets, state: kDefaultAdaptiveState);
+        userAperance.setImageInsets(defaultSmallTitleModeImageInsets, state: kSmallTitleAdaptiveState);
+        
+        userAperance.setTitleOffset(defaultSmallTitleModeOffset, state: kDefaultAdaptiveState)
+        
+        var arrayApperance = [watchAperance ,userAperance]
+        
+     
+        var arrayButtons = tabBar.items as [AdaptiveTabBarItem]
+        AdaptiveButtonsStateManager(state: adaptiveState,buttonsAray:arrayButtons ,buttonsApperance: arrayApperance)
+        
+        
+        //tabBar.launchTabBarAdaptivityForDateSettings(TimeSettingsObject(startDate: installDate),itemSettings: AdaptiveTabBarSettingsObject(imagesArray: imagesArray ) )
         
         
         

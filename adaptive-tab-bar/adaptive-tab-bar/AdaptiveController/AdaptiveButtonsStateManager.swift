@@ -11,10 +11,10 @@ import UIKit
 @objc protocol AdaptiveButtonsProtocol {
     optional func setFontToAdaptiveButton(font: UIFont)
     optional func setTitleToAdaptiveButton(text: NSString)
-    optional func setImageToAdaptiveButton(image: UIImage)
-    optional func setHighlightedToAdaptiveButton(image: UIImage)
-    optional func setBackgroundImageToAdaptiveButton(image: UIImage)
-    optional func setSelectedImageToAdaptiveButton(image: UIImage)
+    optional func setImageToAdaptiveButton(image: UIImage?)
+    optional func setHighlightedToAdaptiveButton(image: UIImage?)
+    optional func setBackgroundImageToAdaptiveButton(image: UIImage?)
+    optional func setSelectedImageToAdaptiveButton(image: UIImage?)
     optional func setImageInsetsToAdaptiveButton(insets: UIEdgeInsets)
     optional func setTitleOffsetToAdaptiveButton(offset: UIOffset)
 }
@@ -24,29 +24,47 @@ let highlighted = "Higlihted"
 
 class AdaptiveButtonsStateManager: NSObject {
     
-    convenience init (state:AdaptiveState,buttonsAray:[AdaptiveButtonsProtocol],buttonsApperance:AdaptiveButtonApperance){
+    convenience init (state:AdaptiveState,buttonsAray:[AdaptiveButtonsProtocol],buttonsApperance:[AdaptiveButtonApperance]){
         self.init()
         self.setButtonsState(state, buttonsAray: buttonsAray, buttonsApperance: buttonsApperance)
     }
     
-     func setButtonsState(state:AdaptiveState,buttonsAray:[AdaptiveButtonsProtocol],buttonsApperance:AdaptiveButtonApperance){
+     func setButtonsState(state:AdaptiveState,buttonsAray:[AdaptiveButtonsProtocol],buttonsApperance:[AdaptiveButtonApperance]){
         
-        var state:String = state.currentItemState
+        var state:String = state.currentItemState!
         
         
         for var index = 0; index < buttonsAray.count; ++index {
             println("index is \(index)")
             
             var button :AdaptiveButtonsProtocol = buttonsAray[index]
+            var buttonApperance = buttonsApperance[index]
+            button.setTitleToAdaptiveButton!(buttonApperance.getButonTitleForState(state))
+            button.setFontToAdaptiveButton!(buttonApperance.getButonTitleFontForState(state))
             
-            button.setTitleToAdaptiveButton!(buttonsApperance.getButonTitleForState(state))
-            button.setFontToAdaptiveButton!(buttonsApperance.getButonTitleFontForState(state))
-            button.setImageToAdaptiveButton!(buttonsApperance.getButonImageForState(state))
-            button.setHighlightedToAdaptiveButton!(buttonsApperance.getButonImageForState(state+highlighted))
-            button.setSelectedImageToAdaptiveButton!(buttonsApperance.getButonImageForState(state+selected))
-            button.setBackgroundImageToAdaptiveButton!(buttonsApperance.getBackgroundImageForState(state))
-            button.setImageInsetsToAdaptiveButton!(buttonsApperance.getImageInsetsForState(state))
-            button.setTitleOffsetToAdaptiveButton!(buttonsApperance.getTitleOffsetForState(state))
+    
+            if let image = buttonApperance.getButonImageForState(state) {
+                button.setHighlightedToAdaptiveButton!(image)
+            }
+            
+            if let selectedImage = buttonApperance.getButonImageForState(state+selected) {
+                button.setSelectedImageToAdaptiveButton!(selectedImage)
+            }
+          
+            
+            if let highlightedImage = buttonApperance.getButonImageForState(state+highlighted) {
+                 button.setHighlightedToAdaptiveButton!(highlightedImage)
+            }
+            
+            if let backgroundImage = buttonApperance.getButonImageForState(state) {
+                button.setBackgroundImageToAdaptiveButton!(backgroundImage)
+            }
+            
+    
+            
+            button.setImageInsetsToAdaptiveButton!(buttonApperance.getImageInsetsForState(state))
+            
+            button.setTitleOffsetToAdaptiveButton!(buttonApperance.getTitleOffsetForState(state))
             
 
         }

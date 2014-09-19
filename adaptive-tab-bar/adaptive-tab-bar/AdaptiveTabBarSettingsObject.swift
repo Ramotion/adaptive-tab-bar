@@ -8,11 +8,11 @@
 
 import UIKit
 
-let defaultFont = UIFont(name: "Helvetica", size: 14.0)
-let defaultSmallTitleModeFont = UIFont(name: "Helvetica", size: 10.0)
-let defaultSmallTitleModeImageInsets = UIEdgeInsetsMake(6,  0,  -6,  0)
-let defaultImageModeInsets = UIEdgeInsetsMake(-3, -8,-13, -8)
-let defaultSmallTitleModeOffset = UIOffsetMake(0, -2)
+//let defaultFont = UIFont(name: "Helvetica", size: 14.0)
+//let defaultSmallTitleModeFont = UIFont(name: "Helvetica", size: 10.0)
+//let defaultSmallTitleModeImageInsets = UIEdgeInsetsMake(6,  0,  -6,  0)
+//let defaultImageModeInsets = UIEdgeInsetsMake(-3, -8,-13, -8)
+//let defaultSmallTitleModeOffset = UIOffsetMake(0, -2)
 
 let defaultSmallTittleModeImageExtesion = "_smalltitle"
 let defaultImageModeImageExtesion = "_bigimage"

@@ -10,12 +10,6 @@ import UIKit
 
 class AdaptiveButtonApperance: NSObject {
    
-//    var defaultModeFont : UIFont = defaultFont
-//    var smallTitleModeFont : UIFont = defaultSmallTitleModeFont
-//    
-//    var smallTitleModeImageInsets = UIEdgeInsetsMake(0,  0,  0,  0)
-//    var onlyImageModeInsets = UIEdgeInsetsMake(6,  0,  -6,  0)
-//    var smallTitleModeOffset = defaultSmallTitleModeOffset
     
     var butonsTitleForStateDictionary:Dictionary <String,String> = Dictionary<String,String>()
     var butonsTitleFontForStateDictionary:Dictionary <String,UIFont> = Dictionary<String,UIFont>()
