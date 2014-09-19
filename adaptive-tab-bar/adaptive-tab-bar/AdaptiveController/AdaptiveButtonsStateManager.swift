@@ -41,30 +41,32 @@ class AdaptiveButtonsStateManager: NSObject {
             var buttonApperance = buttonsApperance[index]
             button.setTitleToAdaptiveButton!(buttonApperance.getButonTitleForState(state))
             button.setFontToAdaptiveButton!(buttonApperance.getButonTitleFontForState(state))
+           
             
     
             if let image = buttonApperance.getButonImageForState(state) {
-                button.setHighlightedToAdaptiveButton!(image)
+                button.setImageToAdaptiveButton?(image)
             }
             
             if let selectedImage = buttonApperance.getButonImageForState(state+selected) {
-                button.setSelectedImageToAdaptiveButton!(selectedImage)
+                button.setSelectedImageToAdaptiveButton?(selectedImage)
             }
           
-            
             if let highlightedImage = buttonApperance.getButonImageForState(state+highlighted) {
-                 button.setHighlightedToAdaptiveButton!(highlightedImage)
+                 button.setHighlightedToAdaptiveButton?(highlightedImage)
             }
             
             if let backgroundImage = buttonApperance.getButonImageForState(state) {
-                button.setBackgroundImageToAdaptiveButton!(backgroundImage)
+                button.setBackgroundImageToAdaptiveButton?(backgroundImage)
             }
             
-    
+            if let imageInset = buttonApperance.getImageInsetsForState(state) {
+                button.setImageInsetsToAdaptiveButton?(imageInset)
+            }
             
-            button.setImageInsetsToAdaptiveButton!(buttonApperance.getImageInsetsForState(state))
-            
-            button.setTitleOffsetToAdaptiveButton!(buttonApperance.getTitleOffsetForState(state))
+            if let titleOffset = buttonApperance.getTitleOffsetForState(state) {
+                button.setTitleOffsetToAdaptiveButton?(titleOffset)
+            }
             
 
         }

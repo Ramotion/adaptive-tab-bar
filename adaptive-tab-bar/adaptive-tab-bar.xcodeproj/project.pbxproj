@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6A87F54D19C8532500E8F31B /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A87F54B19C8532500E8F31B /* DateExtension.swift */; };
-		6A9D84DA19CAB4D0006EA201 /* AdaptiveTabBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9D84D719CAB4D0006EA201 /* AdaptiveTabBarExtension.swift */; };
-		6A9D84DB19CAB4D0006EA201 /* AdaptiveTabBarSettingsObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9D84D819CAB4D0006EA201 /* AdaptiveTabBarSettingsObject.swift */; };
-		6A9D84DC19CAB4D0006EA201 /* TimeSettingsObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9D84D919CAB4D0006EA201 /* TimeSettingsObject.swift */; };
 		6AA8346619CB3ED10026038C /* AdaptiveButtonApperance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA8346219CB3ED10026038C /* AdaptiveButtonApperance.swift */; };
 		6AA8346719CB3ED10026038C /* AdaptiveButtonsStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA8346319CB3ED10026038C /* AdaptiveButtonsStateManager.swift */; };
 		6AA8346819CB3ED10026038C /* AdaptiveDateState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA8346419CB3ED10026038C /* AdaptiveDateState.swift */; };
@@ -59,9 +56,6 @@
 		6A9D84CE19CAB278006EA201 /* AdaptiveTabBarExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdaptiveTabBarExtension.swift; sourceTree = "<group>"; };
 		6A9D84CF19CAB278006EA201 /* AdaptiveTabBarSettingsObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdaptiveTabBarSettingsObject.swift; sourceTree = "<group>"; };
 		6A9D84D019CAB278006EA201 /* TimeSettingsObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeSettingsObject.swift; sourceTree = "<group>"; };
-		6A9D84D719CAB4D0006EA201 /* AdaptiveTabBarExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdaptiveTabBarExtension.swift; sourceTree = "<group>"; };
-		6A9D84D819CAB4D0006EA201 /* AdaptiveTabBarSettingsObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdaptiveTabBarSettingsObject.swift; sourceTree = "<group>"; };
-		6A9D84D919CAB4D0006EA201 /* TimeSettingsObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeSettingsObject.swift; sourceTree = "<group>"; };
 		6AA8346219CB3ED10026038C /* AdaptiveButtonApperance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdaptiveButtonApperance.swift; path = AdaptiveController/AdaptiveButtonApperance.swift; sourceTree = "<group>"; };
 		6AA8346319CB3ED10026038C /* AdaptiveButtonsStateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdaptiveButtonsStateManager.swift; path = AdaptiveController/AdaptiveButtonsStateManager.swift; sourceTree = "<group>"; };
 		6AA8346419CB3ED10026038C /* AdaptiveDateState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdaptiveDateState.swift; path = AdaptiveController/AdaptiveDateState.swift; sourceTree = "<group>"; };
@@ -137,16 +131,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		6A9D84D619CAB431006EA201 /* AdaptiveTabBarExtension */ = {
-			isa = PBXGroup;
-			children = (
-				6A9D84D719CAB4D0006EA201 /* AdaptiveTabBarExtension.swift */,
-				6A9D84D819CAB4D0006EA201 /* AdaptiveTabBarSettingsObject.swift */,
-				6A9D84D919CAB4D0006EA201 /* TimeSettingsObject.swift */,
-			);
-			name = AdaptiveTabBarExtension;
-			sourceTree = "<group>";
-		};
 		6AA8346019CB3E840026038C /* AadaptiveController */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,7 +193,6 @@
 			children = (
 				6AA8346119CB3E9E0026038C /* UIControllers */,
 				6AA8346019CB3E840026038C /* AadaptiveController */,
-				6A9D84D619CAB431006EA201 /* AdaptiveTabBarExtension */,
 				6A87F54B19C8532500E8F31B /* DateExtension.swift */,
 				6AD5A2F819C6C95E00606826 /* AppDelegate.swift */,
 				6AA8346C19CC19590026038C /* AdaptiveTabBarItem.swift */,
@@ -348,9 +331,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A9D84DC19CAB4D0006EA201 /* TimeSettingsObject.swift in Sources */,
 				6AA8346619CB3ED10026038C /* AdaptiveButtonApperance.swift in Sources */,
-				6A9D84DA19CAB4D0006EA201 /* AdaptiveTabBarExtension.swift in Sources */,
 				6AA8346819CB3ED10026038C /* AdaptiveDateState.swift in Sources */,
 				6AA8346719CB3ED10026038C /* AdaptiveButtonsStateManager.swift in Sources */,
 				6AD5A2FD19C6C95E00606826 /* SecondViewController.swift in Sources */,
@@ -358,7 +339,6 @@
 				6AD5A2F919C6C95E00606826 /* AppDelegate.swift in Sources */,
 				6AA8346D19CC19590026038C /* AdaptiveTabBarItem.swift in Sources */,
 				6AD5A2FB19C6C95E00606826 /* FirstViewController.swift in Sources */,
-				6A9D84DB19CAB4D0006EA201 /* AdaptiveTabBarSettingsObject.swift in Sources */,
 				6AA8346919CB3ED10026038C /* AdaptiveState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

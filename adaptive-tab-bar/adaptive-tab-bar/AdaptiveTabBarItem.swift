@@ -25,15 +25,7 @@ class AdaptiveTabBarItem: UITabBarItem , AdaptiveButtonsProtocol {
         self.image = image
     }
     
-    func setHighlightedToAdaptiveButton(image: UIImage){
-        
-    }
-    
-    func setBackgroundImageToAdaptiveButton(image: UIImage){
-        
-    }
-    
-    func setSelectedImageToAdaptiveButton(image: UIImage){
+    func setSelectedImageToAdaptiveButton(image: UIImage?){
          self.selectedImage = image
     }
     

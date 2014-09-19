@@ -23,6 +23,7 @@ class AdaptiveDateState: AdaptiveState {
         
         var remainsDays = self.daysBetweenDates(installDate,currentDate: currentDate)
         self.currentItemState =  self.stateRemainDays(remainsDays,countDaysToSmallTextState:countDaysToSmallTextState,countDaysToImageState:countDaysToImageState)
+        print(currentItemState)
     }
     
     
@@ -40,13 +41,13 @@ class AdaptiveDateState: AdaptiveState {
     private func stateRemainDays (remainDays:Int,countDaysToSmallTextState:Int,countDaysToImageState:Int)->String{
         
         var mode:String = kDefaultAdaptiveState
-        
+        print(" DAYS \(remainDays) ")
         if remainDays > countDaysToSmallTextState && remainDays < countDaysToImageState{
             mode = kSmallTitleAdaptiveState
         }else if remainDays > countDaysToImageState {
             mode = kImageAdaptiveState
         }
-        
+        print(mode)
         return mode
     }
 }

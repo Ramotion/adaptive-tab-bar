@@ -14,11 +14,12 @@ import AdaptiveTabBarExtension
 let countDaysToSmallTextState = 14
 let countDaysToImageState = 30
 
-let defaultFont = UIFont(name: "Helvetica", size: 14.0)
+let defaultInsets = UIEdgeInsetsMake(0, 0,0, 0)
 let defaultSmallTitleModeFont = UIFont(name: "Helvetica", size: 10.0)
-let defaultSmallTitleModeImageInsets = UIEdgeInsetsMake(6,  0,  -6,  0)
-let defaultImageModeInsets = UIEdgeInsetsMake(-3, -8,-13, -8)
-let defaultSmallTitleModeOffset = UIOffsetMake(0, -2)
+let defaultSmallTitleModeImageInsets = UIEdgeInsetsMake(0,  0,  0,  0)
+let defaultImageModeInsets = UIEdgeInsetsMake(6,  0,  -6,  0)
+let defaultSmallTitleModeOffset = UIOffsetMake(0, 20)
+let defaultOffset = UIOffsetMake(0, 00)
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -32,63 +33,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         var tabBar:UITabBar = tabBarController.tabBar
         
-        var installDate = NSDate(dateString:"2014-09-01")
+        var installDate = NSDate(dateString:"2014-07-01")
 
-        var imagesArray:Array<String> = ["watch","man"]
+        //var imagesArray:Array<String> = ["watch","man"]
         
        
         var adaptiveState = AdaptiveDateState(installDate: installDate,currentDate:NSDate(),countDaysToSmallTextState:countDaysToSmallTextState,countDaysToImageState:countDaysToImageState)
         
-        var watchAperance = AdaptiveButtonApperance();
         
-        watchAperance.setButonTitle("watch", state: kDefaultAdaptiveState)
-        watchAperance.setButonTitle("watch", state: kSmallTitleAdaptiveState)
-        watchAperance.setButonTitle("watch", state: kImageAdaptiveState)
-        
-        watchAperance.setButonTitleFontForState(defaultFont, state: kDefaultAdaptiveState)
-        watchAperance.setButonTitleFontForState(defaultSmallTitleModeFont, state: kSmallTitleAdaptiveState)
-        
-        watchAperance.setButonTitle("watch", state: kSmallTitleAdaptiveState)
-        watchAperance.setButonTitle("watch", state: kSmallTitleAdaptiveState)
-        
-        watchAperance.setButtonImage(UIImage(named: "watch"), state: kDefaultAdaptiveState)
-        watchAperance.setButtonImage(UIImage(named: "watch"), state: kSmallTitleAdaptiveState)
-        watchAperance.setButtonImage(UIImage(named: "watch"), state: kImageAdaptiveState)
-       
-        watchAperance.setBackgroundButonImage(UIImage(named: " "), state: kSmallTitleAdaptiveState)
-     
-        
-        watchAperance.setImageInsets(defaultSmallTitleModeImageInsets, state: kDefaultAdaptiveState);
-        watchAperance.setImageInsets(defaultSmallTitleModeImageInsets, state: kSmallTitleAdaptiveState);
-        
-        watchAperance.setTitleOffset(defaultSmallTitleModeOffset, state: kDefaultAdaptiveState)
-        
-        
-        var userAperance = AdaptiveButtonApperance();
-        
-        userAperance.setButonTitle("watch", state: kDefaultAdaptiveState)
-        userAperance.setButonTitle("watch", state: kSmallTitleAdaptiveState)
-        userAperance.setButonTitle("watch", state: kImageAdaptiveState)
-        
-        userAperance.setButonTitleFontForState(defaultFont, state: kDefaultAdaptiveState)
-        userAperance.setButonTitleFontForState(defaultSmallTitleModeFont, state: kSmallTitleAdaptiveState)
-        
-        userAperance.setButonTitle("watch", state: kSmallTitleAdaptiveState)
-        userAperance.setButonTitle("watch", state: kSmallTitleAdaptiveState)
-        
-        userAperance.setButtonImage(UIImage(named: "watch"), state: kDefaultAdaptiveState)
-        userAperance.setButtonImage(UIImage(named: "watch"), state: kSmallTitleAdaptiveState)
-        userAperance.setButtonImage(UIImage(named: "watch"), state: kImageAdaptiveState)
-        
-        userAperance.setBackgroundButonImage(UIImage(named: " "), state: kSmallTitleAdaptiveState)
-        
-        
-        userAperance.setImageInsets(defaultSmallTitleModeImageInsets, state: kDefaultAdaptiveState);
-        userAperance.setImageInsets(defaultSmallTitleModeImageInsets, state: kSmallTitleAdaptiveState);
-        
-        userAperance.setTitleOffset(defaultSmallTitleModeOffset, state: kDefaultAdaptiveState)
-        
-        var arrayApperance = [watchAperance ,userAperance]
+        var arrayApperance = apperanceArrayGenerate()
         
      
         var arrayButtons = tabBar.items as [AdaptiveTabBarItem]
@@ -104,29 +57,68 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
+    func apperanceArrayGenerate() -> [AdaptiveButtonApperance]{
+        var watchAperance = AdaptiveButtonApperance();
+        
+        watchAperance.setButonTitle("watch", state: kDefaultAdaptiveState)
+        watchAperance.setButonTitle("watch", state: kSmallTitleAdaptiveState)
+        watchAperance.setButonTitle("", state: kImageAdaptiveState)
+        
+        watchAperance.setButonTitleFontForState(defaultFont, state: kDefaultAdaptiveState)
+        watchAperance.setButonTitleFontForState(defaultSmallTitleModeFont, state: kSmallTitleAdaptiveState)
+        
+        watchAperance.setButtonImage(UIImage(named: "watch"), state: kDefaultAdaptiveState)
+        
+        watchAperance.setButtonImage(UIImage(named: "watch_smalltitle"), state: kSmallTitleAdaptiveState)
+        watchAperance.setButtonImage(UIImage(named: "watch_smalltitle"), state: kSmallTitleAdaptiveState+selected)
+      
+        watchAperance.setButtonImage(UIImage(named: "watch_bigimage"), state: kImageAdaptiveState)
+        watchAperance.setButtonImage(UIImage(named: "watch_bigimage"), state: kImageAdaptiveState+selected)
+        
+        watchAperance.setBackgroundButonImage(UIImage(named: " "), state: kSmallTitleAdaptiveState)
+        
+        
+        watchAperance.setImageInsets(defaultInsets, state: kDefaultAdaptiveState);
+        
+        watchAperance.setImageInsets(defaultSmallTitleModeImageInsets, state: kSmallTitleAdaptiveState)
+        //watchAperance.setImageInsets(defaultSmallTitleModeImageInsets, state: kSmallTitleAdaptiveState+selected)
+        
+        watchAperance.setTitleOffset(defaultOffset, state: kDefaultAdaptiveState)
+        //watchAperance.setTitleOffset(defaultSmallTitleModeOffset, state: kSmallTitleAdaptiveState)
+        watchAperance.setImageInsets(defaultImageModeInsets, state: kImageAdaptiveState);
+        
+        
+        var userAperance = AdaptiveButtonApperance();
+        
+        userAperance.setButonTitle("man", state: kDefaultAdaptiveState)
+        userAperance.setButonTitle("", state: kImageAdaptiveState)
+        
+        userAperance.setButonTitleFontForState(defaultFont, state: kDefaultAdaptiveState)
+        userAperance.setButonTitleFontForState(defaultSmallTitleModeFont, state: kSmallTitleAdaptiveState)
+        
+        
+        
+        userAperance.setButtonImage(UIImage(named: "man"), state: kDefaultAdaptiveState)
+        
+        userAperance.setButtonImage(UIImage(named: "man_smalltitle"), state: kSmallTitleAdaptiveState)
     
-    func applicationWillResignActive(application: UIApplication) {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+        userAperance.setButtonImage(UIImage(named: "man_bigimage"), state: kImageAdaptiveState)
+        userAperance.setButtonImage(UIImage(named: "man_bigimage"), state: kImageAdaptiveState+selected)
+        
+        
+        userAperance.setBackgroundButonImage(UIImage(named: " "), state: kSmallTitleAdaptiveState)
+        
+        
+        userAperance.setImageInsets(defaultInsets, state: kDefaultAdaptiveState);
+        userAperance.setImageInsets(defaultInsets, state: kSmallTitleAdaptiveState)
+        userAperance.setImageInsets(defaultImageModeInsets, state: kImageAdaptiveState)
+        
+        
+        userAperance.setTitleOffset(defaultOffset, state: kDefaultAdaptiveState)
+        
+        return [watchAperance ,userAperance]
     }
-
-    func applicationDidEnterBackground(application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-    }
-
-    func applicationWillEnterForeground(application: UIApplication) {
-        // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-    }
-
-    func applicationDidBecomeActive(application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    }
-
-    func applicationWillTerminate(application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    }
-
-
+    
+    
 }
 

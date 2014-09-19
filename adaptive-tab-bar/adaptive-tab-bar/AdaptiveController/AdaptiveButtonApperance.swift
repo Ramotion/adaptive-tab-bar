@@ -7,15 +7,11 @@
 //
 
 import UIKit
+let kNotTitle = ""
+let defaultFont = UIFont(name: "Helvetica", size: 16.0)
 
 class AdaptiveButtonApperance: NSObject {
-   
-//    var defaultModeFont : UIFont = defaultFont
-//    var smallTitleModeFont : UIFont = defaultSmallTitleModeFont
-//    
-//    var smallTitleModeImageInsets = UIEdgeInsetsMake(0,  0,  0,  0)
-//    var onlyImageModeInsets = UIEdgeInsetsMake(6,  0,  -6,  0)
-//    var smallTitleModeOffset = defaultSmallTitleModeOffset
+    
     
     var butonsTitleForStateDictionary:Dictionary <String,String> = Dictionary<String,String>()
     var butonsTitleFontForStateDictionary:Dictionary <String,UIFont> = Dictionary<String,UIFont>()
@@ -31,8 +27,18 @@ class AdaptiveButtonApperance: NSObject {
         butonsTitleForStateDictionary.updateValue(title, forKey:state)
     }
     
-    func getButonTitleForState(state:NSString)->String{
-       return butonsTitleForStateDictionary[state]!
+    func getButonTitleForState(state:NSString)->String!{
+        
+        if let title = butonsTitleForStateDictionary[state] {
+            return title
+        }else{
+            if let title = butonsTitleForStateDictionary[kDefaultAdaptiveState] {
+                return title
+            }else{
+                return kNotTitle
+            }
+        }
+     
     }
     
     func setButonTitleFontForState(font:UIFont, state:String){
@@ -40,20 +46,37 @@ class AdaptiveButtonApperance: NSObject {
     }
     
     func getButonTitleFontForState(state:NSString)->UIFont{
-        return butonsTitleFontForStateDictionary[state]!
+        var font:UIFont? = butonsTitleFontForStateDictionary[state]
+        
+        if let font = butonsTitleFontForStateDictionary[state] {
+            return font
+        }else{
+            
+            if let font = butonsTitleFontForStateDictionary[kDefaultAdaptiveState] {
+                return font
+            }else{
+                return defaultFont
+            }
+        }
+    
     }
     
     func setButtonImage(image:UIImage, state:String){
         buttonsImageForStateDictionary.updateValue(image, forKey:state)
+         print("set State \(state)")
     }
     
     func getButonImageForState(state:NSString)->UIImage!{
-        var image:UIImage? = buttonsImageForStateDictionary[state]
-        
-        if(image == nil){
-            image = buttonsImageForStateDictionary[kDefaultAdaptiveState]?
+       
+        print("get State \(state)")
+        if let image = buttonsImageForStateDictionary[state] {
+            return image
+        }else{
+            return buttonsImageForStateDictionary[kDefaultAdaptiveState]
         }
-        return image?
+        
+      
+
     }
     
     func setBackgroundButonImage(image:UIImage, state:String){
@@ -61,7 +84,13 @@ class AdaptiveButtonApperance: NSObject {
     }
     
     func getBackgroundImageForState(state:NSString)->UIImage?{
-        return buttonsImageForStateDictionary[state]?
+      
+        if let image = buttonsBackgroundImageForStateDictionary[state] {
+            return image
+        }else{
+            return buttonsBackgroundImageForStateDictionary[kDefaultAdaptiveState]
+        }
+        
     }
     
     
@@ -69,19 +98,27 @@ class AdaptiveButtonApperance: NSObject {
         buttonsImageInsetsForStateDictionary.updateValue(insets, forKey:state)
     }
     
-    func getImageInsetsForState(state:NSString)->UIEdgeInsets{
-        return buttonsImageInsetsForStateDictionary[state]!
+    func getImageInsetsForState(state:NSString)->UIEdgeInsets!{
+        
+        if let insets = buttonsImageInsetsForStateDictionary[state] {
+           return buttonsImageInsetsForStateDictionary[state]!
+        }else{
+             return buttonsImageInsetsForStateDictionary[kDefaultAdaptiveState]
+        }
+        
     }
     
     func setTitleOffset(insets:UIOffset, state:String){
         buttonsTitleInsetsForStateDictionary.updateValue(insets, forKey:state)
     }
     
-    func getTitleOffsetForState(state:NSString)->UIOffset{
+    func getTitleOffsetForState(state:NSString)->UIOffset!{
+       
         var offset:UIOffset? = buttonsTitleInsetsForStateDictionary[state]
         if(offset == nil){
             offset = buttonsTitleInsetsForStateDictionary[kDefaultAdaptiveState]?
         }
+        
         return offset!
     }
     
