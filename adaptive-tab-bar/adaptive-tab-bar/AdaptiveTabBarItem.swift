@@ -11,9 +11,15 @@ import UIKit
 class AdaptiveTabBarItem: UITabBarItem , AdaptiveButtonsProtocol {
     
     
+    override init(){
+        super.init()
+       
+    }
+    
     func setFontToAdaptiveButton(font: UIFont){
         
         self.setTitleTextAttributes(NSDictionary(objects: [font], forKeys: [NSFontAttributeName]), forState: UIControlState.Normal)
+       // self.setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.whiteColor()],forState: UIControlState.Normal)
        
     }
     
@@ -36,5 +42,11 @@ class AdaptiveTabBarItem: UITabBarItem , AdaptiveButtonsProtocol {
     func setTitleOffsetToAdaptiveButton(offset: UIOffset){
         self.setTitlePositionAdjustment(offset)
     }
+    
+    func setTitleColorToAdaptiveButton(color: UIColor){
+       self.setTitleTextAttributes([NSForegroundColorAttributeName:color],forState: UIControlState.Normal)
+    }
    
+    
+    
 }

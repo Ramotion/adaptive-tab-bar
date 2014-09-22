@@ -8,7 +8,7 @@
 
 import UIKit
 let kNotTitle = ""
-let defaultFont = UIFont(name: "Helvetica", size: 16.0)
+let defaultFont = UIFont(name: "Helvetica", size: 14.0)
 
 class AdaptiveButtonApperance: NSObject {
     
@@ -22,6 +22,21 @@ class AdaptiveButtonApperance: NSObject {
     var buttonsImageInsetsForStateDictionary:Dictionary <String,UIEdgeInsets> = Dictionary<String,UIEdgeInsets>()
     var buttonsTitleInsetsForStateDictionary:Dictionary <String,UIOffset> = Dictionary<String,UIOffset>()
     
+     var buttonsTitleColorsForStateDictionary:Dictionary <String,UIColor> = Dictionary<String,UIColor>()
+    
+    func setInsetsFromAdaptiveButtonApperance(adaptiveButtonApperance:AdaptiveButtonApperance){
+        
+        self.buttonsImageInsetsForStateDictionary = adaptiveButtonApperance.buttonsImageInsetsForStateDictionary
+        
+        self.buttonsTitleInsetsForStateDictionary = adaptiveButtonApperance.buttonsTitleInsetsForStateDictionary
+    
+    
+    }
+    
+    func setFontsFromAdaptiveButtonApperance(adaptiveButtonApperance:AdaptiveButtonApperance){
+        
+        self.butonsTitleFontForStateDictionary =  adaptiveButtonApperance.butonsTitleFontForStateDictionary
+    }
     
     func setButonTitle(title:NSString, state:String){
         butonsTitleForStateDictionary.updateValue(title, forKey:state)
@@ -122,4 +137,19 @@ class AdaptiveButtonApperance: NSObject {
         return offset!
     }
     
+    
+    func setTitleColor(color:UIColor, state:String){
+        buttonsTitleColorsForStateDictionary.updateValue(color, forKey:state)
+    }
+    
+    func getTitleColorForState(state:NSString)->UIColor!{
+        
+        var offset:UIColor? = buttonsTitleColorsForStateDictionary[state]
+        if(offset == nil){
+            offset = buttonsTitleColorsForStateDictionary[kDefaultAdaptiveState]?
+        }
+        
+        return offset!
+    }
+
 }

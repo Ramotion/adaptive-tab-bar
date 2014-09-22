@@ -21,6 +21,10 @@
 		6AD5A30219C6C95E00606826 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AD5A30119C6C95E00606826 /* Images.xcassets */; };
 		6AD5A30519C6C95E00606826 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AD5A30319C6C95E00606826 /* LaunchScreen.xib */; };
 		6AD5A31119C6C95E00606826 /* adaptive_tab_barTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD5A31019C6C95E00606826 /* adaptive_tab_barTests.swift */; };
+		6AFBC6BF19D00C2C00D42578 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFBC6BE19D00C2C00D42578 /* ThirdViewController.swift */; };
+		6AFBC6C119D00C4700D42578 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFBC6C019D00C4700D42578 /* FourthViewController.swift */; };
+		6AFBC6C319D00C5600D42578 /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFBC6C219D00C5600D42578 /* FifthViewController.swift */; };
+		6AFBC6C519D04A2200D42578 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFBC6C419D04A2200D42578 /* TabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +77,10 @@
 		6AD5A30A19C6C95E00606826 /* adaptive-tab-barTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "adaptive-tab-barTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AD5A30F19C6C95E00606826 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6AD5A31019C6C95E00606826 /* adaptive_tab_barTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adaptive_tab_barTests.swift; sourceTree = "<group>"; };
+		6AFBC6BE19D00C2C00D42578 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		6AFBC6C019D00C4700D42578 /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
+		6AFBC6C219D00C5600D42578 /* FifthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
+		6AFBC6C419D04A2200D42578 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +153,10 @@
 			children = (
 				6AD5A2FA19C6C95E00606826 /* FirstViewController.swift */,
 				6AD5A2FC19C6C95E00606826 /* SecondViewController.swift */,
+				6AFBC6BE19D00C2C00D42578 /* ThirdViewController.swift */,
+				6AFBC6C019D00C4700D42578 /* FourthViewController.swift */,
+				6AFBC6C219D00C5600D42578 /* FifthViewController.swift */,
+				6AFBC6C419D04A2200D42578 /* TabBarViewController.swift */,
 			);
 			name = UIControllers;
 			sourceTree = "<group>";
@@ -331,13 +343,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AFBC6C319D00C5600D42578 /* FifthViewController.swift in Sources */,
 				6AA8346619CB3ED10026038C /* AdaptiveButtonApperance.swift in Sources */,
 				6AA8346819CB3ED10026038C /* AdaptiveDateState.swift in Sources */,
+				6AFBC6C119D00C4700D42578 /* FourthViewController.swift in Sources */,
+				6AFBC6BF19D00C2C00D42578 /* ThirdViewController.swift in Sources */,
 				6AA8346719CB3ED10026038C /* AdaptiveButtonsStateManager.swift in Sources */,
 				6AD5A2FD19C6C95E00606826 /* SecondViewController.swift in Sources */,
 				6A87F54D19C8532500E8F31B /* DateExtension.swift in Sources */,
 				6AD5A2F919C6C95E00606826 /* AppDelegate.swift in Sources */,
 				6AA8346D19CC19590026038C /* AdaptiveTabBarItem.swift in Sources */,
+				6AFBC6C519D04A2200D42578 /* TabBarViewController.swift in Sources */,
 				6AD5A2FB19C6C95E00606826 /* FirstViewController.swift in Sources */,
 				6AA8346919CB3ED10026038C /* AdaptiveState.swift in Sources */,
 			);

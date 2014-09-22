@@ -9,7 +9,6 @@
 import UIKit
 import CoreGraphics
 import QuartzCore
-import AdaptiveTabBarExtension
 
 let countDaysToSmallTextState = 14
 let countDaysToImageState = 30
@@ -33,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         var tabBar:UITabBar = tabBarController.tabBar
         
-        var installDate = NSDate(dateString:"2014-07-01")
+        var installDate = NSDate(dateString:"2014-09-01")
 
         //var imagesArray:Array<String> = ["watch","man"]
         
@@ -50,7 +49,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //tabBar.launchTabBarAdaptivityForDateSettings(TimeSettingsObject(startDate: installDate),itemSettings: AdaptiveTabBarSettingsObject(imagesArray: imagesArray ) )
         
-        
+       
+        UITabBar.appearance().selectedImageTintColor = UIColor(red: 169/255, green: 79/255, blue: 152/255, alpha: 1.0)
+        UITabBar.appearance().barTintColor = UIColor.clearColor()
+        UITabBar.appearance().selectionIndicatorImage = UIImage(named: "backgroud_tab")
+        UITabBar.appearance().itemPositioning = UITabBarItemPositioning.Fill
+       
+        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.whiteColor()],forState: UIControlState.Normal)
         
         tabBar.barTintColor = UIColor(red: 169/255, green: 79/255, blue: 152/255, alpha: 1.0)
 
@@ -58,11 +63,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func apperanceArrayGenerate() -> [AdaptiveButtonApperance]{
+       
         var watchAperance = AdaptiveButtonApperance();
         
         watchAperance.setButonTitle("watch", state: kDefaultAdaptiveState)
         watchAperance.setButonTitle("watch", state: kSmallTitleAdaptiveState)
         watchAperance.setButonTitle("", state: kImageAdaptiveState)
+        watchAperance.setTitleColor(UIColor.whiteColor(), state: kDefaultAdaptiveState)
         
         watchAperance.setButonTitleFontForState(defaultFont, state: kDefaultAdaptiveState)
         watchAperance.setButonTitleFontForState(defaultSmallTitleModeFont, state: kSmallTitleAdaptiveState)
@@ -71,52 +78,84 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         watchAperance.setButtonImage(UIImage(named: "watch_smalltitle"), state: kSmallTitleAdaptiveState)
         watchAperance.setButtonImage(UIImage(named: "watch_smalltitle"), state: kSmallTitleAdaptiveState+selected)
-      
         watchAperance.setButtonImage(UIImage(named: "watch_bigimage"), state: kImageAdaptiveState)
         watchAperance.setButtonImage(UIImage(named: "watch_bigimage"), state: kImageAdaptiveState+selected)
-        
-        watchAperance.setBackgroundButonImage(UIImage(named: " "), state: kSmallTitleAdaptiveState)
-        
         
         watchAperance.setImageInsets(defaultInsets, state: kDefaultAdaptiveState);
         
         watchAperance.setImageInsets(defaultSmallTitleModeImageInsets, state: kSmallTitleAdaptiveState)
-        //watchAperance.setImageInsets(defaultSmallTitleModeImageInsets, state: kSmallTitleAdaptiveState+selected)
-        
-        watchAperance.setTitleOffset(defaultOffset, state: kDefaultAdaptiveState)
-        //watchAperance.setTitleOffset(defaultSmallTitleModeOffset, state: kSmallTitleAdaptiveState)
+               watchAperance.setTitleOffset(defaultOffset, state: kDefaultAdaptiveState)
         watchAperance.setImageInsets(defaultImageModeInsets, state: kImageAdaptiveState);
         
         
         var userAperance = AdaptiveButtonApperance();
         
-        userAperance.setButonTitle("man", state: kDefaultAdaptiveState)
+        
+        userAperance.setFontsFromAdaptiveButtonApperance(watchAperance)
+        userAperance.setInsetsFromAdaptiveButtonApperance(watchAperance)
+        
+        userAperance.setButonTitle("user", state: kDefaultAdaptiveState)
         userAperance.setButonTitle("", state: kImageAdaptiveState)
         
-        userAperance.setButonTitleFontForState(defaultFont, state: kDefaultAdaptiveState)
-        userAperance.setButonTitleFontForState(defaultSmallTitleModeFont, state: kSmallTitleAdaptiveState)
-        
-        
-        
         userAperance.setButtonImage(UIImage(named: "man"), state: kDefaultAdaptiveState)
-        
         userAperance.setButtonImage(UIImage(named: "man_smalltitle"), state: kSmallTitleAdaptiveState)
-    
         userAperance.setButtonImage(UIImage(named: "man_bigimage"), state: kImageAdaptiveState)
         userAperance.setButtonImage(UIImage(named: "man_bigimage"), state: kImageAdaptiveState+selected)
-        
-        
         userAperance.setBackgroundButonImage(UIImage(named: " "), state: kSmallTitleAdaptiveState)
+        userAperance.setTitleColor(UIColor.whiteColor(), state: kDefaultAdaptiveState)
+        
+        var messageAperance = AdaptiveButtonApperance();
         
         
-        userAperance.setImageInsets(defaultInsets, state: kDefaultAdaptiveState);
-        userAperance.setImageInsets(defaultInsets, state: kSmallTitleAdaptiveState)
-        userAperance.setImageInsets(defaultImageModeInsets, state: kImageAdaptiveState)
+        messageAperance.setFontsFromAdaptiveButtonApperance(watchAperance)
+        messageAperance.setInsetsFromAdaptiveButtonApperance(watchAperance)
+        
+        messageAperance.setButonTitle("message", state: kDefaultAdaptiveState)
+        messageAperance.setButonTitle("", state: kImageAdaptiveState)
+        
+        messageAperance.setButtonImage(UIImage(named: "messages"), state: kDefaultAdaptiveState)
+        messageAperance.setButtonImage(UIImage(named: "messages_smalltitle"), state: kSmallTitleAdaptiveState)
+        messageAperance.setButtonImage(UIImage(named: "messages_bigimage"), state: kImageAdaptiveState)
+        messageAperance.setButtonImage(UIImage(named: "messages_bigimage"), state: kImageAdaptiveState+selected)
+        messageAperance.setBackgroundButonImage(UIImage(named: " "), state: kSmallTitleAdaptiveState)
+        messageAperance.setTitleColor(UIColor.whiteColor(), state: kDefaultAdaptiveState)
+     
         
         
-        userAperance.setTitleOffset(defaultOffset, state: kDefaultAdaptiveState)
+        var menuAperance = AdaptiveButtonApperance();
         
-        return [watchAperance ,userAperance]
+        
+        menuAperance.setFontsFromAdaptiveButtonApperance(watchAperance)
+        menuAperance.setInsetsFromAdaptiveButtonApperance(watchAperance)
+        
+        menuAperance.setButonTitle("dial", state: kDefaultAdaptiveState)
+        menuAperance.setButonTitle("", state: kImageAdaptiveState)
+        
+        menuAperance.setButtonImage(UIImage(named: "menu"), state: kDefaultAdaptiveState)
+        menuAperance.setButtonImage(UIImage(named: "menu_smalltitle"), state: kSmallTitleAdaptiveState)
+        menuAperance.setButtonImage(UIImage(named: "menu_bigimage"), state: kImageAdaptiveState)
+        menuAperance.setButtonImage(UIImage(named: "menu_bigimage"), state: kImageAdaptiveState+selected)
+        menuAperance.setBackgroundButonImage(UIImage(named: " "), state: kSmallTitleAdaptiveState)
+        menuAperance.setTitleColor(UIColor.whiteColor(), state: kDefaultAdaptiveState)
+        
+        var moreAperance = AdaptiveButtonApperance();
+        
+        
+        moreAperance.setFontsFromAdaptiveButtonApperance(watchAperance)
+        moreAperance.setInsetsFromAdaptiveButtonApperance(watchAperance)
+        
+        moreAperance.setButonTitle("more", state: kDefaultAdaptiveState)
+        moreAperance.setButonTitle("", state: kImageAdaptiveState)
+        
+        moreAperance.setButtonImage(UIImage(named: "more"), state: kDefaultAdaptiveState)
+        moreAperance.setButtonImage(UIImage(named: "more_smalltitle"), state: kSmallTitleAdaptiveState)
+        moreAperance.setButtonImage(UIImage(named: "more_bigimage"), state: kImageAdaptiveState)
+        moreAperance.setButtonImage(UIImage(named: "more_bigimage"), state: kImageAdaptiveState+selected)
+        moreAperance.setBackgroundButonImage(UIImage(named: " "), state: kSmallTitleAdaptiveState)
+        moreAperance.setTitleColor(UIColor.whiteColor(), state: kDefaultAdaptiveState)
+        
+        return [watchAperance ,userAperance,messageAperance,menuAperance,moreAperance]
+
     }
     
     

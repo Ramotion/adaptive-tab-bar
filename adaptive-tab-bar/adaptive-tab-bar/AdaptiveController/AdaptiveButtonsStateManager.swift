@@ -17,6 +17,7 @@ import UIKit
     optional func setSelectedImageToAdaptiveButton(image: UIImage?)
     optional func setImageInsetsToAdaptiveButton(insets: UIEdgeInsets)
     optional func setTitleOffsetToAdaptiveButton(offset: UIOffset)
+    optional func setTitleColorToAdaptiveButton(titleColor: UIColor)
 }
 
 let selected = "Selected"
@@ -33,17 +34,16 @@ class AdaptiveButtonsStateManager: NSObject {
         
         var state:String = state.currentItemState!
         
-        
-        for var index = 0; index < buttonsAray.count; ++index {
+        var countElements = buttonsAray.count > buttonsApperance.count ? buttonsApperance.count : buttonsAray.count
+        for var index = 0; index < countElements; ++index {
             println("index is \(index)")
+            println("buttons count array is \(buttonsAray.count)")
             
             var button :AdaptiveButtonsProtocol = buttonsAray[index]
             var buttonApperance = buttonsApperance[index]
             button.setTitleToAdaptiveButton!(buttonApperance.getButonTitleForState(state))
             button.setFontToAdaptiveButton!(buttonApperance.getButonTitleFontForState(state))
-           
             
-    
             if let image = buttonApperance.getButonImageForState(state) {
                 button.setImageToAdaptiveButton?(image)
             }
@@ -66,6 +66,10 @@ class AdaptiveButtonsStateManager: NSObject {
             
             if let titleOffset = buttonApperance.getTitleOffsetForState(state) {
                 button.setTitleOffsetToAdaptiveButton?(titleOffset)
+            }
+            
+            if let titleColor = buttonApperance.getTitleColorForState(state) {
+                button.setTitleColorToAdaptiveButton?(titleColor)
             }
             
 
