@@ -42,6 +42,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var tabBarController:UITabBarController = self.window?.rootViewController as UITabBarController
         
         var tabBar:UITabBar = tabBarController.tabBar
+        tabBar.barTintColor = tabColor
+        tabBar.clipsToBounds = true
         
         var installDate = NSDate(dateString:"2014-07-01")
 
@@ -53,10 +55,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
      
         var arrayButtons = tabBar.items as [AdaptiveTabBarItem]
+       
         AdaptiveButtonsStateManager(state: adaptiveState,buttonsAray:arrayButtons ,buttonsApperance: arrayApperance)
         
-        tabBar.barTintColor = tabColor
-        tabBar.clipsToBounds = true
+       
         return true
     }
     
