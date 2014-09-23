@@ -12,7 +12,7 @@ let defaultFont = UIFont(name: "Helvetica", size: 14.0)
 
 class AdaptiveButtonApperance: NSObject {
     
-    
+
     private var butonsTitleForStateDictionary:Dictionary <String,String> = Dictionary<String,String>()
     private var butonsTitleFontForStateDictionary:Dictionary <String,UIFont> = Dictionary<String,UIFont>()
     private var buttonsImageForStateDictionary:Dictionary <String,UIImage> = Dictionary<String,UIImage>()
@@ -29,7 +29,7 @@ class AdaptiveButtonApperance: NSObject {
         self.buttonsImageInsetsForStateDictionary = adaptiveButtonApperance.buttonsImageInsetsForStateDictionary
         
         self.buttonsTitleInsetsForStateDictionary = adaptiveButtonApperance.buttonsTitleInsetsForStateDictionary
-    
+        
     
     }
     
@@ -45,6 +45,16 @@ class AdaptiveButtonApperance: NSObject {
       
     }
     
+    
+    func setImageNamesForStatesImageExtesions(imageName :String ,imageExtensionsForState:Dictionary <String,String>){
+        
+        self.setButtonImage(UIImage(named: imageName), state: kDefaultAdaptiveState)
+        
+        for (state,imageExtension) in imageExtensionsForState {
+           self.setButtonImage(UIImage(named: imageName+imageExtension), state: state)
+        }
+        
+    }
     
     func setButonTitle(title:NSString, state:String){
         butonsTitleForStateDictionary.updateValue(title, forKey:state)
