@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         var tabBar:UITabBar = tabBarController.tabBar
         
-        var installDate = NSDate(dateString:"2014-09-01")
+        var installDate = NSDate(dateString:"2014-09-17")
 
         //var imagesArray:Array<String> = ["watch","man"]
         
