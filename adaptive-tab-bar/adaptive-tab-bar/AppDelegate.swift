@@ -32,17 +32,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        
         UITabBar.appearance().selectedImageTintColor = tabColor
         UITabBar.appearance().barTintColor = UIColor.clearColor()
+        UITabBar.appearance().shadowImage = UIImage()
         UITabBar.appearance().selectionIndicatorImage = UIImage(named: "backgroud_tab")
         UITabBar.appearance().itemPositioning = UITabBarItemPositioning.Fill
         UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.whiteColor()],forState: UIControlState.Normal)
-        
         UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: tabColor],forState: UIControlState.Selected)
+        
         
         var tabBarController:UITabBarController = self.window?.rootViewController as UITabBarController
         
         var tabBar:UITabBar = tabBarController.tabBar
         
-        var installDate = NSDate(dateString:"2014-09-17")
+        var installDate = NSDate(dateString:"2014-07-01")
 
        
         var adaptiveState = AdaptiveDateState(installDate: installDate,currentDate:NSDate(),countDaysToSmallTextState:countDaysToSmallTextState,countDaysToImageState:countDaysToImageState)
@@ -54,12 +55,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var arrayButtons = tabBar.items as [AdaptiveTabBarItem]
         AdaptiveButtonsStateManager(state: adaptiveState,buttonsAray:arrayButtons ,buttonsApperance: arrayApperance)
         
-       
-        
         tabBar.barTintColor = tabColor
-
+        tabBar.clipsToBounds = true
         return true
     }
+    
     
     func apperanceArrayGenerate() -> [AdaptiveButtonApperance]{
        

@@ -156,7 +156,6 @@
 				6AFBC6BE19D00C2C00D42578 /* ThirdViewController.swift */,
 				6AFBC6C019D00C4700D42578 /* FourthViewController.swift */,
 				6AFBC6C219D00C5600D42578 /* FifthViewController.swift */,
-				6AFBC6C419D04A2200D42578 /* TabBarViewController.swift */,
 			);
 			name = UIControllers;
 			sourceTree = "<group>";
@@ -203,11 +202,11 @@
 		6AD5A2F519C6C95E00606826 /* adaptive-tab-bar */ = {
 			isa = PBXGroup;
 			children = (
+				6AFBC6C619D19B2C00D42578 /* CustomTabBar */,
 				6AA8346119CB3E9E0026038C /* UIControllers */,
 				6AA8346019CB3E840026038C /* AadaptiveController */,
 				6A87F54B19C8532500E8F31B /* DateExtension.swift */,
 				6AD5A2F819C6C95E00606826 /* AppDelegate.swift */,
-				6AA8346C19CC19590026038C /* AdaptiveTabBarItem.swift */,
 				6AD5A2FE19C6C95E00606826 /* Main.storyboard */,
 				6AD5A30119C6C95E00606826 /* Images.xcassets */,
 				6AD5A30319C6C95E00606826 /* LaunchScreen.xib */,
@@ -240,6 +239,15 @@
 				6AD5A30F19C6C95E00606826 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6AFBC6C619D19B2C00D42578 /* CustomTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				6AA8346C19CC19590026038C /* AdaptiveTabBarItem.swift */,
+				6AFBC6C419D04A2200D42578 /* TabBarViewController.swift */,
+			);
+			name = CustomTabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
