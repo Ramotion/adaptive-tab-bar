@@ -13,16 +13,16 @@ let defaultFont = UIFont(name: "Helvetica", size: 14.0)
 class AdaptiveButtonApperance: NSObject {
     
     
-    var butonsTitleForStateDictionary:Dictionary <String,String> = Dictionary<String,String>()
-    var butonsTitleFontForStateDictionary:Dictionary <String,UIFont> = Dictionary<String,UIFont>()
-    var buttonsImageForStateDictionary:Dictionary <String,UIImage> = Dictionary<String,UIImage>()
-    var buttonsBackgroundImageForStateDictionary:Dictionary <String,UIImage> = Dictionary<String,UIImage>()
+    private var butonsTitleForStateDictionary:Dictionary <String,String> = Dictionary<String,String>()
+    private var butonsTitleFontForStateDictionary:Dictionary <String,UIFont> = Dictionary<String,UIFont>()
+    private var buttonsImageForStateDictionary:Dictionary <String,UIImage> = Dictionary<String,UIImage>()
+    private var buttonsBackgroundImageForStateDictionary:Dictionary <String,UIImage> = Dictionary<String,UIImage>()
     
     
-    var buttonsImageInsetsForStateDictionary:Dictionary <String,UIEdgeInsets> = Dictionary<String,UIEdgeInsets>()
-    var buttonsTitleInsetsForStateDictionary:Dictionary <String,UIOffset> = Dictionary<String,UIOffset>()
+    private var buttonsImageInsetsForStateDictionary:Dictionary <String,UIEdgeInsets> = Dictionary<String,UIEdgeInsets>()
+    private var buttonsTitleInsetsForStateDictionary:Dictionary <String,UIOffset> = Dictionary<String,UIOffset>()
     
-     var buttonsTitleColorsForStateDictionary:Dictionary <String,UIColor> = Dictionary<String,UIColor>()
+    private var buttonsTitleColorsForStateDictionary:Dictionary <String,UIColor> = Dictionary<String,UIColor>()
     
     func setInsetsFromAdaptiveButtonApperance(adaptiveButtonApperance:AdaptiveButtonApperance){
         
@@ -37,6 +37,14 @@ class AdaptiveButtonApperance: NSObject {
         
         self.butonsTitleFontForStateDictionary =  adaptiveButtonApperance.butonsTitleFontForStateDictionary
     }
+    
+    func setAllCommonApperanceFrom(adaptiveButtonApperance:AdaptiveButtonApperance){
+        self.setInsetsFromAdaptiveButtonApperance(adaptiveButtonApperance)
+        self.setFontsFromAdaptiveButtonApperance(adaptiveButtonApperance)
+        self.buttonsTitleColorsForStateDictionary = adaptiveButtonApperance.buttonsTitleColorsForStateDictionary
+      
+    }
+    
     
     func setButonTitle(title:NSString, state:String){
         butonsTitleForStateDictionary.updateValue(title, forKey:state)
@@ -75,6 +83,9 @@ class AdaptiveButtonApperance: NSObject {
         }
     
     }
+    
+    
+    
     
     func setButtonImage(image:UIImage, state:String){
         buttonsImageForStateDictionary.updateValue(image, forKey:state)
