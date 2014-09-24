@@ -9,17 +9,9 @@
 import UIKit
 import CoreGraphics
 import QuartzCore
+import AdaptiveController
 
-let countDaysToSmallTextState = 14
-let countDaysToImageState = 30
 
-let defaultInsets = UIEdgeInsetsMake(0, 0,0, 0)
-let defaultSmallTitleModeFont = UIFont(name: "Helvetica", size: 10.0)
-let defaultSmallTitleModeImageInsets = UIEdgeInsetsMake(0,  0,  0,  0)
-let defaultImageModeInsets = UIEdgeInsetsMake(6,  0,  -6,  0)
-let defaultSmallTitleModeOffset = UIOffsetMake(0, 20)
-let defaultOffset = UIOffsetMake(0, 00)
-let tabColor = UIColor(red: 169/255, green: 79/255, blue: 152/255, alpha: 1.0)
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -51,19 +43,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var adaptiveState = AdaptiveDateState(installDate: installDate,currentDate:NSDate(),countDaysToSmallTextState:countDaysToSmallTextState,countDaysToImageState:countDaysToImageState)
         
         
-        var arrayApperance = apperanceArrayGenerate()
+        var butonsApperances = butonsApprencesGenerate()
         
      
         var arrayButtons = tabBar.items as [AdaptiveTabBarItem]
        
-        AdaptiveButtonsStateManager(state: adaptiveState,buttonsAray:arrayButtons ,buttonsApperance: arrayApperance)
+        AdaptiveButtonsStateManager(state: adaptiveState,buttonsAray:arrayButtons ,buttonsApperance: butonsApperances)
+        
         
        
         return true
     }
     
     
-    func apperanceArrayGenerate() -> [AdaptiveButtonApperance]{
+    func butonsApprencesGenerate() -> [AdaptiveButtonApperance]{
        
         
         var imageExtensionsForStates:Dictionary = [ kSmallTitleAdaptiveState:"_smalltitle",
@@ -125,6 +118,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         menuAperance.setButonTitle("dial", state: kDefaultAdaptiveState)
         menuAperance.setButonTitle("", state: kImageAdaptiveState)
         menuAperance.setImageNamesForStatesImageExtesions("menu", imageExtensionsForState:imageExtensionsForStates)
+        
         
      
         var moreAperance = AdaptiveButtonApperance();

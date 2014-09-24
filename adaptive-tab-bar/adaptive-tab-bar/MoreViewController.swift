@@ -1,5 +1,5 @@
 //
-//  ThirdViewController.swift
+//  FifthViewController.swift
 //  adaptive-tab-bar
 //
 //  Created by Arcilite on 22.09.14.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ThirdViewController: UIViewController {
+class MoreViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

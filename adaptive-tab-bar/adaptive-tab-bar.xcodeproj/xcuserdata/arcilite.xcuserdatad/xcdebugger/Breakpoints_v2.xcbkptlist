@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "adaptive-tab-bar/AppDelegate.swift"
-            timestampString = "433186828.477172"
+            timestampString = "433270026.544751"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "application(_:didFinishLaunchingWithOptions:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "adaptive-tab-bar/AdaptiveTabBarItem.swift"
-            timestampString = "433090811.14512"
+            timestampString = "433270026.544751"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
             landmarkName = "setFontToAdaptiveButton(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "adaptive-tab-bar/AdaptiveTabBarItem.swift"
-            timestampString = "433090811.14512"
+            timestampString = "433270026.544751"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "27"
@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "adaptive-tab-bar/AdaptiveTabBarItem.swift"
-            timestampString = "433090811.14512"
+            timestampString = "433270026.544751"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "31"
@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "adaptive-tab-bar/AdaptiveTabBarItem.swift"
-            timestampString = "433090811.14512"
+            timestampString = "433270026.544751"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "39"
@@ -90,7 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "adaptive-tab-bar/AdaptiveTabBarItem.swift"
-            timestampString = "433090811.14512"
+            timestampString = "433270026.544751"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "43"
@@ -106,7 +106,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "adaptive-tab-bar/AdaptiveTabBarItem.swift"
-            timestampString = "433090811.14512"
+            timestampString = "433270026.544751"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "30"
@@ -154,7 +154,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "adaptive-tab-bar/AdaptiveTabBarItem.swift"
-            timestampString = "433090811.14512"
+            timestampString = "433270026.544751"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "35"
@@ -234,12 +234,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "adaptive-tab-bar/AdaptiveTabBarItem.swift"
-            timestampString = "433245680.264148"
+            timestampString = "433270026.544751"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "48"
             endingLineNumber = "48"
             landmarkName = "setTitleColorToAdaptiveButton(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "adaptive-tab-bar/AppDelegate.swift"
+            timestampString = "433269887.449173"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
+            landmarkName = "butonsApprencesGenerate()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

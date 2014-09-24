@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  FirstViewController.swift
 //  adaptive-tab-bar
 //
 //  Created by Arcilite on 15.09.14.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class WatchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -8,32 +8,50 @@
 
 /* Begin PBXBuildFile section */
 		6A87F54D19C8532500E8F31B /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A87F54B19C8532500E8F31B /* DateExtension.swift */; };
-		6AA8346619CB3ED10026038C /* AdaptiveButtonApperance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA8346219CB3ED10026038C /* AdaptiveButtonApperance.swift */; };
-		6AA8346719CB3ED10026038C /* AdaptiveButtonsStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA8346319CB3ED10026038C /* AdaptiveButtonsStateManager.swift */; };
-		6AA8346819CB3ED10026038C /* AdaptiveDateState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA8346419CB3ED10026038C /* AdaptiveDateState.swift */; };
-		6AA8346919CB3ED10026038C /* AdaptiveState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA8346519CB3ED10026038C /* AdaptiveState.swift */; };
 		6AA8346D19CC19590026038C /* AdaptiveTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA8346C19CC19590026038C /* AdaptiveTabBarItem.swift */; };
+		6AAE857019D3187F005672CA /* AdaptiveController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AFBC6F019D313D700D42578 /* AdaptiveController.framework */; };
 		6ACC309E19C741E7006B6DF6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ACC309D19C741E7006B6DF6 /* QuartzCore.framework */; };
 		6AD5A2F919C6C95E00606826 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD5A2F819C6C95E00606826 /* AppDelegate.swift */; };
-		6AD5A2FB19C6C95E00606826 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD5A2FA19C6C95E00606826 /* FirstViewController.swift */; };
-		6AD5A2FD19C6C95E00606826 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD5A2FC19C6C95E00606826 /* SecondViewController.swift */; };
+		6AD5A2FB19C6C95E00606826 /* WatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD5A2FA19C6C95E00606826 /* WatchViewController.swift */; };
+		6AD5A2FD19C6C95E00606826 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD5A2FC19C6C95E00606826 /* MessageViewController.swift */; };
 		6AD5A30019C6C95E00606826 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AD5A2FE19C6C95E00606826 /* Main.storyboard */; };
 		6AD5A30219C6C95E00606826 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AD5A30119C6C95E00606826 /* Images.xcassets */; };
 		6AD5A30519C6C95E00606826 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AD5A30319C6C95E00606826 /* LaunchScreen.xib */; };
 		6AD5A31119C6C95E00606826 /* adaptive_tab_barTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD5A31019C6C95E00606826 /* adaptive_tab_barTests.swift */; };
-		6AFBC6BF19D00C2C00D42578 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFBC6BE19D00C2C00D42578 /* ThirdViewController.swift */; };
-		6AFBC6C119D00C4700D42578 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFBC6C019D00C4700D42578 /* FourthViewController.swift */; };
-		6AFBC6C319D00C5600D42578 /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFBC6C219D00C5600D42578 /* FifthViewController.swift */; };
+		6AFBC6BF19D00C2C00D42578 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFBC6BE19D00C2C00D42578 /* UserViewController.swift */; };
+		6AFBC6C119D00C4700D42578 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFBC6C019D00C4700D42578 /* MenuViewController.swift */; };
+		6AFBC6C319D00C5600D42578 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFBC6C219D00C5600D42578 /* MoreViewController.swift */; };
 		6AFBC6C519D04A2200D42578 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFBC6C419D04A2200D42578 /* TabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		6AAE857119D3188B005672CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6AFBC6EA19D313D600D42578 /* AdaptiveController.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6AFBC6D019D313D600D42578;
+			remoteInfo = AdaptiveController;
+		};
 		6AD5A30B19C6C95E00606826 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6AD5A2EB19C6C95E00606826 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 6AD5A2F219C6C95E00606826;
 			remoteInfo = "adaptive-tab-bar";
+		};
+		6AFBC6EF19D313D700D42578 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6AFBC6EA19D313D600D42578 /* AdaptiveController.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6AFBC6D119D313D600D42578;
+			remoteInfo = AdaptiveController;
+		};
+		6AFBC6F119D313D700D42578 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6AFBC6EA19D313D600D42578 /* AdaptiveController.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6AFBC6DC19D313D600D42578;
+			remoteInfo = AdaptiveControllerTests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -53,34 +71,24 @@
 /* Begin PBXFileReference section */
 		6A87F4B719C8322D00E8F31B /* adaptive-tab-bar-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "adaptive-tab-bar-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		6A87F54B19C8532500E8F31B /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
-		6A9D84B219CAB231006EA201 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6A9D84B319CAB231006EA201 /* AdaptiveTabBarExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdaptiveTabBarExtension.h; sourceTree = "<group>"; };
-		6A9D84BE19CAB231006EA201 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6A9D84BF19CAB231006EA201 /* AdaptiveTabBarExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveTabBarExtensionTests.swift; sourceTree = "<group>"; };
-		6A9D84CE19CAB278006EA201 /* AdaptiveTabBarExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdaptiveTabBarExtension.swift; sourceTree = "<group>"; };
-		6A9D84CF19CAB278006EA201 /* AdaptiveTabBarSettingsObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdaptiveTabBarSettingsObject.swift; sourceTree = "<group>"; };
-		6A9D84D019CAB278006EA201 /* TimeSettingsObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeSettingsObject.swift; sourceTree = "<group>"; };
-		6AA8346219CB3ED10026038C /* AdaptiveButtonApperance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdaptiveButtonApperance.swift; path = AdaptiveController/AdaptiveButtonApperance.swift; sourceTree = "<group>"; };
-		6AA8346319CB3ED10026038C /* AdaptiveButtonsStateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdaptiveButtonsStateManager.swift; path = AdaptiveController/AdaptiveButtonsStateManager.swift; sourceTree = "<group>"; };
-		6AA8346419CB3ED10026038C /* AdaptiveDateState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdaptiveDateState.swift; path = AdaptiveController/AdaptiveDateState.swift; sourceTree = "<group>"; };
-		6AA8346519CB3ED10026038C /* AdaptiveState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdaptiveState.swift; path = AdaptiveController/AdaptiveState.swift; sourceTree = "<group>"; };
 		6AA8346C19CC19590026038C /* AdaptiveTabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdaptiveTabBarItem.swift; sourceTree = "<group>"; };
 		6ACC309D19C741E7006B6DF6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		6AD5A2F319C6C95E00606826 /* adaptive-tab-bar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "adaptive-tab-bar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AD5A2F719C6C95E00606826 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6AD5A2F819C6C95E00606826 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6AD5A2FA19C6C95E00606826 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		6AD5A2FC19C6C95E00606826 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		6AD5A2FA19C6C95E00606826 /* WatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchViewController.swift; sourceTree = "<group>"; };
+		6AD5A2FC19C6C95E00606826 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		6AD5A2FF19C6C95E00606826 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6AD5A30119C6C95E00606826 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6AD5A30419C6C95E00606826 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		6AD5A30A19C6C95E00606826 /* adaptive-tab-barTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "adaptive-tab-barTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AD5A30F19C6C95E00606826 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6AD5A31019C6C95E00606826 /* adaptive_tab_barTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adaptive_tab_barTests.swift; sourceTree = "<group>"; };
-		6AFBC6BE19D00C2C00D42578 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
-		6AFBC6C019D00C4700D42578 /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
-		6AFBC6C219D00C5600D42578 /* FifthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
+		6AFBC6BE19D00C2C00D42578 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		6AFBC6C019D00C4700D42578 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		6AFBC6C219D00C5600D42578 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		6AFBC6C419D04A2200D42578 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		6AFBC6EA19D313D600D42578 /* AdaptiveController.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AdaptiveController.xcodeproj; path = AdaptiveController/AdaptiveController.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AAE857019D3187F005672CA /* AdaptiveController.framework in Frameworks */,
 				6ACC309E19C741E7006B6DF6 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,90 +111,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6A9D84B019CAB231006EA201 /* AdaptiveTabBarExtension */ = {
-			isa = PBXGroup;
-			children = (
-				6A9D84CE19CAB278006EA201 /* AdaptiveTabBarExtension.swift */,
-				6A9D84CF19CAB278006EA201 /* AdaptiveTabBarSettingsObject.swift */,
-				6A9D84D019CAB278006EA201 /* TimeSettingsObject.swift */,
-				6A9D84B319CAB231006EA201 /* AdaptiveTabBarExtension.h */,
-				6A9D84B119CAB231006EA201 /* Supporting Files */,
-			);
-			path = AdaptiveTabBarExtension;
-			sourceTree = "<group>";
-		};
-		6A9D84B119CAB231006EA201 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				6A9D84B219CAB231006EA201 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		6A9D84BC19CAB231006EA201 /* AdaptiveTabBarExtensionTests */ = {
-			isa = PBXGroup;
-			children = (
-				6A9D84BF19CAB231006EA201 /* AdaptiveTabBarExtensionTests.swift */,
-				6A9D84BD19CAB231006EA201 /* Supporting Files */,
-			);
-			path = AdaptiveTabBarExtensionTests;
-			sourceTree = "<group>";
-		};
-		6A9D84BD19CAB231006EA201 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				6A9D84BE19CAB231006EA201 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		6AA8346019CB3E840026038C /* AadaptiveController */ = {
-			isa = PBXGroup;
-			children = (
-				6AA8346B19CB3F990026038C /* CustomAdaptiveController */,
-				6AA8346A19CB3EEB0026038C /* BaseAdaptiveController */,
-			);
-			name = AadaptiveController;
-			sourceTree = "<group>";
-		};
 		6AA8346119CB3E9E0026038C /* UIControllers */ = {
 			isa = PBXGroup;
 			children = (
-				6AD5A2FA19C6C95E00606826 /* FirstViewController.swift */,
-				6AD5A2FC19C6C95E00606826 /* SecondViewController.swift */,
-				6AFBC6BE19D00C2C00D42578 /* ThirdViewController.swift */,
-				6AFBC6C019D00C4700D42578 /* FourthViewController.swift */,
-				6AFBC6C219D00C5600D42578 /* FifthViewController.swift */,
+				6AD5A2FA19C6C95E00606826 /* WatchViewController.swift */,
+				6AD5A2FC19C6C95E00606826 /* MessageViewController.swift */,
+				6AFBC6BE19D00C2C00D42578 /* UserViewController.swift */,
+				6AFBC6C019D00C4700D42578 /* MenuViewController.swift */,
+				6AFBC6C219D00C5600D42578 /* MoreViewController.swift */,
 			);
 			name = UIControllers;
-			sourceTree = "<group>";
-		};
-		6AA8346A19CB3EEB0026038C /* BaseAdaptiveController */ = {
-			isa = PBXGroup;
-			children = (
-				6AA8346219CB3ED10026038C /* AdaptiveButtonApperance.swift */,
-				6AA8346319CB3ED10026038C /* AdaptiveButtonsStateManager.swift */,
-				6AA8346519CB3ED10026038C /* AdaptiveState.swift */,
-			);
-			name = BaseAdaptiveController;
-			sourceTree = "<group>";
-		};
-		6AA8346B19CB3F990026038C /* CustomAdaptiveController */ = {
-			isa = PBXGroup;
-			children = (
-				6AA8346419CB3ED10026038C /* AdaptiveDateState.swift */,
-			);
-			name = CustomAdaptiveController;
 			sourceTree = "<group>";
 		};
 		6AD5A2EA19C6C95E00606826 = {
 			isa = PBXGroup;
 			children = (
+				6AFBC6EA19D313D600D42578 /* AdaptiveController.xcodeproj */,
 				6ACC309D19C741E7006B6DF6 /* QuartzCore.framework */,
 				6AD5A2F519C6C95E00606826 /* adaptive-tab-bar */,
 				6AD5A30D19C6C95E00606826 /* adaptive-tab-barTests */,
-				6A9D84B019CAB231006EA201 /* AdaptiveTabBarExtension */,
-				6A9D84BC19CAB231006EA201 /* AdaptiveTabBarExtensionTests */,
 				6AD5A2F419C6C95E00606826 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -204,7 +148,6 @@
 			children = (
 				6AFBC6C619D19B2C00D42578 /* CustomTabBar */,
 				6AA8346119CB3E9E0026038C /* UIControllers */,
-				6AA8346019CB3E840026038C /* AadaptiveController */,
 				6A87F54B19C8532500E8F31B /* DateExtension.swift */,
 				6AD5A2F819C6C95E00606826 /* AppDelegate.swift */,
 				6AD5A2FE19C6C95E00606826 /* Main.storyboard */,
@@ -250,6 +193,15 @@
 			name = CustomTabBar;
 			sourceTree = "<group>";
 		};
+		6AFBC6EB19D313D600D42578 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6AFBC6F019D313D700D42578 /* AdaptiveController.framework */,
+				6AFBC6F219D313D700D42578 /* AdaptiveControllerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -265,6 +217,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				6AAE857219D3188B005672CA /* PBXTargetDependency */,
 			);
 			name = "adaptive-tab-bar";
 			productName = "adaptive-tab-bar";
@@ -318,6 +271,12 @@
 			mainGroup = 6AD5A2EA19C6C95E00606826;
 			productRefGroup = 6AD5A2F419C6C95E00606826 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 6AFBC6EB19D313D600D42578 /* Products */;
+					ProjectRef = 6AFBC6EA19D313D600D42578 /* AdaptiveController.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				6AD5A2F219C6C95E00606826 /* adaptive-tab-bar */,
@@ -325,6 +284,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		6AFBC6F019D313D700D42578 /* AdaptiveController.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AdaptiveController.framework;
+			remoteRef = 6AFBC6EF19D313D700D42578 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6AFBC6F219D313D700D42578 /* AdaptiveControllerTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AdaptiveControllerTests.xctest;
+			remoteRef = 6AFBC6F119D313D700D42578 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		6AD5A2F119C6C95E00606826 /* Resources */ = {
@@ -351,19 +327,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6AFBC6C319D00C5600D42578 /* FifthViewController.swift in Sources */,
-				6AA8346619CB3ED10026038C /* AdaptiveButtonApperance.swift in Sources */,
-				6AA8346819CB3ED10026038C /* AdaptiveDateState.swift in Sources */,
-				6AFBC6C119D00C4700D42578 /* FourthViewController.swift in Sources */,
-				6AFBC6BF19D00C2C00D42578 /* ThirdViewController.swift in Sources */,
-				6AA8346719CB3ED10026038C /* AdaptiveButtonsStateManager.swift in Sources */,
-				6AD5A2FD19C6C95E00606826 /* SecondViewController.swift in Sources */,
+				6AFBC6C319D00C5600D42578 /* MoreViewController.swift in Sources */,
+				6AFBC6C119D00C4700D42578 /* MenuViewController.swift in Sources */,
+				6AFBC6BF19D00C2C00D42578 /* UserViewController.swift in Sources */,
+				6AD5A2FD19C6C95E00606826 /* MessageViewController.swift in Sources */,
 				6A87F54D19C8532500E8F31B /* DateExtension.swift in Sources */,
 				6AD5A2F919C6C95E00606826 /* AppDelegate.swift in Sources */,
 				6AA8346D19CC19590026038C /* AdaptiveTabBarItem.swift in Sources */,
 				6AFBC6C519D04A2200D42578 /* TabBarViewController.swift in Sources */,
-				6AD5A2FB19C6C95E00606826 /* FirstViewController.swift in Sources */,
-				6AA8346919CB3ED10026038C /* AdaptiveState.swift in Sources */,
+				6AD5A2FB19C6C95E00606826 /* WatchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +350,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		6AAE857219D3188B005672CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AdaptiveController;
+			targetProxy = 6AAE857119D3188B005672CA /* PBXContainerItemProxy */;
+		};
 		6AD5A30C19C6C95E00606826 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 6AD5A2F219C6C95E00606826 /* adaptive-tab-bar */;
@@ -493,9 +470,11 @@
 				INFOPLIST_FILE = "adaptive-tab-bar/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INCLUDE_PATHS = "\"$(SRCROOT)/adaptive-tab-bar/\"/**";
 				SWIFT_OBJC_BRIDGING_HEADER = "adaptive-tab-bar-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				"USER_HEADER_SEARCH_PATHS[arch=*]" = "";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/adaptive-tab-bar/\"/**/**";
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = "\"$(SRCROOT)/adaptive-tab-bar/\"/**/**";
 			};
 			name = Debug;
 		};
@@ -510,7 +489,9 @@
 				INFOPLIST_FILE = "adaptive-tab-bar/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INCLUDE_PATHS = "\"$(SRCROOT)/adaptive-tab-bar/\"/**";
 				SWIFT_OBJC_BRIDGING_HEADER = "adaptive-tab-bar-Bridging-Header.h";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/adaptive-tab-bar/\"/**/**";
 			};
 			name = Release;
 		};

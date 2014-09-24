@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import AdaptiveController
 
-class AdaptiveTabBarItem: UITabBarItem , AdaptiveButtonsProtocol {
+class AdaptiveTabBarItem: UITabBarItem , AdaptiveApperanceProtocol {
     
     
     override init(){

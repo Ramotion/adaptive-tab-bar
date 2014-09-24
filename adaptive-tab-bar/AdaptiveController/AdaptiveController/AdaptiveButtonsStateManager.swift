@@ -8,20 +8,20 @@
 
 import UIKit
 
-let countDaysToSmallTextState = 14
-let countDaysToImageState = 30
+public let countDaysToSmallTextState = 14
+public let countDaysToImageState = 30
 
-let defaultInsets = UIEdgeInsetsMake(0, 0,0, 0)
-let defaultSmallTitleModeFont = UIFont(name: "Helvetica", size: 10.0)
-let defaultSmallTitleModeImageInsets = UIEdgeInsetsMake(0,  0,  0,  0)
-let defaultImageModeInsets = UIEdgeInsetsMake(6,  0,  -6,  0)
-let defaultSmallTitleModeOffset = UIOffsetMake(0, 20)
-let defaultOffset = UIOffsetMake(0, 00)
-let tabColor = UIColor(red: 169/255, green: 79/255, blue: 152/255, alpha: 1.0)
+public let defaultInsets = UIEdgeInsetsMake(0, 0,0, 0)
+public let defaultSmallTitleModeFont = UIFont(name: "Helvetica", size: 10.0)
+public let defaultSmallTitleModeImageInsets = UIEdgeInsetsMake(0,  0,  0,  0)
+public let defaultImageModeInsets = UIEdgeInsetsMake(6,  0,  -6,  0)
+public let defaultSmallTitleModeOffset = UIOffsetMake(0, 20)
+public let defaultOffset = UIOffsetMake(0, 00)
+public let tabColor = UIColor(red: 169/255, green: 79/255, blue: 152/255, alpha: 1.0)
 
 
 
-@objc protocol AdaptiveApperanceProtocol {
+ @objc public protocol AdaptiveApperanceProtocol {
     optional func setFontToAdaptiveButton(font: UIFont)
     optional func setTitleToAdaptiveButton(text: NSString)
     optional func setImageToAdaptiveButton(image: UIImage?)
@@ -33,17 +33,17 @@ let tabColor = UIColor(red: 169/255, green: 79/255, blue: 152/255, alpha: 1.0)
     optional func setTitleColorToAdaptiveButton(titleColor: UIColor)
 }
 
-let selected = "Selected"
-let highlighted = "Higlihted"
+public let selected = "Selected"
+public let highlighted = "Higlihted"
 
-class AdaptiveButtonsStateManager: NSObject {
+public class AdaptiveButtonsStateManager: NSObject {
     
-    convenience init (state:AdaptiveState,buttonsAray:[AdaptiveApperanceProtocol],buttonsApperance:[AdaptiveButtonApperance]){
+    public convenience init (state:AdaptiveState,buttonsAray:[AdaptiveApperanceProtocol],buttonsApperance:[AdaptiveButtonApperance]){
         self.init()
         self.setButtonsState(state, buttonsAray: buttonsAray, buttonsApperance: buttonsApperance)
     }
     
-     func setButtonsState(state:AdaptiveState,buttonsAray:[AdaptiveApperanceProtocol],buttonsApperance:[AdaptiveButtonApperance]){
+     public func setButtonsState(state:AdaptiveState,buttonsAray:[AdaptiveApperanceProtocol],buttonsApperance:[AdaptiveButtonApperance]){
         
         var state:String = state.currentItemState!
         

@@ -7,7 +7,7 @@
         <!--First-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="adaptive_tab_bar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="WatchViewController" customModule="adaptive_tab_bar" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -50,7 +50,7 @@
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="adaptive_tab_bar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="MessageViewController" customModule="adaptive_tab_bar" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
@@ -115,7 +115,7 @@
         <!--Item-->
         <scene sceneID="60i-zg-cAx">
             <objects>
-                <viewController id="BiK-DX-JK5" customClass="ThirdViewController" customModule="adaptive_tab_bar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BiK-DX-JK5" customClass="UserViewController" customModule="adaptive_tab_bar" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oSS-7K-rER"/>
                         <viewControllerLayoutGuide type="bottom" id="Ba7-rp-yUE"/>
@@ -139,7 +139,7 @@
         <!--Item-->
         <scene sceneID="RUI-wr-KlE">
             <objects>
-                <viewController id="aXk-96-nwf" customClass="FourthViewController" customModule="adaptive_tab_bar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="aXk-96-nwf" customClass="MenuViewController" customModule="adaptive_tab_bar" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Aha-rh-ib6"/>
                         <viewControllerLayoutGuide type="bottom" id="aNR-L8-QaD"/>
@@ -163,7 +163,7 @@
         <!--Item-->
         <scene sceneID="B98-FR-Rjt">
             <objects>
-                <viewController id="BgE-dr-gW8" sceneMemberID="viewController">
+                <viewController id="BgE-dr-gW8" customClass="MoreViewController" customModule="adaptive_tab_bar" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="r9s-DG-v8Y"/>
                         <viewControllerLayoutGuide type="bottom" id="mju-qR-F4m"/>
