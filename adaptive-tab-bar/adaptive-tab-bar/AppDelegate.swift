@@ -45,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         tabBar.barTintColor = tabColor
         tabBar.clipsToBounds = true
         
-        var installDate = NSDate(dateString:"2014-07-01")
+        var installDate = NSDate(dateString:"2014-09-18")
 
        
         var adaptiveState = AdaptiveDateState(installDate: installDate,currentDate:NSDate(),countDaysToSmallTextState:countDaysToSmallTextState,countDaysToImageState:countDaysToImageState)
@@ -80,6 +80,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         watchAperance.setTitleColor(UIColor.whiteColor(), state: kDefaultAdaptiveState)
         
         watchAperance.setButonTitleFontForState(defaultFont, state: kDefaultAdaptiveState)
+        
         watchAperance.setButonTitleFontForState(defaultSmallTitleModeFont, state: kSmallTitleAdaptiveState)
         
       
@@ -137,7 +138,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       
         
         
-        return [watchAperance ,userAperance,messageAperance,menuAperance,moreAperance]
+        return [watchAperance ,messageAperance,userAperance,menuAperance,moreAperance]
 
     }
     
