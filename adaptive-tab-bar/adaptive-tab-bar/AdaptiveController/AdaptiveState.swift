@@ -14,7 +14,7 @@ let kDefaultAdaptiveState:String = "DefaultAdaptiveState"
 
 class AdaptiveState: NSObject {
    
-    var currentItemState:NSString? //= kDefaultAdaptiveState
+    var currentItemState:NSString? 
     
 
     var  buttonStates:[String] = [String]()

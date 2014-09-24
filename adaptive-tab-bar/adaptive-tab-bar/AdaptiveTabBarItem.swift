@@ -19,7 +19,6 @@ class AdaptiveTabBarItem: UITabBarItem , AdaptiveButtonsProtocol {
     func setFontToAdaptiveButton(font: UIFont){
         
         self.setTitleTextAttributes(NSDictionary(objects: [font], forKeys: [NSFontAttributeName]), forState: UIControlState.Normal)
-       // self.setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.whiteColor()],forState: UIControlState.Normal)
        
     }
     
