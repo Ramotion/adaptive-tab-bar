@@ -143,17 +143,14 @@ In AdaptiveDateState, we can add new custom states like this:
 
 And add methods which decide how the state relates to input parameters:
 
-	```swift
-	
-	var adaptiveState = AdaptiveDateState(installDate: installDate,currentDate:NSDate(),countDaysToSmallTextState:countDaysToSmallTextState,countDaysToImageState:countDaysToImageState)
-
-	```
+```swift
+		var adaptiveState = AdaptiveDateState(installDate: installDate,currentDate:NSDate(),countDaysToSmallTextState:countDaysToSmallTextState,countDaysToImageState:countDaysToImageState)
+```
 
 In AdaptiveDateState, we add custom init methods which decided what states have the Adaptive state object according to the input parameters:    
 
-	~~~swift 
-		 private func stateRemainDays 	(remainDays:Int,countDaysToSmallTextState:Int,countDaysToImageState:Int)->String{
-        
+```swift 
+private func stateRemainDays 	(remainDays:Int,countDaysToSmallTextState:Int,countDaysToImageState:Int)->String{        
         var mode:String = kDefaultAdaptiveState
         print(" DAYS \(remainDays) ")
         if remainDays > countDaysToSmallTextState && remainDays < countDaysToImageState{
@@ -164,7 +161,8 @@ In AdaptiveDateState, we add custom init methods which decided what states have 
         print(mode)
         return mode
     	}    
-	~~~
+```
+
 
 
 You can customize different UI components if they adopt to the AdaptiveApperanceProtocol.
