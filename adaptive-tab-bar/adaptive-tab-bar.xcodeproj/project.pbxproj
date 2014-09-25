@@ -470,11 +470,8 @@
 				INFOPLIST_FILE = "adaptive-tab-bar/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_INCLUDE_PATHS = "\"$(SRCROOT)/adaptive-tab-bar/\"/**";
 				SWIFT_OBJC_BRIDGING_HEADER = "adaptive-tab-bar-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/adaptive-tab-bar/\"/**/**";
-				"USER_HEADER_SEARCH_PATHS[arch=*]" = "\"$(SRCROOT)/adaptive-tab-bar/\"/**/**";
 			};
 			name = Debug;
 		};
@@ -489,9 +486,7 @@
 				INFOPLIST_FILE = "adaptive-tab-bar/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_INCLUDE_PATHS = "\"$(SRCROOT)/adaptive-tab-bar/\"/**";
 				SWIFT_OBJC_BRIDGING_HEADER = "adaptive-tab-bar-Bridging-Header.h";
-				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/adaptive-tab-bar/\"/**/**";
 			};
 			name = Release;
 		};
