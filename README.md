@@ -1,5 +1,9 @@
 # Adaptive Tab Bar
 
+AdaptiveController is a 'Progressive Reduction' Swift module for adding custom states to Native or Custom UI elements.
+
+![Mou icon](https://d13yacurqjgara.cloudfront.net/users/25514/screenshots/1320024/viber-ios7-concept-navigation-bar-ramotion.gif)
+
 ##Tab Bar After Install
 ![Mou icon](http://i.imgur.com/K46LKQE.png)
 
