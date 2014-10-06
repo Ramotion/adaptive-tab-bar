@@ -10,7 +10,7 @@ import UIKit
 
 public let defaultFont = UIFont(name: "Helvetica", size: 14.0)
 public let kNotTitle = ""
-public class AdaptiveButtonApperance: NSObject {
+public class AdaptiveButtonAppearance: NSObject {
     
 
     private var butonsTitleForStateDictionary:Dictionary <String,String> = Dictionary<String,String>()
@@ -24,7 +24,7 @@ public class AdaptiveButtonApperance: NSObject {
     
     private var buttonsTitleColorsForStateDictionary:Dictionary <String,UIColor> = Dictionary<String,UIColor>()
     
-    func setInsetsFromAdaptiveButtonApperance(adaptiveButtonApperance:AdaptiveButtonApperance){
+    func setInsetsFromAdaptiveButtonApperance(adaptiveButtonApperance:AdaptiveButtonAppearance){
         
         self.buttonsImageInsetsForStateDictionary = adaptiveButtonApperance.buttonsImageInsetsForStateDictionary
         
@@ -33,12 +33,12 @@ public class AdaptiveButtonApperance: NSObject {
     
     }
     
-    public func setFontsFromAdaptiveButtonApperance(adaptiveButtonApperance:AdaptiveButtonApperance){
+    public func setFontsFromAdaptiveButtonApperance(adaptiveButtonApperance:AdaptiveButtonAppearance){
         
         self.butonsTitleFontForStateDictionary =  adaptiveButtonApperance.butonsTitleFontForStateDictionary
     }
     
-    public func setAllCommonApperanceFrom(adaptiveButtonApperance:AdaptiveButtonApperance){
+    public func setAllCommonApperanceFrom(adaptiveButtonApperance:AdaptiveButtonAppearance){
         self.setInsetsFromAdaptiveButtonApperance(adaptiveButtonApperance)
         self.setFontsFromAdaptiveButtonApperance(adaptiveButtonApperance)
         self.buttonsTitleColorsForStateDictionary = adaptiveButtonApperance.buttonsTitleColorsForStateDictionary

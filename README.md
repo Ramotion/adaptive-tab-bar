@@ -44,7 +44,7 @@ Or count of launches for different state :
 And then you should setup an array of appearances. You should setup button images for each state for each apperacnce object:
 
 ```swift
-        var buttonApperances = buttonsAperancesGenerate()
+        var buttonsAppearances = buttonsAppearancesGenerate() //func butonsAppearancesGenerate() -> [AdaptiveButtonApperance]
 ```
        
 And then you should setup an array of items Appearance object. You should set the button's image for each state for each appearance object.  
@@ -59,32 +59,32 @@ First, you should setup a dictionary for the extension of the image for each UI 
  First, init the appearance object and setup the text for each state. If the text is the same for each state, you can set text for the default state:
        
 ```swift
-        var watchAperance = AdaptiveButtonApperance(); 
-        watchAperance.setButonTitle("watch", state: kDefaultAdaptiveState)
-        watchAperance.setButonTitle("watch", state: kSmallTitleAdaptiveState)
-        watchAperance.setButonTitle("", state: kImageAdaptiveState)
+        var watchAppearance = AdaptiveButtonAppearance(); 
+        watchAppearance.setButonTitle("watch", state: kDefaultAdaptiveState)
+        watchAppearance.setButonTitle("watch", state: kSmallTitleAdaptiveState)
+        watchAppearance.setButonTitle("", state: kImageAdaptiveState)
 ```
         
  Then you should setup your fonts for each state:    
 
 ```swift
-		watchAperance.setButonTitleFontForState(yourDefaultFont, state: kDefaultAdaptiveState)        
-        watchAperance.setButonTitleFontForState(yourDefaultSmallTitleModeFont, state: kSmallTitleAdaptiveState)
+		watchAppearance.setButonTitleFontForState(yourDefaultFont, state: kDefaultAdaptiveState)        
+        watchAppearance.setButonTitleFontForState(yourDefaultSmallTitleModeFont, state: kSmallTitleAdaptiveState)
 ```
 
 Then you should set the default image and extensions for each state a function which automaticaly sets images for each state: 
 
 ```swift
-        watchAperance.setImageNamesForStatesImageExtesions("watch", imageExtensionsForState:imageExtensionsForStates)
+        watchAppearance.setImageNamesForStatesImageExtesions("watch", imageExtensionsForState:imageExtensionsForStates)
 ```
 
 Then you should setup the appearance insets for each state: 
 
 ```swift
-        watchAperance.setImageInsets(defaultInsets, state: kDefaultAdaptiveState);        
-        watchAperance.setImageInsets(defaultSmallTitleModeImageInsets, state: kSmallTitleAdaptiveState)
-        watchAperance.setTitleOffset(defaultOffset, state: kDefaultAdaptiveState)
-        watchAperance.setImageInsets(defaultImageModeInsets, state: kImageAdaptiveState);  
+        watchAppearance.setImageInsets(defaultInsets, state: kDefaultAdaptiveState);        
+        watchAppearance.setImageInsets(defaultSmallTitleModeImageInsets, state: kSmallTitleAdaptiveState)
+        watchAppearance.setTitleOffset(defaultOffset, state: kDefaultAdaptiveState)
+       watchAppearance.setImageInsets(defaultImageModeInsets, state: kImageAdaptiveState);  
 ```
 
 Then you should setup сustom UITabBarItems which conform to the AdaptiveButtonsProtocol:        

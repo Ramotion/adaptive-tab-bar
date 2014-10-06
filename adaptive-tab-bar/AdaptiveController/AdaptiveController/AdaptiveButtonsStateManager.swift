@@ -38,22 +38,22 @@ public let highlighted = "Higlihted"
 
 public class AdaptiveButtonsStateManager: NSObject {
     
-    public convenience init (state:AdaptiveState,buttonsAray:[AdaptiveApperanceProtocol],buttonsApperance:[AdaptiveButtonApperance]){
+    public convenience init (state:AdaptiveState,buttonsAray:[AdaptiveApperanceProtocol],buttonsAppearance:[AdaptiveButtonAppearance]){
         self.init()
-        self.setButtonsState(state, buttonsAray: buttonsAray, buttonsApperance: buttonsApperance)
+        self.setButtonsState(state, buttonsAray: buttonsAray, buttonsAppearance: buttonsAppearance)
     }
     
-     public func setButtonsState(state:AdaptiveState,buttonsAray:[AdaptiveApperanceProtocol],buttonsApperance:[AdaptiveButtonApperance]){
+     public func setButtonsState(state:AdaptiveState,buttonsAray:[AdaptiveApperanceProtocol],buttonsAppearance:[AdaptiveButtonAppearance]){
         
         var state:String = state.currentItemState!
         
-        var countElements = buttonsAray.count > buttonsApperance.count ? buttonsApperance.count : buttonsAray.count
+        var countElements = buttonsAray.count > buttonsAppearance.count ? buttonsAppearance.count : buttonsAray.count
         for var index = 0; index < countElements; ++index {
             println("index is \(index)")
             println("buttons count array is \(buttonsAray.count)")
             
             var button :AdaptiveApperanceProtocol = buttonsAray[index]
-            var buttonApperance = buttonsApperance[index]
+            var buttonApperance = buttonsAppearance[index]
             button.setTitleToAdaptiveButton!(buttonApperance.getButonTitleForState(state))
             button.setFontToAdaptiveButton!(buttonApperance.getButonTitleFontForState(state))
             
