@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A3E3A1C19E05E5B00C7504B /* AdaptiveLaunchesState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3E3A1B19E05E5B00C7504B /* AdaptiveLaunchesState.swift */; };
 		6AAE857719D329C6005672CA /* AdaptiveButtonApperance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAE857319D329C6005672CA /* AdaptiveButtonApperance.swift */; };
 		6AAE857819D329C6005672CA /* AdaptiveButtonsStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAE857419D329C6005672CA /* AdaptiveButtonsStateManager.swift */; };
 		6AAE857919D329C6005672CA /* AdaptiveDateState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAE857519D329C6005672CA /* AdaptiveDateState.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6A3E3A1B19E05E5B00C7504B /* AdaptiveLaunchesState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdaptiveLaunchesState.swift; sourceTree = "<group>"; };
 		6AAE857319D329C6005672CA /* AdaptiveButtonApperance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdaptiveButtonApperance.swift; sourceTree = "<group>"; };
 		6AAE857419D329C6005672CA /* AdaptiveButtonsStateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdaptiveButtonsStateManager.swift; sourceTree = "<group>"; };
 		6AAE857519D329C6005672CA /* AdaptiveDateState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdaptiveDateState.swift; sourceTree = "<group>"; };
@@ -50,6 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				6AAE857519D329C6005672CA /* AdaptiveDateState.swift */,
+				6A3E3A1B19E05E5B00C7504B /* AdaptiveLaunchesState.swift */,
 			);
 			name = CustomAdaptiveControllers;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AAE857819D329C6005672CA /* AdaptiveButtonsStateManager.swift in Sources */,
+				6A3E3A1C19E05E5B00C7504B /* AdaptiveLaunchesState.swift in Sources */,
 				6AAE857719D329C6005672CA /* AdaptiveButtonApperance.swift in Sources */,
 				6AAE857919D329C6005672CA /* AdaptiveDateState.swift in Sources */,
 				6AAE857A19D329C6005672CA /* AdaptiveState.swift in Sources */,

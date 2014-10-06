@@ -34,6 +34,11 @@ First, you should set the install date, current date, count of days to transitio
         var installDate = NSDate(dateString:"2014-09-18")
         var adaptiveState = AdaptiveDateState(installDate: installDate,currentDate:NSDate(),countDaysToSmallTextState:countDaysToSmallTextState,countDaysToImageState:countDaysToImageState)    
  ```
+Or count of launches for different state :
+
+```swift         
+           var adaptiveState = AdaptiveLaunchesState(curentCountLaunches:curentCountLaunches,countLaunchesToSmallTextState:countDaysForSmaltextState,countLaunchesToImageState:countDaysForImageModeState)  
+ ```
 
 And then you should setup an array of appearances. You should setup button images for each state for each apperacnce object:
 

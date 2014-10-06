@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:Samples/adaptive-dates-tabbar/adaptive-tab-bar.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Samples/adaptive-launches-tabbar/adaptive-launches-tabbar.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:AdaptiveController/AdaptiveController.xcodeproj">
+   </FileRef>
+</Workspace>
