@@ -37,7 +37,7 @@ First, you should set the install date, current date, count of days to transitio
 Or count of launches for different state :
 
 ```swift     
-			var curentCountLaunches = 6
+		   var curentCountLaunches = 6
            var adaptiveState = AdaptiveLaunchesState(curentCountLaunches:curentCountLaunches,countLaunchesToSmallTextState:5,countLaunchesToImageState:7)  
  ```
 
