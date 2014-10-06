@@ -43,12 +43,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var adaptiveState = AdaptiveDateState(installDate: installDate,currentDate:NSDate(),countDaysToSmallTextState:countDaysToSmallTextState,countDaysToImageState:countDaysToImageState)
         
         
-        var butonsApperances = butonsApprencesGenerate()
+        var butonsApperances = buttonsAppearancesGenerate()
         
      
         var arrayButtons = tabBar.items as [AdaptiveTabBarItem]
        
-        AdaptiveButtonsStateManager(state: adaptiveState,buttonsAray:arrayButtons ,buttonsApperance: butonsApperances)
+        AdaptiveButtonsStateManager(state: adaptiveState,buttonsAray:arrayButtons ,buttonsAppearance: butonsApperances)
         
         
        
@@ -56,7 +56,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     
-    func butonsApprencesGenerate() -> [AdaptiveButtonApperance]{
+    func buttonsAppearancesGenerate() -> [AdaptiveButtonAppearance]{
        
         
         var imageExtensionsForStates:Dictionary = [ kSmallTitleAdaptiveState:"_smalltitle",
@@ -65,7 +65,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                                     kImageAdaptiveState+selected:"_bigimage" ]
         
         
-        var watchAperance = AdaptiveButtonApperance();
+        var watchAperance = AdaptiveButtonAppearance();
         
         watchAperance.setButonTitle("watch", state: kDefaultAdaptiveState)
         watchAperance.setButonTitle("watch", state: kSmallTitleAdaptiveState)
@@ -87,7 +87,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         watchAperance.setImageInsets(defaultImageModeInsets, state: kImageAdaptiveState);
         
         
-        var userAperance = AdaptiveButtonApperance();
+        var userAperance = AdaptiveButtonAppearance();
         
        
         userAperance.setAllCommonApperanceFrom(watchAperance)
@@ -98,7 +98,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        
         
         
-        var messageAperance = AdaptiveButtonApperance();
+        var messageAperance = AdaptiveButtonAppearance();
         
         messageAperance.setAllCommonApperanceFrom((watchAperance))
 
@@ -110,7 +110,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        
         
         
-        var menuAperance = AdaptiveButtonApperance();
+        var menuAperance = AdaptiveButtonAppearance();
         
         
         menuAperance.setAllCommonApperanceFrom((watchAperance))
@@ -121,7 +121,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
      
-        var moreAperance = AdaptiveButtonApperance();
+        var moreAperance = AdaptiveButtonAppearance();
         
         moreAperance.setAllCommonApperanceFrom((watchAperance))
         

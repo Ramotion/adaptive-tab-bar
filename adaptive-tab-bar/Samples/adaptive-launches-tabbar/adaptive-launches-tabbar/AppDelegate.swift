@@ -67,32 +67,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                                     kImageAdaptiveState+selected:"_bigimage" ]
         
         
-        var watchApperance = AdaptiveButtonAppearance();
+        var watchAppearance = AdaptiveButtonAppearance();
         
-        watchApperance.setButonTitle("watch", state: kDefaultAdaptiveState)
-        watchApperance.setButonTitle("watch", state: kSmallTitleAdaptiveState)
-        watchApperance.setButonTitle("", state: kImageAdaptiveState)
-        watchApperance.setTitleColor(UIColor.whiteColor(), state: kDefaultAdaptiveState)
+        watchAppearance.setButonTitle("watch", state: kDefaultAdaptiveState)
+        watchAppearance.setButonTitle("watch", state: kSmallTitleAdaptiveState)
+        watchAppearance.setButonTitle("", state: kImageAdaptiveState)
+        watchAppearance.setTitleColor(UIColor.whiteColor(), state: kDefaultAdaptiveState)
         
-        watchApperance.setButonTitleFontForState(defaultFont, state: kDefaultAdaptiveState)
+        watchAppearance.setButonTitleFontForState(defaultFont, state: kDefaultAdaptiveState)
         
-        watchApperance.setButonTitleFontForState(defaultSmallTitleModeFont, state: kSmallTitleAdaptiveState)
+        watchAppearance.setButonTitleFontForState(defaultSmallTitleModeFont, state: kSmallTitleAdaptiveState)
         
       
-        watchApperance.setImageNamesForStatesImageExtesions("watch", imageExtensionsForState:imageExtensionsForStates)
+        watchAppearance.setImageNamesForStatesImageExtesions("watch", imageExtensionsForState:imageExtensionsForStates)
 
         
-        watchApperance.setImageInsets(defaultInsets, state: kDefaultAdaptiveState);
+        watchAppearance.setImageInsets(defaultInsets, state: kDefaultAdaptiveState);
         
-        watchApperance.setImageInsets(defaultSmallTitleModeImageInsets, state: kSmallTitleAdaptiveState)
-        watchApperance.setTitleOffset(defaultOffset, state: kDefaultAdaptiveState)
-        watchApperance.setImageInsets(defaultImageModeInsets, state: kImageAdaptiveState);
+        watchAppearance.setImageInsets(defaultSmallTitleModeImageInsets, state: kSmallTitleAdaptiveState)
+        watchAppearance.setTitleOffset(defaultOffset, state: kDefaultAdaptiveState)
+        watchAppearance.setImageInsets(defaultImageModeInsets, state: kImageAdaptiveState);
         
         
         var userAperance = AdaptiveButtonAppearance();
         
        
-        userAperance.setAllCommonApperanceFrom(watchApperance)
+        userAperance.setAllCommonApperanceFrom(watchAppearance)
        
         userAperance.setButonTitle("user", state: kDefaultAdaptiveState)
         userAperance.setButonTitle("", state: kImageAdaptiveState)
@@ -102,7 +102,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         var messageAperance = AdaptiveButtonAppearance();
         
-        messageAperance.setAllCommonApperanceFrom((watchApperance))
+        messageAperance.setAllCommonApperanceFrom((watchAppearance))
 
         messageAperance.setButonTitle("message", state: kDefaultAdaptiveState)
         messageAperance.setButonTitle("", state: kImageAdaptiveState)
@@ -115,7 +115,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var menuAperance = AdaptiveButtonAppearance();
         
         
-        menuAperance.setAllCommonApperanceFrom((watchApperance))
+        menuAperance.setAllCommonApperanceFrom((watchAppearance))
         
         menuAperance.setButonTitle("dial", state: kDefaultAdaptiveState)
         menuAperance.setButonTitle("", state: kImageAdaptiveState)
@@ -125,7 +125,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
      
         var moreAperance = AdaptiveButtonAppearance();
         
-        moreAperance.setAllCommonApperanceFrom((watchApperance))
+        moreAperance.setAllCommonApperanceFrom((watchAppearance))
         
         moreAperance.setButonTitle("more", state: kDefaultAdaptiveState)
         moreAperance.setButonTitle("", state: kImageAdaptiveState)
@@ -134,7 +134,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       
         
         
-        return [watchApperance ,messageAperance,userAperance,menuAperance,moreAperance]
+        return [watchAppearance ,messageAperance,userAperance,menuAperance,moreAperance]
 
     }
     
