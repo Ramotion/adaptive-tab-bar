@@ -121,7 +121,7 @@ An example implemetation of a protocol method from our custom tab bar item:
 Finally, you should init Adaptive State Manager with the objects you've setup:
     	
 ```swift
-		AdaptiveButtonsStateManager(state: adaptiveState,buttonsAray:arrayButtons ,buttonsApperance: butonsApperances)
+		AdaptiveButtonsStateManager(state: adaptiveState,buttonsAray:arrayButtons ,buttonsAppearance: butonsAppearances)
 ```
 
 
