@@ -14,24 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6A5558B219E2BAB100ED3B5C"
-               BuildableName = "adaptive-launches-tabbar.app"
-               BlueprintName = "adaptive-launches-tabbar"
-               ReferencedContainer = "container:adaptive-launches-tabbar.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6A5558C919E2BAB100ED3B5C"
-               BuildableName = "adaptive-launches-tabbarTests.xctest"
-               BlueprintName = "adaptive-launches-tabbarTests"
-               ReferencedContainer = "container:adaptive-launches-tabbar.xcodeproj">
+               BlueprintIdentifier = "6AD5A2F219C6C95E00606826"
+               BuildableName = "example-date-adaptive-tab-bar.app"
+               BlueprintName = "example-date-adaptive-tab-bar"
+               ReferencedContainer = "container:example-date-adaptive-tab-bar.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -42,24 +28,14 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6A5558C919E2BAB100ED3B5C"
-               BuildableName = "adaptive-launches-tabbarTests.xctest"
-               BlueprintName = "adaptive-launches-tabbarTests"
-               ReferencedContainer = "container:adaptive-launches-tabbar.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6A5558B219E2BAB100ED3B5C"
-            BuildableName = "adaptive-launches-tabbar.app"
-            BlueprintName = "adaptive-launches-tabbar"
-            ReferencedContainer = "container:adaptive-launches-tabbar.xcodeproj">
+            BlueprintIdentifier = "6AD5A2F219C6C95E00606826"
+            BuildableName = "example-date-adaptive-tab-bar.app"
+            BlueprintName = "example-date-adaptive-tab-bar"
+            ReferencedContainer = "container:example-date-adaptive-tab-bar.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -75,10 +51,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6A5558B219E2BAB100ED3B5C"
-            BuildableName = "adaptive-launches-tabbar.app"
-            BlueprintName = "adaptive-launches-tabbar"
-            ReferencedContainer = "container:adaptive-launches-tabbar.xcodeproj">
+            BlueprintIdentifier = "6AD5A2F219C6C95E00606826"
+            BuildableName = "example-date-adaptive-tab-bar.app"
+            BlueprintName = "example-date-adaptive-tab-bar"
+            ReferencedContainer = "container:example-date-adaptive-tab-bar.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -93,10 +69,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6A5558B219E2BAB100ED3B5C"
-            BuildableName = "adaptive-launches-tabbar.app"
-            BlueprintName = "adaptive-launches-tabbar"
-            ReferencedContainer = "container:adaptive-launches-tabbar.xcodeproj">
+            BlueprintIdentifier = "6AD5A2F219C6C95E00606826"
+            BuildableName = "example-date-adaptive-tab-bar.app"
+            BlueprintName = "example-date-adaptive-tab-bar"
+            ReferencedContainer = "container:example-date-adaptive-tab-bar.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

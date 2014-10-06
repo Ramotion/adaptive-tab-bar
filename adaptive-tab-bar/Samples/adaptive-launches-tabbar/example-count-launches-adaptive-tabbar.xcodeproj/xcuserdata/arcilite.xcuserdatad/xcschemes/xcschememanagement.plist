@@ -4,30 +4,20 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>adaptive-tab-bar.xcscheme</key>
+		<key>example-count-launches-adaptive-tabbar.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>6A9D84AE19CAB231006EA201</key>
+		<key>6A5558B219E2BAB100ED3B5C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6A9D84B819CAB231006EA201</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6AD5A2F219C6C95E00606826</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6AD5A30919C6C95E00606826</key>
+		<key>6A5558C919E2BAB100ED3B5C</key>
 		<dict>
 			<key>primary</key>
 			<true/>

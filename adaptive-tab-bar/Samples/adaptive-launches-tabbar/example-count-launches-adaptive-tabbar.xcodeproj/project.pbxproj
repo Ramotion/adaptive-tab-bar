@@ -33,13 +33,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6A5558B319E2BAB100ED3B5C /* adaptive-launches-tabbar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "adaptive-launches-tabbar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A5558B319E2BAB100ED3B5C /* example-count-launches-adaptive-tabbar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "example-count-launches-adaptive-tabbar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A5558B719E2BAB100ED3B5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A5558B819E2BAB100ED3B5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A5558BF19E2BAB100ED3B5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6A5558C119E2BAB100ED3B5C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6A5558C419E2BAB100ED3B5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		6A5558CA19E2BAB100ED3B5C /* adaptive-launches-tabbarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "adaptive-launches-tabbarTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A5558CA19E2BAB100ED3B5C /* example-count-launches-adaptive-tabbarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "example-count-launches-adaptive-tabbarTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A5558CF19E2BAB100ED3B5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A5558D019E2BAB100ED3B5C /* adaptive_launches_tabbarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adaptive_launches_tabbarTests.swift; sourceTree = "<group>"; };
 		6A5558DB19E2BCFB00ED3B5C /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = UIControllers/MenuViewController.swift; sourceTree = "<group>"; };
@@ -84,8 +84,8 @@
 		6A5558B419E2BAB100ED3B5C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6A5558B319E2BAB100ED3B5C /* adaptive-launches-tabbar.app */,
-				6A5558CA19E2BAB100ED3B5C /* adaptive-launches-tabbarTests.xctest */,
+				6A5558B319E2BAB100ED3B5C /* example-count-launches-adaptive-tabbar.app */,
+				6A5558CA19E2BAB100ED3B5C /* example-count-launches-adaptive-tabbarTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,9 +153,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6A5558B219E2BAB100ED3B5C /* adaptive-launches-tabbar */ = {
+		6A5558B219E2BAB100ED3B5C /* example-count-launches-adaptive-tabbar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6A5558D419E2BAB100ED3B5C /* Build configuration list for PBXNativeTarget "adaptive-launches-tabbar" */;
+			buildConfigurationList = 6A5558D419E2BAB100ED3B5C /* Build configuration list for PBXNativeTarget "example-count-launches-adaptive-tabbar" */;
 			buildPhases = (
 				6A5558AF19E2BAB100ED3B5C /* Sources */,
 				6A5558B019E2BAB100ED3B5C /* Frameworks */,
@@ -165,14 +165,14 @@
 			);
 			dependencies = (
 			);
-			name = "adaptive-launches-tabbar";
+			name = "example-count-launches-adaptive-tabbar";
 			productName = "adaptive-launches-tabbar";
-			productReference = 6A5558B319E2BAB100ED3B5C /* adaptive-launches-tabbar.app */;
+			productReference = 6A5558B319E2BAB100ED3B5C /* example-count-launches-adaptive-tabbar.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6A5558C919E2BAB100ED3B5C /* adaptive-launches-tabbarTests */ = {
+		6A5558C919E2BAB100ED3B5C /* example-count-launches-adaptive-tabbarTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6A5558D719E2BAB100ED3B5C /* Build configuration list for PBXNativeTarget "adaptive-launches-tabbarTests" */;
+			buildConfigurationList = 6A5558D719E2BAB100ED3B5C /* Build configuration list for PBXNativeTarget "example-count-launches-adaptive-tabbarTests" */;
 			buildPhases = (
 				6A5558C619E2BAB100ED3B5C /* Sources */,
 				6A5558C719E2BAB100ED3B5C /* Frameworks */,
@@ -183,9 +183,9 @@
 			dependencies = (
 				6A5558CC19E2BAB100ED3B5C /* PBXTargetDependency */,
 			);
-			name = "adaptive-launches-tabbarTests";
+			name = "example-count-launches-adaptive-tabbarTests";
 			productName = "adaptive-launches-tabbarTests";
-			productReference = 6A5558CA19E2BAB100ED3B5C /* adaptive-launches-tabbarTests.xctest */;
+			productReference = 6A5558CA19E2BAB100ED3B5C /* example-count-launches-adaptive-tabbarTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -206,7 +206,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6A5558AE19E2BAB100ED3B5C /* Build configuration list for PBXProject "adaptive-launches-tabbar" */;
+			buildConfigurationList = 6A5558AE19E2BAB100ED3B5C /* Build configuration list for PBXProject "example-count-launches-adaptive-tabbar" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -219,8 +219,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6A5558B219E2BAB100ED3B5C /* adaptive-launches-tabbar */,
-				6A5558C919E2BAB100ED3B5C /* adaptive-launches-tabbarTests */,
+				6A5558B219E2BAB100ED3B5C /* example-count-launches-adaptive-tabbar */,
+				6A5558C919E2BAB100ED3B5C /* example-count-launches-adaptive-tabbarTests */,
 			);
 		};
 /* End PBXProject section */
@@ -274,7 +274,7 @@
 /* Begin PBXTargetDependency section */
 		6A5558CC19E2BAB100ED3B5C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6A5558B219E2BAB100ED3B5C /* adaptive-launches-tabbar */;
+			target = 6A5558B219E2BAB100ED3B5C /* example-count-launches-adaptive-tabbar */;
 			targetProxy = 6A5558CB19E2BAB100ED3B5C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -382,7 +382,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "adaptive-launches-tabbar/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "example-count-launches-adaptive-tabbar";
 			};
 			name = Debug;
 		};
@@ -392,7 +392,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "adaptive-launches-tabbar/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "example-count-launches-adaptive-tabbar";
 			};
 			name = Release;
 		};
@@ -410,7 +410,7 @@
 				);
 				INFOPLIST_FILE = "adaptive-launches-tabbarTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "example-count-launches-adaptive-tabbarTests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/adaptive-launches-tabbar.app/adaptive-launches-tabbar";
 			};
 			name = Debug;
@@ -425,7 +425,7 @@
 				);
 				INFOPLIST_FILE = "adaptive-launches-tabbarTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "example-count-launches-adaptive-tabbarTests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/adaptive-launches-tabbar.app/adaptive-launches-tabbar";
 			};
 			name = Release;
@@ -433,7 +433,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6A5558AE19E2BAB100ED3B5C /* Build configuration list for PBXProject "adaptive-launches-tabbar" */ = {
+		6A5558AE19E2BAB100ED3B5C /* Build configuration list for PBXProject "example-count-launches-adaptive-tabbar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6A5558D219E2BAB100ED3B5C /* Debug */,
@@ -442,7 +442,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6A5558D419E2BAB100ED3B5C /* Build configuration list for PBXNativeTarget "adaptive-launches-tabbar" */ = {
+		6A5558D419E2BAB100ED3B5C /* Build configuration list for PBXNativeTarget "example-count-launches-adaptive-tabbar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6A5558D519E2BAB100ED3B5C /* Debug */,
@@ -451,7 +451,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6A5558D719E2BAB100ED3B5C /* Build configuration list for PBXNativeTarget "adaptive-launches-tabbarTests" */ = {
+		6A5558D719E2BAB100ED3B5C /* Build configuration list for PBXNativeTarget "example-count-launches-adaptive-tabbarTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6A5558D819E2BAB100ED3B5C /* Debug */,

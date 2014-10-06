@@ -59,13 +59,13 @@
 		6A87F4B719C8322D00E8F31B /* adaptive-tab-bar-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "adaptive-tab-bar-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		6A87F54B19C8532500E8F31B /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		6ACC309D19C741E7006B6DF6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		6AD5A2F319C6C95E00606826 /* adaptive-tab-bar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "adaptive-tab-bar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AD5A2F319C6C95E00606826 /* example-date-adaptive-tab-bar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "example-date-adaptive-tab-bar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AD5A2F719C6C95E00606826 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6AD5A2F819C6C95E00606826 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6AD5A2FF19C6C95E00606826 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6AD5A30119C6C95E00606826 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6AD5A30419C6C95E00606826 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		6AD5A30A19C6C95E00606826 /* adaptive-tab-barTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "adaptive-tab-barTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AD5A30A19C6C95E00606826 /* example-date-adaptive-tab-barTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "example-date-adaptive-tab-barTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AD5A30F19C6C95E00606826 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6AD5A31019C6C95E00606826 /* adaptive_tab_barTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adaptive_tab_barTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,8 +116,8 @@
 		6AD5A2F419C6C95E00606826 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6AD5A2F319C6C95E00606826 /* adaptive-tab-bar.app */,
-				6AD5A30A19C6C95E00606826 /* adaptive-tab-barTests.xctest */,
+				6AD5A2F319C6C95E00606826 /* example-date-adaptive-tab-bar.app */,
+				6AD5A30A19C6C95E00606826 /* example-date-adaptive-tab-barTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -175,9 +175,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6AD5A2F219C6C95E00606826 /* adaptive-tab-bar */ = {
+		6AD5A2F219C6C95E00606826 /* example-date-adaptive-tab-bar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6AD5A31419C6C95E00606826 /* Build configuration list for PBXNativeTarget "adaptive-tab-bar" */;
+			buildConfigurationList = 6AD5A31419C6C95E00606826 /* Build configuration list for PBXNativeTarget "example-date-adaptive-tab-bar" */;
 			buildPhases = (
 				6AD5A2EF19C6C95E00606826 /* Sources */,
 				6AD5A2F019C6C95E00606826 /* Frameworks */,
@@ -188,14 +188,14 @@
 			);
 			dependencies = (
 			);
-			name = "adaptive-tab-bar";
+			name = "example-date-adaptive-tab-bar";
 			productName = "adaptive-tab-bar";
-			productReference = 6AD5A2F319C6C95E00606826 /* adaptive-tab-bar.app */;
+			productReference = 6AD5A2F319C6C95E00606826 /* example-date-adaptive-tab-bar.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6AD5A30919C6C95E00606826 /* adaptive-tab-barTests */ = {
+		6AD5A30919C6C95E00606826 /* example-date-adaptive-tab-barTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6AD5A31719C6C95E00606826 /* Build configuration list for PBXNativeTarget "adaptive-tab-barTests" */;
+			buildConfigurationList = 6AD5A31719C6C95E00606826 /* Build configuration list for PBXNativeTarget "example-date-adaptive-tab-barTests" */;
 			buildPhases = (
 				6AD5A30619C6C95E00606826 /* Sources */,
 				6AD5A30719C6C95E00606826 /* Frameworks */,
@@ -206,9 +206,9 @@
 			dependencies = (
 				6AD5A30C19C6C95E00606826 /* PBXTargetDependency */,
 			);
-			name = "adaptive-tab-barTests";
+			name = "example-date-adaptive-tab-barTests";
 			productName = "adaptive-tab-barTests";
-			productReference = 6AD5A30A19C6C95E00606826 /* adaptive-tab-barTests.xctest */;
+			productReference = 6AD5A30A19C6C95E00606826 /* example-date-adaptive-tab-barTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -229,7 +229,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6AD5A2EE19C6C95E00606826 /* Build configuration list for PBXProject "adaptive-tab-bar" */;
+			buildConfigurationList = 6AD5A2EE19C6C95E00606826 /* Build configuration list for PBXProject "example-date-adaptive-tab-bar" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -242,8 +242,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6AD5A2F219C6C95E00606826 /* adaptive-tab-bar */,
-				6AD5A30919C6C95E00606826 /* adaptive-tab-barTests */,
+				6AD5A2F219C6C95E00606826 /* example-date-adaptive-tab-bar */,
+				6AD5A30919C6C95E00606826 /* example-date-adaptive-tab-barTests */,
 			);
 		};
 /* End PBXProject section */
@@ -298,7 +298,7 @@
 /* Begin PBXTargetDependency section */
 		6AD5A30C19C6C95E00606826 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6AD5A2F219C6C95E00606826 /* adaptive-tab-bar */;
+			target = 6AD5A2F219C6C95E00606826 /* example-date-adaptive-tab-bar */;
 			targetProxy = 6AD5A30B19C6C95E00606826 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -409,7 +409,7 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "adaptive-tab-bar/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "example-date-adaptive-tab-bar";
 				SWIFT_OBJC_BRIDGING_HEADER = "adaptive-tab-bar-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -424,7 +424,7 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "adaptive-tab-bar/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "example-date-adaptive-tab-bar";
 				SWIFT_OBJC_BRIDGING_HEADER = "adaptive-tab-bar-Bridging-Header.h";
 			};
 			name = Release;
@@ -443,7 +443,7 @@
 				);
 				INFOPLIST_FILE = "adaptive-tab-barTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "example-date-adaptive-tab-barTests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/adaptive-tab-bar.app/adaptive-tab-bar";
 			};
 			name = Debug;
@@ -458,7 +458,7 @@
 				);
 				INFOPLIST_FILE = "adaptive-tab-barTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "example-date-adaptive-tab-barTests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/adaptive-tab-bar.app/adaptive-tab-bar";
 			};
 			name = Release;
@@ -466,7 +466,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6AD5A2EE19C6C95E00606826 /* Build configuration list for PBXProject "adaptive-tab-bar" */ = {
+		6AD5A2EE19C6C95E00606826 /* Build configuration list for PBXProject "example-date-adaptive-tab-bar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6AD5A31219C6C95E00606826 /* Debug */,
@@ -475,7 +475,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6AD5A31419C6C95E00606826 /* Build configuration list for PBXNativeTarget "adaptive-tab-bar" */ = {
+		6AD5A31419C6C95E00606826 /* Build configuration list for PBXNativeTarget "example-date-adaptive-tab-bar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6AD5A31519C6C95E00606826 /* Debug */,
@@ -484,7 +484,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6AD5A31719C6C95E00606826 /* Build configuration list for PBXNativeTarget "adaptive-tab-barTests" */ = {
+		6AD5A31719C6C95E00606826 /* Build configuration list for PBXNativeTarget "example-date-adaptive-tab-barTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6AD5A31819C6C95E00606826 /* Debug */,

@@ -45,12 +45,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var adaptiveState = AdaptiveLaunchesState(curentCountLaunches:curentCountLaunches,countLaunchesToSmallTextState:countDaysForSmaltextState,countLaunchesToImageState:countDaysForImageModeState)
         
         
-        var butonsApperances = butonsApprencesGenerate()
+        var buttonsApperances = buttonsApprencesGenerate() //func butonsApprencesGenerate() -> [AdaptiveButtonApperance]
         
      
         var arrayButtons = tabBar.items as [AdaptiveTabBarItem]
        
-        AdaptiveButtonsStateManager(state: adaptiveState,buttonsAray:arrayButtons ,buttonsApperance: butonsApperances)
+        AdaptiveButtonsStateManager(state: adaptiveState,buttonsAray:arrayButtons ,buttonsApperance: buttonsApperances)
         
         
        
@@ -58,7 +58,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     
-    func butonsApprencesGenerate() -> [AdaptiveButtonApperance]{
+    func buttonsApprencesGenerate() -> [AdaptiveButtonApperance]{
        
         
         var imageExtensionsForStates:Dictionary = [ kSmallTitleAdaptiveState:"_smalltitle",

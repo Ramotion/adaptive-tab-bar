@@ -36,8 +36,9 @@ First, you should set the install date, current date, count of days to transitio
  ```
 Or count of launches for different state :
 
-```swift         
-           var adaptiveState = AdaptiveLaunchesState(curentCountLaunches:curentCountLaunches,countLaunchesToSmallTextState:countDaysForSmaltextState,countLaunchesToImageState:countDaysForImageModeState)  
+```swift     
+			var curentCountLaunches = 6
+           var adaptiveState = AdaptiveLaunchesState(curentCountLaunches:curentCountLaunches,countLaunchesToSmallTextState:5,countLaunchesToImageState:7)  
  ```
 
 And then you should setup an array of appearances. You should setup button images for each state for each apperacnce object:
