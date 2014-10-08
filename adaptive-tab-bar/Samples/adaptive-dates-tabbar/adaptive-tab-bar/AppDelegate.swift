@@ -37,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         tabBar.barTintColor = tabColor
         tabBar.clipsToBounds = true
         
-        var installDate = NSDate(dateString:"2014-09-20")
+        var installDate = NSDate(dateString:"2014-10-7")
 
        
         var adaptiveState = AdaptiveDateState(installDate: installDate,currentDate:NSDate(),countDaysToSmallTextState:countDaysToSmallTextState,countDaysToImageState:countDaysToImageState)
@@ -59,7 +59,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func buttonsAppearancesGenerate() -> [AdaptiveButtonAppearance]{
        
         
-        var imageExtensionsForStates:Dictionary = [ kSmallTitleAdaptiveState:"_smalltitle",
+        var imageExtensionsForStates:Dictionary = [ kDefaultAdaptiveState:"",
+                                                    kSmallTitleAdaptiveState:"_smalltitle",
                                                     kImageAdaptiveState:"_bigimage",
                                                     kSmallTitleAdaptiveState+selected :"_smalltitle",
                                                     kImageAdaptiveState+selected:"_bigimage" ]
