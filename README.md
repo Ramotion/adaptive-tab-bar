@@ -37,11 +37,11 @@ First, you should set the install date, current date, count of days to transitio
 Or count of launches for different state:
 
 ```swift
-    var currentCountLaunches = 6
-    var adaptiveState = AdaptiveLaunchesState(currentCountLaunches:currentCountLaunches, countLaunchesToSmallTextState:5, countLaunchesToImageState:7)
+    var curentCountLaunches = 6
+    var adaptiveState = AdaptiveLaunchesState(curentCountLaunches:curentCountLaunches, countLaunchesToSmallTextState:5, countLaunchesToImageState:7)
 ```
 
-And then you should setup an array of appearances. You should setup button images for each state for each apperacnce object:
+And then you should setup an array of appearances. You should setup button images for each state for each apperance object:
 
 ```swift
     var buttonsAppearances = buttonsAppearancesGenerate() //func butonsAppearancesGenerate() -> [AdaptiveButtonApperance]
@@ -112,14 +112,14 @@ In your custom tab item, you should implement these methods from the protocol:
 An example implemetation of a protocol method from our custom tab bar item:
 	
 ```swift	
-        func setTitleToAdaptiveButton(text: NSString) {
-        	self.title = text
-    	}
+    func setTitleToAdaptiveButton(text: NSString) {
+    	self.title = text
+	}
 ```
 
 
 Finally, you should init Adaptive State Manager with the objects you've setup:
-	
+
 ```swift
 	AdaptiveButtonsStateManager(state: adaptiveState, buttonsAray:arrayButtons, buttonsAppearance:butonsAppearances)
 ```
