@@ -30,98 +30,98 @@ AdaptiveController is module for adding custom states to Native or Custom UI ele
 
 First, you should set the install date, current date, count of days to transition to small text state, and count of days to transition to big image state. The AdaptiveDateState object automatically determines what UI state to show:
 
-```swift         
-        var installDate = NSDate(dateString:"2014-09-18")
-        var adaptiveState = AdaptiveDateState(installDate: installDate,currentDate:NSDate(),countDaysToSmallTextState:countDaysToSmallTextState,countDaysToImageState:countDaysToImageState)    
- ```
-Or count of launches for different state :
+```swift
+    var installDate = NSDate(dateString:"2014-09-18")
+    var adaptiveState = AdaptiveDateState(installDate: installDate, currentDate:NSDate(), countDaysToSmallTextState:countDaysToSmallTextState, countDaysToImageState:countDaysToImageState)
+```
+Or count of launches for different state:
 
-```swift     
-		   var curentCountLaunches = 6
-           var adaptiveState = AdaptiveLaunchesState(curentCountLaunches:curentCountLaunches,countLaunchesToSmallTextState:5,countLaunchesToImageState:7)  
- ```
+```swift
+    var currentCountLaunches = 6
+    var adaptiveState = AdaptiveLaunchesState(currentCountLaunches:currentCountLaunches, countLaunchesToSmallTextState:5, countLaunchesToImageState:7)
+```
 
 And then you should setup an array of appearances. You should setup button images for each state for each apperacnce object:
 
 ```swift
-        var buttonsAppearances = buttonsAppearancesGenerate() //func butonsAppearancesGenerate() -> [AdaptiveButtonApperance]
+    var buttonsAppearances = buttonsAppearancesGenerate() //func butonsAppearancesGenerate() -> [AdaptiveButtonApperance]
 ```
-       
-And then you should setup an array of items Appearance object. You should set the button's image for each state for each appearance object.  
+
+And then you should setup an array of items Appearance object. You should set the button's image for each state for each appearance object.
 
 First, you should setup a dictionary for the extension of the image for each UI state:
 		
 ```swift
-		var imageExtensionsForStates:Dictionary = [ kSmallTitleAdaptiveState:"_smalltitle",kImageAdaptiveState:"_bigimage",kSmallTitleAdaptiveState+selected :"_smalltitle",kImageAdaptiveState+selected:"_bigimage" ]
+    var imageExtensionsForStates:Dictionary = [ kSmallTitleAdaptiveState:"_smalltitle", kImageAdaptiveState:"_bigimage", kSmallTitleAdaptiveState+selected :"_smalltitle", kImageAdaptiveState+selected:"_bigimage" ]
 ```
  Then you should set the Appearance for each UITabBarItem title for each state, fonts for each state, a default image if you describe an extension for each state, or if you do not describe an extension, you should setup each image for each state.
  
  First, init the appearance object and setup the text for each state. If the text is the same for each state, you can set text for the default state:
-       
+ 
 ```swift
-        var watchAppearance = AdaptiveButtonAppearance(); 
-        watchAppearance.setButonTitle("watch", state: kDefaultAdaptiveState)
-        watchAppearance.setButonTitle("watch", state: kSmallTitleAdaptiveState)
-        watchAppearance.setButonTitle("", state: kImageAdaptiveState)
+    var watchAppearance = AdaptiveButtonAppearance(); 
+    watchAppearance.setButonTitle("watch", state: kDefaultAdaptiveState)
+    watchAppearance.setButonTitle("watch", state: kSmallTitleAdaptiveState)
+    watchAppearance.setButonTitle("", state: kImageAdaptiveState)
 ```
-        
- Then you should setup your fonts for each state:    
+
+Then you should setup your fonts for each state:
 
 ```swift
-		watchAppearance.setButonTitleFontForState(yourDefaultFont, state: kDefaultAdaptiveState)        
-        watchAppearance.setButonTitleFontForState(yourDefaultSmallTitleModeFont, state: kSmallTitleAdaptiveState)
+    watchAppearance.setButonTitleFontForState(yourDefaultFont, state: kDefaultAdaptiveState)
+    watchAppearance.setButonTitleFontForState(yourDefaultSmallTitleModeFont, state: kSmallTitleAdaptiveState)
 ```
 
 Then you should set the default image and extensions for each state a function which automaticaly sets images for each state: 
 
 ```swift
-        watchAppearance.setImageNamesForStatesImageExtesions("watch", imageExtensionsForState:imageExtensionsForStates)
+    watchAppearance.setImageNamesForStatesImageExtesions("watch", imageExtensionsForState:imageExtensionsForStates)
 ```
 
 Then you should setup the appearance insets for each state: 
 
 ```swift
-        watchAppearance.setImageInsets(defaultInsets, state: kDefaultAdaptiveState);        
-        watchAppearance.setImageInsets(defaultSmallTitleModeImageInsets, state: kSmallTitleAdaptiveState)
-        watchAppearance.setTitleOffset(defaultOffset, state: kDefaultAdaptiveState)
-       watchAppearance.setImageInsets(defaultImageModeInsets, state: kImageAdaptiveState);  
+    watchAppearance.setImageInsets(defaultInsets, state: kDefaultAdaptiveState);
+    watchAppearance.setImageInsets(defaultSmallTitleModeImageInsets, state: kSmallTitleAdaptiveState)
+    watchAppearance.setTitleOffset(defaultOffset, state: kDefaultAdaptiveState)
+    watchAppearance.setImageInsets(defaultImageModeInsets, state: kImageAdaptiveState);
 ```
 
-Then you should setup сustom UITabBarItems which conform to the AdaptiveButtonsProtocol:        
-        
+Then you should setup сustom UITabBarItems which conform to the AdaptiveButtonsProtocol:
+
 ```swift 
-       		 var arrayButtons = tabBar.items as [AdaptiveTabBarItem]
+    var arrayButtons = tabBar.items as [AdaptiveTabBarItem]
 ```
 
 In your custom tab item, you should implement these methods from the protocol:
 		
-```swift  
-        @objc protocol AdaptiveApperanceProtocol {
-    		optional func setFontToAdaptiveButton(font: UIFont)
-    		optional func setTitleToAdaptiveButton(text: NSString)
-    		optional func setImageToAdaptiveButton(image: UIImage?)
-    		optional func setHighlightedToAdaptiveButton(image: UIImage?)
-    		optional func setBackgroundImageToAdaptiveButton(image: UIImage?)
-    		optional func setSelectedImageToAdaptiveButton(image: UIImage?)
-    		optional func setImageInsetsToAdaptiveButton(insets: UIEdgeInsets)
-    		optional func setTitleOffsetToAdaptiveButton(offset: UIOffset)
-    		optional func setTitleColorToAdaptiveButton(titleColor: UIColor)
-		}
+```swift
+    @objc protocol AdaptiveApperanceProtocol {
+        optional func setFontToAdaptiveButton(font: UIFont)
+        optional func setTitleToAdaptiveButton(text: NSString)
+        optional func setImageToAdaptiveButton(image: UIImage?)
+        optional func setHighlightedToAdaptiveButton(image: UIImage?)
+        optional func setBackgroundImageToAdaptiveButton(image: UIImage?)
+        optional func setSelectedImageToAdaptiveButton(image: UIImage?)
+        optional func setImageInsetsToAdaptiveButton(insets: UIEdgeInsets)
+        optional func setTitleOffsetToAdaptiveButton(offset: UIOffset)
+        optional func setTitleColorToAdaptiveButton(titleColor: UIColor)
+    }
 ```
 
 An example implemetation of a protocol method from our custom tab bar item:
 	
 ```swift	
-		func setTitleToAdaptiveButton(text: NSString){
+        func setTitleToAdaptiveButton(text: NSString) {
         	self.title = text
     	}
 ```
 
 
 Finally, you should init Adaptive State Manager with the objects you've setup:
-    	
+	
 ```swift
-		AdaptiveButtonsStateManager(state: adaptiveState,buttonsAray:arrayButtons ,buttonsAppearance: butonsAppearances)
+	AdaptiveButtonsStateManager(state: adaptiveState, buttonsAray:arrayButtons, buttonsAppearance:butonsAppearances)
 ```
 
 
@@ -136,36 +136,36 @@ named AdaptiveDateState
 In AdaptiveDateState, we can add new custom states like this:
 
 ```swift
-		let kSmallTitleAdaptiveState = "kImageAdaptiveState"
-		let kImageAdaptiveState = "kNormalImageAdaptiveState"
+	let kSmallTitleAdaptiveState = "kImageAdaptiveState"
+	let kImageAdaptiveState = "kNormalImageAdaptiveState"
 ```
 
 And add methods which decide how the state relates to input parameters:
 
 ```swift
-		var adaptiveState = AdaptiveDateState(installDate: installDate,currentDate:NSDate(),countDaysToSmallTextState:countDaysToSmallTextState,countDaysToImageState:countDaysToImageState)
+	var adaptiveState = AdaptiveDateState(installDate: installDate,currentDate:NSDate(),countDaysToSmallTextState:countDaysToSmallTextState,countDaysToImageState:countDaysToImageState)
 ```
 
-In AdaptiveDateState, we add custom init methods which decided what states have the Adaptive state object according to the input parameters:    
+In AdaptiveDateState, we add custom init methods which decided what states have the Adaptive state object according to the input parameters:
 
 ```swift 
-private func stateRemainDays 	(remainDays:Int,countDaysToSmallTextState:Int,countDaysToImageState:Int)->String{        
+    private func stateRemainDays(remainDays:Int, countDaysToSmallTextState:Int, countDaysToImageState:Int)->String {
         var mode:String = kDefaultAdaptiveState
         print(" DAYS \(remainDays) ")
         if remainDays > countDaysToSmallTextState && remainDays < countDaysToImageState{
             mode = kSmallTitleAdaptiveState
-        }else if remainDays > countDaysToImageState {
+        } else if remainDays > countDaysToImageState {
             mode = kImageAdaptiveState
         }
         print(mode)
         return mode
-    	}    
+    }
 ```
 
 You can customize different UI components if they adopt to the AdaptiveApperanceProtocol.
 
 ##About us
 
-[Ramotion](http://Ramotion.com )  is an iPhone app design and development company. We are ready for new interesting iOS App Development projects.
+[Ramotion](http://Ramotion.com) is an iPhone app design and development company. We are ready for new interesting iOS App Development projects.
 
 Follow us on [twitter](http://twitter.com/ramotion).
