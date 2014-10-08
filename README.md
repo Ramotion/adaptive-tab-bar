@@ -5,15 +5,15 @@ AdaptiveController is a 'Progressive Reduction' Swift module for adding custom s
 ![Mou icon](https://d13yacurqjgara.cloudfront.net/users/25514/screenshots/1320024/viber-ios7-concept-navigation-bar-ramotion.gif)
 
 ##Tab Bar After Install
-![Mou icon](http://i.imgur.com/K46LKQE.png)
+![Mou icon](http://i.imgur.com/7V6M7z6.png?1)
 
 ##Tab Bar After Two Weeks
 
-![Mou icon](http://i.imgur.com/MWUmKRv.png)
+![Mou icon](http://i.imgur.com/KTZIC4Z.png?1)
 
 ##Tab Bar After a Month
 
-![Mou icon](http://i.imgur.com/ixjmhpQ.png)
+![Mou icon](http://i.imgur.com/TNQMGTf.png?1)
 
 ##Overview
 
