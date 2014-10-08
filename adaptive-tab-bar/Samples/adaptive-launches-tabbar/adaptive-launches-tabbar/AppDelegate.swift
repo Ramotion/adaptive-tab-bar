@@ -40,7 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         tabBar.barTintColor = tabColor
         tabBar.clipsToBounds = true
         
-        var curentCountLaunches = 5
+        var curentCountLaunches = 10
         
         var adaptiveState = AdaptiveLaunchesState(curentCountLaunches:curentCountLaunches,countLaunchesToSmallTextState:countDaysForSmaltextState,countLaunchesToImageState:countDaysForImageModeState)
         
