@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A3ED0C819ED0236006F06DD /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A87F54B19C8532500E8F31B /* DateExtension.swift */; };
 		6A55590219E2C20900ED3B5C /* AdaptiveController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A55590119E2C20900ED3B5C /* AdaptiveController.framework */; };
 		6A55590819E2CF7200ED3B5C /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A55590319E2CF7200ED3B5C /* MenuViewController.swift */; };
 		6A55590919E2CF7200ED3B5C /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A55590419E2CF7200ED3B5C /* MessageViewController.swift */; };
@@ -290,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AD5A31119C6C95E00606826 /* adaptive_tab_barTests.swift in Sources */,
+				6A3ED0C819ED0236006F06DD /* DateExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

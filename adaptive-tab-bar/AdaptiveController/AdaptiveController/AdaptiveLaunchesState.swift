@@ -16,7 +16,7 @@ public class AdaptiveLaunchesState : AdaptiveState {
     }
     
     
-    public convenience init(curentCountLaunches:Int,countLaunchesToSmallTextState:Int,countLaunchesToImageState:Int) {
+   internal public convenience init(curentCountLaunches:Int,countLaunchesToSmallTextState:Int,countLaunchesToImageState:Int) {
         self.init()
         
         
@@ -25,7 +25,7 @@ public class AdaptiveLaunchesState : AdaptiveState {
         //print(currentItemState)
     }
     
-    private func stateRemainDays (curentCountLaunches:Int,countLaunchesToSmallTextState:Int,countLaunchesToImageState:Int)->String{
+    internal func stateRemainDays (curentCountLaunches:Int,countLaunchesToSmallTextState:Int,countLaunchesToImageState:Int)->String{
         var mode:String = kDefaultAdaptiveState
         
         if curentCountLaunches > countLaunchesToSmallTextState && curentCountLaunches < countLaunchesToImageState{

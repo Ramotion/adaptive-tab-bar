@@ -28,7 +28,7 @@ public class AdaptiveDateState: AdaptiveState {
     }
     
     
-    private func daysBetweenDates(installDate:NSDate, currentDate:NSDate) -> Int{
+     func daysBetweenDates(installDate:NSDate, currentDate:NSDate) -> Int{
         
         let cal = NSCalendar.currentCalendar()
         
@@ -39,7 +39,7 @@ public class AdaptiveDateState: AdaptiveState {
         return components.day+1;
     }
     
-    private func stateRemainDays (remainDays:Int,countDaysToSmallTextState:Int,countDaysToImageState:Int)->String{
+     func stateRemainDays (remainDays:Int,countDaysToSmallTextState:Int,countDaysToImageState:Int)->String{
         
         var mode:String = kDefaultAdaptiveState
         print(" DAYS \(remainDays) ")
