@@ -5,6 +5,8 @@
 //  Created by Arcilite on 04.10.14.
 //  Copyright (c) 2014 Ramotion. All rights reserved.
 //
+public let countDaysForSmaltextState = 3
+public let countDaysForImageModeState = 7
 
 import UIKit
 
@@ -16,7 +18,7 @@ public class AdaptiveLaunchesState : AdaptiveState {
     }
     
     
-   internal public convenience init(curentCountLaunches:Int,countLaunchesToSmallTextState:Int,countLaunchesToImageState:Int) {
+    public convenience init(curentCountLaunches:Int,countLaunchesToSmallTextState:Int,countLaunchesToImageState:Int) {
         self.init()
         
         

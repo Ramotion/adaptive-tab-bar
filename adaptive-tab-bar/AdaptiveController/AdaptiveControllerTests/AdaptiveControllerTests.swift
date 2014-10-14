@@ -14,7 +14,7 @@ import AdaptiveController
 class AdaptiveControllerTests: XCTestCase {
     
     var adaptiveDateState:AdaptiveDateState?
-    var adaptiveLaunchState:AdaptiveDateState?
+    var adaptiveLaunchState:AdaptiveLaunchesState?
     
     override func setUp() {
         super.setUp()
@@ -23,9 +23,9 @@ class AdaptiveControllerTests: XCTestCase {
         
         adaptiveDateState = AdaptiveDateState(installDate: installDate,currentDate:NSDate(),countDaysToSmallTextState:countDaysToSmallTextState,countDaysToImageState:countDaysToImageState)
         
-        var curentCountLaunches = 10
+        var curentCountLaunches = 0
         
-       // adaptiveLaunchState = AdaptiveLaunchesState(curentCountLaunches:curentCountLaunches,countLaunchesToSmallTextState:countDaysForSmaltextState,countLaunchesToImageState:countDaysForImageModeState)
+        adaptiveLaunchState = AdaptiveLaunchesState(curentCountLaunches:curentCountLaunches,countLaunchesToSmallTextState:countDaysForSmaltextState,countLaunchesToImageState:countDaysForImageModeState)
         
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }

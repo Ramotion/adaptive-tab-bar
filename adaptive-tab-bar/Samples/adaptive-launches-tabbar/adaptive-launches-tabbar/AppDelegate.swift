@@ -6,8 +6,7 @@
 //  Copyright (c) 2014 Ramotion. All rights reserved.
 //
 
-let countDaysForSmaltextState = 3
-let countDaysForImageModeState = 7
+
 
 import UIKit
 import CoreGraphics
