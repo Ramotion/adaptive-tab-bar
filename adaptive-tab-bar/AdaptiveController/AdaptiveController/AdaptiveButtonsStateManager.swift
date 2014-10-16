@@ -81,8 +81,19 @@ public class AdaptiveButtonsStateManager: NSObject {
                 button.setTitleOffsetToAdaptiveButton?(titleOffset)
             }
             
-            if let titleColor = buttonApperance.getTitleColorForState(state) {
-                button.setTitleColorToAdaptiveButton?(titleColor)
+            if let titleStateValue:ControlStateValue = buttonApperance.getTitleColorForState(state) {
+                
+                switch titleStateValue.normalState! {
+                case .ControlStateColor(let titleColor):
+                    button.setTitleColorToAdaptiveButton?(titleColor)
+                    break
+                default:
+                  //WARNING: Color is default
+                    break
+                    
+                }
+                
+               
             }
             
 

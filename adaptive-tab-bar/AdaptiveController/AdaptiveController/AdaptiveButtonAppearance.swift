@@ -22,7 +22,7 @@ public class AdaptiveButtonAppearance: NSObject {
     private var buttonsImageInsetsForStateDictionary:Dictionary <String,UIEdgeInsets> = Dictionary<String,UIEdgeInsets>()
     private var buttonsTitleInsetsForStateDictionary:Dictionary <String,UIOffset> = Dictionary<String,UIOffset>()
     
-    private var buttonsTitleColorsForStateDictionary:Dictionary <String,UIColor> = Dictionary<String,UIColor>()
+    private var buttonsTitleColorsForStateDictionary:Dictionary <String,ControlStateValue> = Dictionary<String,ControlStateValue>()
     
     func setInsetsFromAdaptiveButtonApperance(adaptiveButtonApperance:AdaptiveButtonAppearance){
         
@@ -159,18 +159,18 @@ public class AdaptiveButtonAppearance: NSObject {
     }
     
     
-    public func setTitleColor(color:UIColor, state:String){
+    public func setTitleColor(color:ControlStateValue, state:String){
         buttonsTitleColorsForStateDictionary.updateValue(color, forKey:state)
     }
     
-    public func getTitleColorForState(state:NSString)->UIColor!{
+    public func getTitleColorForState(state:NSString)-> ControlStateValue!{
         
-        var offset:UIColor? = buttonsTitleColorsForStateDictionary[state]
-        if(offset == nil){
-            offset = buttonsTitleColorsForStateDictionary[kDefaultAdaptiveState]?
+        var titleColorState:ControlStateValue? = buttonsTitleColorsForStateDictionary[state]
+        if(titleColorState == nil){
+            titleColorState = buttonsTitleColorsForStateDictionary[kDefaultAdaptiveState]?
         }
         
-        return offset!
+        return titleColorState!
     }
 
 }
