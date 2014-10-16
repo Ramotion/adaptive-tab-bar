@@ -63,6 +63,7 @@ public class ControlStateValue:ControlStateProtocol{
     }
     
     
+    
     public func setNormalStateColor(color:UIColor){
         normalState = .ControlStateColor(color)
     }
@@ -75,6 +76,7 @@ public class ControlStateValue:ControlStateProtocol{
         highlightedState = .ControlStateColor(color)
     }
     
+    
     public func setNormalStateImage(image:UIImage){
         normalState = .ControlStateImage(image)
     }
@@ -86,5 +88,51 @@ public class ControlStateValue:ControlStateProtocol{
     public func setHighlightedStateImage(image:UIImage){
         highlightedState = .ControlStateImage(image)
     }
+    
+    public func setHighlightedStateImage(image:UIImage){
+        highlightedState = .ControlStateImage(image)
+    }
+    
+    
+    
+    public func setNormalStateFont(font:UIFont){
+        normalState = .ControlStateFont(font)
+    }
+    
+    public func setSelectedStateFont(font:UIFont){
+        selectedState = .ControlStateFont(font)
+    }
+    
+    public func setHighlightedStateFont(font:UIFont){
+        highlightedState = .ControlStateFont(font)
+    }
+    
+    
+    public func setNormalStateInsets(insets:UIEdgeInsets){
+        normalState = .ControlStateInsets(insets)
+    }
+    
+    public func seSelectedStateInsets(insets:UIEdgeInsets){
+        selectedState = .ControlStateInsets(insets)
+    }
+    
+    public func setHighlightedStateInsets(insets:UIEdgeInsets){
+        highlightedState = .ControlStateInsets(insets)
+    }
+    
+    
+    public func setNormalStateFont(offset:UIOffset){
+        normalState = .ControlStateFont(font)
+    }
+    
+    public func seSelectedStateFont(font:UIFont){
+        selectedState = .ControlStateFont(font)
+    }
+    
+    public func setHighlightedStateFont(font:UIFont){
+        highlightedState = .ControlStateFont(font)
+    }
+    
+    
     
 }
