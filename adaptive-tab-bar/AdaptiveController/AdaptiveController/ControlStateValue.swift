@@ -14,9 +14,9 @@ public enum ControlStateEnum {
 
 
 
-public class ControlState:ControlStateProtocol{
+public class ControlStateValue:ControlStateProtocol{
    
-    typealias StateEnum = ControlStateEnum
+    public typealias StateEnum = ControlStateEnum
     
     public var normalState: StateEnum?
     public var selectedState: StateEnum?
@@ -26,9 +26,9 @@ public class ControlState:ControlStateProtocol{
     public convenience init(valueForNormalState:ControlStateEnum?) {
        self.init()
        
-       self.valueForNormalState = valueForNormalState
-       self.valueForHighlighttedState = valueForHighlightedState
-       self.valueForSelectedState = valueForSelectedState
+       self.normalState = valueForNormalState
+       self.selectedState = valueForNormalState
+       self.highlightedState = valueForNormalState
    
     }
    
