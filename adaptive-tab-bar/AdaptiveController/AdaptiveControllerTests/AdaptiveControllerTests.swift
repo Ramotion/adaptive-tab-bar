@@ -13,16 +13,14 @@ import AdaptiveController
 
 class AdaptiveControllerTests: XCTestCase {
     
-    var adaptiveDateState:AdaptiveDateState?
-    var adaptiveLaunchState:AdaptiveLaunchesState?
-    var installDate:NSDate?
+//    var adaptiveDateState:AdaptiveDateState?
+//    var adaptiveLaunchState:AdaptiveLaunchesState?
+//    var installDate:NSDate?
     
     override func setUp() {
         super.setUp()
       
-         installDate = NSDate(dateString:"2014-07-7")
-       
-        adaptiveDateState = AdaptiveDateState(installDate: installDate!,currentDate:NSDate(),countDaysToSmallTextState:countDaysToSmallTextState,countDaysToImageState:countDaysToImageState)
+        
         
 //        var curentCountLaunches = 0
 //        
@@ -38,12 +36,17 @@ class AdaptiveControllerTests: XCTestCase {
     
     func testDefaultState() {
         // This is an example of a functional test case.
-        XCTAssert(!adaptiveDateState!.isEqual(kDefaultAdaptiveState), "Fail DefaultState")
+        var installDate = NSDate(dateString:"2014-07-7")
+        var currentDate = NSDate(dateString:"2014-07-7")
+        
+        var adaptiveDateState = AdaptiveDateState(installDate: installDate,currentDate:currentDate,countDaysToSmallTextState:countDaysToSmallTextState,countDaysToImageState:countDaysToImageState)
+        
+        XCTAssert(!adaptiveDateState.isEqual(kDefaultAdaptiveState), "Fail DefaultState")
         
         var buttonsAppearances = buttonsAppearancesGenerate()
         var tabBarItem = TestTabBarItem()
         
-        tabBarItem.font = defaultFont
+        tabBarItem.font =  defaultFont
         tabBarItem.text = "watch"
         tabBarItem.image = UIImage(named: "watch")
         tabBarItem.insets = defaultInsets
@@ -52,24 +55,26 @@ class AdaptiveControllerTests: XCTestCase {
         
         var arrayButtons = [tabBarItem]
         
-        AdaptiveButtonsStateManager(state: adaptiveDateState!,buttonsAray:arrayButtons ,buttonsAppearance: buttonsAppearances)
+        AdaptiveButtonsStateManager(state: adaptiveDateState,buttonsAray:arrayButtons ,buttonsAppearance: buttonsAppearances)
     
     }
     
     func testSmallTextState() {
         // This is an example of a functional test case.
+        var installDate = NSDate(dateString:"2014-07-7")
         var currentDate = NSDate(dateString:"2014-07-21")
         
-        adaptiveDateState = AdaptiveDateState(installDate: installDate!,currentDate:NSDate(),countDaysToSmallTextState:countDaysToSmallTextState,countDaysToImageState:countDaysToImageState)
+        var adaptiveDateState = AdaptiveDateState(installDate: installDate,currentDate:currentDate,countDaysToSmallTextState:countDaysToSmallTextState,countDaysToImageState:countDaysToImageState)
         
-        //XCTAssert(!adaptiveDateState!.isEqual(kSmallTitleAdaptiveState), "Fail SmallTitleState")
+        XCTAssert(!adaptiveDateState.isEqual(kSmallTitleAdaptiveState), "Fail SmallTitleState")
     }
     
     func testImageState() {
         // This is an example of a functional test case.
+        var installDate = NSDate(dateString:"2014-07-7")
         var currentDate = NSDate(dateString:"2014-08-21")
         
-        adaptiveDateState = AdaptiveDateState(installDate: installDate!,currentDate:NSDate(),countDaysToSmallTextState:countDaysToSmallTextState,countDaysToImageState:countDaysToImageState)
+        var adaptiveDateState = AdaptiveDateState(installDate: installDate,currentDate:currentDate,countDaysToSmallTextState:countDaysToSmallTextState,countDaysToImageState:countDaysToImageState)
         
        // XCTAssert(!adaptiveDateState!.isEqual(kImageAdaptiveState), "Fail ImageAdaptiveState")
     }
@@ -87,7 +92,7 @@ class AdaptiveControllerTests: XCTestCase {
         var watchAppearance = AdaptiveButtonAppearance();
         
         watchAppearance.setButonTitle("watch", state: kDefaultAdaptiveState)
-        watchAppearance.setButonTitle("watch", state: kSmallTitleAdaptiveState)
+        watchAppearance.setButonTitle("watch2", state: kSmallTitleAdaptiveState)
         watchAppearance.setButonTitle("", state: kImageAdaptiveState)
         watchAppearance.setTitleColor(UIColor.whiteColor(), state: kDefaultAdaptiveState)
         

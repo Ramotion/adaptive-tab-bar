@@ -26,11 +26,14 @@ class TestTabBarItem:   AdaptiveApperanceProtocol {
     }
     
     func setFontToAdaptiveButton(font: UIFont){
+        XCTAssertNotNil(font)
          XCTAssert(font.isEqual(self.font), "Fail  font")
     }
     
     func setTitleToAdaptiveButton(text: NSString){
-         println("text  \(text)")
+         XCTAssertNotNil(text)
+         XCTAssertNotNil(self.text)
+         println(text)
          XCTAssert(text.isEqualToString(self.text!), "Fail  text")
     }
     
@@ -43,17 +46,17 @@ class TestTabBarItem:   AdaptiveApperanceProtocol {
     }
     
     func setImageInsetsToAdaptiveButton(insets: UIEdgeInsets){
-        XCTAssert(!UIEdgeInsetsEqualToEdgeInsets(insets, self.insets!), "Fail insets")
+        XCTAssert(UIEdgeInsetsEqualToEdgeInsets(insets, self.insets!), "Fail insets")
     }
     
     func setTitleOffsetToAdaptiveButton(offset: UIOffset){
         println(offset)
         println(self.offset)
-        XCTAssert(!UIOffsetEqualToOffset(offset,self.offset!), "Fail offset")
+        XCTAssert(UIOffsetEqualToOffset(offset,self.offset!), "Fail offset")
     }
     
     func setTitleColorToAdaptiveButton(color: UIColor){
-       XCTAssert(!color.isEqual(self.color), "Fail color")
+       XCTAssert(color.isEqual(self.color), "Fail color")
     }
     
     

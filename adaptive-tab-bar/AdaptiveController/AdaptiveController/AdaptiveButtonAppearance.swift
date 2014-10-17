@@ -57,6 +57,8 @@ public class AdaptiveButtonAppearance: NSObject {
     }
     
     public  func setButonTitle(title:NSString, state:String){
+        println(title)
+        println(state)
         butonsTitleForStateDictionary.updateValue(title, forKey:state)
     }
     

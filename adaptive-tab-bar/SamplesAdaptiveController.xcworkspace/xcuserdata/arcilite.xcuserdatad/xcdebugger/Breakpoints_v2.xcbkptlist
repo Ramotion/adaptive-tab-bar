@@ -35,5 +35,363 @@
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdaptiveController/AdaptiveControllerTests/AdaptiveControllerTests.swift"
+            timestampString = "435241215.514344"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "testDefaultState()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdaptiveController/AdaptiveController/AdaptiveButtonAppearance.swift"
+            timestampString = "435240731.057037"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "setButonTitle(_:state:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdaptiveController/AdaptiveController/AdaptiveButtonAppearance.swift"
+            timestampString = "435241015.75753"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "getButonTitleForState(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdaptiveController/AdaptiveController/AdaptiveButtonAppearance.swift"
+            timestampString = "435241018.694539"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "getButonTitleForState(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdaptiveController/AdaptiveController/AdaptiveButtonAppearance.swift"
+            timestampString = "435241020.267833"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "getButonTitleForState(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdaptiveController/AdaptiveController/AdaptiveButtonAppearance.swift"
+            timestampString = "435241219.58597"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "getButonTitleForState(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdaptiveController/AdaptiveControllerTests/TestTabBarItem.swift"
+            timestampString = "435241490.346253"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "setTitleOffsetToAdaptiveButton(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdaptiveController/AdaptiveControllerTests/TestTabBarItem.swift"
+            timestampString = "435241491.002467"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "setTitleColorToAdaptiveButton(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdaptiveControllerTests.TestTabBarItem.setTitleColorToAdaptiveButton (AdaptiveControllerTests.TestTabBarItem)(ObjectiveC.UIColor) -&gt; ()"
+                  moduleName = "AdaptiveControllerTests"
+                  urlString = "file:///Users/arcilite/adaptive-tab-bar/adaptive-tab-bar/AdaptiveController/AdaptiveControllerTests/TestTabBarItem.swift"
+                  timestampString = "435241968.974153"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "27">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdaptiveControllerTests.TestTabBarItem.(setTitleColorToAdaptiveButton (AdaptiveControllerTests.TestTabBarItem) -&gt; (ObjectiveC.UIColor) -&gt; ()).(implicit closure #1)"
+                  moduleName = "AdaptiveControllerTests"
+                  urlString = "file:///Users/arcilite/adaptive-tab-bar/adaptive-tab-bar/AdaptiveController/AdaptiveControllerTests/TestTabBarItem.swift"
+                  timestampString = "435241968.974291"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdaptiveController/AdaptiveControllerTests/TestTabBarItem.swift"
+            timestampString = "435241492.178713"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "setImageToAdaptiveButton(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdaptiveControllerTests.TestTabBarItem.setImageToAdaptiveButton (AdaptiveControllerTests.TestTabBarItem)(ObjectiveC.UIImage) -&gt; ()"
+                  moduleName = "AdaptiveControllerTests"
+                  urlString = "file:///Users/arcilite/adaptive-tab-bar/adaptive-tab-bar/AdaptiveController/AdaptiveControllerTests/TestTabBarItem.swift"
+                  timestampString = "435241968.97443"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "27">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdaptiveControllerTests.TestTabBarItem.(setImageToAdaptiveButton (AdaptiveControllerTests.TestTabBarItem) -&gt; (ObjectiveC.UIImage) -&gt; ()).(implicit closure #1)"
+                  moduleName = "AdaptiveControllerTests"
+                  urlString = "file:///Users/arcilite/adaptive-tab-bar/adaptive-tab-bar/AdaptiveController/AdaptiveControllerTests/TestTabBarItem.swift"
+                  timestampString = "435241968.974569"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdaptiveController/AdaptiveControllerTests/TestTabBarItem.swift"
+            timestampString = "435241492.963321"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "setSelectedImageToAdaptiveButton(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdaptiveControllerTests.TestTabBarItem.setSelectedImageToAdaptiveButton (AdaptiveControllerTests.TestTabBarItem)(ObjectiveC.UIImage) -&gt; ()"
+                  moduleName = "AdaptiveControllerTests"
+                  urlString = "file:///Users/arcilite/adaptive-tab-bar/adaptive-tab-bar/AdaptiveController/AdaptiveControllerTests/TestTabBarItem.swift"
+                  timestampString = "435241968.974697"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "27">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdaptiveControllerTests.TestTabBarItem.(setSelectedImageToAdaptiveButton (AdaptiveControllerTests.TestTabBarItem) -&gt; (ObjectiveC.UIImage) -&gt; ()).(implicit closure #1)"
+                  moduleName = "AdaptiveControllerTests"
+                  urlString = "file:///Users/arcilite/adaptive-tab-bar/adaptive-tab-bar/AdaptiveController/AdaptiveControllerTests/TestTabBarItem.swift"
+                  timestampString = "435241968.974818"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdaptiveController/AdaptiveControllerTests/TestTabBarItem.swift"
+            timestampString = "435241521.397134"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "setFontToAdaptiveButton(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdaptiveControllerTests.TestTabBarItem.setFontToAdaptiveButton (AdaptiveControllerTests.TestTabBarItem)(ObjectiveC.UIFont) -&gt; ()"
+                  moduleName = "AdaptiveControllerTests"
+                  urlString = "file:///Users/arcilite/adaptive-tab-bar/adaptive-tab-bar/AdaptiveController/AdaptiveControllerTests/TestTabBarItem.swift"
+                  timestampString = "435243039.95148"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "237">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdaptiveControllerTests.TestTabBarItem.(setFontToAdaptiveButton (AdaptiveControllerTests.TestTabBarItem) -&gt; (ObjectiveC.UIFont) -&gt; ()).(implicit closure #2)"
+                  moduleName = "AdaptiveControllerTests"
+                  urlString = "file:///Users/arcilite/adaptive-tab-bar/adaptive-tab-bar/AdaptiveController/AdaptiveControllerTests/TestTabBarItem.swift"
+                  timestampString = "435243039.95177"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdaptiveController/AdaptiveControllerTests/TestTabBarItem.swift"
+            timestampString = "435241606.832905"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "setTitleToAdaptiveButton(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdaptiveController/AdaptiveControllerTests/TestTabBarItem.swift"
+            timestampString = "435242969.357178"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "setFontToAdaptiveButton(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdaptiveControllerTests.TestTabBarItem.setFontToAdaptiveButton (AdaptiveControllerTests.TestTabBarItem)(ObjectiveC.UIFont) -&gt; ()"
+                  moduleName = "AdaptiveControllerTests"
+                  urlString = "file:///Users/arcilite/adaptive-tab-bar/adaptive-tab-bar/AdaptiveController/AdaptiveControllerTests/TestTabBarItem.swift"
+                  timestampString = "435243036.196487"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdaptiveControllerTests.TestTabBarItem.(setFontToAdaptiveButton (AdaptiveControllerTests.TestTabBarItem) -&gt; (ObjectiveC.UIFont) -&gt; ()).(implicit closure #1)"
+                  moduleName = "AdaptiveControllerTests"
+                  urlString = "file:///Users/arcilite/adaptive-tab-bar/adaptive-tab-bar/AdaptiveController/AdaptiveControllerTests/TestTabBarItem.swift"
+                  timestampString = "435243036.196689"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "15">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

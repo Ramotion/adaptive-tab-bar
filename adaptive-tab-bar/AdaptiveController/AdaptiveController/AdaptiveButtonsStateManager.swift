@@ -54,7 +54,13 @@ public class AdaptiveButtonsStateManager: NSObject {
             
             var button :AdaptiveApperanceProtocol = buttonsAray[index]
             var buttonApperance = buttonsAppearance[index]
-            button.setTitleToAdaptiveButton!(buttonApperance.getButonTitleForState(state))
+            
+            let title = buttonApperance.getButonTitleForState(state)
+            println("title: /(title)")
+            println(NSString(format:"title  %@",title))
+            button.setTitleToAdaptiveButton!(title)
+            
+            
             button.setFontToAdaptiveButton!(buttonApperance.getButonTitleFontForState(state))
             
             if let image = buttonApperance.getButonImageForState(state) {
