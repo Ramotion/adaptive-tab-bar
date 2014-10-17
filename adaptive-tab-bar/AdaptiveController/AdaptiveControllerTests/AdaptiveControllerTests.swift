@@ -67,6 +67,20 @@ class AdaptiveControllerTests: XCTestCase {
         var adaptiveDateState = AdaptiveDateState(installDate: installDate,currentDate:currentDate,countDaysToSmallTextState:countDaysToSmallTextState,countDaysToImageState:countDaysToImageState)
         
         XCTAssert(!adaptiveDateState.isEqual(kSmallTitleAdaptiveState), "Fail SmallTitleState")
+        
+        var buttonsAppearances = buttonsAppearancesGenerate()
+        var tabBarItem = TestTabBarItem()
+        
+        tabBarItem.font = defaultSmallTitleModeFont
+        tabBarItem.text = "watch2"
+        tabBarItem.image = UIImage(named: "watch_smalltitle")
+        tabBarItem.insets = defaultInsets
+        tabBarItem.color = UIColor.whiteColor()
+        tabBarItem.offset = defaultOffset
+        
+        var arrayButtons = [tabBarItem]
+        
+        AdaptiveButtonsStateManager(state: adaptiveDateState,buttonsAray:arrayButtons ,buttonsAppearance: buttonsAppearances)
     }
     
     func testImageState() {
@@ -76,7 +90,7 @@ class AdaptiveControllerTests: XCTestCase {
         
         var adaptiveDateState = AdaptiveDateState(installDate: installDate,currentDate:currentDate,countDaysToSmallTextState:countDaysToSmallTextState,countDaysToImageState:countDaysToImageState)
         
-       // XCTAssert(!adaptiveDateState!.isEqual(kImageAdaptiveState), "Fail ImageAdaptiveState")
+        XCTAssert(!adaptiveDateState!.isEqual(kImageAdaptiveState), "Fail ImageAdaptiveState")
     }
     
     
