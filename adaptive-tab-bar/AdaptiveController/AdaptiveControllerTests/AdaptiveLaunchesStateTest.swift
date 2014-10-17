@@ -12,7 +12,7 @@ import AdaptiveController
 class AdaptiveLaunchesStateTest: XCTestCase {
 
     var adaptiveLaunchState:AdaptiveLaunchesState?
-    
+   
     override func setUp() {
         super.setUp()
 //           adaptiveDateState = AdaptiveDateState(installDate: installDate,currentDate:NSDate(),countDaysToSmallTextState:countDaysToSmallTextState,countDaysToImageState:countDaysToImageState)
@@ -51,11 +51,6 @@ class AdaptiveLaunchesStateTest: XCTestCase {
         XCTAssert(!adaptiveLaunchState!.isEqual(kImageAdaptiveState), "Fail ImageAdaptiveState")
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock() {
-            // Put the code you want to measure the time of here.
-        }
-    }
+   
 
 }

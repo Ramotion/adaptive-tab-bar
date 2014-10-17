@@ -11,7 +11,7 @@ import UIKit
 import AdaptiveController
 import XCTest
 
-class AdaptiveTabBarItem:   AdaptiveApperanceProtocol {
+class TestTabBarItem:   AdaptiveApperanceProtocol {
     
     var font:UIFont?
     var text:NSString?
@@ -21,6 +21,9 @@ class AdaptiveTabBarItem:   AdaptiveApperanceProtocol {
     var color:UIColor?
     var offset :UIOffset?
     
+    init(){
+        
+    }
     
     func setFontToAdaptiveButton(font: UIFont){
          XCTAssert(font.isEqual(self.font), "Fail  font")
