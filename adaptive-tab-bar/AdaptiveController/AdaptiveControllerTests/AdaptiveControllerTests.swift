@@ -13,20 +13,11 @@ import AdaptiveController
 
 class AdaptiveControllerTests: XCTestCase {
     
-//    var adaptiveDateState:AdaptiveDateState?
-//    var adaptiveLaunchState:AdaptiveLaunchesState?
-//    var installDate:NSDate?
-    
+
     override func setUp() {
         super.setUp()
       
         
-        
-//        var curentCountLaunches = 0
-//        
-//        adaptiveLaunchState = bAdaptiveLaunchesState(curentCountLaunches:curentCountLaunches,countLaunchesToSmallTextState:countDaysForSmaltextState,countLaunchesToImageState:countDaysForImageModeState)
-//        
-        // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
     override func tearDown() {
@@ -41,22 +32,27 @@ class AdaptiveControllerTests: XCTestCase {
         
         var adaptiveDateState = AdaptiveDateState(installDate: installDate,currentDate:currentDate,countDaysToSmallTextState:countDaysToSmallTextState,countDaysToImageState:countDaysToImageState)
         
-        XCTAssert(!adaptiveDateState.isEqual(kDefaultAdaptiveState), "Fail DefaultState")
-        
         var buttonsAppearances = buttonsAppearancesGenerate()
         var tabBarItem = TestTabBarItem()
         
-        tabBarItem.font =  defaultFont
-        tabBarItem.text = "watch"
-        tabBarItem.image = UIImage(named: "watch")
-        tabBarItem.insets = defaultInsets
-        tabBarItem.color = UIColor.whiteColor()
-        tabBarItem.offset = defaultOffset
+//        tabBarItem.font =  defaultFont
+//        tabBarItem.text = "watch"
+//        tabBarItem.image = UIImage(named: "watch")
+//        tabBarItem.insets = defaultInsets
+//        tabBarItem.color = UIColor.whiteColor()
+//        tabBarItem.offset = defaultOffset
         
         var arrayButtons = [tabBarItem]
         
         AdaptiveButtonsStateManager(state: adaptiveDateState,buttonsAray:arrayButtons ,buttonsAppearance: buttonsAppearances)
+        //assert
     
+        XCTAssert(tabBarItem.color!.isEqual(UIColor.whiteColor()), "Fail color")
+        XCTAssert(UIOffsetEqualToOffset(tabBarItem.offset!,defaultOffset), "Fail offset")
+        XCTAssert(UIEdgeInsetsEqualToEdgeInsets(defaultInsets, tabBarItem.insets!), "Fail insets")
+        // XCTAssert(tabBarItem.image!.isEqual(UIImage(named: "watch_smalltitle")), "Fail  image")
+        XCTAssert(tabBarItem.text!.isEqualToString("watch"), "Fail  text")
+        XCTAssert(tabBarItem.font!.isEqual(defaultFont), "Fail  font")
     }
     
     func testSmallTextState() {
@@ -71,16 +67,17 @@ class AdaptiveControllerTests: XCTestCase {
         var buttonsAppearances = buttonsAppearancesGenerate()
         var tabBarItem = TestTabBarItem()
         
-        tabBarItem.font = defaultSmallTitleModeFont
-        tabBarItem.text = "watch2"
-        tabBarItem.image = UIImage(named: "watch_smalltitle")
-        tabBarItem.insets = defaultInsets
-        tabBarItem.color = UIColor.whiteColor()
-        tabBarItem.offset = defaultOffset
         
         var arrayButtons = [tabBarItem]
         
         AdaptiveButtonsStateManager(state: adaptiveDateState,buttonsAray:arrayButtons ,buttonsAppearance: buttonsAppearances)
+        
+        XCTAssert(tabBarItem.color!.isEqual(UIColor.whiteColor()), "Fail color")
+        XCTAssert(UIOffsetEqualToOffset(tabBarItem.offset!,defaultOffset), "Fail offset")
+        XCTAssert(UIEdgeInsetsEqualToEdgeInsets(defaultInsets, tabBarItem.insets!), "Fail insets")
+        // XCTAssert(tabBarItem.image!.isEqual(UIImage(named: "watch_smalltitle")), "Fail  image")
+        XCTAssert(tabBarItem.text!.isEqualToString("watch2"), "Fail  text")
+        XCTAssert(tabBarItem.font!.isEqual(defaultSmallTitleModeFont), "Fail  font")
     }
     
     func testImageState() {
@@ -95,17 +92,18 @@ class AdaptiveControllerTests: XCTestCase {
         var buttonsAppearances = buttonsAppearancesGenerate()
         var tabBarItem = TestTabBarItem()
         
-        tabBarItem.font = defaultFont
-        tabBarItem.text = ""
-        tabBarItem.image = UIImage(named: "watch_smalltitle")
-        tabBarItem.insets = defaultImageModeInsets
-        tabBarItem.color = UIColor.whiteColor()
-        tabBarItem.offset = defaultOffset
         
         var arrayButtons = [tabBarItem]
         
         AdaptiveButtonsStateManager(state: adaptiveDateState,buttonsAray:arrayButtons ,buttonsAppearance: buttonsAppearances)
         
+        
+         XCTAssert(tabBarItem.color!.isEqual(UIColor.whiteColor()), "Fail color")
+         XCTAssert(UIOffsetEqualToOffset(tabBarItem.offset!,defaultOffset), "Fail offset")
+         XCTAssert(UIEdgeInsetsEqualToEdgeInsets(defaultImageModeInsets, tabBarItem.insets!), "Fail insets")
+        // XCTAssert(tabBarItem.image!.isEqual(UIImage(named: "watch_smalltitle")), "Fail  image")
+         XCTAssert(tabBarItem.text!.isEqualToString(""), "Fail  text")
+         XCTAssert(tabBarItem.font!.isEqual(defaultFont), "Fail  font")
     }
     
     
@@ -138,8 +136,6 @@ class AdaptiveControllerTests: XCTestCase {
         watchAppearance.setImageInsets(defaultSmallTitleModeImageInsets, state: kSmallTitleAdaptiveState)
         watchAppearance.setTitleOffset(defaultOffset, state: kDefaultAdaptiveState)
         watchAppearance.setImageInsets(defaultImageModeInsets, state: kImageAdaptiveState);
-        
-        
         
         
         return [watchAppearance]

@@ -20,6 +20,7 @@
 		6A5558E819E2BD1F00ED3B5C /* AdaptiveTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5558E619E2BD1F00ED3B5C /* AdaptiveTabBarItem.swift */; };
 		6A5558E919E2BD1F00ED3B5C /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5558E719E2BD1F00ED3B5C /* TabBarViewController.swift */; };
 		6A55590019E2C1F900ED3B5C /* AdaptiveController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A5558FF19E2C1F900ED3B5C /* AdaptiveController.framework */; };
+		6AD1EC2C19F15417003F36A4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A5558C119E2BAB100ED3B5C /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -240,6 +241,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AD1EC2C19F15417003F36A4 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
