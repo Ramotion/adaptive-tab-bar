@@ -90,7 +90,22 @@ class AdaptiveControllerTests: XCTestCase {
         
         var adaptiveDateState = AdaptiveDateState(installDate: installDate,currentDate:currentDate,countDaysToSmallTextState:countDaysToSmallTextState,countDaysToImageState:countDaysToImageState)
         
-        XCTAssert(!adaptiveDateState!.isEqual(kImageAdaptiveState), "Fail ImageAdaptiveState")
+        XCTAssert(!adaptiveDateState.isEqual(kImageAdaptiveState), "Fail ImageAdaptiveState")
+        
+        var buttonsAppearances = buttonsAppearancesGenerate()
+        var tabBarItem = TestTabBarItem()
+        
+        tabBarItem.font = defaultFont
+        tabBarItem.text = ""
+        tabBarItem.image = UIImage(named: "watch_smalltitle")
+        tabBarItem.insets = defaultImageModeInsets
+        tabBarItem.color = UIColor.whiteColor()
+        tabBarItem.offset = defaultOffset
+        
+        var arrayButtons = [tabBarItem]
+        
+        AdaptiveButtonsStateManager(state: adaptiveDateState,buttonsAray:arrayButtons ,buttonsAppearance: buttonsAppearances)
+        
     }
     
     
