@@ -15,8 +15,7 @@ class AdaptiveLaunchesStateTest: XCTestCase {
    
     override func setUp() {
         super.setUp()
-//           adaptiveDateState = AdaptiveDateState(installDate: installDate,currentDate:NSDate(),countDaysToSmallTextState:countDaysToSmallTextState,countDaysToImageState:countDaysToImageState)
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+
     }
     
     override func tearDown() {

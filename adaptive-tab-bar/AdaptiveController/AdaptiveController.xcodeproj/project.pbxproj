@@ -11,6 +11,7 @@
 		6A3ED0CA19ED02DA006F06DD /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3ED0C919ED02DA006F06DD /* DateExtension.swift */; };
 		6A3ED0CC19ED058F006F06DD /* AdaptiveDateStateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3ED0CB19ED058F006F06DD /* AdaptiveDateStateTest.swift */; };
 		6A3ED0CE19ED05D8006F06DD /* AdaptiveLaunchesStateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3ED0CD19ED05D8006F06DD /* AdaptiveLaunchesStateTest.swift */; };
+		6A6270A619F1653900D02B1A /* watch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A6270A519F1653900D02B1A /* watch@2x.png */; };
 		6AAE857719D329C6005672CA /* AdaptiveButtonAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAE857319D329C6005672CA /* AdaptiveButtonAppearance.swift */; };
 		6AAE857819D329C6005672CA /* AdaptiveButtonsStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAE857419D329C6005672CA /* AdaptiveButtonsStateManager.swift */; };
 		6AAE857919D329C6005672CA /* AdaptiveDateState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAE857519D329C6005672CA /* AdaptiveDateState.swift */; };
@@ -27,6 +28,7 @@
 		6A3ED0C919ED02DA006F06DD /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DateExtension.swift; path = "../../Samples/adaptive-dates-tabbar/adaptive-tab-bar/DateExtension.swift"; sourceTree = "<group>"; };
 		6A3ED0CB19ED058F006F06DD /* AdaptiveDateStateTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdaptiveDateStateTest.swift; sourceTree = "<group>"; };
 		6A3ED0CD19ED05D8006F06DD /* AdaptiveLaunchesStateTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdaptiveLaunchesStateTest.swift; sourceTree = "<group>"; };
+		6A6270A519F1653900D02B1A /* watch@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "watch@2x.png"; sourceTree = "<group>"; };
 		6AAE857319D329C6005672CA /* AdaptiveButtonAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdaptiveButtonAppearance.swift; sourceTree = "<group>"; };
 		6AAE857419D329C6005672CA /* AdaptiveButtonsStateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdaptiveButtonsStateManager.swift; sourceTree = "<group>"; };
 		6AAE857519D329C6005672CA /* AdaptiveDateState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdaptiveDateState.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 		6AFBC6DD19D313D600D42578 /* AdaptiveControllerTests */ = {
 			isa = PBXGroup;
 			children = (
+				6A6270A519F1653900D02B1A /* watch@2x.png */,
 				6A3ED0C919ED02DA006F06DD /* DateExtension.swift */,
 				6AFBC6E019D313D600D42578 /* AdaptiveControllerTests.swift */,
 				6A3ED0CB19ED058F006F06DD /* AdaptiveDateStateTest.swift */,
@@ -251,6 +254,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A6270A619F1653900D02B1A /* watch@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

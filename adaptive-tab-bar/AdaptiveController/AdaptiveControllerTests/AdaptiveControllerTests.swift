@@ -9,7 +9,31 @@
 import UIKit
 import XCTest
 import AdaptiveController
- 
+
+//extension AdaptiveButtonAppearance{
+//    
+//    //init(named name: String) -> UIImage
+//
+//    public func setImageNamesForStatesImageExtesions(imageName :String ,imageExtensionsForState:Dictionary <String,String>){
+//        
+//        let bundle = NSBundle(forClass: AdaptiveButtonAppearance.self)
+//        let image = UIImage(named:imageName,
+//            inBundle:bundle,
+//            compatibleWithTraitCollection:nil)
+//        
+//        self.setButtonImage(image, state: kDefaultAdaptiveState)
+//        for (state,imageExtension) in imageExtensionsForState {
+//            self.setButtonImage(UIImage(named: imageName+imageExtension,
+//                inBundle:bundle,
+//                compatibleWithTraitCollection:nil), state: state)
+//        }
+//        
+//        
+//    }
+//
+//    
+//    
+//}
 
 class AdaptiveControllerTests: XCTestCase {
     
@@ -35,22 +59,20 @@ class AdaptiveControllerTests: XCTestCase {
         var buttonsAppearances = buttonsAppearancesGenerate()
         var tabBarItem = TestTabBarItem()
         
-//        tabBarItem.font =  defaultFont
-//        tabBarItem.text = "watch"
-//        tabBarItem.image = UIImage(named: "watch")
-//        tabBarItem.insets = defaultInsets
-//        tabBarItem.color = UIColor.whiteColor()
-//        tabBarItem.offset = defaultOffset
+       
+        
         
         var arrayButtons = [tabBarItem]
         
         AdaptiveButtonsStateManager(state: adaptiveDateState,buttonsAray:arrayButtons ,buttonsAppearance: buttonsAppearances)
         //assert
+        
     
         XCTAssert(tabBarItem.color!.isEqual(UIColor.whiteColor()), "Fail color")
         XCTAssert(UIOffsetEqualToOffset(tabBarItem.offset!,defaultOffset), "Fail offset")
         XCTAssert(UIEdgeInsetsEqualToEdgeInsets(defaultInsets, tabBarItem.insets!), "Fail insets")
-        // XCTAssert(tabBarItem.image!.isEqual(UIImage(named: "watch_smalltitle")), "Fail  image")
+         let bundle = NSBundle(forClass: AdaptiveButtonAppearance.self)
+        //XCTAssert(tabBarItem.image!.isEqual(UIImage(named: "watch",inBundle:bundle,compatibleWithTraitCollection:nil)), "Fail  image")
         XCTAssert(tabBarItem.text!.isEqualToString("watch"), "Fail  text")
         XCTAssert(tabBarItem.font!.isEqual(defaultFont), "Fail  font")
     }

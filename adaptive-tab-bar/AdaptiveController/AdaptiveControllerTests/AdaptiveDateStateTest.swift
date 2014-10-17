@@ -10,6 +10,8 @@ import UIKit
 import XCTest
 import AdaptiveController
 
+
+
 class AdaptiveDateStateTest: XCTestCase {
    
     var adaptiveDateState:AdaptiveDateState?
