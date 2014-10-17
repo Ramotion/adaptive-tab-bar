@@ -30,7 +30,8 @@ class TestTabBarItem:   AdaptiveApperanceProtocol {
     }
     
     func setTitleToAdaptiveButton(text: NSString){
-         XCTAssert(text.isEqual(self.text), "Fail  text")
+         println("text  \(text)")
+         XCTAssert(text.isEqualToString(self.text!), "Fail  text")
     }
     
     func setImageToAdaptiveButton(image: UIImage){
@@ -46,6 +47,8 @@ class TestTabBarItem:   AdaptiveApperanceProtocol {
     }
     
     func setTitleOffsetToAdaptiveButton(offset: UIOffset){
+        println(offset)
+        println(self.offset)
         XCTAssert(!UIOffsetEqualToOffset(offset,self.offset!), "Fail offset")
     }
     
