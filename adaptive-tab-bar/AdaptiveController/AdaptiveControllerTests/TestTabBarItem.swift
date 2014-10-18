@@ -36,10 +36,9 @@ class TestTabBarItem:   AdaptiveApperanceProtocol {
          
     }
     
-    func setImageToAdaptiveButton(image: UIImage){
-        //XCTAssertNotNil(image)
+    func setImageToAdaptiveButton(image: UIImage?){
+       // XCTAssertNotNil(image)
         self.image = image
-        
         
     }
     

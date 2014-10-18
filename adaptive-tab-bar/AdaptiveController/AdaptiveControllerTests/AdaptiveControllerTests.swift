@@ -37,7 +37,12 @@ import AdaptiveController
 
 class AdaptiveControllerTests: XCTestCase {
     
-
+    class MockUIImage: UIImage {
+        var checkImageString:String?
+        
+        
+    }
+    
     override func setUp() {
         super.setUp()
       
@@ -72,7 +77,8 @@ class AdaptiveControllerTests: XCTestCase {
         XCTAssert(UIOffsetEqualToOffset(tabBarItem.offset!,defaultOffset), "Fail offset")
         XCTAssert(UIEdgeInsetsEqualToEdgeInsets(defaultInsets, tabBarItem.insets!), "Fail insets")
          let bundle = NSBundle(forClass: AdaptiveButtonAppearance.self)
-        //XCTAssert(tabBarItem.image!.isEqual(UIImage(named: "watch",inBundle:bundle,compatibleWithTraitCollection:nil)), "Fail  image")
+        var image:MockUIImage = tabBarItem.image as MockUIImage
+        XCTAssert(image.checkImageString!.isEqual("default Image"), "Fail  image")
         XCTAssert(tabBarItem.text!.isEqualToString("watch"), "Fail  text")
         XCTAssert(tabBarItem.font!.isEqual(defaultFont), "Fail  font")
     }
@@ -97,8 +103,9 @@ class AdaptiveControllerTests: XCTestCase {
         XCTAssert(tabBarItem.color!.isEqual(UIColor.whiteColor()), "Fail color")
         XCTAssert(UIOffsetEqualToOffset(tabBarItem.offset!,defaultOffset), "Fail offset")
         XCTAssert(UIEdgeInsetsEqualToEdgeInsets(defaultInsets, tabBarItem.insets!), "Fail insets")
-        // XCTAssert(tabBarItem.image!.isEqual(UIImage(named: "watch_smalltitle")), "Fail  image")
-        XCTAssert(tabBarItem.text!.isEqualToString("watch2"), "Fail  text")
+        var image:MockUIImage = tabBarItem.image as MockUIImage
+        XCTAssert(image.checkImageString!.isEqual("smalltitle Image"), "Fail  image")
+        
         XCTAssert(tabBarItem.font!.isEqual(defaultSmallTitleModeFont), "Fail  font")
     }
     
@@ -123,7 +130,8 @@ class AdaptiveControllerTests: XCTestCase {
          XCTAssert(tabBarItem.color!.isEqual(UIColor.whiteColor()), "Fail color")
          XCTAssert(UIOffsetEqualToOffset(tabBarItem.offset!,defaultOffset), "Fail offset")
          XCTAssert(UIEdgeInsetsEqualToEdgeInsets(defaultImageModeInsets, tabBarItem.insets!), "Fail insets")
-        // XCTAssert(tabBarItem.image!.isEqual(UIImage(named: "watch_smalltitle")), "Fail  image")
+        var image:MockUIImage = tabBarItem.image as MockUIImage
+         XCTAssert(image.checkImageString!.isEqual("big Image"), "Fail  image")
          XCTAssert(tabBarItem.text!.isEqualToString(""), "Fail  text")
          XCTAssert(tabBarItem.font!.isEqual(defaultFont), "Fail  font")
     }
@@ -150,7 +158,23 @@ class AdaptiveControllerTests: XCTestCase {
         watchAppearance.setButonTitleFontForState(defaultSmallTitleModeFont, state: kSmallTitleAdaptiveState)
         
         
-        watchAppearance.setImageNamesForStatesImageExtesions("watch", imageExtensionsForState:imageExtensionsForStates)
+        //watchAppearance.setImageNamesForStatesImageExtesions("watch", imageExtensionsForState:imageExtensionsForStates)
+        
+        let mockImage = MockUIImage()
+         mockImage.checkImageString = "default Image"
+        
+        watchAppearance.setButtonImage(mockImage, state: kDefaultAdaptiveState)
+        
+        
+        let mockSmallTitleImage = MockUIImage()
+        mockSmallTitleImage.checkImageString = "smalltitle Image"
+        
+        watchAppearance.setButtonImage(mockSmallTitleImage, state: kSmallTitleAdaptiveState)
+        
+        let mockBigImageStateImage = MockUIImage()
+        mockBigImageStateImage.checkImageString = "big Image"
+        
+        watchAppearance.setButtonImage(mockBigImageStateImage, state: kImageAdaptiveState)
         
         
         watchAppearance.setImageInsets(defaultInsets, state: kDefaultAdaptiveState);

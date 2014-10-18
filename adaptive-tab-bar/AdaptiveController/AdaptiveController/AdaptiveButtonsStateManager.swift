@@ -65,6 +65,8 @@ public class AdaptiveButtonsStateManager: NSObject {
             
             if let image = buttonApperance.getButonImageForState(state) {
                 button.setImageToAdaptiveButton?(image)
+            }else{
+                
             }
             
             if let selectedImage = buttonApperance.getButonImageForState(state+selected) {
