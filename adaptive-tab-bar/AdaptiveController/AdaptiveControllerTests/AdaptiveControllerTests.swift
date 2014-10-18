@@ -10,30 +10,7 @@ import UIKit
 import XCTest
 import AdaptiveController
 
-//extension AdaptiveButtonAppearance{
-//    
-//    //init(named name: String) -> UIImage
-//
-//    public func setImageNamesForStatesImageExtesions(imageName :String ,imageExtensionsForState:Dictionary <String,String>){
-//        
-//        let bundle = NSBundle(forClass: AdaptiveButtonAppearance.self)
-//        let image = UIImage(named:imageName,
-//            inBundle:bundle,
-//            compatibleWithTraitCollection:nil)
-//        
-//        self.setButtonImage(image, state: kDefaultAdaptiveState)
-//        for (state,imageExtension) in imageExtensionsForState {
-//            self.setButtonImage(UIImage(named: imageName+imageExtension,
-//                inBundle:bundle,
-//                compatibleWithTraitCollection:nil), state: state)
-//        }
-//        
-//        
-//    }
-//
-//    
-//    
-//}
+
 
 class AdaptiveControllerTests: XCTestCase {
     
