@@ -47,7 +47,9 @@ class AdaptiveLaunchesStateTest: XCTestCase {
         
         adaptiveLaunchState = AdaptiveLaunchesState(curentCountLaunches:curentCountLaunches,countLaunchesToSmallTextState:countDaysForSmaltextState,countLaunchesToImageState:countDaysForImageModeState)
         
+       
         XCTAssert(!adaptiveLaunchState!.isEqual(kImageAdaptiveState), "Fail ImageAdaptiveState")
+        
     }
     
    
