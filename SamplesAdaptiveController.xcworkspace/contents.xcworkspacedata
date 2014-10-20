@@ -8,6 +8,6 @@
       location = "group:Samples/adaptive-launches-tabbar/example-count-launches-adaptive-tabbar.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:AdaptiveController/AdaptiveController.xcodeproj">
+      location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>

@@ -1,0 +1,1 @@
+../../../../AdaptiveController-0.0.1/ios/AdaptiveController.framework/Versions/A/Headers/AdaptiveController.h

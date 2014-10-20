@@ -1,0 +1,11 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'example-count-launches-adaptive-tabbar', :exclusive => true do
+  pod "AdaptiveController", :path => "../.."
+end
+
+target 'example-count-launches-adaptive-tabbarTests', :exclusive => true do
+  pod "AdaptiveController", :path => "../.."
+
+  
+end

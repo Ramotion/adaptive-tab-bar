@@ -1,0 +1,14 @@
+PODS:
+  - AdaptiveController (0.0.1)
+
+DEPENDENCIES:
+  - AdaptiveController (from `./AdaptiveController-0.0.1`)
+
+EXTERNAL SOURCES:
+  AdaptiveController:
+    :path: ./AdaptiveController-0.0.1
+
+SPEC CHECKSUMS:
+  AdaptiveController: 0231a4d702b246bb011877308b8c5e644b4daef0
+
+COCOAPODS: 0.34.2

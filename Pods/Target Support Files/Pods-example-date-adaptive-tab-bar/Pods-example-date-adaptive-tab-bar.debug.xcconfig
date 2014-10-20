@@ -1,0 +1,6 @@
+FRAMEWORK_SEARCH_PATHS = "$(PODS_ROOT)/../AdaptiveController-0.0.1/ios"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AdaptiveController"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/AdaptiveController"
+OTHER_LDFLAGS = -ObjC -l"Pods-example-date-adaptive-tab-bar-AdaptiveController" -framework "AdaptiveController" -framework "UIKit"
+PODS_ROOT = ${SRCROOT}/../../Pods
