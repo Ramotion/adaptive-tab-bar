@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5829954DA02162C41BF1AFAF"
+               BlueprintIdentifier = "1423353DF53052B8F07C16F9"
                BuildableName = "libPods-example-count-launches-adaptive-tabbar-AdaptiveController.a"
                BlueprintName = "Pods-example-count-launches-adaptive-tabbar-AdaptiveController"
                ReferencedContainer = "container:Pods.xcodeproj">

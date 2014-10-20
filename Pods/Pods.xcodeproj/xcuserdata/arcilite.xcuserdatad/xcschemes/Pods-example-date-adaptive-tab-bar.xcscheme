@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "351F3E1BA7AE7E4E7E476DCF"
+               BlueprintIdentifier = "DBDBD67BBDD08CE8E4AB6D9F"
                BuildableName = "libPods-example-date-adaptive-tab-bar.a"
                BlueprintName = "Pods-example-date-adaptive-tab-bar"
                ReferencedContainer = "container:Pods.xcodeproj">

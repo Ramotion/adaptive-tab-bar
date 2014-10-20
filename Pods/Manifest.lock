@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: ./AdaptiveController-0.0.1
 
 SPEC CHECKSUMS:
-  AdaptiveController: 0231a4d702b246bb011877308b8c5e644b4daef0
+  AdaptiveController: f21b5cff66a025b30addf870a593a3350a44d8e3
 
-COCOAPODS: 0.34.2
+COCOAPODS: 0.34.4

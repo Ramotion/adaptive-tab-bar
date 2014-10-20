@@ -10,13 +10,12 @@ Pod::Spec.new do |s|
   s.source = {}
 
   s.osx.platform             = :osx, ''
-  s.osx.preserve_paths       = 'osx/AdaptiveController.framework'
-  s.osx.public_header_files  = 'osx/AdaptiveController.framework/Versions/A/Headers/*.h'
-  s.osx.resource             = 'osx/AdaptiveController.framework/Versions/A/Resources/**/*'
-  s.osx.vendored_frameworks  = 'osx/AdaptiveController.framework'
+  s.osx.preserve_paths       = 'AdaptiveController-0.0.1/osx/AdaptiveController.framework'
+  s.osx.public_header_files  = 'AdaptiveController-0.0.1/osx/AdaptiveController.framework/Versions/A/Headers/*.h'
+  s.osx.vendored_frameworks  = 'AdaptiveController-0.0.1/osx/AdaptiveController.framework'
+
   s.ios.platform             = :ios, "7.0"
-  s.ios.preserve_paths       = 'ios/AdaptiveController.framework'
-  s.ios.public_header_files  = 'ios/AdaptiveController.framework/Versions/A/Headers/*.h'
-  s.ios.resource             = 'ios/AdaptiveController.framework/Versions/A/Resources/**/*'
-  s.ios.vendored_frameworks  = 'ios/AdaptiveController.framework'
+  s.ios.preserve_paths       = 'AdaptiveController-0.0.1/ios/AdaptiveController.framework'
+  s.ios.public_header_files  = 'AdaptiveController-0.0.1/ios/AdaptiveController.framework/Versions/A/Headers/*.h'
+  s.ios.vendored_frameworks  = 'AdaptiveController-0.0.1/ios/AdaptiveController.framework'
 end
