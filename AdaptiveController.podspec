@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.authors = {"Artem Kislitsyn, Yuri Vasilenko"=>"juri.v@ramotion.com"}
   s.homepage = 'https://github.com/Ramotion/adaptive-tab-bar'
   #s.frameworks = ["UIKit"]
-  s.frameworks          = 'Foundation', 'AdaptiveController','UIKit'
+  s.frameworks          = 'Foundation','UIKit'
 
   
   s.requires_arc = true
