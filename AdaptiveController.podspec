@@ -4,13 +4,13 @@
 
 Pod::Spec.new do |s|
   s.name = 'AdaptiveController'
-  s.version = '0.0.5'
+  s.version = '0.0.7'
   s.summary = 'AdaptiveController is a Progressive Reduction Swift module for adding custom states to Native or Custom UI elements.'
   s.license = {"type"=>"MIT"}
   s.authors = {"Artem Kislitsyn, Yuri Vasilenko"=>"juri.v@ramotion.com"}
   s.homepage = 'https://github.com/Ramotion/adaptive-tab-bar'
   #s.frameworks = ["UIKit"]
-  s.frameworks          = 'Foundation','UIKit'
+  s.frameworks          = 'Foundation','UIKit','AdaptiveController'
 
   
   s.requires_arc = true
@@ -29,5 +29,6 @@ Pod::Spec.new do |s|
   s.ios.preserve_paths       = 'AdaptiveController-0.0.1/ios/AdaptiveController.framework'
   s.ios.public_header_files  = 'AdaptiveController-0.0.1/ios/AdaptiveController.framework/Versions/A/Headers/*.h','AdaptiveController/AdaptiveController/*.{h,swift}'
   s.ios.vendored_frameworks  = 'AdaptiveController-0.0.1/ios/AdaptiveController.framework'
+  s.xcconfig = { 'OTHER_LDFLAGS' => '-framework AdaptiveController' }
 
 end
