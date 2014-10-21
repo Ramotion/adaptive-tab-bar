@@ -30,6 +30,7 @@ Pod::Spec.new do |s|
   s.ios.preserve_paths       = 'AdaptiveController-0.0.1/ios/AdaptiveController.framework'
   s.ios.public_header_files  = 'AdaptiveController-0.0.1/ios/AdaptiveController.framework/Versions/A/Headers/*.h','AdaptiveController/AdaptiveController/*.{h,swift}'
   s.ios.vendored_frameworks  = 'AdaptiveController-0.0.1/ios/AdaptiveController.framework'
+  #s.ios.resource             = 'AdaptiveController-0.0.1/ios/AdaptiveController.framework/Versions/A/Resources/**/*'
   #s.xcconfig = { 'OTHER_LDFLAGS' => '-framework AdaptiveController' }
 
 end
