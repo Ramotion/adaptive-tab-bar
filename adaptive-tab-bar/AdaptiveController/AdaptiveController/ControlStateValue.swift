@@ -27,5 +27,15 @@ public class ControlStateValue:ControlStateProtocol{
        self.highlightedState = valueForNormalState
    
     }
+    
+    func getObjectDictionary() -> Dictionary<String,AnyObject>{
+        
+        return Dictionary()
+    }
+    
+    func setObjectDictionary(dictionary:Dictionary<String,AnyObject>){
+        
+    }
+
    
 }

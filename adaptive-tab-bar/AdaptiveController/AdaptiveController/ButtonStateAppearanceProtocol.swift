@@ -10,15 +10,15 @@ import UIKit
 
 protocol ButtonStateAppearanceProtocol :AppearanceSerializationProtocol{
 
-    var title: String?{get set}
-    var font:  UIFont?{get set}
-    var imageName: String?{get set}
-    var backgroundImageName:String?{get set}
-    var titleOffset:UIOffset?{get set}
-    var imageInsets:UIEdgeInsets{get set}
-    var titleColor:UIColor {get set}
-    var backgroundColor:UIColor {get set}
-    var enabled:Bool{get set}
+    var title: AnyObject?{get set}
+    var font:  AnyObject?{get set}
+    var imageName: AnyObject?{get set}
+    var backgroundImageName:AnyObject?{get set}
+    var titleOffset:AnyObject?{get set}
+    var imageInsets:AnyObject?{get set}
+    var titleColor:AnyObject?{get set}
+    var backgroundColor:AnyObject?{get set}
+    var enabled:Bool?{get set}
     
     
 }
