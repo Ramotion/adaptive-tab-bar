@@ -8,14 +8,17 @@
 
 import UIKit
 
-protocol ButtonStateAppearanceProtocol {
+protocol ButtonStateAppearanceProtocol :AppearanceSerializationProtocol{
 
     var title: String?{get set}
-    var fontSize:  Float?{get set}
-    var fontFamily:  String?{get set}
+    var font:  UIFont?{get set}
     var imageName: String?{get set}
     var backgroundImageName:String?{get set}
+    var titleOffset:UIOffset?{get set}
+    var imageInsets:UIEdgeInsets{get set}
+    var titleColor:UIColor {get set}
+    var backgroundColor:UIColor {get set}
+    var enabled:Bool{get set}
     
-    func getObjectDictionary() -> Dictionary
-    func setObjectDictionary(dictionary:Dictionary)
+    
 }

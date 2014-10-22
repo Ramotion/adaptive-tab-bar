@@ -21,6 +21,7 @@
 		6AD1EC2B19F1165E003F36A4 /* TestTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD1EC2A19F1165E003F36A4 /* TestTabBarItem.swift */; };
 		6AD4002719F7896900630034 /* ButtonStateAppearanceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD4002619F7896900630034 /* ButtonStateAppearanceProtocol.swift */; };
 		6AD4002919F792FA00630034 /* ControlStateAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD4002819F792FA00630034 /* ControlStateAppearance.swift */; };
+		6AD4002B19F7A0B800630034 /* AppearanceSerializationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD4002A19F7A0B800630034 /* AppearanceSerializationProtocol.swift */; };
 		6AFBC6D719D313D600D42578 /* AdaptiveController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AFBC6D619D313D600D42578 /* AdaptiveController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6AFBC6E119D313D600D42578 /* AdaptiveControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFBC6E019D313D600D42578 /* AdaptiveControllerTests.swift */; };
 /* End PBXBuildFile section */
@@ -40,6 +41,7 @@
 		6AD1EC2A19F1165E003F36A4 /* TestTabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTabBarItem.swift; sourceTree = "<group>"; };
 		6AD4002619F7896900630034 /* ButtonStateAppearanceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonStateAppearanceProtocol.swift; sourceTree = "<group>"; };
 		6AD4002819F792FA00630034 /* ControlStateAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlStateAppearance.swift; sourceTree = "<group>"; };
+		6AD4002A19F7A0B800630034 /* AppearanceSerializationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppearanceSerializationProtocol.swift; sourceTree = "<group>"; };
 		6AFBC6D119D313D600D42578 /* AdaptiveController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdaptiveController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AFBC6D519D313D600D42578 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6AFBC6D619D313D600D42578 /* AdaptiveController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdaptiveController.h; sourceTree = "<group>"; };
@@ -95,12 +97,20 @@
 		6AD1EC2719EFB521003F36A4 /* ControlStates */ = {
 			isa = PBXGroup;
 			children = (
-				6AD1EC2819EFB8E2003F36A4 /* ControlStateProtocol.swift */,
 				6AD1EC2519EFA9BA003F36A4 /* ControlStateValue.swift */,
-				6AD4002619F7896900630034 /* ButtonStateAppearanceProtocol.swift */,
 				6AD4002819F792FA00630034 /* ControlStateAppearance.swift */,
 			);
 			name = ControlStates;
+			sourceTree = "<group>";
+		};
+		6AD4002C19F7A12200630034 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				6AD4002A19F7A0B800630034 /* AppearanceSerializationProtocol.swift */,
+				6AD4002619F7896900630034 /* ButtonStateAppearanceProtocol.swift */,
+				6AD1EC2819EFB8E2003F36A4 /* ControlStateProtocol.swift */,
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 		6AFBC6C719D313D600D42578 = {
@@ -124,6 +134,7 @@
 		6AFBC6D319D313D600D42578 /* AdaptiveController */ = {
 			isa = PBXGroup;
 			children = (
+				6AD4002C19F7A12200630034 /* Protocols */,
 				6AD1EC2719EFB521003F36A4 /* ControlStates */,
 				6AD1EC2319EFA903003F36A4 /* Appearance */,
 				6AAE857C19D32A14005672CA /* AdaptiveStates */,
@@ -275,6 +286,7 @@
 				6AD4002919F792FA00630034 /* ControlStateAppearance.swift in Sources */,
 				6A3E3A1C19E05E5B00C7504B /* AdaptiveLaunchesState.swift in Sources */,
 				6AAE857719D329C6005672CA /* AdaptiveButtonAppearance.swift in Sources */,
+				6AD4002B19F7A0B800630034 /* AppearanceSerializationProtocol.swift in Sources */,
 				6AD1EC2619EFA9BA003F36A4 /* ControlStateValue.swift in Sources */,
 				6AAE857919D329C6005672CA /* AdaptiveDateState.swift in Sources */,
 				6AD1EC2919EFB8E2003F36A4 /* ControlStateProtocol.swift in Sources */,

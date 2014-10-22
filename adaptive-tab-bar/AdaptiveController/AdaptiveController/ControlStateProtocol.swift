@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol ControlStateProtocol {
+protocol ControlStateProtocol:AppearanceSerializationProtocol {
     
     typealias StateEnum
     

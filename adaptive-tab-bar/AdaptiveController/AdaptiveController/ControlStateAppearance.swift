@@ -8,6 +8,6 @@
 
 import UIKit
 
-class ControlStateAppearance: Object {
+public class ControlStateAppearance {
    
 }

@@ -8,22 +8,18 @@
 
 import UIKit
 
-public enum ControlStateEnum {
-    case ControlStateFont(UIFont), ControlStateImage(UIImage),ControlStateTitle(String),ControlStateInsets(UIEdgeInsets),ControlStateColor(UIColor),UIControlState(UIOffset)
-}
-
 
 
 public class ControlStateValue:ControlStateProtocol{
    
-    public typealias StateEnum = ControlStateEnum
+    public typealias stateType = ControlStateAppearance
     
-    public var normalState: StateEnum?
-    public var selectedState: StateEnum?
-    public var highlightedState: StateEnum?
+    public var normalState: stateType?
+    public var selectedState: stateType?
+    public var highlightedState: stateType?
 
 
-    public convenience init(valueForNormalState:ControlStateEnum?) {
+    public convenience init(valueForNormalState:stateType?) {
        self.init()
        
        self.normalState = valueForNormalState
