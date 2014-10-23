@@ -12,29 +12,23 @@ import UIKit
 
 public class ControlStateValue:ControlStateProtocol{
    
-    public typealias stateType = ControlStateAppearance
+    public typealias StateObject = ControlStateAppearance
     
-    public var normalState: stateType?
-    public var selectedState: stateType?
-    public var highlightedState: stateType?
+    public var controlStates: Dictionary <String,StateObject>?
 
-
-    public convenience init(valueForNormalState:stateType?) {
+    public convenience init(valueForNormalState:StateObject?) {
        self.init()
        
-       self.normalState = valueForNormalState
-       self.selectedState = valueForNormalState
-       self.highlightedState = valueForNormalState
    
     }
     
     func getObjectDictionary() -> Dictionary<String,AnyObject>{
         
-        return Dictionary()
+        return controlStates!
     }
     
     func setObjectDictionary(dictionary:Dictionary<String,AnyObject>){
-        
+        //self.controlStates = dictionary
     }
 
    

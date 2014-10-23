@@ -10,10 +10,8 @@ import Foundation
 
 protocol ControlStateProtocol:AppearanceSerializationProtocol {
     
-    typealias StateEnum
+    typealias StateObject
     
-    var normalState: StateEnum?{get set}
-    var selectedState: StateEnum?{get set}
-    var highlightedState: StateEnum?{get set}
+    var controlStates: Dictionary <String,StateObject>?{get set}
     
 }
