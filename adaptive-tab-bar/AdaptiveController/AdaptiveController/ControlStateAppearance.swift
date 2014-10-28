@@ -9,15 +9,19 @@
 import UIKit
 
 public class ControlStateAppearance: AppearanceSerializationProtocol{
-    var title: String?
-    var font:  UIFont?
-    var imageName: String?
-    var backgroundImageName:String?
-    var titleOffset:UIOffset?
-    var imageInsets:UIEdgeInsets?
-    var titleColor:UIColor?
-    var backgroundColor:UIColor?
-    var enabled:Bool?
+    public var title: String?
+    public var font:  UIFont?
+    public var imageName: String?
+    public var backgroundImageName:String?
+    public var titleOffset:UIOffset?
+    public var imageInsets:UIEdgeInsets?
+    public var titleColor:UIColor?
+    public var backgroundColor:UIColor?
+    public var enabled:Bool?
+    
+    public init(){
+        
+    }
     
     func getObjectDictionary() -> Dictionary<String,AnyObject>{
     

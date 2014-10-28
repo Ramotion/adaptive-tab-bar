@@ -73,9 +73,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         watchAperance.setButonTitle("", state: kImageAdaptiveState)
         watchAperance.setTitleColor(UIColor.whiteColor(), state: kDefaultAdaptiveState)
         
-        watchAperance.setButonTitleFontForState(defaultFont, state: kDefaultAdaptiveState)
+        watchAperance.setButonTitleFontForState(defaultFont!, state: kDefaultAdaptiveState)
         
-        watchAperance.setButonTitleFontForState(defaultSmallTitleModeFont, state: kSmallTitleAdaptiveState)
+        watchAperance.setButonTitleFontForState(defaultSmallTitleModeFont!, state: kSmallTitleAdaptiveState)
         
       
         watchAperance.setImageNamesForStatesImageExtesions("watch", imageExtensionsForState:imageExtensionsForStates)

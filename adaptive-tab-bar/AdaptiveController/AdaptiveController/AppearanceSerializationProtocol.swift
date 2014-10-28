@@ -9,8 +9,8 @@
 import Foundation
 
 protocol AppearanceSerializationProtocol {
-    
-    func getObjectDictionary() -> Dictionary<String,AnyObject>
-    func setObjectDictionary(dictionary:Dictionary<String,AnyObject>)
+    typealias StateObject
+    func getObjectDictionary() -> Dictionary<String,StateObject>
+    func setObjectDictionary(dictionary:Dictionary<String,StateObject>)
 
 }

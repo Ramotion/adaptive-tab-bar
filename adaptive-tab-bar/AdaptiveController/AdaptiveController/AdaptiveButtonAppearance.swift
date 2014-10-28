@@ -48,9 +48,9 @@ public class AdaptiveButtonAppearance: NSObject {
     
     public func setImageNamesForStatesImageExtesions(imageName :String ,imageExtensionsForState:Dictionary <String,String>){
         
-         self.setButtonImage(UIImage(named: imageName), state: kDefaultAdaptiveState)
+         self.setButtonImage(UIImage(named: imageName)!, state: kDefaultAdaptiveState)
         for (state,imageExtension) in imageExtensionsForState {
-           self.setButtonImage(UIImage(named: imageName+imageExtension), state: state)
+           self.setButtonImage(UIImage(named: imageName+imageExtension)!, state: state)
         }
         
         
@@ -90,7 +90,7 @@ public class AdaptiveButtonAppearance: NSObject {
             if let font = butonsTitleFontForStateDictionary[kDefaultAdaptiveState] {
                 return font
             }else{
-                return defaultFont
+                return defaultFont!
             }
         }
     
