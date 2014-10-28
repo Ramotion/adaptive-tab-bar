@@ -105,7 +105,7 @@ public class AdaptiveButtonAppearance: NSObject {
     }
     
     public func getButonImageForState(state:NSString)->UIImage!{
-       
+        
         print("get State \(state)")
         if let image = buttonsImageForStateDictionary[state] {
             return image
