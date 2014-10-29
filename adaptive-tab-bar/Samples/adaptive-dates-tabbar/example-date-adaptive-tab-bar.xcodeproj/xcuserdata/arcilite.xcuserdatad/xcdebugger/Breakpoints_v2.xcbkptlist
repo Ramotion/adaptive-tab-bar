@@ -250,11 +250,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "adaptive-tab-bar/AppDelegate.swift"
-            timestampString = "434465681.065848"
+            timestampString = "436284620.571578"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
             landmarkName = "buttonsAppearancesGenerate()"
             landmarkType = "5">
          </BreakpointContent>

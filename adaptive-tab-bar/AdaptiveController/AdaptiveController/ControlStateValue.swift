@@ -20,10 +20,13 @@ public class ControlStateValue:ControlStateProtocol{
           self.controlStates = Dictionary<String,ControlStateAppearance>()
     }
     
-    public convenience init(valueForNormalState:StateObject?) {
+    public convenience init(styleValueStates:ControlStateValue) {
         self.init()
     
-        self.setControlApearence(valueForNormalState!, state: UIControlState.Normal)
+        for (state, object) in styleValueStates.controlStates {
+             self.controlStates.updateValue( ControlStateAppearance(appearanceStyle: object), forKey: state)
+        }
+      //  self.setControlApearence(valueForNormalState!, state: UIControlState.Normal)
    
     }
     

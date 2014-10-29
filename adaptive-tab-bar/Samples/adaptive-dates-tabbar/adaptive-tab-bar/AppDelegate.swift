@@ -79,7 +79,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
       
         watchAperance.setImageNamesForStatesImageExtesions("watch", imageExtensionsForState:imageExtensionsForStates)
-
+       
         
         watchAperance.setImageInsets(defaultInsets, state: kDefaultAdaptiveState);
         
@@ -94,7 +94,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         userAperance.setAllCommonApperanceFrom(watchAperance)
        
         userAperance.setButonTitle("user", state: kDefaultAdaptiveState)
+        userAperance.setButonTitle("user", state: kSmallTitleAdaptiveState)
+        
         userAperance.setButonTitle("", state: kImageAdaptiveState)
+        
         userAperance.setImageNamesForStatesImageExtesions("man", imageExtensionsForState:imageExtensionsForStates)
        
         
@@ -104,6 +107,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         messageAperance.setAllCommonApperanceFrom((watchAperance))
 
         messageAperance.setButonTitle("message", state: kDefaultAdaptiveState)
+        messageAperance.setButonTitle("message", state: kSmallTitleAdaptiveState)
         messageAperance.setButonTitle("", state: kImageAdaptiveState)
         
         messageAperance.setImageNamesForStatesImageExtesions("messages", imageExtensionsForState:imageExtensionsForStates)
@@ -117,6 +121,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         menuAperance.setAllCommonApperanceFrom((watchAperance))
         
         menuAperance.setButonTitle("dial", state: kDefaultAdaptiveState)
+        menuAperance.setButonTitle("dial", state: kSmallTitleAdaptiveState)
         menuAperance.setButonTitle("", state: kImageAdaptiveState)
         menuAperance.setImageNamesForStatesImageExtesions("menu", imageExtensionsForState:imageExtensionsForStates)
         
@@ -127,6 +132,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         moreAperance.setAllCommonApperanceFrom((watchAperance))
         
         moreAperance.setButonTitle("more", state: kDefaultAdaptiveState)
+        moreAperance.setButonTitle("more", state: kSmallTitleAdaptiveState)
         moreAperance.setButonTitle("", state: kImageAdaptiveState)
         
         moreAperance.setImageNamesForStatesImageExtesions("more", imageExtensionsForState:imageExtensionsForStates)

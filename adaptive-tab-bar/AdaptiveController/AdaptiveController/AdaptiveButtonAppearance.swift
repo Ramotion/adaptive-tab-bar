@@ -42,14 +42,19 @@ public class AdaptiveButtonAppearance: NSObject {
     public func setFontsFromAdaptiveButtonApperance(adaptiveButtonApperance:AdaptiveButtonAppearance){
         
         self.butonsTitleFontForStateDictionary =  adaptiveButtonApperance.butonsTitleFontForStateDictionary
-        //self.stateDictionary = adaptiveButtonApperance.stateDictionary
+       
     }
     
     public func setAllCommonApperanceFrom(adaptiveButtonApperance:AdaptiveButtonAppearance){
         self.setInsetsFromAdaptiveButtonApperance(adaptiveButtonApperance)
         self.setFontsFromAdaptiveButtonApperance(adaptiveButtonApperance)
         self.buttonsTitleColorsForStateDictionary = adaptiveButtonApperance.buttonsTitleColorsForStateDictionary
-      
+       
+        for (state, object) in adaptiveButtonApperance.stateDictionary {
+        
+            self.stateDictionary.updateValue(ControlStateValue(styleValueStates: object), forKey: state)
+        }
+        
     }
     
     
@@ -63,7 +68,7 @@ public class AdaptiveButtonAppearance: NSObject {
         
     }
     
-    func getOrCreateStateObjectForState(state:String) -> ControlStateValue{
+    func getOrCreateStateObjectForState(state:String) -> ControlStateValue!{
         if let stateObject = stateDictionary[state] {
             return stateObject
         }else{
@@ -77,6 +82,7 @@ public class AdaptiveButtonAppearance: NSObject {
     func getOrCreateStateAppearenceObject(controlStateValueObject:ControlStateValue, controlState:UIControlState)->ControlStateAppearance{
         
         if let stateObject =  controlStateValueObject.getControlApearenceFor(controlState) {
+           
             return stateObject
         }else{
             if let stateObject =  controlStateValueObject.getControlApearenceFor(UIControlState.Normal) {
@@ -121,7 +127,9 @@ public class AdaptiveButtonAppearance: NSObject {
     }
     
     public func getButonTitleForState(state:NSString ,controlState:UIControlState)->String!{
+        
         var controlStateValueObject = getOrCreateStateObjectForState(state)
+    
         var controlStateAppearanceObject = controlStateValueObject.getControlApearenceFor(controlState)
         return controlStateAppearanceObject.title!
        

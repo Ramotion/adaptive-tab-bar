@@ -28,6 +28,18 @@ public class ControlStateAppearance: AppearanceSerializationProtocol{
         backgroundColor = UIColor.clearColor()
     }
     
+    public convenience init(appearanceStyle:ControlStateAppearance?){
+        self.init()
+        font = appearanceStyle?.font
+        titleOffset = appearanceStyle?.titleOffset
+        imageInsets = appearanceStyle?.imageInsets
+        titleColor = appearanceStyle?.titleColor
+        backgroundColor = appearanceStyle?.backgroundColor
+        imageName = appearanceStyle?.imageName
+        backgroundImageName = appearanceStyle?.backgroundImageName
+    }
+    
+    
     func getObjectDictionary() -> Dictionary<String,AnyObject>{
     
         return Dictionary()
