@@ -289,17 +289,35 @@ public class AdaptiveButtonAppearance: NSObject {
     
     
     public func setTitleColor(color:UIColor, state:String){
-        buttonsTitleColorsForStateDictionary.updateValue(color, forKey:state)
+        
+        setTitleColor(color, state: state,controlState:UIControlState.Normal)
+        //buttonsTitleColorsForStateDictionary.updateValue(color, forKey:state)
     }
     
+    public func setTitleColor(color:UIColor, state:String, controlState:UIControlState){
+        var controlStateValueObject = getOrCreateStateObjectForState(state)
+        var controlStateAppearanceObject = getOrCreateStateAppearenceObject(controlStateValueObject,controlState: controlState)
+        controlStateAppearanceObject.titleColor = color
+    }
+   
+    
     public func getTitleColorForState(state:NSString)->UIColor!{
+       return getTitleColorForState(state, controlState: UIControlState.Normal)
+//        var offset:UIColor? = buttonsTitleColorsForStateDictionary[state]
+//        if(offset == nil){
+//            offset = buttonsTitleColorsForStateDictionary[kDefaultAdaptiveState]?
+//        }
+//        
+//        return offset!
+    }
+    
+    public func getTitleColorForState(state:NSString ,controlState:UIControlState)->UIColor!{
         
-        var offset:UIColor? = buttonsTitleColorsForStateDictionary[state]
-        if(offset == nil){
-            offset = buttonsTitleColorsForStateDictionary[kDefaultAdaptiveState]?
-        }
+        var controlStateValueObject = getOrCreateStateObjectForState(state)
         
-        return offset!
+        var controlStateAppearanceObject = controlStateValueObject.getControlApearenceFor(controlState)
+        return controlStateAppearanceObject.titleColor!
+        
     }
 
 }
