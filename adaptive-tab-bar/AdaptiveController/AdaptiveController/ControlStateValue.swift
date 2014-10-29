@@ -20,6 +20,11 @@ public class ControlStateValue:ControlStateProtocol{
           self.controlStates = Dictionary<String,ControlStateAppearance>()
     }
     
+    public convenience init(valueForNormalState:ControlStateAppearance) {
+        self.init()
+        self.setControlApearence(valueForNormalState, state: UIControlState.Normal)
+    }
+    
     public convenience init(styleValueStates:ControlStateValue) {
         self.init()
     

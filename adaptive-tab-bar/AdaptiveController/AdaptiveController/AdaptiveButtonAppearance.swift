@@ -224,31 +224,67 @@ public class AdaptiveButtonAppearance: NSObject {
     
     
     public func setImageInsets(insets:UIEdgeInsets, state:String){
-        buttonsImageInsetsForStateDictionary.updateValue(insets, forKey:state)
+        setImageInsets(insets, state: state,controlState:UIControlState.Normal)
+        //buttonsImageInsetsForStateDictionary.updateValue(insets, forKey:state)
+        
+    }
+    
+    
+    public func setImageInsets(insets:UIEdgeInsets, state:String, controlState:UIControlState){
+        var controlStateValueObject = getOrCreateStateObjectForState(state)
+        var controlStateAppearanceObject = getOrCreateStateAppearenceObject(controlStateValueObject,controlState: controlState)
+        controlStateAppearanceObject.imageInsets = insets
     }
     
     public func getImageInsetsForState(state:NSString)->UIEdgeInsets!{
         
-        if let insets = buttonsImageInsetsForStateDictionary[state] {
-           return buttonsImageInsetsForStateDictionary[state]!
-        }else{
-             return buttonsImageInsetsForStateDictionary[kDefaultAdaptiveState]
-        }
+        return getImageInsetsForState(state, controlState: UIControlState.Normal)
+//        if let insets = buttonsImageInsetsForStateDictionary[state] {
+//           return buttonsImageInsetsForStateDictionary[state]!
+//        }else{
+//             return buttonsImageInsetsForStateDictionary[kDefaultAdaptiveState]
+//        }
         
     }
     
-    public func setTitleOffset(insets:UIOffset, state:String){
-        buttonsTitleInsetsForStateDictionary.updateValue(insets, forKey:state)
+    public func getImageInsetsForState(state:NSString ,controlState:UIControlState)->UIEdgeInsets!{
+        
+        var controlStateValueObject = getOrCreateStateObjectForState(state)
+        
+        var controlStateAppearanceObject = controlStateValueObject.getControlApearenceFor(controlState)
+        return controlStateAppearanceObject.imageInsets!
+        
+    }
+  
+    
+    public func setTitleOffset(offset:UIOffset, state:String){
+        setTitleOffset(offset, state: state, controlState: UIControlState.Normal)
+       // buttonsTitleInsetsForStateDictionary.updateValue(insets, forKey:state)
+    }
+    
+    public func setTitleOffset(offset:UIOffset, state:String, controlState:UIControlState){
+        var controlStateValueObject = getOrCreateStateObjectForState(state)
+        var controlStateAppearanceObject = getOrCreateStateAppearenceObject(controlStateValueObject,controlState: controlState)
+        controlStateAppearanceObject.titleOffset = offset
     }
     
     public func getTitleOffsetForState(state:NSString)->UIOffset!{
-       
-        var offset:UIOffset? = buttonsTitleInsetsForStateDictionary[state]
-        if(offset == nil){
-            offset = buttonsTitleInsetsForStateDictionary[kDefaultAdaptiveState]?
-        }
+        return getTitleOffsetForState(state,controlState:UIControlState.Normal)
+//        var offset:UIOffset? = buttonsTitleInsetsForStateDictionary[state]
+//        if(offset == nil){
+//            offset = buttonsTitleInsetsForStateDictionary[kDefaultAdaptiveState]?
+//        }
+//        
+//        return offset!
+    }
+    
+    public func getTitleOffsetForState(state:NSString ,controlState:UIControlState)->UIOffset!{
         
-        return offset!
+        var controlStateValueObject = getOrCreateStateObjectForState(state)
+        
+        var controlStateAppearanceObject = controlStateValueObject.getControlApearenceFor(controlState)
+        return controlStateAppearanceObject.titleOffset!
+        
     }
     
     
