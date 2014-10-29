@@ -12,6 +12,6 @@ protocol ControlStateProtocol:AppearanceSerializationProtocol {
     
     typealias StateObject
     
-    var controlStates: Dictionary <String,StateObject>?{get set}
+    var controlStates: Dictionary <String,StateObject>{get set}
     
 }

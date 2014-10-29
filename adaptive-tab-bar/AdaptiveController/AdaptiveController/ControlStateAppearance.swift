@@ -20,7 +20,12 @@ public class ControlStateAppearance: AppearanceSerializationProtocol{
     public var enabled:Bool?
     
     public init(){
-        
+        title = "!!!!!!!!!!!!!!!"
+        font = defaultFont
+        titleOffset = defaultOffset
+        imageInsets = defaultImageModeInsets
+        titleColor = UIColor.blackColor()
+        backgroundColor = UIColor.clearColor()
     }
     
     func getObjectDictionary() -> Dictionary<String,AnyObject>{

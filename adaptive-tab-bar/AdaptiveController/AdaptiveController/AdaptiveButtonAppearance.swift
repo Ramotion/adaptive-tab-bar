@@ -24,6 +24,12 @@ public class AdaptiveButtonAppearance: NSObject {
     
     private var buttonsTitleColorsForStateDictionary:Dictionary <String,UIColor> = Dictionary<String,UIColor>()
     
+    
+    private var stateDictionary:Dictionary <String,ControlStateValue> = Dictionary<String,ControlStateValue>()
+    
+    
+   
+    
     func setInsetsFromAdaptiveButtonApperance(adaptiveButtonApperance:AdaptiveButtonAppearance){
         
         self.buttonsImageInsetsForStateDictionary = adaptiveButtonApperance.buttonsImageInsetsForStateDictionary
@@ -36,6 +42,7 @@ public class AdaptiveButtonAppearance: NSObject {
     public func setFontsFromAdaptiveButtonApperance(adaptiveButtonApperance:AdaptiveButtonAppearance){
         
         self.butonsTitleFontForStateDictionary =  adaptiveButtonApperance.butonsTitleFontForStateDictionary
+        //self.stateDictionary = adaptiveButtonApperance.stateDictionary
     }
     
     public func setAllCommonApperanceFrom(adaptiveButtonApperance:AdaptiveButtonAppearance){
@@ -56,47 +63,123 @@ public class AdaptiveButtonAppearance: NSObject {
         
     }
     
+    func getOrCreateStateObjectForState(state:String) -> ControlStateValue{
+        if let stateObject = stateDictionary[state] {
+            return stateObject
+        }else{
+            var stateObject = ControlStateValue()
+            stateDictionary.updateValue(stateObject, forKey: state)
+            return stateObject
+        }
+    }
+    
+    
+    func getOrCreateStateAppearenceObject(controlStateValueObject:ControlStateValue, controlState:UIControlState)->ControlStateAppearance{
+        
+        if let stateObject =  controlStateValueObject.getControlApearenceFor(controlState) {
+            return stateObject
+        }else{
+            if let stateObject =  controlStateValueObject.getControlApearenceFor(UIControlState.Normal) {
+                controlStateValueObject.setControlApearence(stateObject,state: controlState)
+                return stateObject
+            }else{
+                var stateObject = ControlStateAppearance()
+                controlStateValueObject.setControlApearence(stateObject,state: controlState)
+                return stateObject
+            }
+            
+        }
+    }
+    
+    
+    
     public  func setButonTitle(title:NSString, state:String){
-        println(title)
-        println(state)
-        butonsTitleForStateDictionary.updateValue(title, forKey:state)
+        setButonTitle(title, state:state, controlState:UIControlState.Normal)
+        //butonsTitleForStateDictionary.updateValue(title, forKey:state)
     }
     
     public func getButonTitleForState(state:NSString)->String!{
+        return getButonTitleForState(state, controlState: UIControlState.Normal)
+        //        if let title = butonsTitleForStateDictionary[state] {
+        //            return title
+        //        }else{
+        //            if let title = butonsTitleForStateDictionary[kDefaultAdaptiveState] {
+        //                return title
+        //            }else{
+        //                return kNotTitle
+        //            }
+        //        }
         
-        if let title = butonsTitleForStateDictionary[state] {
-            return title
-        }else{
-            if let title = butonsTitleForStateDictionary[kDefaultAdaptiveState] {
-                return title
-            }else{
-                return kNotTitle
-            }
-        }
-     
     }
     
+    public  func setButonTitle(title:NSString, state:String, controlState:UIControlState){
+        
+        var controlStateValueObject = getOrCreateStateObjectForState(state)
+        var controlStateAppearanceObject = getOrCreateStateAppearenceObject(controlStateValueObject,controlState: controlState)
+        controlStateAppearanceObject.title = title
+       // butonsTitleForStateDictionary.updateValue(title, forKey:state)
+    }
+    
+    public func getButonTitleForState(state:NSString ,controlState:UIControlState)->String!{
+        var controlStateValueObject = getOrCreateStateObjectForState(state)
+        var controlStateAppearanceObject = controlStateValueObject.getControlApearenceFor(controlState)
+        return controlStateAppearanceObject.title!
+       
+    }
+    
+
+    
     public func setButonTitleFontForState(font:UIFont, state:String){
-        butonsTitleFontForStateDictionary.updateValue(font, forKey:state)
+       // butonsTitleFontForStateDictionary.updateValue(font, forKey:state)
+        setButonTitleFont(font, state: state, controlState: UIControlState.Normal)
     }
     
     public func getButonTitleFontForState(state:NSString)->UIFont{
-        var font:UIFont? = butonsTitleFontForStateDictionary[state]
         
-        if let font = butonsTitleFontForStateDictionary[state] {
+        if let font =  getButonTitleFontForState(state, controlState: UIControlState.Normal){
             return font
         }else{
-            
-            if let font = butonsTitleFontForStateDictionary[kDefaultAdaptiveState] {
-                return font
-            }else{
-                return defaultFont!
-            }
+            return defaultFont!
         }
+        
+       // return getButonTitleFontForState(state, controlState: UIControlState.Normal)
+//        var font:UIFont? = butonsTitleFontForStateDictionary[state]
+//        
+//        if let font = butonsTitleFontForStateDictionary[state] {
+//            return font
+//        }else{
+//            
+//            if let font = butonsTitleFontForStateDictionary[kDefaultAdaptiveState] {
+//                return font
+//            }else{
+//                return defaultFont!
+//            }
+//        }
     
     }
     
     
+    public func getButonTitleFontForState(state:NSString ,controlState:UIControlState)->UIFont!{
+        var controlStateValueObject = getOrCreateStateObjectForState(state)
+        if  let controlStateAppearanceObject = controlStateValueObject.getControlApearenceFor(controlState){
+            return controlStateAppearanceObject.font!
+        }else{
+            return defaultFont!
+        }
+    }
+    
+    public  func setButonTitleFont(font:UIFont, state:String, controlState:UIControlState){
+        
+        var controlStateValueObject = getOrCreateStateObjectForState(state)
+        var controlStateAppearanceObject = getOrCreateStateAppearenceObject(controlStateValueObject,controlState: controlState)
+        controlStateAppearanceObject.font = font
+        // butonsTitleForStateDictionary.updateValue(title, forKey:state)
+    }
+    
+    
+    
+    
+   
     
     
     public func setButtonImage(image:UIImage, state:String){

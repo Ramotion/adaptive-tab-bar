@@ -27,7 +27,7 @@ class ControlStateValueTest: XCTestCase {
         appearance.title = "ddd"
         var value = ControlStateValue(valueForNormalState: appearance)
         value.setControlApearence(appearance,state:UIControlState.Normal)
-        var object:ControlStateAppearance = value.getControlApearenceFor(UIControlState.Highlighted)
+        var object:ControlStateAppearance = value.getControlApearenceFor(UIControlState.Normal)
         
         // This is an example of a functional test case.
       

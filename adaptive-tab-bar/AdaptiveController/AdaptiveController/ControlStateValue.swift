@@ -14,17 +14,22 @@ public class ControlStateValue:ControlStateProtocol{
    
     public typealias StateObject = ControlStateAppearance
     
-    public var controlStates: Dictionary <String,ControlStateAppearance>?
+    public var controlStates: Dictionary <String,ControlStateAppearance> = Dictionary <String,ControlStateAppearance>()
 
+    public init(){
+          self.controlStates = Dictionary<String,ControlStateAppearance>()
+    }
+    
     public convenience init(valueForNormalState:StateObject?) {
-       self.init()
-       self.controlStates = Dictionary<String,ControlStateAppearance>()
+        self.init()
+    
+        self.setControlApearence(valueForNormalState!, state: UIControlState.Normal)
    
     }
     
     public func getObjectDictionary() -> Dictionary<String,StateObject>{
         
-        return controlStates!
+        return controlStates
     }
     
    public func setObjectDictionary(dictionary:Dictionary<String,StateObject>){
@@ -34,17 +39,19 @@ public class ControlStateValue:ControlStateProtocol{
    public func setControlApearence(appearance:ControlStateAppearance,state:UIControlState){
         
         var stateKey = "\(state.rawValue)"
-        self.controlStates?.updateValue(appearance, forKey: stateKey)
+        self.controlStates.updateValue(appearance, forKey: stateKey)
+        println(self.controlStates)
         println(stateKey)
         
     }
     
-    public func getControlApearenceFor(state:UIControlState) -> ControlStateAppearance{
+    public func getControlApearenceFor(state:UIControlState) -> ControlStateAppearance!{
         
       var stateKey:String = "\(state.rawValue)"
-      var stateObject =  self.controlStates![stateKey]
+      println(self.controlStates)
+      var stateObject =  self.controlStates[stateKey]
       
-     return stateObject!
+       return stateObject
     }
 
    
