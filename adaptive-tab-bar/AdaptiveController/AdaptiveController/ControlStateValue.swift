@@ -22,12 +22,18 @@ public class ControlStateValue:ControlStateProtocol{
     
     public convenience init(valueForNormalState:ControlStateAppearance) {
         self.init()
+        
         self.setControlApearence(valueForNormalState, state: UIControlState.Normal)
+        self.setControlApearence(valueForNormalState, state: UIControlState.Highlighted)
+        self.setControlApearence(valueForNormalState, state: UIControlState.Selected)
+        
     }
     
     public convenience init(styleValueStates:ControlStateValue) {
         self.init()
     
+      
+        
         for (state, object) in styleValueStates.controlStates {
              self.controlStates.updateValue( ControlStateAppearance(appearanceStyle: object), forKey: state)
         }

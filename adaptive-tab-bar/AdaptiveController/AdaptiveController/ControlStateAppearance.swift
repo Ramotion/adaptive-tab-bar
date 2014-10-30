@@ -12,7 +12,9 @@ public class ControlStateAppearance: AppearanceSerializationProtocol{
     public var title: String?
     public var font:  UIFont?
     public var imageName: String?
+    public var image: UIImage?
     public var backgroundImageName:String?
+    public var backgroundImage: UIImage?
     public var titleOffset:UIOffset?
     public var imageInsets:UIEdgeInsets?
     public var titleColor:UIColor?
@@ -37,6 +39,8 @@ public class ControlStateAppearance: AppearanceSerializationProtocol{
         backgroundColor = appearanceStyle?.backgroundColor
         imageName = appearanceStyle?.imageName
         backgroundImageName = appearanceStyle?.backgroundImageName
+        image = appearanceStyle?.image
+        backgroundImage = appearanceStyle?.backgroundImage
     }
     
     

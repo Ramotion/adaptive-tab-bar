@@ -73,6 +73,11 @@ public class AdaptiveButtonAppearance: NSObject {
             return stateObject
         }else{
             var stateObject = ControlStateValue()
+            if let stateDefaultObject = stateDictionary[kDefaultAdaptiveState]  {
+                if state != kDefaultAdaptiveState {
+                     stateObject = ControlStateValue(styleValueStates:stateDefaultObject)
+                }
+            }
             stateDictionary.updateValue(stateObject, forKey: state)
             return stateObject
         }
@@ -159,41 +164,79 @@ public class AdaptiveButtonAppearance: NSObject {
     }
     
     
-    
-    
-   
-    
-    
     public func setButtonImage(image:UIImage, state:String){
-        buttonsImageForStateDictionary.updateValue(image, forKey:state)
-         print("set State \(state)")
+       // buttonsImageForStateDictionary.updateValue(image, forKey:state)
+        setButtonImage(image, state: state, controlState: UIControlState.Normal)
+        print("set State \(state)")
     }
     
+    public func setButtonImage(image:UIImage, state:String, controlState:UIControlState){
+        //buttonsImageForStateDictionary.updateValue(image, forKey:state)
+        var controlStateValueObject = getOrCreateStateObjectForState(state)
+        var controlStateAppearanceObject = getOrCreateStateAppearenceObject(controlStateValueObject,controlState: controlState)
+        controlStateAppearanceObject.image = image
+        
+        print("set State \(state)")
+    }
+
     public func getButonImageForState(state:NSString)->UIImage!{
+       
+        return getButonImageForState(state, controlState: UIControlState.Normal)
         
-        print("get State \(state)")
-        if let image = buttonsImageForStateDictionary[state] {
-            return image
-        }else{
-            return buttonsImageForStateDictionary[kDefaultAdaptiveState]
-        }
-        
+        //        print("get State \(state)")
+//        if let image = buttonsImageForStateDictionary[state] {
+//            return image
+//        }else{
+//            return buttonsImageForStateDictionary[kDefaultAdaptiveState]
+//        }
+//        
       
 
     }
     
+    public func getButonImageForState(state:NSString, controlState:UIControlState)->UIImage?{
+        var controlStateValueObject = getOrCreateStateObjectForState(state)
+        
+         if var controlStateAppearanceObject = controlStateValueObject.getControlApearenceFor(controlState){
+            return controlStateAppearanceObject.image
+        }else{
+            return nil
+        }
+    }
+    
     public func setBackgroundButonImage(image:UIImage, state:String){
-        buttonsImageForStateDictionary.updateValue(image, forKey:state)
+      //  buttonsImageForStateDictionary.updateValue(image, forKey:state)
+        setBackgroundButonImage(image, state: state)
+    }
+    
+    public func setBackgroundButtonImage(image:UIImage, state:String, controlState:UIControlState){
+        //buttonsImageForStateDictionary.updateValue(image, forKey:state)
+        var controlStateValueObject = getOrCreateStateObjectForState(state)
+        var controlStateAppearanceObject = getOrCreateStateAppearenceObject(controlStateValueObject,controlState: controlState)
+        controlStateAppearanceObject.backgroundImage = image
+        
+        print("set State \(state)")
     }
     
     public func getBackgroundImageForState(state:NSString)->UIImage?{
       
-        if let image = buttonsBackgroundImageForStateDictionary[state] {
-            return image
-        }else{
-            return buttonsBackgroundImageForStateDictionary[kDefaultAdaptiveState]
-        }
+        return getBackgroundButonImageForState(state, controlState: UIControlState.Normal)
+//        if let image = buttonsBackgroundImageForStateDictionary[state] {
+//            return image
+//        }else{
+//            return buttonsBackgroundImageForStateDictionary[kDefaultAdaptiveState]
+//        }
         
+    }
+    
+    public func getBackgroundButonImageForState(state:NSString, controlState:UIControlState)->UIImage?{
+        var controlStateValueObject = getOrCreateStateObjectForState(state)
+        
+        if var controlStateAppearanceObject = controlStateValueObject.getControlApearenceFor(controlState){
+            return controlStateAppearanceObject.image
+        }else{
+            return nil
+        }
     }
     
     
@@ -252,7 +295,11 @@ public class AdaptiveButtonAppearance: NSObject {
     
     
     public func setTitleColor(color:UIColor, state:String){
+        
         setTitleColor(color, state: state,controlState:UIControlState.Normal)
+        setTitleColor(color, state: state,controlState:UIControlState.Highlighted)
+        setTitleColor(color, state: state,controlState:UIControlState.Selected)
+      
     }
     
     public func setTitleColor(color:UIColor, state:String, controlState:UIControlState){
@@ -269,10 +316,16 @@ public class AdaptiveButtonAppearance: NSObject {
     
     public func getTitleColorForState(state:NSString ,controlState:UIControlState)->UIColor!{
         
-        var controlStateValueObject = getOrCreateStateObjectForState(state)
+        if var controlStateValueObject = getOrCreateStateObjectForState(state){
+            var controlStateAppearanceObject = controlStateValueObject.getControlApearenceFor(controlState)
+            return controlStateAppearanceObject.titleColor!
+        }else{
+            var controlStateValueObject = getOrCreateStateObjectForState(kDefaultAdaptiveState)
+            var controlStateAppearanceObject = controlStateValueObject.getControlApearenceFor(controlState)
+            return controlStateAppearanceObject.titleColor!
+        }
         
-        var controlStateAppearanceObject = controlStateValueObject.getControlApearenceFor(controlState)
-        return controlStateAppearanceObject.titleColor!
+      
         
     }
 
