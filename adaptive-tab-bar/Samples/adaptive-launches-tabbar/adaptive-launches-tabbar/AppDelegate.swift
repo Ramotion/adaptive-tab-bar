@@ -72,6 +72,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         watchAppearance.setButonTitle("watch", state: kSmallTitleAdaptiveState)
         watchAppearance.setButonTitle("", state: kImageAdaptiveState)
         watchAppearance.setTitleColor(UIColor.whiteColor(), state: kDefaultAdaptiveState)
+        watchAppearance.setTitleColor(UIColor.whiteColor(), state: kSmallTitleAdaptiveState)
         
         watchAppearance.setButonTitleFontForState(defaultFont!, state: kDefaultAdaptiveState)
         
@@ -94,6 +95,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         userAperance.setAllCommonApperanceFrom(watchAppearance)
        
         userAperance.setButonTitle("user", state: kDefaultAdaptiveState)
+        userAperance.setButonTitle("user", state: kSmallTitleAdaptiveState)
         userAperance.setButonTitle("", state: kImageAdaptiveState)
         userAperance.setImageNamesForStatesImageExtesions("man", imageExtensionsForState:imageExtensionsForStates)
        
@@ -104,6 +106,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         messageAperance.setAllCommonApperanceFrom((watchAppearance))
 
         messageAperance.setButonTitle("message", state: kDefaultAdaptiveState)
+        messageAperance.setButonTitle("message", state: kSmallTitleAdaptiveState)
         messageAperance.setButonTitle("", state: kImageAdaptiveState)
         
         messageAperance.setImageNamesForStatesImageExtesions("messages", imageExtensionsForState:imageExtensionsForStates)
@@ -117,6 +120,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         menuAperance.setAllCommonApperanceFrom((watchAppearance))
         
         menuAperance.setButonTitle("dial", state: kDefaultAdaptiveState)
+        menuAperance.setButonTitle("dial", state: kSmallTitleAdaptiveState)
         menuAperance.setButonTitle("", state: kImageAdaptiveState)
         menuAperance.setImageNamesForStatesImageExtesions("menu", imageExtensionsForState:imageExtensionsForStates)
         
@@ -127,6 +131,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         moreAperance.setAllCommonApperanceFrom((watchAppearance))
         
         moreAperance.setButonTitle("more", state: kDefaultAdaptiveState)
+        moreAperance.setButonTitle("more", state: kSmallTitleAdaptiveState)
         moreAperance.setButonTitle("", state: kImageAdaptiveState)
         
         moreAperance.setImageNamesForStatesImageExtesions("more", imageExtensionsForState:imageExtensionsForStates)
