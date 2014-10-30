@@ -101,21 +101,10 @@ public class AdaptiveButtonAppearance: NSObject {
     
     public  func setButonTitle(title:NSString, state:String){
         setButonTitle(title, state:state, controlState:UIControlState.Normal)
-        //butonsTitleForStateDictionary.updateValue(title, forKey:state)
     }
     
     public func getButonTitleForState(state:NSString)->String!{
         return getButonTitleForState(state, controlState: UIControlState.Normal)
-        //        if let title = butonsTitleForStateDictionary[state] {
-        //            return title
-        //        }else{
-        //            if let title = butonsTitleForStateDictionary[kDefaultAdaptiveState] {
-        //                return title
-        //            }else{
-        //                return kNotTitle
-        //            }
-        //        }
-        
     }
     
     public  func setButonTitle(title:NSString, state:String, controlState:UIControlState){
@@ -138,7 +127,6 @@ public class AdaptiveButtonAppearance: NSObject {
 
     
     public func setButonTitleFontForState(font:UIFont, state:String){
-       // butonsTitleFontForStateDictionary.updateValue(font, forKey:state)
         setButonTitleFont(font, state: state, controlState: UIControlState.Normal)
     }
     
@@ -149,20 +137,6 @@ public class AdaptiveButtonAppearance: NSObject {
         }else{
             return defaultFont!
         }
-        
-       // return getButonTitleFontForState(state, controlState: UIControlState.Normal)
-//        var font:UIFont? = butonsTitleFontForStateDictionary[state]
-//        
-//        if let font = butonsTitleFontForStateDictionary[state] {
-//            return font
-//        }else{
-//            
-//            if let font = butonsTitleFontForStateDictionary[kDefaultAdaptiveState] {
-//                return font
-//            }else{
-//                return defaultFont!
-//            }
-//        }
     
     }
     
@@ -181,7 +155,7 @@ public class AdaptiveButtonAppearance: NSObject {
         var controlStateValueObject = getOrCreateStateObjectForState(state)
         var controlStateAppearanceObject = getOrCreateStateAppearenceObject(controlStateValueObject,controlState: controlState)
         controlStateAppearanceObject.font = font
-        // butonsTitleForStateDictionary.updateValue(title, forKey:state)
+       
     }
     
     
@@ -225,7 +199,7 @@ public class AdaptiveButtonAppearance: NSObject {
     
     public func setImageInsets(insets:UIEdgeInsets, state:String){
         setImageInsets(insets, state: state,controlState:UIControlState.Normal)
-        //buttonsImageInsetsForStateDictionary.updateValue(insets, forKey:state)
+    
         
     }
     
@@ -239,11 +213,7 @@ public class AdaptiveButtonAppearance: NSObject {
     public func getImageInsetsForState(state:NSString)->UIEdgeInsets!{
         
         return getImageInsetsForState(state, controlState: UIControlState.Normal)
-//        if let insets = buttonsImageInsetsForStateDictionary[state] {
-//           return buttonsImageInsetsForStateDictionary[state]!
-//        }else{
-//             return buttonsImageInsetsForStateDictionary[kDefaultAdaptiveState]
-//        }
+
         
     }
     
@@ -259,7 +229,6 @@ public class AdaptiveButtonAppearance: NSObject {
     
     public func setTitleOffset(offset:UIOffset, state:String){
         setTitleOffset(offset, state: state, controlState: UIControlState.Normal)
-       // buttonsTitleInsetsForStateDictionary.updateValue(insets, forKey:state)
     }
     
     public func setTitleOffset(offset:UIOffset, state:String, controlState:UIControlState){
@@ -270,12 +239,6 @@ public class AdaptiveButtonAppearance: NSObject {
     
     public func getTitleOffsetForState(state:NSString)->UIOffset!{
         return getTitleOffsetForState(state,controlState:UIControlState.Normal)
-//        var offset:UIOffset? = buttonsTitleInsetsForStateDictionary[state]
-//        if(offset == nil){
-//            offset = buttonsTitleInsetsForStateDictionary[kDefaultAdaptiveState]?
-//        }
-//        
-//        return offset!
     }
     
     public func getTitleOffsetForState(state:NSString ,controlState:UIControlState)->UIOffset!{
@@ -289,9 +252,7 @@ public class AdaptiveButtonAppearance: NSObject {
     
     
     public func setTitleColor(color:UIColor, state:String){
-        
         setTitleColor(color, state: state,controlState:UIControlState.Normal)
-        //buttonsTitleColorsForStateDictionary.updateValue(color, forKey:state)
     }
     
     public func setTitleColor(color:UIColor, state:String, controlState:UIControlState){
@@ -303,12 +264,7 @@ public class AdaptiveButtonAppearance: NSObject {
     
     public func getTitleColorForState(state:NSString)->UIColor!{
        return getTitleColorForState(state, controlState: UIControlState.Normal)
-//        var offset:UIColor? = buttonsTitleColorsForStateDictionary[state]
-//        if(offset == nil){
-//            offset = buttonsTitleColorsForStateDictionary[kDefaultAdaptiveState]?
-//        }
-//        
-//        return offset!
+
     }
     
     public func getTitleColorForState(state:NSString ,controlState:UIControlState)->UIColor!{

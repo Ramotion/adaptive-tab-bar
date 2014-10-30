@@ -20,7 +20,7 @@ public class ControlStateAppearance: AppearanceSerializationProtocol{
     public var enabled:Bool?
     
     public init(){
-        title = "!!!!!!!!!!!!!!!"
+        title = ""
         font = defaultFont
         titleOffset = defaultOffset
         imageInsets = defaultImageModeInsets
