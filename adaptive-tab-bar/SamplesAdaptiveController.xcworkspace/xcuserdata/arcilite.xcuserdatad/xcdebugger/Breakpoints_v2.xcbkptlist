@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AdaptiveController/AdaptiveController/AdaptiveButtonAppearance.swift"
-            timestampString = "436280510.173847"
+            timestampString = "436381543.478981"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
             landmarkName = "AdaptiveButtonAppearance"
             landmarkType = "3">
          </BreakpointContent>
@@ -42,27 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AdaptiveController/AdaptiveController/AdaptiveButtonAppearance.swift"
-            timestampString = "436280510.173847"
+            timestampString = "436381543.478981"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "setInsetsFromAdaptiveButtonApperance(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AdaptiveController/AdaptiveController/AdaptiveButtonAppearance.swift"
-            timestampString = "436280510.173847"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
             landmarkName = "setAllCommonApperanceFrom(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -74,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AdaptiveController/AdaptiveController/AdaptiveButtonAppearance.swift"
-            timestampString = "436288865.633308"
+            timestampString = "436381543.478981"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
             landmarkName = "setAllCommonApperanceFrom(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -90,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AdaptiveController/AdaptiveController/AdaptiveButtonAppearance.swift"
-            timestampString = "436288865.633308"
+            timestampString = "436381543.478981"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
             landmarkName = "AdaptiveButtonAppearance"
             landmarkType = "3">
          </BreakpointContent>
@@ -106,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AdaptiveController/AdaptiveController/AdaptiveButtonAppearance.swift"
-            timestampString = "436280510.173847"
+            timestampString = "436381543.478981"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
             landmarkName = "setAllCommonApperanceFrom(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -338,52 +322,6 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AdaptiveController/AdaptiveController/AdaptiveButtonsStateManager.swift"
-            timestampString = "435309147.908624"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
-            landmarkName = "setButtonsState(_:buttonsAray:buttonsAppearance:)"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "AdaptiveController.AdaptiveButtonsStateManager.setButtonsState (AdaptiveController.AdaptiveButtonsStateManager)(AdaptiveController.AdaptiveState, buttonsAray : Swift.Array&lt;AdaptiveController.AdaptiveApperanceProtocol&gt;, buttonsAppearance : Swift.Array&lt;AdaptiveController.AdaptiveButtonAppearance&gt;) -&gt; ()"
-                  moduleName = "AdaptiveController"
-                  urlString = "file:///Users/arcilite/adaptive-tab-bar/adaptive-tab-bar/AdaptiveController/AdaptiveController/AdaptiveButtonsStateManager.swift"
-                  timestampString = "435309261.958128"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "70"
-                  endingLineNumber = "70"
-                  offsetFromSymbolStart = "4991">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "AdaptiveController.AdaptiveButtonsStateManager.setButtonsState (AdaptiveController.AdaptiveButtonsStateManager)(AdaptiveController.AdaptiveState, buttonsAray : Swift.Array&lt;AdaptiveController.AdaptiveApperanceProtocol&gt;, buttonsAppearance : Swift.Array&lt;AdaptiveController.AdaptiveButtonAppearance&gt;) -&gt; ()"
-                  moduleName = "AdaptiveController"
-                  urlString = "file:///Users/arcilite/adaptive-tab-bar/adaptive-tab-bar/AdaptiveController/AdaptiveController/AdaptiveButtonsStateManager.swift"
-                  timestampString = "435309261.958306"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "70"
-                  endingLineNumber = "70"
-                  offsetFromSymbolStart = "5343">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AdaptiveController/AdaptiveController/AdaptiveButtonsStateManager.swift"
             timestampString = "435309161.63493"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
@@ -504,13 +442,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AdaptiveController/AdaptiveController/AdaptiveButtonAppearance.swift"
-            timestampString = "436280510.173847"
+            timestampString = "436381543.478981"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "setInsetsFromAdaptiveButtonApperance(_:)"
-            landmarkType = "5">
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "AdaptiveButtonAppearance"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -520,11 +458,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AdaptiveController/AdaptiveController/ControlStateValue.swift"
-            timestampString = "436288865.633308"
+            timestampString = "436374553.132012"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "getControlApearenceFor(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -582,11 +520,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AdaptiveController/AdaptiveController/AdaptiveButtonAppearance.swift"
-            timestampString = "436288865.633308"
+            timestampString = "436436235.979201"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "183"
-            endingLineNumber = "183"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
             landmarkName = "setButonTitleFont(_:state:controlState:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -598,11 +536,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AdaptiveController/AdaptiveController/AdaptiveButtonAppearance.swift"
-            timestampString = "436288865.633308"
+            timestampString = "436436235.979201"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "172"
-            endingLineNumber = "172"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
             landmarkName = "getButonTitleFontForState(_:controlState:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -614,11 +552,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AdaptiveController/AdaptiveController/AdaptiveButtonAppearance.swift"
-            timestampString = "436288865.633308"
+            timestampString = "436436235.979201"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "150"
-            endingLineNumber = "150"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
             landmarkName = "getButonTitleFontForState(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -630,11 +568,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AdaptiveController/AdaptiveController/AdaptiveButtonAppearance.swift"
-            timestampString = "436288865.633308"
+            timestampString = "436436235.979201"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
             landmarkName = "setButonTitleFontForState(_:state:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -642,15 +580,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AdaptiveController/AdaptiveController/ControlStateValue.swift"
-            timestampString = "436288865.633308"
+            timestampString = "436374553.132012"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "setControlApearence(_:state:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -662,11 +600,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AdaptiveController/AdaptiveController/AdaptiveButtonAppearance.swift"
-            timestampString = "436288865.633308"
+            timestampString = "436436235.979201"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
             landmarkName = "setButonTitle(_:state:controlState:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -678,11 +616,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AdaptiveController/AdaptiveController/AdaptiveButtonAppearance.swift"
-            timestampString = "436288865.633308"
+            timestampString = "436436235.979201"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
             landmarkName = "setButonTitle(_:state:controlState:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -694,11 +632,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AdaptiveController/AdaptiveController/AdaptiveButtonAppearance.swift"
-            timestampString = "436288865.633308"
+            timestampString = "436436235.979201"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
             landmarkName = "setButonTitle(_:state:controlState:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -706,15 +644,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AdaptiveController/AdaptiveController/AdaptiveButtonAppearance.swift"
-            timestampString = "436288865.633308"
+            timestampString = "436436235.979201"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
             landmarkName = "getOrCreateStateAppearenceObject(_:controlState:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -722,15 +660,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AdaptiveController/AdaptiveController/AdaptiveButtonAppearance.swift"
-            timestampString = "436288865.633308"
+            timestampString = "436436235.979201"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "getOrCreateStateObjectForState(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -741,13 +679,93 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AdaptiveController/AdaptiveController/AdaptiveButtonAppearance.swift"
-            timestampString = "436288865.633308"
+            filePath = "AdaptiveController/AdaptiveController/ControlStateAppearance.swift"
+            timestampString = "436434948.123402"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
-            landmarkName = "getOrCreateStateObjectForState(_:)"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "init(appearanceStyle:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdaptiveController/AdaptiveController/AdaptiveButtonAppearance.swift"
+            timestampString = "436381543.478981"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "setAllCommonApperanceFrom(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdaptiveController/AdaptiveController/ControlStateValue.swift"
+            timestampString = "436374553.132012"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "init(styleValueStates:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdaptiveController/AdaptiveController/AdaptiveButtonAppearance.swift"
+            timestampString = "436436235.979201"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
+            landmarkName = "setButtonImage(_:state:controlState:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdaptiveController/AdaptiveController/AdaptiveButtonAppearance.swift"
+            timestampString = "436436235.979201"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
+            landmarkName = "getButonImageForState(_:controlState:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdaptiveController/AdaptiveController/ControlStateAppearance.swift"
+            timestampString = "436447678.359646"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "getObjectDictionary()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -758,44 +776,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AdaptiveController/AdaptiveController/ControlStateAppearance.swift"
-            timestampString = "436286896.391671"
+            timestampString = "436458499.463639"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "init(appearanceStyle:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AdaptiveController/AdaptiveController/AdaptiveButtonAppearance.swift"
-            timestampString = "436288865.633308"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
-            landmarkName = "setAllCommonApperanceFrom(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AdaptiveController/AdaptiveController/ControlStateValue.swift"
-            timestampString = "436288727.367507"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "init(styleValueStates:)"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
+            landmarkName = "setObjectDictionary(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
