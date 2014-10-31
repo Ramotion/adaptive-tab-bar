@@ -29,6 +29,18 @@ public class ControlStateAppearance: AppearanceSerializationProtocol{
         titleColor = UIColor.blackColor()
         backgroundColor = UIColor.clearColor()
     }
+    public convenience init(appearanceFullStyle:ControlStateAppearance?){
+        self.init()
+        font = appearanceFullStyle?.font
+        titleOffset = appearanceFullStyle?.titleOffset
+        imageInsets = appearanceFullStyle?.imageInsets
+        titleColor = appearanceFullStyle?.titleColor
+        backgroundColor = appearanceFullStyle?.backgroundColor
+        imageName = appearanceFullStyle?.imageName
+        backgroundImageName = appearanceFullStyle?.backgroundImageName
+        image = appearanceFullStyle?.image
+        backgroundImage = appearanceFullStyle?.backgroundImage
+    }
     
     public convenience init(appearanceStyle:ControlStateAppearance?){
         self.init()
@@ -37,10 +49,10 @@ public class ControlStateAppearance: AppearanceSerializationProtocol{
         imageInsets = appearanceStyle?.imageInsets
         titleColor = appearanceStyle?.titleColor
         backgroundColor = appearanceStyle?.backgroundColor
-        imageName = appearanceStyle?.imageName
-        backgroundImageName = appearanceStyle?.backgroundImageName
-        image = appearanceStyle?.image
-        backgroundImage = appearanceStyle?.backgroundImage
+       // imageName = appearanceStyle?.imageName
+       // backgroundImageName = appearanceStyle?.backgroundImageName
+        //image = appearanceStyle?.image
+       // backgroundImage = appearanceStyle?.backgroundImage
     }
     
     

@@ -32,9 +32,19 @@ public class AdaptiveButtonAppearance: NSObject {
     
     public func setImageNamesForStatesImageExtesions(imageName :String ,imageExtensionsForState:Dictionary <String,String>){
         
-         self.setButtonImage(UIImage(named: imageName)!, state: kDefaultAdaptiveState)
+        setImageNamesForStatesImageExtesions(imageName, imageExtensionsForState: imageExtensionsForState, controlState:UIControlState.Normal)
+        
+        setImageNamesForStatesImageExtesions(imageName, imageExtensionsForState: imageExtensionsForState, controlState:UIControlState.Highlighted)
+        
+        setImageNamesForStatesImageExtesions(imageName, imageExtensionsForState: imageExtensionsForState, controlState:UIControlState.Selected)
+        
+    }
+    
+    public func setImageNamesForStatesImageExtesions(imageName :String ,imageExtensionsForState:Dictionary <String,String>, controlState:UIControlState) {
+        
+        self.setButtonImage(UIImage(named: imageName)!, state: kDefaultAdaptiveState)
         for (state,imageExtension) in imageExtensionsForState {
-           self.setButtonImage(UIImage(named: imageName+imageExtension)!, state: state)
+            self.setButtonImage(UIImage(named: imageName+imageExtension)!, state: state ,controlState:controlState)
         }
         
         

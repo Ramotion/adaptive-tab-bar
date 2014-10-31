@@ -137,8 +137,6 @@ class AdaptiveControllerTests: XCTestCase {
         watchAppearance.setButonTitleFontForState(defaultSmallTitleModeFont!, state: kSmallTitleAdaptiveState)
         
         
-        //watchAppearance.setImageNamesForStatesImageExtesions("watch", imageExtensionsForState:imageExtensionsForStates)
-        
         let mockImage = MockUIImage()
          mockImage.checkImageString = "default Image"
         

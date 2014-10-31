@@ -18,13 +18,11 @@ public class AdaptiveLaunchesState : AdaptiveState {
     }
     
     
-    public convenience init(curentCountLaunches:Int,countLaunchesToSmallTextState:Int,countLaunchesToImageState:Int) {
+    public convenience init(curentCountLaunches:Int,countLaunchesToSmallTextState:Int,countLaunchesToImageState:Int){
         self.init()
-        
-        
+    
         self.currentItemState = stateRemainDays(curentCountLaunches,countLaunchesToSmallTextState: countLaunchesToSmallTextState,countLaunchesToImageState: countLaunchesToImageState);
         
-        //print(currentItemState)
     }
     
     internal func stateRemainDays (curentCountLaunches:Int,countLaunchesToSmallTextState:Int,countLaunchesToImageState:Int)->String{
