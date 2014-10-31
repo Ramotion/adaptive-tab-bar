@@ -205,8 +205,6 @@ public class AdaptiveButtonAppearance: NSObject {
     
     public func setImageInsets(insets:UIEdgeInsets, state:String){
         setImageInsets(insets, state: state,controlState:UIControlState.Normal)
-    
-        
     }
     
     
