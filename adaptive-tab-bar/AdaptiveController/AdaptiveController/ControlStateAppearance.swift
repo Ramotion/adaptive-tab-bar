@@ -21,9 +21,19 @@ let xKey = "xKey"
 let yKey = "yKey"
 let heightKey = "heightKey"
 let widthKey = "widthKey"
+
+let leftKey = "leftKey"
+let topKey =  "topKey"
+let rightKey = "rightKey"
+let bottomKey = "bottomKey"
+
 let fontNameKey = "fontNameKey"
 let fontSizeKey = "fontSizeKey"
 
+let redColor = "redColor"
+let greenColor = "greenColor"
+let blueColor = "blueColor"
+let alphaColor = "alphaColor"
 
 public class ControlStateAppearance: AppearanceSerializationProtocol{
     public var title: String?
@@ -83,24 +93,46 @@ public class ControlStateAppearance: AppearanceSerializationProtocol{
         controlStateDictionary[fontKey] = fontDictionary
         
         var offsetDictionary =  Dictionary<String,AnyObject>()
-        fontDictionary[xKey] = titleOffset?.horizontal
-        fontDictionary[yKey] = titleOffset?.vertical
+        offsetDictionary[xKey] = titleOffset?.horizontal
+        offsetDictionary[yKey] = titleOffset?.vertical
         controlStateDictionary[titleOffsetKey] = offsetDictionary
         
-//        public var imageName: String?
-//        public var image: UIImage?
-//        public var backgroundImageName:String?
-//        public var backgroundImage: UIImage?
-//        public var titleOffset:UIOffset?
-//        public var imageInsets:UIEdgeInsets?
-//        public var titleColor:UIColor?
-//        public var backgroundColor:UIColor?
-//        public var enabled:Bool?
+        
+        var insetsDictionary =  Dictionary<String,AnyObject>()
+        
+        insetsDictionary[bottomKey] = imageInsets?.bottom
+        insetsDictionary[topKey] = imageInsets?.top
+        insetsDictionary[leftKey] = imageInsets?.left
+        insetsDictionary[rightKey] = imageInsets?.right
+        
+        insetsDictionary[titleOffsetKey] = insetsDictionary
+        
+        insetsDictionary[colorKey] = colorToDctionary(titleColor!)
+        insetsDictionary[backgroundColorKey] = colorToDctionary(backgroundColor!)
+
         
         return controlStateDictionary
     }
     
+    func colorToDctionary(color:UIColor) -> Dictionary<String,AnyObject>{
+        
+        var  colorDictionary =  Dictionary<String,AnyObject>()
+        var  components = CGColorGetComponents(color.CGColor)
+        
+        colorDictionary[redColor] = components[0]
+        colorDictionary[blueColor] = components[1]
+        colorDictionary[greenColor] = components[2]
+        colorDictionary[alphaColor] = components[4]
+        
+        return colorDictionary
+    }
+    
     func setObjectDictionary(dictionary:Dictionary<String,AnyObject>){
+        title = dictionary[titleKey] as? String
+        var fontDictionary :Dictionary <String, AnyObject> = dictionary[fontKey] as Dictionary <String, AnyObject>
+        var fontName:String  = fontDictionary [fontNameKey]! as String
+        var fontSize:CGFloat = fontDictionary [fontSizeKey]! as CGFloat
+        font =  UIFont( name: fontName, size:fontSize )
     
     }
 
