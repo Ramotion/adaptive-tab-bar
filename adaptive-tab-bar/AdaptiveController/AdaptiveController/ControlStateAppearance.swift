@@ -127,13 +127,44 @@ public class ControlStateAppearance: AppearanceSerializationProtocol{
         return colorDictionary
     }
     
+    func dictionaryToColor(colorDictionary: Dictionary<String,CGFloat>) -> UIColor{
+        
+        var red:CGFloat  = colorDictionary [leftKey]!
+        var green:CGFloat = colorDictionary [topKey]!
+        var blue:CGFloat  = colorDictionary [rightKey]!
+        var alpha:CGFloat  = colorDictionary [rightKey]!
+        
+        return  UIColor(red: red, green: green, blue: blue, alpha: alpha)
+    }
+    
+    func dictionaryToInsets(insetsDictionary: Dictionary<String,CGFloat>) -> UIEdgeInsets{
+        
+        var left:CGFloat  = insetsDictionary [leftKey]!
+        var top:CGFloat = insetsDictionary [topKey]!
+        var right:CGFloat  = insetsDictionary [rightKey]!
+        var bottom:CGFloat = insetsDictionary [bottomKey]!
+        return UIEdgeInsetsMake(top, left, bottom, right)
+        
+    }
+    
     func setObjectDictionary(dictionary:Dictionary<String,AnyObject>){
+       
         title = dictionary[titleKey] as? String
         var fontDictionary :Dictionary <String, AnyObject> = dictionary[fontKey] as Dictionary <String, AnyObject>
         var fontName:String  = fontDictionary [fontNameKey]! as String
         var fontSize:CGFloat = fontDictionary [fontSizeKey]! as CGFloat
         font =  UIFont( name: fontName, size:fontSize )
-    
+        
+        var offsetDictionary  = dictionary[titleOffsetKey] as Dictionary <String, AnyObject>
+        var horizontal:CGFloat  = offsetDictionary [xKey]! as CGFloat
+        var vertical:CGFloat = offsetDictionary [yKey]! as CGFloat
+        
+        titleOffset = UIOffsetMake(horizontal, vertical)
+        
+        imageInsets = dictionaryToInsets(dictionary[imageInsetsKey] as Dictionary <String, CGFloat>)
+        
+        titleColor =  dictionaryToColor(dictionary[colorKey] as Dictionary <String, CGFloat>)
+        
     }
 
 }
