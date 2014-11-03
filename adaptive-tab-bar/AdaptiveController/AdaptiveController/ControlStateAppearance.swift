@@ -76,10 +76,7 @@ public class ControlStateAppearance: AppearanceSerializationProtocol{
         imageInsets = appearanceStyle?.imageInsets
         titleColor = appearanceStyle?.titleColor
         backgroundColor = appearanceStyle?.backgroundColor
-       // imageName = appearanceStyle?.imageName
-       // backgroundImageName = appearanceStyle?.backgroundImageName
-        //image = appearanceStyle?.image
-       // backgroundImage = appearanceStyle?.backgroundImage
+    
     }
     
     
@@ -105,10 +102,10 @@ public class ControlStateAppearance: AppearanceSerializationProtocol{
         insetsDictionary[leftKey] = imageInsets?.left
         insetsDictionary[rightKey] = imageInsets?.right
         
-        insetsDictionary[titleOffsetKey] = insetsDictionary
+        controlStateDictionary[imageInsetsKey] = insetsDictionary
         
-        insetsDictionary[colorKey] = colorToDctionary(titleColor!)
-        insetsDictionary[backgroundColorKey] = colorToDctionary(backgroundColor!)
+        controlStateDictionary[colorKey] = colorToDctionary(titleColor!)
+        controlStateDictionary[backgroundColorKey] = colorToDctionary(backgroundColor!)
 
         
         return controlStateDictionary
@@ -116,54 +113,124 @@ public class ControlStateAppearance: AppearanceSerializationProtocol{
     
     func colorToDctionary(color:UIColor) -> Dictionary<String,AnyObject>{
         
-        var  colorDictionary =  Dictionary<String,AnyObject>()
+        //var rgbClor = color.)
         var  components = CGColorGetComponents(color.CGColor)
         
-        colorDictionary[redColor] = components[0]
-        colorDictionary[blueColor] = components[1]
-        colorDictionary[greenColor] = components[2]
-        colorDictionary[alphaColor] = components[4]
-        
+        var  colorDictionary =  Dictionary<String,AnyObject>()
+       
+        if CGColorGetNumberOfComponents(color.CGColor) == 2{
+            colorDictionary[redColor] = components[0]
+            colorDictionary[greenColor] = components[0]
+            colorDictionary[blueColor] = components[0]
+            colorDictionary[alphaColor] = components[1]
+        }else{
+            colorDictionary[redColor] = components[0]
+            colorDictionary[greenColor] = components[1]
+            colorDictionary[blueColor] = components[2]
+            colorDictionary[alphaColor] = components[3]
+        }
+        print(colorDictionary)
         return colorDictionary
     }
     
-    func dictionaryToColor(colorDictionary: Dictionary<String,CGFloat>) -> UIColor{
-        
-        var red:CGFloat  = colorDictionary [leftKey]!
-        var green:CGFloat = colorDictionary [topKey]!
-        var blue:CGFloat  = colorDictionary [rightKey]!
-        var alpha:CGFloat  = colorDictionary [rightKey]!
-        
-        return  UIColor(red: red, green: green, blue: blue, alpha: alpha)
+    func dictionaryToColor(colorDictionary: Dictionary<String,CGFloat>?) -> UIColor{
+        if let colorValueDictioanary = colorDictionary {
+            var red:CGFloat  = 0
+
+            if let redValue = colorValueDictioanary [redColor]{
+                red = redValue
+            }
+            
+            var green:CGFloat = 0
+            
+            if let  greenValue =  colorValueDictioanary [greenColor]{
+                green = greenValue
+            }
+          
+            var blue:CGFloat  = 0
+            
+            if let blueValue = colorValueDictioanary [blueColor]{
+                 blue = blueValue
+            }
+            
+            var alpha:CGFloat  =  0
+            
+            if let alphaValue = colorValueDictioanary [alphaColor]{
+              alpha = alphaValue
+            }
+            
+            return  UIColor(red: red, green: green, blue: blue, alpha: alpha)
+        }else{
+            return UIColor.clearColor()
+        }
     }
     
-    func dictionaryToInsets(insetsDictionary: Dictionary<String,CGFloat>) -> UIEdgeInsets{
+    func dictionaryToInsets(insetsDictionary: Dictionary<String,CGFloat>?) -> UIEdgeInsets!{
+        if let insetsDictionary = insetsDictionary{
+            var left:CGFloat = 0
+            if let leftDictioanaryValue = insetsDictionary [leftKey]{
+                left = leftDictioanaryValue
+            }
+            
+            var top:CGFloat = 0
+            
+            if let topDictioanaryValue =  insetsDictionary [topKey]{
+                top = topDictioanaryValue
+            }
+            
+            var right:CGFloat  = 0
+            
+            if let rightDictionary = insetsDictionary[topKey]{
+                right = rightDictionary
+            }
+            
+            var bottom:CGFloat = 0
+            
+            if let bottomDictionaryValue =  insetsDictionary[bottomKey]{
+                bottom = bottomDictionaryValue
+            }
+            
+            return UIEdgeInsetsMake(top, left, bottom, right)
+        }else{
+            return UIEdgeInsetsZero
+        }
         
-        var left:CGFloat  = insetsDictionary [leftKey]!
-        var top:CGFloat = insetsDictionary [topKey]!
-        var right:CGFloat  = insetsDictionary [rightKey]!
-        var bottom:CGFloat = insetsDictionary [bottomKey]!
-        return UIEdgeInsetsMake(top, left, bottom, right)
+    }
+    
+    func dictionaryToOffset(offsetDictionary: Dictionary<String,CGFloat>?) -> UIOffset{
         
+        var horizontal:CGFloat  = 0
+        
+        if let horizontalFromDictionary = offsetDictionary![xKey]{
+            horizontal = horizontalFromDictionary
+        }
+        
+        var vertical:CGFloat = 0
+        
+        if let verticalFromDictionary = offsetDictionary![yKey]{
+            vertical = verticalFromDictionary
+        }
+        
+        return UIOffsetMake(horizontal, vertical)
+        
+    }
+    
+    
+    func dictionaryToFont(fontDictionary: Dictionary<String,AnyObject>) -> UIFont{
+        
+        var fontName:String  = fontDictionary [fontNameKey]! as String
+        var fontSize:CGFloat = fontDictionary [fontSizeKey]! as CGFloat
+        
+        return  UIFont( name: fontName, size:fontSize )!
     }
     
     func setObjectDictionary(dictionary:Dictionary<String,AnyObject>){
        
         title = dictionary[titleKey] as? String
-        var fontDictionary :Dictionary <String, AnyObject> = dictionary[fontKey] as Dictionary <String, AnyObject>
-        var fontName:String  = fontDictionary [fontNameKey]! as String
-        var fontSize:CGFloat = fontDictionary [fontSizeKey]! as CGFloat
-        font =  UIFont( name: fontName, size:fontSize )
-        
-        var offsetDictionary  = dictionary[titleOffsetKey] as Dictionary <String, AnyObject>
-        var horizontal:CGFloat  = offsetDictionary [xKey]! as CGFloat
-        var vertical:CGFloat = offsetDictionary [yKey]! as CGFloat
-        
-        titleOffset = UIOffsetMake(horizontal, vertical)
-        
-        imageInsets = dictionaryToInsets(dictionary[imageInsetsKey] as Dictionary <String, CGFloat>)
-        
-        titleColor =  dictionaryToColor(dictionary[colorKey] as Dictionary <String, CGFloat>)
+        font =  dictionaryToFont(dictionary[fontKey] as Dictionary <String, AnyObject>)
+        titleOffset = dictionaryToOffset(dictionary[titleOffsetKey] as? Dictionary <String, CGFloat>)
+        imageInsets = dictionaryToInsets(dictionary[imageInsetsKey] as? Dictionary <String, CGFloat>)
+        titleColor =  dictionaryToColor(dictionary[colorKey]! as? Dictionary <String, CGFloat>)
         
     }
 

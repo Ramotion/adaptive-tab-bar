@@ -23,6 +23,18 @@
 		6AD4002719F7896900630034 /* ButtonStateAppearanceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD4002619F7896900630034 /* ButtonStateAppearanceProtocol.swift */; };
 		6AD4002919F792FA00630034 /* ControlStateAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD4002819F792FA00630034 /* ControlStateAppearance.swift */; };
 		6AD4002B19F7A0B800630034 /* AppearanceSerializationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD4002A19F7A0B800630034 /* AppearanceSerializationProtocol.swift */; };
+		6AE723351A04EE6F003416B6 /* ControlStateAppearanceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE723341A04EE6F003416B6 /* ControlStateAppearanceTest.swift */; };
+		6AE723381A04F7AE003416B6 /* AdaptiveDateState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAE857519D329C6005672CA /* AdaptiveDateState.swift */; };
+		6AE723391A04F7B1003416B6 /* AdaptiveLaunchesState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3E3A1B19E05E5B00C7504B /* AdaptiveLaunchesState.swift */; };
+		6AE7233A1A04F7B4003416B6 /* AdaptiveButtonsStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAE857419D329C6005672CA /* AdaptiveButtonsStateManager.swift */; };
+		6AE7233B1A04F7B6003416B6 /* AdaptiveButtonAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAE857319D329C6005672CA /* AdaptiveButtonAppearance.swift */; };
+		6AE7233C1A04F7BA003416B6 /* ControlStateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD1EC2819EFB8E2003F36A4 /* ControlStateProtocol.swift */; };
+		6AE7233D1A04F7BD003416B6 /* ButtonStateAppearanceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD4002619F7896900630034 /* ButtonStateAppearanceProtocol.swift */; };
+		6AE7233E1A04F7BF003416B6 /* AppearanceSerializationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD4002A19F7A0B800630034 /* AppearanceSerializationProtocol.swift */; };
+		6AE7233F1A04F7C3003416B6 /* ControlStateValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD1EC2519EFA9BA003F36A4 /* ControlStateValue.swift */; };
+		6AE723401A04F7E5003416B6 /* AdaptiveState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAE857619D329C6005672CA /* AdaptiveState.swift */; };
+		6AE723411A04F7ED003416B6 /* ControlStateAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD4002819F792FA00630034 /* ControlStateAppearance.swift */; };
+		6AE723431A078071003416B6 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE723421A078071003416B6 /* ColorExtension.swift */; };
 		6AFBC6D719D313D600D42578 /* AdaptiveController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AFBC6D619D313D600D42578 /* AdaptiveController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6AFBC6E119D313D600D42578 /* AdaptiveControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFBC6E019D313D600D42578 /* AdaptiveControllerTests.swift */; };
 /* End PBXBuildFile section */
@@ -44,6 +56,8 @@
 		6AD4002619F7896900630034 /* ButtonStateAppearanceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonStateAppearanceProtocol.swift; sourceTree = "<group>"; };
 		6AD4002819F792FA00630034 /* ControlStateAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlStateAppearance.swift; sourceTree = "<group>"; };
 		6AD4002A19F7A0B800630034 /* AppearanceSerializationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppearanceSerializationProtocol.swift; sourceTree = "<group>"; };
+		6AE723341A04EE6F003416B6 /* ControlStateAppearanceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlStateAppearanceTest.swift; sourceTree = "<group>"; };
+		6AE723421A078071003416B6 /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		6AFBC6D119D313D600D42578 /* AdaptiveController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdaptiveController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AFBC6D519D313D600D42578 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6AFBC6D619D313D600D42578 /* AdaptiveController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdaptiveController.h; sourceTree = "<group>"; };
@@ -136,6 +150,7 @@
 		6AFBC6D319D313D600D42578 /* AdaptiveController */ = {
 			isa = PBXGroup;
 			children = (
+				6AE723421A078071003416B6 /* ColorExtension.swift */,
 				6AD4002C19F7A12200630034 /* Protocols */,
 				6AD1EC2719EFB521003F36A4 /* ControlStates */,
 				6AD1EC2319EFA903003F36A4 /* Appearance */,
@@ -158,6 +173,7 @@
 		6AFBC6DD19D313D600D42578 /* AdaptiveControllerTests */ = {
 			isa = PBXGroup;
 			children = (
+				6AE723341A04EE6F003416B6 /* ControlStateAppearanceTest.swift */,
 				6A6270A519F1653900D02B1A /* watch@2x.png */,
 				6A3ED0C919ED02DA006F06DD /* DateExtension.swift */,
 				6AFBC6E019D313D600D42578 /* AdaptiveControllerTests.swift */,
@@ -294,6 +310,7 @@
 				6AAE857919D329C6005672CA /* AdaptiveDateState.swift in Sources */,
 				6AD1EC2919EFB8E2003F36A4 /* ControlStateProtocol.swift in Sources */,
 				6AAE857A19D329C6005672CA /* AdaptiveState.swift in Sources */,
+				6AE723431A078071003416B6 /* ColorExtension.swift in Sources */,
 				6AD4002719F7896900630034 /* ButtonStateAppearanceProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,12 +319,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AE723411A04F7ED003416B6 /* ControlStateAppearance.swift in Sources */,
+				6AE723351A04EE6F003416B6 /* ControlStateAppearanceTest.swift in Sources */,
+				6AE7233B1A04F7B6003416B6 /* AdaptiveButtonAppearance.swift in Sources */,
 				6AD1EC2B19F1165E003F36A4 /* TestTabBarItem.swift in Sources */,
+				6AE7233D1A04F7BD003416B6 /* ButtonStateAppearanceProtocol.swift in Sources */,
+				6AE723391A04F7B1003416B6 /* AdaptiveLaunchesState.swift in Sources */,
 				6A3ED0CE19ED05D8006F06DD /* AdaptiveLaunchesStateTest.swift in Sources */,
+				6AE7233F1A04F7C3003416B6 /* ControlStateValue.swift in Sources */,
+				6AE7233E1A04F7BF003416B6 /* AppearanceSerializationProtocol.swift in Sources */,
 				6A3ED0CA19ED02DA006F06DD /* DateExtension.swift in Sources */,
 				6A3ED0CC19ED058F006F06DD /* AdaptiveDateStateTest.swift in Sources */,
 				6AFBC6E119D313D600D42578 /* AdaptiveControllerTests.swift in Sources */,
 				6A36BD4219FFDEDA00C19F61 /* ControlStateValueTest.swift in Sources */,
+				6AE7233C1A04F7BA003416B6 /* ControlStateProtocol.swift in Sources */,
+				6AE723401A04F7E5003416B6 /* AdaptiveState.swift in Sources */,
+				6AE723381A04F7AE003416B6 /* AdaptiveDateState.swift in Sources */,
+				6AE7233A1A04F7B4003416B6 /* AdaptiveButtonsStateManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
