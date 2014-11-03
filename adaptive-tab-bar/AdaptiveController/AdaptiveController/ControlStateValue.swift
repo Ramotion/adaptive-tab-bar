@@ -13,8 +13,8 @@ import UIKit
 public class ControlStateValue:ControlStateProtocol{
    
     public typealias StateObject = ControlStateAppearance
-    
-    public var controlStates: Dictionary <String,ControlStateAppearance> = Dictionary <String,ControlStateAppearance>()
+    public typealias DictionaryObject = Dictionary <String,AnyObject>
+    public var controlStates: Dictionary <String,StateObject> = Dictionary <String,ControlStateAppearance>()
 
     public init(){
           self.controlStates = Dictionary<String,ControlStateAppearance>()
@@ -32,8 +32,6 @@ public class ControlStateValue:ControlStateProtocol{
     public convenience init(styleValueStates:ControlStateValue) {
         self.init()
     
-      
-        
         for (state, object) in styleValueStates.controlStates {
              self.controlStates.updateValue( ControlStateAppearance(appearanceStyle: object), forKey: state)
         }
@@ -41,13 +39,28 @@ public class ControlStateValue:ControlStateProtocol{
    
     }
     
-    public func getObjectDictionary() -> Dictionary<String,StateObject>{
+    public func getObjectDictionary() -> Dictionary<String,DictionaryObject>{
         
-        return controlStates
+        var controlStatesDictionary =   Dictionary<String,DictionaryObject>()
+        
+        for (key,object ) in controlStates{
+            var appearance = object as ControlStateAppearance
+            var appearanceDictionary =  appearance.getObjectDictionary()
+            controlStatesDictionary.updateValue(appearanceDictionary, forKey: key)
+        }
+        
+        return controlStatesDictionary
     }
     
-   public func setObjectDictionary(dictionary:Dictionary<String,StateObject>){
-        self.controlStates = dictionary
+  
+    public func setObjectDictionary(dictionary:Dictionary <String,DictionaryObject>){
+        
+        for (key,object ) in dictionary{
+            var appearanceDictionary = object as Dictionary <String,AnyObject>
+            var appearanceObject = ControlStateAppearance()
+            appearanceObject.setObjectDictionary(appearanceDictionary)
+            controlStates.updateValue(appearanceObject, forKey: key)
+        }
     }
     
    public func setControlApearence(appearance:ControlStateAppearance,state:UIControlState){
@@ -64,8 +77,7 @@ public class ControlStateValue:ControlStateProtocol{
       var stateKey:String = "\(state.rawValue)"
       println(self.controlStates)
       var stateObject =  self.controlStates[stateKey]
-      
-       return stateObject
+      return stateObject
     }
 
    

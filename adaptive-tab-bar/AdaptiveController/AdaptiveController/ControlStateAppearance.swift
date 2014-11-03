@@ -36,6 +36,10 @@ let blueColor = "blueColor"
 let alphaColor = "alphaColor"
 
 public class ControlStateAppearance: AppearanceSerializationProtocol{
+ 
+    typealias DictionaryObject = AnyObject
+    typealias StateObject = AnyObject
+    
     public var title: String?
     public var font:  UIFont?
     public var imageName: String?
@@ -80,36 +84,7 @@ public class ControlStateAppearance: AppearanceSerializationProtocol{
     }
     
     
-    func getObjectDictionary() -> Dictionary<String,AnyObject>{
-        var controlStateDictionary =  Dictionary<String,AnyObject>()
-        controlStateDictionary[titleKey] = title!
-        
-        var fontDictionary =  Dictionary<String,AnyObject>()
-        fontDictionary[fontNameKey] = font?.fontName
-        fontDictionary[fontSizeKey] = font?.pointSize
-        controlStateDictionary[fontKey] = fontDictionary
-        
-        var offsetDictionary =  Dictionary<String,AnyObject>()
-        offsetDictionary[xKey] = titleOffset?.horizontal
-        offsetDictionary[yKey] = titleOffset?.vertical
-        controlStateDictionary[titleOffsetKey] = offsetDictionary
-        
-        
-        var insetsDictionary =  Dictionary<String,AnyObject>()
-        
-        insetsDictionary[bottomKey] = imageInsets?.bottom
-        insetsDictionary[topKey] = imageInsets?.top
-        insetsDictionary[leftKey] = imageInsets?.left
-        insetsDictionary[rightKey] = imageInsets?.right
-        
-        controlStateDictionary[imageInsetsKey] = insetsDictionary
-        
-        controlStateDictionary[colorKey] = colorToDctionary(titleColor!)
-        controlStateDictionary[backgroundColorKey] = colorToDctionary(backgroundColor!)
-
-        
-        return controlStateDictionary
-    }
+   
     
     func colorToDctionary(color:UIColor) -> Dictionary<String,AnyObject>{
         
@@ -224,14 +199,47 @@ public class ControlStateAppearance: AppearanceSerializationProtocol{
         return  UIFont( name: fontName, size:fontSize )!
     }
     
-    func setObjectDictionary(dictionary:Dictionary<String,AnyObject>){
+    func setObjectDictionary(dictionary:Dictionary<String,DictionaryObject>){
        
         title = dictionary[titleKey] as? String
         font =  dictionaryToFont(dictionary[fontKey] as Dictionary <String, AnyObject>)
         titleOffset = dictionaryToOffset(dictionary[titleOffsetKey] as? Dictionary <String, CGFloat>)
         imageInsets = dictionaryToInsets(dictionary[imageInsetsKey] as? Dictionary <String, CGFloat>)
         titleColor =  dictionaryToColor(dictionary[colorKey]! as? Dictionary <String, CGFloat>)
+        backgroundColor =  dictionaryToColor(dictionary[backgroundColorKey]! as? Dictionary <String, CGFloat>)
         
+        
+    }
+    
+    func getObjectDictionary() -> Dictionary<String,DictionaryObject>{
+        var controlStateDictionary =  Dictionary<String,AnyObject>()
+        controlStateDictionary[titleKey] = title!
+        
+        var fontDictionary =  Dictionary<String,AnyObject>()
+        fontDictionary[fontNameKey] = font?.fontName
+        fontDictionary[fontSizeKey] = font?.pointSize
+        controlStateDictionary[fontKey] = fontDictionary
+        
+        var offsetDictionary =  Dictionary<String,AnyObject>()
+        offsetDictionary[xKey] = titleOffset?.horizontal
+        offsetDictionary[yKey] = titleOffset?.vertical
+        controlStateDictionary[titleOffsetKey] = offsetDictionary
+        
+        
+        var insetsDictionary =  Dictionary<String,AnyObject>()
+        
+        insetsDictionary[bottomKey] = imageInsets?.bottom
+        insetsDictionary[topKey] = imageInsets?.top
+        insetsDictionary[leftKey] = imageInsets?.left
+        insetsDictionary[rightKey] = imageInsets?.right
+        
+        controlStateDictionary[imageInsetsKey] = insetsDictionary
+        
+        controlStateDictionary[colorKey] = colorToDctionary(titleColor!)
+        controlStateDictionary[backgroundColorKey] = colorToDctionary(backgroundColor!)
+        
+        
+        return controlStateDictionary
     }
 
 }

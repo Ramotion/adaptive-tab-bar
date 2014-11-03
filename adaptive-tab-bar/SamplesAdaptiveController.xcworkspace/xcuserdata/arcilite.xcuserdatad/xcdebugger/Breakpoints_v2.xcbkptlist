@@ -458,11 +458,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AdaptiveController/AdaptiveController/ControlStateValue.swift"
-            timestampString = "436374553.132012"
+            timestampString = "436714152.296016"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
             landmarkName = "getControlApearenceFor(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -584,11 +584,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AdaptiveController/AdaptiveController/ControlStateValue.swift"
-            timestampString = "436374553.132012"
+            timestampString = "436714152.296016"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
             landmarkName = "setControlApearence(_:state:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -680,11 +680,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AdaptiveController/AdaptiveController/ControlStateAppearance.swift"
-            timestampString = "436532833.79576"
+            timestampString = "436714152.296016"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
             landmarkName = "init(appearanceStyle:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -760,27 +760,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AdaptiveController/AdaptiveController/ControlStateAppearance.swift"
-            timestampString = "436532833.79576"
+            timestampString = "436714152.296016"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
-            landmarkName = "getObjectDictionary()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AdaptiveController/AdaptiveController/ControlStateAppearance.swift"
-            timestampString = "436697017.334597"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "188"
-            endingLineNumber = "188"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
             landmarkName = "dictionaryToInsets(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -792,11 +776,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AdaptiveController/AdaptiveController/ControlStateAppearance.swift"
-            timestampString = "436697017.334597"
+            timestampString = "436714152.296016"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "231"
-            endingLineNumber = "231"
+            startingLineNumber = "207"
+            endingLineNumber = "207"
             landmarkName = "setObjectDictionary(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -804,15 +788,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AdaptiveController/AdaptiveController/ControlStateAppearance.swift"
-            timestampString = "436697017.334597"
+            timestampString = "436714152.296016"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "163"
-            endingLineNumber = "163"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
             landmarkName = "dictionaryToColor(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -824,59 +808,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AdaptiveController/AdaptiveController/ControlStateAppearance.swift"
-            timestampString = "436696371.432886"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
-            landmarkName = "getObjectDictionary()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AdaptiveController/AdaptiveController/ControlStateAppearance.swift"
-            timestampString = "436697017.334597"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "140"
-            endingLineNumber = "140"
-            landmarkName = "dictionaryToColor(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AdaptiveController/AdaptiveController/ControlStateAppearance.swift"
-            timestampString = "436697017.334597"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "131"
-            endingLineNumber = "131"
-            landmarkName = "colorToDctionary(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AdaptiveController/AdaptiveController/ControlStateAppearance.swift"
-            timestampString = "436697643.230712"
+            timestampString = "436714152.296016"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "116"
             endingLineNumber = "116"
+            landmarkName = "dictionaryToColor(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdaptiveController/AdaptiveController/ControlStateAppearance.swift"
+            timestampString = "436714152.296016"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
             landmarkName = "colorToDctionary(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -884,26 +836,42 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdaptiveController/AdaptiveController/ControlStateAppearance.swift"
+            timestampString = "436714152.296016"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "colorToDctionary(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AdaptiveController/AdaptiveControllerTests/ControlStateAppearanceTest.swift"
-            timestampString = "436698392.318708"
+            timestampString = "436714152.296016"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "testExample()"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "testControlstateAppearance()"
             landmarkType = "5">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "AdaptiveControllerTests.ControlStateAppearanceTest.testExample (AdaptiveControllerTests.ControlStateAppearanceTest)() -&gt; ()"
                   moduleName = "AdaptiveControllerTests"
                   urlString = "file:///Users/arcilite/adaptive-tab-bar/adaptive-tab-bar/AdaptiveController/AdaptiveControllerTests/ControlStateAppearanceTest.swift"
-                  timestampString = "436698395.776919"
+                  timestampString = "436699865.080362"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "59"
@@ -911,17 +879,233 @@
                   offsetFromSymbolStart = "3947">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "AdaptiveControllerTests.ControlStateAppearanceTest.(testExample (AdaptiveControllerTests.ControlStateAppearanceTest) -&gt; () -&gt; ()).(implicit closure #3) with unmangled suffix &quot;_promote0&quot;"
                   moduleName = "AdaptiveControllerTests"
                   urlString = "file:///Users/arcilite/adaptive-tab-bar/adaptive-tab-bar/AdaptiveController/AdaptiveControllerTests/ControlStateAppearanceTest.swift"
-                  timestampString = "436698395.777035"
+                  timestampString = "436699865.080471"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "59"
                   endingLineNumber = "59"
+                  offsetFromSymbolStart = "33">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdaptiveController/AdaptiveControllerTests/ControlStateAppearanceTest.swift"
+            timestampString = "436714152.296016"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "testControlstateAppearance()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdaptiveControllerTests.ControlStateAppearanceTest.testExample (AdaptiveControllerTests.ControlStateAppearanceTest)() -&gt; ()"
+                  moduleName = "AdaptiveControllerTests"
+                  urlString = "file:///Users/arcilite/adaptive-tab-bar/adaptive-tab-bar/AdaptiveController/AdaptiveControllerTests/ControlStateAppearanceTest.swift"
+                  timestampString = "436699865.080574"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "3715">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdaptiveControllerTests.ControlStateAppearanceTest.(testExample (AdaptiveControllerTests.ControlStateAppearanceTest) -&gt; () -&gt; ()).(implicit closure #2) with unmangled suffix &quot;_promote0&quot;"
+                  moduleName = "AdaptiveControllerTests"
+                  urlString = "file:///Users/arcilite/adaptive-tab-bar/adaptive-tab-bar/AdaptiveController/AdaptiveControllerTests/ControlStateAppearanceTest.swift"
+                  timestampString = "436699865.080679"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "22">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdaptiveController/AdaptiveControllerTests/ControlStateAppearanceTest.swift"
+            timestampString = "436700377.307792"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "testControlstateAppearance()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdaptiveControllerTests.ControlStateAppearanceTest.testExample (AdaptiveControllerTests.ControlStateAppearanceTest)() -&gt; ()"
+                  moduleName = "AdaptiveControllerTests"
+                  urlString = "file:///Users/arcilite/adaptive-tab-bar/adaptive-tab-bar/AdaptiveController/AdaptiveControllerTests/ControlStateAppearanceTest.swift"
+                  timestampString = "436701149.371788"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "1135">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdaptiveControllerTests.ControlStateAppearanceTest.(testExample (AdaptiveControllerTests.ControlStateAppearanceTest) -&gt; () -&gt; ()).(implicit closure #1) with unmangled suffix &quot;_promote0&quot;"
+                  moduleName = "AdaptiveControllerTests"
+                  urlString = "file:///Users/arcilite/adaptive-tab-bar/adaptive-tab-bar/AdaptiveController/AdaptiveControllerTests/ControlStateAppearanceTest.swift"
+                  timestampString = "436701149.372055"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "29">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdaptiveController/AdaptiveControllerTests/ControlStateAppearanceTest.swift"
+            timestampString = "436714152.296016"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "testControlstateAppearance()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdaptiveControllerTests.ControlStateAppearanceTest.testExample (AdaptiveControllerTests.ControlStateAppearanceTest)() -&gt; ()"
+                  moduleName = "AdaptiveControllerTests"
+                  urlString = "file:///Users/arcilite/adaptive-tab-bar/adaptive-tab-bar/AdaptiveController/AdaptiveControllerTests/ControlStateAppearanceTest.swift"
+                  timestampString = "436701149.372357"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "1135">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdaptiveControllerTests.ControlStateAppearanceTest.(testExample (AdaptiveControllerTests.ControlStateAppearanceTest) -&gt; () -&gt; ()).(implicit closure #1) with unmangled suffix &quot;_promote0&quot;"
+                  moduleName = "AdaptiveControllerTests"
+                  urlString = "file:///Users/arcilite/adaptive-tab-bar/adaptive-tab-bar/AdaptiveController/AdaptiveControllerTests/ControlStateAppearanceTest.swift"
+                  timestampString = "436701149.372539"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "29">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdaptiveController/AdaptiveController/ControlStateAppearance.swift"
+            timestampString = "436714152.296016"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
+            landmarkName = "dictionaryToColor(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdaptiveController/AdaptiveControllerTests/ControlStateAppearanceTest.swift"
+            timestampString = "436708279.193527"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "testControlstateAppearance()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdaptiveController/AdaptiveControllerTests/ControlStateAppearanceTest.swift"
+            timestampString = "436708280.248811"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "testControlstateAppearance()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdaptiveControllerTests.ControlStateAppearanceTest.testControlstateAppearance (AdaptiveControllerTests.ControlStateAppearanceTest)() -&gt; ()"
+                  moduleName = "AdaptiveControllerTests"
+                  urlString = "file:///Users/arcilite/adaptive-tab-bar/adaptive-tab-bar/AdaptiveController/AdaptiveControllerTests/ControlStateAppearanceTest.swift"
+                  timestampString = "436714154.023459"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "2423">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdaptiveControllerTests.ControlStateAppearanceTest.(testControlstateAppearance (AdaptiveControllerTests.ControlStateAppearanceTest) -&gt; () -&gt; ()).(implicit closure #5) with unmangled suffix &quot;_promote0&quot;"
+                  moduleName = "AdaptiveControllerTests"
+                  urlString = "file:///Users/arcilite/adaptive-tab-bar/adaptive-tab-bar/AdaptiveController/AdaptiveControllerTests/ControlStateAppearanceTest.swift"
+                  timestampString = "436714154.023813"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
                   offsetFromSymbolStart = "33">
                </Location>
             </Locations>

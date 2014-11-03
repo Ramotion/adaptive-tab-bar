@@ -33,29 +33,26 @@ class ControlStateAppearanceTest: XCTestCase {
         super.tearDown()
     }
 
-    func testExample() {
+    func testControlstateAppearance() {
         
         var appearance = ControlStateAppearance();
         appearance.font = UIFont(name: "Arial", size: 12)
         appearance.title = "2"
         appearance.imageInsets = UIEdgeInsetsMake(2, 2, 2, 2)
         appearance.titleOffset = UIOffsetMake(2, 2)
-        appearance.titleColor = UIColor.blackColor()
-        appearance.backgroundColor = UIColor.greenColor()
+        appearance.titleColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+        appearance.backgroundColor = UIColor(red: 0, green: 7, blue: 0, alpha: 1)
         
         var appearance1 = ControlStateAppearance();
         appearance1.setObjectDictionary( appearance.getObjectDictionary())
         
      
         
-        if CGColorEqualToColor(appearance.backgroundColor?.CGColor,appearance1.backgroundColor?.CGColor)
-        {
-            //Two colors are same
-        }
+        XCTAssert(appearance.titleColor ==  appearance1.titleColor, "Fail color")
         
-        XCTAssert(CGColorEqualToColor(appearance.backgroundColor?.CGColor,appearance1.backgroundColor?.CGColor), "Fail color")
+        XCTAssert(appearance.backgroundColor ==  appearance1.backgroundColor, "Fail color")
         
-        XCTAssert(appearance1.titleColor ==  UIColor.blackColor(), "Fail color")
+        XCTAssert(appearance1.titleColor ==  appearance.titleColor, "Fail color")
         XCTAssert(UIOffsetEqualToOffset(appearance1.titleOffset!,appearance.titleOffset!), "Fail offset")
         XCTAssert(UIEdgeInsetsEqualToEdgeInsets(appearance.imageInsets!, appearance1.imageInsets!), "Fail insets")
         
