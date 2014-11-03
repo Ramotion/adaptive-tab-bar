@@ -10,13 +10,16 @@ import UIKit
 
 public let defaultFont = UIFont(name: "Helvetica", size: 14.0)
 public let kNotTitle = ""
-public class AdaptiveButtonAppearance: NSObject {
+public class AdaptiveButtonAppearance: NSObject,AppearanceSerializationProtocol {
     
 
- 
+    public typealias StateObject = ControlStateValue
+    public typealias DictionaryObject = Dictionary <String,AnyObject>
     
     
     private var stateDictionary:Dictionary <String,ControlStateValue> = Dictionary<String,ControlStateValue>()
+    
+   
     
     
     
@@ -284,5 +287,29 @@ public class AdaptiveButtonAppearance: NSObject {
       
         
     }
+    
+    public func setObjectDictionary(dictionary:Dictionary <String,DictionaryObject>){
+        
+        for (key,object ) in dictionary{
+            var appearanceDictionary = object as Dictionary <String,DictionaryObject>
+            var appearanceObject = ControlStateValue()
+            appearanceObject.setObjectDictionary(appearanceDictionary)
+            stateDictionary.updateValue(appearanceObject, forKey: key)
+        }
+    }
+    
+    public func getObjectDictionary() -> Dictionary<String,DictionaryObject>{
+        
+        var controlStatesDictionary =   Dictionary<String,DictionaryObject>()
+        
+        for (key,object ) in stateDictionary{
+            var appearance = object as ControlStateValue
+            var appearanceDictionary =  appearance.getObjectDictionary()
+            controlStatesDictionary.updateValue(appearanceDictionary, forKey: key)
+        }
+        
+        return controlStatesDictionary
+    }
+
 
 }

@@ -22,17 +22,60 @@ class ControlStateValueTest: XCTestCase {
         super.tearDown()
     }
 
-    func testExample() {
+    func testControlStateAppearance() {
         var appearance = ControlStateAppearance()
-        appearance.title = "ddd"
+        appearance.font = UIFont(name: "Arial", size: 12)
+        appearance.title = "2"
+        appearance.imageInsets = UIEdgeInsetsMake(2, 2, 2, 2)
+        appearance.titleOffset = UIOffsetMake(2, 2)
+        appearance.titleColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+        appearance.backgroundColor = UIColor(red: 0, green: 7, blue: 0, alpha: 1)
+ 
         var value = ControlStateValue(valueForNormalState: appearance)
         value.setControlApearence(appearance,state:UIControlState.Normal)
         var object:ControlStateAppearance = value.getControlApearenceFor(UIControlState.Normal)
         
-        // This is an example of a functional test case.
-      
         XCTAssert(object.title! == appearance.title , "Pass")
+        
+        
     }
+    
+    
+    func testControlStateAppearanceSerialization() {
+      
+        var appearance = ControlStateAppearance()
+        appearance.font = UIFont(name: "Arial", size: 12)
+        appearance.title = "2"
+        appearance.imageInsets = UIEdgeInsetsMake(2, 2, 2, 2)
+        appearance.titleOffset = UIOffsetMake(2, 2)
+        appearance.titleColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+        appearance.backgroundColor = UIColor(red: 0, green: 7, blue: 0, alpha: 1)
+        
+        var value = ControlStateValue(valueForNormalState: appearance)
+        value.setControlApearence(appearance,state:UIControlState.Normal)
+        var object:ControlStateAppearance = value.getControlApearenceFor(UIControlState.Normal)
+        
+        XCTAssert(object.title! == appearance.title , "Pass")
+        
+        var value1 = ControlStateValue()
+        value1.setObjectDictionary(value.getObjectDictionary())
+        var object1:ControlStateAppearance = value.getControlApearenceFor(UIControlState.Normal)
+        XCTAssert(object1.title! == appearance.title , "Pass")
+        
+        
+        XCTAssert(appearance.titleColor ==  object1.titleColor, "Fail color")
+        
+        XCTAssert(appearance.backgroundColor ==  object1.backgroundColor, "Fail color")
+        
+        XCTAssert(appearance.titleColor ==  object1.titleColor, "Fail color")
+        XCTAssert(UIOffsetEqualToOffset(appearance.titleOffset!,object1.titleOffset!), "Fail offset")
+        XCTAssert(UIEdgeInsetsEqualToEdgeInsets(appearance.imageInsets!, object1.imageInsets!), "Fail insets")
+        
+        
+    }
+    
+    
+    
 
     func testPerformanceExample() {
         // This is an example of a performance test case.
