@@ -213,7 +213,7 @@ public class ControlStateAppearance: AppearanceSerializationProtocol{
         }
         
         if let backgroundImageName = dictionary[backgroundImageNameKey] as? String{
-            image = UIImage(named:backgroundImageName)
+            backgroundImage = UIImage(named:backgroundImageName)
         }
         
     }
