@@ -9,6 +9,8 @@
 import UIKit
 
 public class DictioanarySeriliazator: NSObject {
+    let rootKey:NSString = "Root"
+    public typealias DictionaryObject = Dictionary <String,AnyObject>
     
     func readDictionaryFromFile(filePath:String) -> Dictionary<String,AnyObject!>? {
         var anError : NSError?
@@ -51,22 +53,44 @@ public class DictioanarySeriliazator: NSObject {
         return buttonsAperancesDictionaryArray
     }
     
-    public func saveStateDictionary(buttonApearances:[AdaptiveButtonAppearance],fileName:String){
+    public func saveStateDictionary(buttonApearances:[AdaptiveButtonAppearance],filePath:String){
         
-        var paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
-        var path = paths.stringByAppendingPathComponent(fileName)
+       // var paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
+        var path = filePath//.stringByAppendingPathComponent(fileName)
         println(path)
         var dataArray =  buttonApperancesToArrayDictionary(buttonApearances)
         var data : NSArray = dataArray as NSArray
         var fileManager = NSFileManager.defaultManager()
-       
-//        if (!(fileManager.fileExistsAtPath(path)))
-//        {
-//            var bundle : NSString = NSBundle.mainBundle().pathForResource("data", ofType: "plist")
-//            fileManager.copyItemAtPath(bundle, toPath: path, error:nil)
-//        }
-       // data.setObject(object, forKey: "object")
         data.writeToFile(path, atomically: true)
         
+    }
+    
+    public func dictionaryApperancesToArrayApperances(buttonApearancesDictionary:Array<Dictionary<String, DictionaryObject>>) -> [AdaptiveButtonAppearance]{
+        var buttonsAperancesDictionaryArray  = [AdaptiveButtonAppearance]()
+        for appeareanceDictionary in buttonApearancesDictionary{
+            var appearance = AdaptiveButtonAppearance()
+            appearance.setObjectDictionary(appeareanceDictionary)
+            buttonsAperancesDictionaryArray.append(appearance)
+        }
+        return buttonsAperancesDictionaryArray
+    }
+    
+    
+    public func getButtonApperances(filePath:String)->[AdaptiveButtonAppearance] {
+        
+        if countElements(filePath) > 0 {
+            // The file saved previously
+            
+            // Check for existence of the file
+            if NSFileManager.defaultManager().fileExistsAtPath(filePath){
+                let resultArray = NSArray(contentsOfFile: filePath)
+             //   var arrayAppearencesDictionary: NSArray? = resultDictionary?.objectForKey(rootKey) as? NSArray
+                var appearancesDictionaryArray = resultArray as Array<Dictionary<String, DictionaryObject>>
+                
+                return dictionaryApperancesToArrayApperances(appearancesDictionaryArray)
+                
+            }
+        }
+        return [AdaptiveButtonAppearance]()
     }
 }

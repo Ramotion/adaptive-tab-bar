@@ -42,14 +42,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        
         var adaptiveState = AdaptiveDateState(installDate: installDate,currentDate:NSDate(),countDaysToSmallTextState:countDaysToSmallTextState,countDaysToImageState:countDaysToImageState)
         
+        let path = NSBundle.mainBundle().pathForResource("appearances", ofType: "plist")
         
-        var butonsApperances = buttonsAppearancesGenerate()
+        var seriliazator = DictioanarySeriliazator()
+      //  seriliazator.getButtonApperances(path!)
+        
+        var butonsApperances = seriliazator.getButtonApperances(path!) //buttonsAppearancesGenerate()
         
      
         var arrayButtons = tabBar.items as [AdaptiveTabBarItem]
         
-        var seriliazator = DictioanarySeriliazator()
-        seriliazator.saveStateDictionary(butonsApperances, fileName: "appearances.plist")
+      
+        var paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
+        paths = paths.stringByAppendingPathComponent("appearances.plist")
+        seriliazator.saveStateDictionary(butonsApperances,filePath:paths)
+        
         
         AdaptiveButtonsStateManager(state: adaptiveState,buttonsAray:arrayButtons ,buttonsAppearance: butonsApperances)
         

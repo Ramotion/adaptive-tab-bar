@@ -8,8 +8,8 @@
 
 import UIKit
 
-public let kSmallTitleAdaptiveState = "kImageAdaptiveState"
-public let kImageAdaptiveState = "kNormalImageAdaptiveState"
+public let kSmallTitleAdaptiveState = "kSmallTitleAdaptiveState"
+public let kImageAdaptiveState = "kImageAdaptiveState"
 
 public class AdaptiveDateState: AdaptiveState {
    

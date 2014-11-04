@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A156E401A091169002A69AD /* appearances.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6A156E3F1A091169002A69AD /* appearances.plist */; };
 		6A3ED0C819ED0236006F06DD /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A87F54B19C8532500E8F31B /* DateExtension.swift */; };
 		6A55590219E2C20900ED3B5C /* AdaptiveController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A55590119E2C20900ED3B5C /* AdaptiveController.framework */; };
 		6A55590819E2CF7200ED3B5C /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A55590319E2CF7200ED3B5C /* MenuViewController.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6A156E3F1A091169002A69AD /* appearances.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = appearances.plist; sourceTree = "<group>"; };
 		6A55590119E2C20900ED3B5C /* AdaptiveController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdaptiveController.framework; path = "../../AdaptiveController/build/Debug-iphoneos/AdaptiveController.framework"; sourceTree = "<group>"; };
 		6A55590319E2CF7200ED3B5C /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = UIControllers/MenuViewController.swift; sourceTree = "<group>"; };
 		6A55590419E2CF7200ED3B5C /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageViewController.swift; path = UIControllers/MessageViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 		6AD5A2F619C6C95E00606826 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6A156E3F1A091169002A69AD /* appearances.plist */,
 				6AD5A2F719C6C95E00606826 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -256,6 +259,7 @@
 			files = (
 				6AD5A30019C6C95E00606826 /* Main.storyboard in Resources */,
 				6AD5A30519C6C95E00606826 /* LaunchScreen.xib in Resources */,
+				6A156E401A091169002A69AD /* appearances.plist in Resources */,
 				6AD5A30219C6C95E00606826 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
