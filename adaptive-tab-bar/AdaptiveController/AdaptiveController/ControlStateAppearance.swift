@@ -208,6 +208,13 @@ public class ControlStateAppearance: AppearanceSerializationProtocol{
         titleColor =  dictionaryToColor(dictionary[colorKey]! as? Dictionary <String, CGFloat>)
         backgroundColor =  dictionaryToColor(dictionary[backgroundColorKey]! as? Dictionary <String, CGFloat>)
         
+        if let imageName = dictionary[imageNameKey] as? String{
+            image = UIImage(named:imageName)
+        }
+        
+        if let backgroundImageName = dictionary[backgroundImageNameKey] as? String{
+            image = UIImage(named:backgroundImageName)
+        }
         
     }
     
@@ -237,7 +244,8 @@ public class ControlStateAppearance: AppearanceSerializationProtocol{
         
         controlStateDictionary[colorKey] = colorToDctionary(titleColor!)
         controlStateDictionary[backgroundColorKey] = colorToDctionary(backgroundColor!)
-        
+        controlStateDictionary[imageNameKey] = ""
+        controlStateDictionary[backgroundImageNameKey] = ""
         
         return controlStateDictionary
     }
