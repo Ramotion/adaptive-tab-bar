@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A156E3E1A08B38E002A69AD /* DictioanarySeriliazator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A156E3D1A08B38E002A69AD /* DictioanarySeriliazator.swift */; };
 		6A36BD4219FFDEDA00C19F61 /* ControlStateValueTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A36BD4119FFDEDA00C19F61 /* ControlStateValueTest.swift */; };
 		6A3E3A1C19E05E5B00C7504B /* AdaptiveLaunchesState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3E3A1B19E05E5B00C7504B /* AdaptiveLaunchesState.swift */; };
 		6A3ED0CA19ED02DA006F06DD /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3ED0C919ED02DA006F06DD /* DateExtension.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6A156E3D1A08B38E002A69AD /* DictioanarySeriliazator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictioanarySeriliazator.swift; sourceTree = "<group>"; };
 		6A36BD4119FFDEDA00C19F61 /* ControlStateValueTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlStateValueTest.swift; sourceTree = "<group>"; };
 		6A3E3A1B19E05E5B00C7504B /* AdaptiveLaunchesState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdaptiveLaunchesState.swift; sourceTree = "<group>"; };
 		6A3ED0C919ED02DA006F06DD /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DateExtension.swift; path = "../../Samples/adaptive-dates-tabbar/adaptive-tab-bar/DateExtension.swift"; sourceTree = "<group>"; };
@@ -86,6 +88,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A156E3C1A08B322002A69AD /* Serializator */ = {
+			isa = PBXGroup;
+			children = (
+				6A156E3D1A08B38E002A69AD /* DictioanarySeriliazator.swift */,
+			);
+			name = Serializator;
+			sourceTree = "<group>";
+		};
 		6AAE857B19D329E0005672CA /* CustomAdaptiveStates */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				6AE723421A078071003416B6 /* ColorExtension.swift */,
+				6A156E3C1A08B322002A69AD /* Serializator */,
 				6AD4002C19F7A12200630034 /* Protocols */,
 				6AD1EC2719EFB521003F36A4 /* ControlStates */,
 				6AD1EC2319EFA903003F36A4 /* Appearance */,
@@ -312,6 +323,7 @@
 				6AD1EC2619EFA9BA003F36A4 /* ControlStateValue.swift in Sources */,
 				6AAE857919D329C6005672CA /* AdaptiveDateState.swift in Sources */,
 				6AD1EC2919EFB8E2003F36A4 /* ControlStateProtocol.swift in Sources */,
+				6A156E3E1A08B38E002A69AD /* DictioanarySeriliazator.swift in Sources */,
 				6AAE857A19D329C6005672CA /* AdaptiveState.swift in Sources */,
 				6AE723431A078071003416B6 /* ColorExtension.swift in Sources */,
 				6AD4002719F7896900630034 /* ButtonStateAppearanceProtocol.swift in Sources */,

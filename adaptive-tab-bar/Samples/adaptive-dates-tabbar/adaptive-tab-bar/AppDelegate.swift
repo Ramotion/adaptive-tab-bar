@@ -47,7 +47,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
      
         var arrayButtons = tabBar.items as [AdaptiveTabBarItem]
-       
+        
+        var seriliazator = DictioanarySeriliazator()
+        seriliazator.saveStateDictionary(butonsApperances, fileName: "appearances.plist")
+        
         AdaptiveButtonsStateManager(state: adaptiveState,buttonsAray:arrayButtons ,buttonsAppearance: butonsApperances)
         
         
@@ -61,9 +64,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         var imageExtensionsForStates:Dictionary = [ kDefaultAdaptiveState:"",
                                                     kSmallTitleAdaptiveState:"_smalltitle",
-                                                    kImageAdaptiveState:"_bigimage",
-                                                    kSmallTitleAdaptiveState+selected :"_smalltitle",
-                                                    kImageAdaptiveState+selected:"_bigimage" ]
+                                                    kImageAdaptiveState:"_bigimage"
+                                                   ]
         
         
         var watchAperance = AdaptiveButtonAppearance();
