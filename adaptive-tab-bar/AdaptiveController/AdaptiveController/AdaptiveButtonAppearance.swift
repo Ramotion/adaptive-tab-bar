@@ -48,7 +48,9 @@ public class AdaptiveButtonAppearance: NSObject,AppearanceSerializationProtocol 
         self.setButtonImage(UIImage(named: imageName)!, state: kDefaultAdaptiveState)
         for (state,imageExtension) in imageExtensionsForState {
             self.setButtonImage(UIImage(named: imageName+imageExtension)!, state: state ,controlState:controlState)
+            self.setButtonImageName(imageName,state: state ,controlState:controlState)
         }
+        
         
         
     }
@@ -150,6 +152,8 @@ public class AdaptiveButtonAppearance: NSObject,AppearanceSerializationProtocol 
         print("set State \(state)")
     }
     
+   
+    
     public func setButtonImage(image:UIImage, state:String, controlState:UIControlState){
         
         var controlStateValueObject = getOrCreateStateObjectForState(state)
@@ -159,6 +163,22 @@ public class AdaptiveButtonAppearance: NSObject,AppearanceSerializationProtocol 
         print("set State \(state)")
     }
 
+    public func setButtonImageName(imageName:String, state:String){
+        
+        setButtonImageName(imageName, state: state, controlState: UIControlState.Normal)
+        print("set State \(state)")
+    }
+ 
+    public func setButtonImageName(imageName:String, state:String, controlState:UIControlState){
+        
+        var controlStateValueObject = getOrCreateStateObjectForState(state)
+        var controlStateAppearanceObject = getOrCreateStateAppearenceObject(controlStateValueObject,controlState: controlState)
+        controlStateAppearanceObject.imageName = imageName
+        
+        print("set State \(state)")
+    }
+
+    
     public func getButonImageForState(state:NSString)->UIImage!{
        
         return getButonImageForState(state, controlState: UIControlState.Normal)
@@ -170,6 +190,23 @@ public class AdaptiveButtonAppearance: NSObject,AppearanceSerializationProtocol 
         
          if var controlStateAppearanceObject = controlStateValueObject.getControlApearenceFor(controlState){
             return controlStateAppearanceObject.image
+        }else{
+            return nil
+        }
+    }
+    
+    
+    public func getButonImageNameForState(state:NSString)->NSString!{
+        
+        return getButonImageNameForState(state, controlState: UIControlState.Normal)
+        
+    }
+    
+    public func getButonImageNameForState(state:NSString, controlState:UIControlState)->NSString?{
+        var controlStateValueObject = getOrCreateStateObjectForState(state)
+        
+        if var controlStateAppearanceObject = controlStateValueObject.getControlApearenceFor(controlState){
+            return controlStateAppearanceObject.imageName
         }else{
             return nil
         }

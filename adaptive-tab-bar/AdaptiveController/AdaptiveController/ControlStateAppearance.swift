@@ -210,6 +210,7 @@ public class ControlStateAppearance: AppearanceSerializationProtocol{
         
         if let imageName = dictionary[imageNameKey] as? String{
             image = UIImage(named:imageName)
+            self.imageName = imageName
         }
         
         if let backgroundImageName = dictionary[backgroundImageNameKey] as? String{
@@ -244,7 +245,7 @@ public class ControlStateAppearance: AppearanceSerializationProtocol{
         
         controlStateDictionary[colorKey] = colorToDctionary(titleColor!)
         controlStateDictionary[backgroundColorKey] = colorToDctionary(backgroundColor!)
-        controlStateDictionary[imageNameKey] = ""
+        controlStateDictionary[imageNameKey] = imageName
         controlStateDictionary[backgroundImageNameKey] = ""
         
         return controlStateDictionary
