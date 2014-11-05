@@ -5,7 +5,7 @@
 	<dict>
 		<key>DefaultAdaptiveState</key>
 		<dict>
-			<key>0</key>
+			<key>UIControlState.Normal</key>
 			<dict>
 				<key>backgroundColorKey</key>
 				<dict>
@@ -66,7 +66,7 @@
 		</dict>
 		<key>kImageAdaptiveState</key>
 		<dict>
-			<key>0</key>
+			<key>UIControlState.Normal</key>
 			<dict>
 				<key>backgroundColorKey</key>
 				<dict>
@@ -125,7 +125,7 @@
 		</dict>
 		<key>kSmallTitleAdaptiveState</key>
 		<dict>
-			<key>0</key>
+			<key>UIControlState.Normal</key>
 			<dict>
 				<key>backgroundColorKey</key>
 				<dict>
@@ -186,7 +186,7 @@
 	<dict>
 		<key>DefaultAdaptiveState</key>
 		<dict>
-			<key>0</key>
+			<key>UIControlState.Normal</key>
 			<dict>
 				<key>backgroundColorKey</key>
 				<dict>
@@ -245,7 +245,7 @@
 		</dict>
 		<key>kImageAdaptiveState</key>
 		<dict>
-			<key>0</key>
+			<key>UIControlState.Normal</key>
 			<dict>
 				<key>backgroundColorKey</key>
 				<dict>
@@ -304,7 +304,7 @@
 		</dict>
 		<key>kSmallTitleAdaptiveState</key>
 		<dict>
-			<key>0</key>
+			<key>UIControlState.Normal</key>
 			<dict>
 				<key>backgroundColorKey</key>
 				<dict>
@@ -365,7 +365,7 @@
 	<dict>
 		<key>DefaultAdaptiveState</key>
 		<dict>
-			<key>0</key>
+			<key>UIControlState.Normal</key>
 			<dict>
 				<key>backgroundColorKey</key>
 				<dict>
@@ -424,7 +424,7 @@
 		</dict>
 		<key>kImageAdaptiveState</key>
 		<dict>
-			<key>0</key>
+			<key>UIControlState.Normal</key>
 			<dict>
 				<key>backgroundColorKey</key>
 				<dict>
@@ -483,7 +483,7 @@
 		</dict>
 		<key>kSmallTitleAdaptiveState</key>
 		<dict>
-			<key>0</key>
+			<key>UIControlState.Normal</key>
 			<dict>
 				<key>backgroundColorKey</key>
 				<dict>
@@ -544,7 +544,7 @@
 	<dict>
 		<key>DefaultAdaptiveState</key>
 		<dict>
-			<key>0</key>
+			<key>UIControlState.Normal</key>
 			<dict>
 				<key>backgroundColorKey</key>
 				<dict>
@@ -603,7 +603,7 @@
 		</dict>
 		<key>kImageAdaptiveState</key>
 		<dict>
-			<key>0</key>
+			<key>UIControlState.Normal</key>
 			<dict>
 				<key>backgroundColorKey</key>
 				<dict>
@@ -662,7 +662,7 @@
 		</dict>
 		<key>kSmallTitleAdaptiveState</key>
 		<dict>
-			<key>0</key>
+			<key>UIControlState.Normal</key>
 			<dict>
 				<key>backgroundColorKey</key>
 				<dict>
@@ -723,7 +723,7 @@
 	<dict>
 		<key>DefaultAdaptiveState</key>
 		<dict>
-			<key>0</key>
+			<key>UIControlState.Normal</key>
 			<dict>
 				<key>backgroundColorKey</key>
 				<dict>
@@ -782,7 +782,7 @@
 		</dict>
 		<key>kImageAdaptiveState</key>
 		<dict>
-			<key>0</key>
+			<key>UIControlState.Normal</key>
 			<dict>
 				<key>backgroundColorKey</key>
 				<dict>
@@ -841,7 +841,7 @@
 		</dict>
 		<key>kSmallTitleAdaptiveState</key>
 		<dict>
-			<key>0</key>
+			<key>UIControlState.Normal</key>
 			<dict>
 				<key>backgroundColorKey</key>
 				<dict>
