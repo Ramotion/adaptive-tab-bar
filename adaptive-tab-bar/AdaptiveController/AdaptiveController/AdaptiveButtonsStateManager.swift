@@ -86,6 +86,10 @@ public class AdaptiveButtonsStateManager: NSObject {
             
             if let selectedImage = buttonApperance.getButonImageForState(state,controlState:UIControlState.Selected){
                 button.setSelectedImageToAdaptiveButton?(selectedImage)
+            }else{
+                if let selectedImage = buttonApperance.getButonImageForState(state,controlState:UIControlState.Normal){
+                    button.setSelectedImageToAdaptiveButton?(selectedImage)
+                }
             }
             
             if let highlightedImage = buttonApperance.getButonImageForState(state,controlState:UIControlState.Highlighted) {

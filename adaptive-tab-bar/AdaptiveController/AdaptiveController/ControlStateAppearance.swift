@@ -155,7 +155,7 @@ public class ControlStateAppearance: AppearanceSerializationProtocol{
             
             var right:CGFloat  = 0
             
-            if let rightDictionary = insetsDictionary[topKey]{
+            if let rightDictionary = insetsDictionary[rightKey]{
                 right = rightDictionary
             }
             
