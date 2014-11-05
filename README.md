@@ -104,17 +104,18 @@ sample of plist you can find in example-date-adaptive-tab-bar project file named
  
 for setuping button appearences from plist you can use this code:
         
-       ```swift 
-       var seriliazator = DictioanarySeriliazator()
-       var butonsApperances = seriliazator.getButtonApperances(path!)
-       ```
+```swift 
+var seriliazator = DictioanarySeriliazator()
+var butonsApperances = seriliazator.getButtonApperances(path!)
+```
+
 for debugging button appearences  you can save your aperances in plist for this you can use next code:    
 
 ```swift 
  var paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
-        paths = paths.stringByAppendingPathComponent("appearances.plist")
-        seriliazator.saveStateDictionary(butonsApperances,filePath:paths)
-       ```   
+ paths = paths.stringByAppendingPathComponent("appearances.plist")
+ seriliazator.saveStateDictionary(butonsApperances,filePath:paths)
+```   
        
 Then you should setup сustom UITabBarItems which conform to the AdaptiveButtonsProtocol:
 
