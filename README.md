@@ -87,6 +87,35 @@ Then you should setup the appearance insets for each state:
     watchAppearance.setImageInsets(defaultImageModeInsets, state: kImageAdaptiveState);
 ```
 
+And you can setup the appearance insets for each Control state but this setting is optional: 
+
+```swift
+    watchAppearance.setImageInsets(defaultInsets, state: kDefaultAdaptiveState controlState:UIControlState.Highlighted);
+    watchAppearance.setImageInsets(defaultSmallTitleModeImageInsets, state: kSmallTitleAdaptiveState controlState:UIControlState.Highlighted)
+    watchAppearance.setTitleOffset(defaultOffset, state: kDefaultAdaptiveState controlState:UIControlState.Highlighted)
+    watchAppearance.setImageInsets(defaultImageModeInsets, state: kImageAdaptiveState controlState:UIControlState.Highlighted);
+```
+
+In alternative way you can setup all appearances settings in plist like on image
+
+![Mou icon](http://i.imgur.com/7I2TTbP.png)
+
+sample of plist you can find in example-date-adaptive-tab-bar project file named  appearances.plist
+ 
+for setuping button appearences from plist you can use this code:
+        
+       ```swift 
+       var seriliazator = DictioanarySeriliazator()
+       var butonsApperances = seriliazator.getButtonApperances(path!)
+       ```
+for debugging button appearences  you can save your aperances in plist for this you can use next code:    
+
+```swift 
+ var paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
+        paths = paths.stringByAppendingPathComponent("appearances.plist")
+        seriliazator.saveStateDictionary(butonsApperances,filePath:paths)
+       ```   
+       
 Then you should setup сustom UITabBarItems which conform to the AdaptiveButtonsProtocol:
 
 ```swift 
