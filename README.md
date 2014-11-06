@@ -52,7 +52,7 @@ And then you should setup an array of items Appearance object. You should set th
 First, you should setup a dictionary for the extension of the image for each UI state:
 		
 ```swift
-    var imageExtensionsForStates:Dictionary = [ kSmallTitleAdaptiveState:"_smalltitle", kImageAdaptiveState:"_bigimage", kSmallTitleAdaptiveState+selected :"_smalltitle", kImageAdaptiveState+selected:"_bigimage" ]
+    var imageExtensionsForStates:Dictionary = [ kSmallTitleAdaptiveState:"_smalltitle", kImageAdaptiveState:"_bigimage"]
 ```
  Then you should set the Appearance for each UITabBarItem title for each state, fonts for each state, a default image if you describe an extension for each state, or if you do not describe an extension, you should setup each image for each state.
  
@@ -98,7 +98,7 @@ And you can setup the appearance insets for each Control state but this setting 
 
 In alternative way you can setup all appearances settings in plist like on image
 
-![Mou icon](http://i.imgur.com/7I2TTbP.png)
+![Mou icon](http://i.imgur.com/sYroFrW.png)
 
 sample of plist you can find in example-date-adaptive-tab-bar project file named  appearances.plist
  

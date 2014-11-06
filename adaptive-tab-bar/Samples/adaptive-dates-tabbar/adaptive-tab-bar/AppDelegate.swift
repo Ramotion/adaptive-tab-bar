@@ -45,12 +45,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let path = NSBundle.mainBundle().pathForResource("appearances", ofType: "plist")
         
         var seriliazator = DictioanarySeriliazator()
-      //  seriliazator.getButtonApperances(path!)
+      
         
-        var butonsApperances = seriliazator.getButtonApperances(path!) //buttonsAppearancesGenerate()
+        var butonsApperances = seriliazator.getButtonApperances(path!)
         
      
-        var arrayButtons = tabBar.items as [AdaptiveTabBarItem]
+        var arrayButtons = tabBar.items as [UITabBarItem]
         
       
         var paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String

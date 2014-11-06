@@ -53,8 +53,6 @@
 				<string>watch</string>
 				<key>title</key>
 				<string>watch</string>
-				<key>New item</key>
-				<string></string>
 				<key>titleOffsetKey</key>
 				<dict>
 					<key>xKey</key>
