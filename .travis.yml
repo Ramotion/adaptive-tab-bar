@@ -1,5 +1,4 @@
 language: objective-c
-before_install: git submodule update --init --recursive
 script: "rake test:ios"
 #xcode_workspace: adaptive-tab-bar/SamplesAdaptiveController.xcworkspace # path to your xcodeproj folder
 #xcode_scheme: AdaptiveControllerTests
