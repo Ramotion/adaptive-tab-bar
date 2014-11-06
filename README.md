@@ -98,7 +98,7 @@ And you can setup the appearance insets for each Control state but this setting 
 
 In alternative way you can setup all appearances settings in plist like on image
 
-![Mou icon](http://i.imgur.com/sYroFrW.png)
+![Mou icon](http://i.imgur.com/zLP8zHF.png)
 
 sample of plist you can find in example-date-adaptive-tab-bar project file named  appearances.plist
  
