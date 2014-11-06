@@ -3,895 +3,865 @@
 <plist version="1.0">
 <array>
 	<dict>
-		<key>DefaultAdaptiveState</key>
+		<key>kDefaultAdaptiveState</key>
 		<dict>
-			<key>UIControlState.Normal</key>
+			<key>UIControlStateNormal</key>
 			<dict>
-				<key>backgroundColorKey</key>
+				<key>backgroundColor</key>
 				<dict>
-					<key>alphaColor</key>
+					<key>alpha</key>
 					<real>0</real>
-					<key>blueColor</key>
+					<key>blue</key>
 					<real>0</real>
-					<key>greenColor</key>
+					<key>green</key>
 					<real>0</real>
-					<key>redColor</key>
+					<key>red</key>
 					<real>0</real>
 				</dict>
-				<key>backgroundImageNameKey</key>
-				<string></string>
-				<key>colorKey</key>
+				<key>color</key>
 				<dict>
-					<key>alphaColor</key>
+					<key>alpha</key>
 					<real>1</real>
-					<key>blueColor</key>
+					<key>blue</key>
 					<real>1</real>
-					<key>greenColor</key>
+					<key>green</key>
 					<real>1</real>
-					<key>redColor</key>
+					<key>red</key>
 					<real>1</real>
 				</dict>
-				<key>fontKey</key>
+				<key>font</key>
 				<dict>
-					<key>fontNameKey</key>
+					<key>fontName</key>
 					<string>Helvetica</string>
-					<key>fontSizeKey</key>
+					<key>fontSize</key>
 					<real>14</real>
 				</dict>
-				<key>imageInsetsKey</key>
+				<key>imageInsets</key>
 				<dict>
-					<key>bottomKey</key>
+					<key>bottom</key>
 					<real>0</real>
-					<key>leftKey</key>
+					<key>left</key>
 					<real>0</real>
-					<key>rightKey</key>
+					<key>right</key>
 					<real>0</real>
-					<key>topKey</key>
+					<key>top</key>
 					<real>0</real>
 				</dict>
-				<key>imageNameKey</key>
+				<key>imageName</key>
 				<string>watch</string>
 				<key>title</key>
 				<string>watch</string>
-				<key>titleOffsetKey</key>
+				<key>titleOffset</key>
 				<dict>
-					<key>xKey</key>
+					<key>horizontal</key>
 					<real>0</real>
-					<key>yKey</key>
+					<key>vertical</key>
 					<real>0</real>
 				</dict>
 			</dict>
 		</dict>
 		<key>kImageAdaptiveState</key>
 		<dict>
-			<key>UIControlState.Normal</key>
+			<key>UIControlStateNormal</key>
 			<dict>
-				<key>backgroundColorKey</key>
+				<key>backgroundColor</key>
 				<dict>
-					<key>alphaColor</key>
+					<key>alpha</key>
 					<real>0</real>
-					<key>blueColor</key>
+					<key>blue</key>
 					<real>0</real>
-					<key>greenColor</key>
+					<key>green</key>
 					<real>0</real>
-					<key>redColor</key>
+					<key>red</key>
 					<real>0</real>
 				</dict>
-				<key>backgroundImageNameKey</key>
-				<string></string>
-				<key>colorKey</key>
+				<key>color</key>
 				<dict>
-					<key>alphaColor</key>
+					<key>alpha</key>
 					<real>1</real>
-					<key>blueColor</key>
+					<key>blue</key>
 					<real>0</real>
-					<key>greenColor</key>
+					<key>green</key>
 					<real>0</real>
-					<key>redColor</key>
+					<key>red</key>
 					<real>0</real>
 				</dict>
-				<key>fontKey</key>
+				<key>font</key>
 				<dict>
-					<key>fontNameKey</key>
+					<key>fontName</key>
 					<string>Helvetica</string>
-					<key>fontSizeKey</key>
+					<key>fontSize</key>
 					<real>14</real>
 				</dict>
-				<key>imageInsetsKey</key>
+				<key>imageInsets</key>
 				<dict>
-					<key>bottomKey</key>
-					<integer>-6</integer>
-					<key>leftKey</key>
-					<integer>0</integer>
-					<key>rightKey</key>
-					<integer>0</integer>
-					<key>topKey</key>
-					<integer>6</integer>
+					<key>bottom</key>
+					<real>-6</real>
+					<key>left</key>
+					<real>0</real>
+					<key>right</key>
+					<real>0</real>
+					<key>top</key>
+					<real>6</real>
 				</dict>
-				<key>imageNameKey</key>
+				<key>imageName</key>
 				<string>watch_bigimage</string>
 				<key>title</key>
 				<string></string>
-				<key>titleOffsetKey</key>
+				<key>titleOffset</key>
 				<dict>
-					<key>xKey</key>
+					<key>horizontal</key>
 					<real>0</real>
-					<key>yKey</key>
+					<key>vertical</key>
 					<real>0</real>
 				</dict>
 			</dict>
 		</dict>
 		<key>kSmallTitleAdaptiveState</key>
 		<dict>
-			<key>UIControlState.Normal</key>
+			<key>UIControlStateNormal</key>
 			<dict>
-				<key>backgroundColorKey</key>
+				<key>backgroundColor</key>
 				<dict>
-					<key>alphaColor</key>
+					<key>alpha</key>
 					<real>0</real>
-					<key>blueColor</key>
+					<key>blue</key>
 					<real>0</real>
-					<key>greenColor</key>
+					<key>green</key>
 					<real>0</real>
-					<key>redColor</key>
+					<key>red</key>
 					<real>0</real>
 				</dict>
-				<key>backgroundImageNameKey</key>
-				<string></string>
-				<key>colorKey</key>
+				<key>color</key>
 				<dict>
-					<key>alphaColor</key>
+					<key>alpha</key>
 					<real>1</real>
-					<key>blueColor</key>
+					<key>blue</key>
 					<real>1</real>
-					<key>greenColor</key>
+					<key>green</key>
 					<real>1</real>
-					<key>redColor</key>
+					<key>red</key>
 					<real>1</real>
 				</dict>
-				<key>fontKey</key>
+				<key>font</key>
 				<dict>
-					<key>fontNameKey</key>
+					<key>fontName</key>
 					<string>Helvetica</string>
-					<key>fontSizeKey</key>
+					<key>fontSize</key>
 					<real>10</real>
 				</dict>
-				<key>imageInsetsKey</key>
+				<key>imageInsets</key>
 				<dict>
-					<key>bottomKey</key>
+					<key>bottom</key>
 					<real>0</real>
-					<key>leftKey</key>
+					<key>left</key>
 					<real>0</real>
-					<key>rightKey</key>
+					<key>right</key>
 					<real>0</real>
-					<key>topKey</key>
+					<key>top</key>
 					<real>0</real>
 				</dict>
-				<key>imageNameKey</key>
+				<key>imageName</key>
 				<string>watch_smalltitle</string>
 				<key>title</key>
 				<string>watch</string>
-				<key>titleOffsetKey</key>
+				<key>titleOffset</key>
 				<dict>
-					<key>xKey</key>
+					<key>horizontal</key>
 					<real>0</real>
-					<key>yKey</key>
+					<key>vertical</key>
 					<real>0</real>
 				</dict>
 			</dict>
 		</dict>
 	</dict>
 	<dict>
-		<key>DefaultAdaptiveState</key>
+		<key>kDefaultAdaptiveState</key>
 		<dict>
-			<key>UIControlState.Normal</key>
+			<key>UIControlStateNormal</key>
 			<dict>
-				<key>backgroundColorKey</key>
+				<key>backgroundColor</key>
 				<dict>
-					<key>alphaColor</key>
+					<key>alpha</key>
 					<real>0</real>
-					<key>blueColor</key>
+					<key>blue</key>
 					<real>0</real>
-					<key>greenColor</key>
+					<key>green</key>
 					<real>0</real>
-					<key>redColor</key>
+					<key>red</key>
 					<real>0</real>
 				</dict>
-				<key>backgroundImageNameKey</key>
-				<string></string>
-				<key>colorKey</key>
+				<key>color</key>
 				<dict>
-					<key>alphaColor</key>
+					<key>alpha</key>
 					<real>1</real>
-					<key>blueColor</key>
+					<key>blue</key>
 					<real>1</real>
-					<key>greenColor</key>
+					<key>green</key>
 					<real>1</real>
-					<key>redColor</key>
+					<key>red</key>
 					<real>1</real>
 				</dict>
-				<key>fontKey</key>
+				<key>font</key>
 				<dict>
-					<key>fontNameKey</key>
+					<key>fontName</key>
 					<string>Helvetica</string>
-					<key>fontSizeKey</key>
+					<key>fontSize</key>
 					<real>14</real>
 				</dict>
-				<key>imageInsetsKey</key>
+				<key>imageInsets</key>
 				<dict>
-					<key>bottomKey</key>
+					<key>bottom</key>
 					<real>0</real>
-					<key>leftKey</key>
+					<key>left</key>
 					<real>0</real>
-					<key>rightKey</key>
+					<key>right</key>
 					<real>0</real>
-					<key>topKey</key>
+					<key>top</key>
 					<real>0</real>
 				</dict>
-				<key>imageNameKey</key>
+				<key>imageName</key>
 				<string>messages</string>
 				<key>title</key>
 				<string>message</string>
-				<key>titleOffsetKey</key>
+				<key>titleOffset</key>
 				<dict>
-					<key>xKey</key>
+					<key>horizontal</key>
 					<real>0</real>
-					<key>yKey</key>
+					<key>vertical</key>
 					<real>0</real>
 				</dict>
 			</dict>
 		</dict>
 		<key>kImageAdaptiveState</key>
 		<dict>
-			<key>UIControlState.Normal</key>
+			<key>UIControlStateNormal</key>
 			<dict>
-				<key>backgroundColorKey</key>
+				<key>backgroundColor</key>
 				<dict>
-					<key>alphaColor</key>
+					<key>alpha</key>
 					<real>0</real>
-					<key>blueColor</key>
+					<key>blue</key>
 					<real>0</real>
-					<key>greenColor</key>
+					<key>green</key>
 					<real>0</real>
-					<key>redColor</key>
+					<key>red</key>
 					<real>0</real>
 				</dict>
-				<key>backgroundImageNameKey</key>
-				<string></string>
-				<key>colorKey</key>
+				<key>color</key>
 				<dict>
-					<key>alphaColor</key>
+					<key>alpha</key>
 					<real>1</real>
-					<key>blueColor</key>
+					<key>blue</key>
 					<real>0</real>
-					<key>greenColor</key>
+					<key>green</key>
 					<real>0</real>
-					<key>redColor</key>
+					<key>red</key>
 					<real>0</real>
 				</dict>
-				<key>fontKey</key>
+				<key>font</key>
 				<dict>
-					<key>fontNameKey</key>
+					<key>fontName</key>
 					<string>Helvetica</string>
-					<key>fontSizeKey</key>
+					<key>fontSize</key>
 					<real>14</real>
 				</dict>
-				<key>imageInsetsKey</key>
+				<key>imageInsets</key>
 				<dict>
-					<key>bottomKey</key>
+					<key>bottom</key>
 					<real>-6</real>
-					<key>leftKey</key>
+					<key>left</key>
 					<real>0</real>
-					<key>rightKey</key>
-					<integer>0</integer>
-					<key>topKey</key>
+					<key>right</key>
+					<real>0</real>
+					<key>top</key>
 					<real>6</real>
 				</dict>
-				<key>imageNameKey</key>
+				<key>imageName</key>
 				<string>messages_bigimage</string>
 				<key>title</key>
 				<string></string>
-				<key>titleOffsetKey</key>
+				<key>titleOffset</key>
 				<dict>
-					<key>xKey</key>
+					<key>horizontal</key>
 					<real>0</real>
-					<key>yKey</key>
+					<key>vertical</key>
 					<real>0</real>
 				</dict>
 			</dict>
 		</dict>
 		<key>kSmallTitleAdaptiveState</key>
 		<dict>
-			<key>UIControlState.Normal</key>
+			<key>UIControlStateNormal</key>
 			<dict>
-				<key>backgroundColorKey</key>
+				<key>backgroundColor</key>
 				<dict>
-					<key>alphaColor</key>
+					<key>alpha</key>
 					<real>0</real>
-					<key>blueColor</key>
+					<key>blue</key>
 					<real>0</real>
-					<key>greenColor</key>
+					<key>green</key>
 					<real>0</real>
-					<key>redColor</key>
+					<key>red</key>
 					<real>0</real>
 				</dict>
-				<key>backgroundImageNameKey</key>
-				<string></string>
-				<key>colorKey</key>
+				<key>color</key>
 				<dict>
-					<key>alphaColor</key>
+					<key>alpha</key>
 					<real>1</real>
-					<key>blueColor</key>
+					<key>blue</key>
 					<real>1</real>
-					<key>greenColor</key>
+					<key>green</key>
 					<real>1</real>
-					<key>redColor</key>
+					<key>red</key>
 					<real>1</real>
 				</dict>
-				<key>fontKey</key>
+				<key>font</key>
 				<dict>
-					<key>fontNameKey</key>
+					<key>fontName</key>
 					<string>Helvetica</string>
-					<key>fontSizeKey</key>
+					<key>fontSize</key>
 					<real>10</real>
 				</dict>
-				<key>imageInsetsKey</key>
+				<key>imageInsets</key>
 				<dict>
-					<key>bottomKey</key>
+					<key>bottom</key>
 					<real>0</real>
-					<key>leftKey</key>
+					<key>left</key>
 					<real>0</real>
-					<key>rightKey</key>
+					<key>right</key>
 					<real>0</real>
-					<key>topKey</key>
+					<key>top</key>
 					<real>0</real>
 				</dict>
-				<key>imageNameKey</key>
+				<key>imageName</key>
 				<string>messages_smalltitle</string>
 				<key>title</key>
 				<string>message</string>
-				<key>titleOffsetKey</key>
+				<key>titleOffset</key>
 				<dict>
-					<key>xKey</key>
+					<key>horizontal</key>
 					<real>0</real>
-					<key>yKey</key>
+					<key>vertical</key>
 					<real>0</real>
 				</dict>
 			</dict>
 		</dict>
 	</dict>
 	<dict>
-		<key>DefaultAdaptiveState</key>
+		<key>kDefaultAdaptiveState</key>
 		<dict>
-			<key>UIControlState.Normal</key>
+			<key>UIControlStateNormal</key>
 			<dict>
-				<key>backgroundColorKey</key>
+				<key>backgroundColor</key>
 				<dict>
-					<key>alphaColor</key>
+					<key>alpha</key>
 					<real>0</real>
-					<key>blueColor</key>
+					<key>blue</key>
 					<real>0</real>
-					<key>greenColor</key>
+					<key>green</key>
 					<real>0</real>
-					<key>redColor</key>
+					<key>red</key>
 					<real>0</real>
 				</dict>
-				<key>backgroundImageNameKey</key>
-				<string></string>
-				<key>colorKey</key>
+				<key>color</key>
 				<dict>
-					<key>alphaColor</key>
+					<key>alpha</key>
 					<real>1</real>
-					<key>blueColor</key>
+					<key>blue</key>
 					<real>1</real>
-					<key>greenColor</key>
+					<key>green</key>
 					<real>1</real>
-					<key>redColor</key>
+					<key>red</key>
 					<real>1</real>
 				</dict>
-				<key>fontKey</key>
+				<key>font</key>
 				<dict>
-					<key>fontNameKey</key>
+					<key>fontName</key>
 					<string>Helvetica</string>
-					<key>fontSizeKey</key>
+					<key>fontSize</key>
 					<real>14</real>
 				</dict>
-				<key>imageInsetsKey</key>
+				<key>imageInsets</key>
 				<dict>
-					<key>bottomKey</key>
+					<key>bottom</key>
 					<real>0</real>
-					<key>leftKey</key>
+					<key>left</key>
 					<real>0</real>
-					<key>rightKey</key>
+					<key>right</key>
 					<real>0</real>
-					<key>topKey</key>
+					<key>top</key>
 					<real>0</real>
 				</dict>
-				<key>imageNameKey</key>
+				<key>imageName</key>
 				<string>man</string>
 				<key>title</key>
 				<string>user</string>
-				<key>titleOffsetKey</key>
+				<key>titleOffset</key>
 				<dict>
-					<key>xKey</key>
+					<key>horizontal</key>
 					<real>0</real>
-					<key>yKey</key>
+					<key>vertical</key>
 					<real>0</real>
 				</dict>
 			</dict>
 		</dict>
 		<key>kImageAdaptiveState</key>
 		<dict>
-			<key>UIControlState.Normal</key>
+			<key>UIControlStateNormal</key>
 			<dict>
-				<key>backgroundColorKey</key>
+				<key>backgroundColor</key>
 				<dict>
-					<key>alphaColor</key>
+					<key>alpha</key>
 					<real>0</real>
-					<key>blueColor</key>
+					<key>blue</key>
 					<real>0</real>
-					<key>greenColor</key>
+					<key>green</key>
 					<real>0</real>
-					<key>redColor</key>
+					<key>red</key>
 					<real>0</real>
 				</dict>
-				<key>backgroundImageNameKey</key>
-				<string></string>
-				<key>colorKey</key>
+				<key>color</key>
 				<dict>
-					<key>alphaColor</key>
+					<key>alpha</key>
 					<real>1</real>
-					<key>blueColor</key>
+					<key>blue</key>
 					<real>0</real>
-					<key>greenColor</key>
+					<key>green</key>
 					<real>0</real>
-					<key>redColor</key>
+					<key>red</key>
 					<real>0</real>
 				</dict>
-				<key>fontKey</key>
+				<key>font</key>
 				<dict>
-					<key>fontNameKey</key>
+					<key>fontName</key>
 					<string>Helvetica</string>
-					<key>fontSizeKey</key>
+					<key>fontSize</key>
 					<real>14</real>
 				</dict>
-				<key>imageInsetsKey</key>
+				<key>imageInsets</key>
 				<dict>
-					<key>bottomKey</key>
+					<key>bottom</key>
 					<real>-6</real>
-					<key>leftKey</key>
+					<key>left</key>
 					<real>0</real>
-					<key>rightKey</key>
-					<integer>0</integer>
-					<key>topKey</key>
+					<key>right</key>
+					<real>0</real>
+					<key>top</key>
 					<real>6</real>
 				</dict>
-				<key>imageNameKey</key>
+				<key>imageName</key>
 				<string>man_bigimage</string>
 				<key>title</key>
 				<string></string>
-				<key>titleOffsetKey</key>
+				<key>titleOffset</key>
 				<dict>
-					<key>xKey</key>
+					<key>horizontal</key>
 					<real>0</real>
-					<key>yKey</key>
+					<key>vertical</key>
 					<real>0</real>
 				</dict>
 			</dict>
 		</dict>
 		<key>kSmallTitleAdaptiveState</key>
 		<dict>
-			<key>UIControlState.Normal</key>
+			<key>UIControlStateNormal</key>
 			<dict>
-				<key>backgroundColorKey</key>
+				<key>backgroundColor</key>
 				<dict>
-					<key>alphaColor</key>
+					<key>alpha</key>
 					<real>0</real>
-					<key>blueColor</key>
+					<key>blue</key>
 					<real>0</real>
-					<key>greenColor</key>
+					<key>green</key>
 					<real>0</real>
-					<key>redColor</key>
+					<key>red</key>
 					<real>0</real>
 				</dict>
-				<key>backgroundImageNameKey</key>
-				<string></string>
-				<key>colorKey</key>
+				<key>color</key>
 				<dict>
-					<key>alphaColor</key>
+					<key>alpha</key>
 					<real>1</real>
-					<key>blueColor</key>
+					<key>blue</key>
 					<real>1</real>
-					<key>greenColor</key>
+					<key>green</key>
 					<real>1</real>
-					<key>redColor</key>
+					<key>red</key>
 					<real>1</real>
 				</dict>
-				<key>fontKey</key>
+				<key>font</key>
 				<dict>
-					<key>fontNameKey</key>
+					<key>fontName</key>
 					<string>Helvetica</string>
-					<key>fontSizeKey</key>
+					<key>fontSize</key>
 					<real>10</real>
 				</dict>
-				<key>imageInsetsKey</key>
+				<key>imageInsets</key>
 				<dict>
-					<key>bottomKey</key>
+					<key>bottom</key>
 					<real>0</real>
-					<key>leftKey</key>
+					<key>left</key>
 					<real>0</real>
-					<key>rightKey</key>
+					<key>right</key>
 					<real>0</real>
-					<key>topKey</key>
+					<key>top</key>
 					<real>0</real>
 				</dict>
-				<key>imageNameKey</key>
+				<key>imageName</key>
 				<string>man_smalltitle</string>
 				<key>title</key>
 				<string>user</string>
-				<key>titleOffsetKey</key>
+				<key>titleOffset</key>
 				<dict>
-					<key>xKey</key>
+					<key>horizontal</key>
 					<real>0</real>
-					<key>yKey</key>
+					<key>vertical</key>
 					<real>0</real>
 				</dict>
 			</dict>
 		</dict>
 	</dict>
 	<dict>
-		<key>DefaultAdaptiveState</key>
+		<key>kDefaultAdaptiveState</key>
 		<dict>
-			<key>UIControlState.Normal</key>
+			<key>UIControlStateNormal</key>
 			<dict>
-				<key>backgroundColorKey</key>
+				<key>backgroundColor</key>
 				<dict>
-					<key>alphaColor</key>
+					<key>alpha</key>
 					<real>0</real>
-					<key>blueColor</key>
+					<key>blue</key>
 					<real>0</real>
-					<key>greenColor</key>
+					<key>green</key>
 					<real>0</real>
-					<key>redColor</key>
+					<key>red</key>
 					<real>0</real>
 				</dict>
-				<key>backgroundImageNameKey</key>
-				<string></string>
-				<key>colorKey</key>
+				<key>color</key>
 				<dict>
-					<key>alphaColor</key>
+					<key>alpha</key>
 					<real>1</real>
-					<key>blueColor</key>
+					<key>blue</key>
 					<real>1</real>
-					<key>greenColor</key>
+					<key>green</key>
 					<real>1</real>
-					<key>redColor</key>
+					<key>red</key>
 					<real>1</real>
 				</dict>
-				<key>fontKey</key>
+				<key>font</key>
 				<dict>
-					<key>fontNameKey</key>
+					<key>fontName</key>
 					<string>Helvetica</string>
-					<key>fontSizeKey</key>
+					<key>fontSize</key>
 					<real>14</real>
 				</dict>
-				<key>imageInsetsKey</key>
+				<key>imageInsets</key>
 				<dict>
-					<key>bottomKey</key>
+					<key>bottom</key>
 					<real>0</real>
-					<key>leftKey</key>
+					<key>left</key>
 					<real>0</real>
-					<key>rightKey</key>
+					<key>right</key>
 					<real>0</real>
-					<key>topKey</key>
+					<key>top</key>
 					<real>0</real>
 				</dict>
-				<key>imageNameKey</key>
+				<key>imageName</key>
 				<string>menu</string>
 				<key>title</key>
 				<string>dial</string>
-				<key>titleOffsetKey</key>
+				<key>titleOffset</key>
 				<dict>
-					<key>xKey</key>
+					<key>horizontal</key>
 					<real>0</real>
-					<key>yKey</key>
+					<key>vertical</key>
 					<real>0</real>
 				</dict>
 			</dict>
 		</dict>
 		<key>kImageAdaptiveState</key>
 		<dict>
-			<key>UIControlState.Normal</key>
+			<key>UIControlStateNormal</key>
 			<dict>
-				<key>backgroundColorKey</key>
+				<key>backgroundColor</key>
 				<dict>
-					<key>alphaColor</key>
+					<key>alpha</key>
 					<real>0</real>
-					<key>blueColor</key>
+					<key>blue</key>
 					<real>0</real>
-					<key>greenColor</key>
+					<key>green</key>
 					<real>0</real>
-					<key>redColor</key>
+					<key>red</key>
 					<real>0</real>
 				</dict>
-				<key>backgroundImageNameKey</key>
-				<string></string>
-				<key>colorKey</key>
+				<key>color</key>
 				<dict>
-					<key>alphaColor</key>
+					<key>alpha</key>
 					<real>1</real>
-					<key>blueColor</key>
+					<key>blue</key>
 					<real>0</real>
-					<key>greenColor</key>
+					<key>green</key>
 					<real>0</real>
-					<key>redColor</key>
+					<key>red</key>
 					<real>0</real>
 				</dict>
-				<key>fontKey</key>
+				<key>font</key>
 				<dict>
-					<key>fontNameKey</key>
+					<key>fontName</key>
 					<string>Helvetica</string>
-					<key>fontSizeKey</key>
+					<key>fontSize</key>
 					<real>14</real>
 				</dict>
-				<key>imageInsetsKey</key>
+				<key>imageInsets</key>
 				<dict>
-					<key>bottomKey</key>
+					<key>bottom</key>
 					<real>-6</real>
-					<key>leftKey</key>
+					<key>left</key>
 					<real>0</real>
-					<key>rightKey</key>
-					<integer>0</integer>
-					<key>topKey</key>
-					<integer>6</integer>
+					<key>right</key>
+					<real>0</real>
+					<key>top</key>
+					<real>6</real>
 				</dict>
-				<key>imageNameKey</key>
+				<key>imageName</key>
 				<string>menu_bigimage</string>
 				<key>title</key>
 				<string></string>
-				<key>titleOffsetKey</key>
+				<key>titleOffset</key>
 				<dict>
-					<key>xKey</key>
+					<key>horizontal</key>
 					<real>0</real>
-					<key>yKey</key>
+					<key>vertical</key>
 					<real>0</real>
 				</dict>
 			</dict>
 		</dict>
 		<key>kSmallTitleAdaptiveState</key>
 		<dict>
-			<key>UIControlState.Normal</key>
+			<key>UIControlStateNormal</key>
 			<dict>
-				<key>backgroundColorKey</key>
+				<key>backgroundColor</key>
 				<dict>
-					<key>alphaColor</key>
+					<key>alpha</key>
 					<real>0</real>
-					<key>blueColor</key>
+					<key>blue</key>
 					<real>0</real>
-					<key>greenColor</key>
+					<key>green</key>
 					<real>0</real>
-					<key>redColor</key>
+					<key>red</key>
 					<real>0</real>
 				</dict>
-				<key>backgroundImageNameKey</key>
-				<string></string>
-				<key>colorKey</key>
+				<key>color</key>
 				<dict>
-					<key>alphaColor</key>
+					<key>alpha</key>
 					<real>1</real>
-					<key>blueColor</key>
+					<key>blue</key>
 					<real>1</real>
-					<key>greenColor</key>
+					<key>green</key>
 					<real>1</real>
-					<key>redColor</key>
+					<key>red</key>
 					<real>1</real>
 				</dict>
-				<key>fontKey</key>
+				<key>font</key>
 				<dict>
-					<key>fontNameKey</key>
+					<key>fontName</key>
 					<string>Helvetica</string>
-					<key>fontSizeKey</key>
+					<key>fontSize</key>
 					<real>10</real>
 				</dict>
-				<key>imageInsetsKey</key>
+				<key>imageInsets</key>
 				<dict>
-					<key>bottomKey</key>
+					<key>bottom</key>
 					<real>0</real>
-					<key>leftKey</key>
+					<key>left</key>
 					<real>0</real>
-					<key>rightKey</key>
+					<key>right</key>
 					<real>0</real>
-					<key>topKey</key>
+					<key>top</key>
 					<real>0</real>
 				</dict>
-				<key>imageNameKey</key>
+				<key>imageName</key>
 				<string>menu_smalltitle</string>
 				<key>title</key>
 				<string>dial</string>
-				<key>titleOffsetKey</key>
+				<key>titleOffset</key>
 				<dict>
-					<key>xKey</key>
+					<key>horizontal</key>
 					<real>0</real>
-					<key>yKey</key>
+					<key>vertical</key>
 					<real>0</real>
 				</dict>
 			</dict>
 		</dict>
 	</dict>
 	<dict>
-		<key>DefaultAdaptiveState</key>
+		<key>kDefaultAdaptiveState</key>
 		<dict>
-			<key>UIControlState.Normal</key>
+			<key>UIControlStateNormal</key>
 			<dict>
-				<key>backgroundColorKey</key>
+				<key>backgroundColor</key>
 				<dict>
-					<key>alphaColor</key>
+					<key>alpha</key>
 					<real>0</real>
-					<key>blueColor</key>
+					<key>blue</key>
 					<real>0</real>
-					<key>greenColor</key>
+					<key>green</key>
 					<real>0</real>
-					<key>redColor</key>
+					<key>red</key>
 					<real>0</real>
 				</dict>
-				<key>backgroundImageNameKey</key>
-				<string></string>
-				<key>colorKey</key>
+				<key>color</key>
 				<dict>
-					<key>alphaColor</key>
+					<key>alpha</key>
 					<real>1</real>
-					<key>blueColor</key>
+					<key>blue</key>
 					<real>1</real>
-					<key>greenColor</key>
+					<key>green</key>
 					<real>1</real>
-					<key>redColor</key>
+					<key>red</key>
 					<real>1</real>
 				</dict>
-				<key>fontKey</key>
+				<key>font</key>
 				<dict>
-					<key>fontNameKey</key>
+					<key>fontName</key>
 					<string>Helvetica</string>
-					<key>fontSizeKey</key>
+					<key>fontSize</key>
 					<real>14</real>
 				</dict>
-				<key>imageInsetsKey</key>
+				<key>imageInsets</key>
 				<dict>
-					<key>bottomKey</key>
+					<key>bottom</key>
 					<real>0</real>
-					<key>leftKey</key>
+					<key>left</key>
 					<real>0</real>
-					<key>rightKey</key>
+					<key>right</key>
 					<real>0</real>
-					<key>topKey</key>
+					<key>top</key>
 					<real>0</real>
 				</dict>
-				<key>imageNameKey</key>
+				<key>imageName</key>
 				<string>more</string>
 				<key>title</key>
 				<string>more</string>
-				<key>titleOffsetKey</key>
+				<key>titleOffset</key>
 				<dict>
-					<key>xKey</key>
+					<key>horizontal</key>
 					<real>0</real>
-					<key>yKey</key>
+					<key>vertical</key>
 					<real>0</real>
 				</dict>
 			</dict>
 		</dict>
 		<key>kImageAdaptiveState</key>
 		<dict>
-			<key>UIControlState.Normal</key>
+			<key>UIControlStateNormal</key>
 			<dict>
-				<key>backgroundColorKey</key>
+				<key>backgroundColor</key>
 				<dict>
-					<key>alphaColor</key>
+					<key>alpha</key>
 					<real>0</real>
-					<key>blueColor</key>
+					<key>blue</key>
 					<real>0</real>
-					<key>greenColor</key>
+					<key>green</key>
 					<real>0</real>
-					<key>redColor</key>
+					<key>red</key>
 					<real>0</real>
 				</dict>
-				<key>backgroundImageNameKey</key>
-				<string></string>
-				<key>colorKey</key>
+				<key>color</key>
 				<dict>
-					<key>alphaColor</key>
+					<key>alpha</key>
 					<real>1</real>
-					<key>blueColor</key>
+					<key>blue</key>
 					<real>0</real>
-					<key>greenColor</key>
+					<key>green</key>
 					<real>0</real>
-					<key>redColor</key>
+					<key>red</key>
 					<real>0</real>
 				</dict>
-				<key>fontKey</key>
+				<key>font</key>
 				<dict>
-					<key>fontNameKey</key>
+					<key>fontName</key>
 					<string>Helvetica</string>
-					<key>fontSizeKey</key>
+					<key>fontSize</key>
 					<real>14</real>
 				</dict>
-				<key>imageInsetsKey</key>
+				<key>imageInsets</key>
 				<dict>
-					<key>bottomKey</key>
+					<key>bottom</key>
 					<real>-6</real>
-					<key>leftKey</key>
+					<key>left</key>
 					<real>0</real>
-					<key>rightKey</key>
-					<integer>0</integer>
-					<key>topKey</key>
+					<key>right</key>
+					<real>0</real>
+					<key>top</key>
 					<real>6</real>
 				</dict>
-				<key>imageNameKey</key>
+				<key>imageName</key>
 				<string>more_bigimage</string>
 				<key>title</key>
 				<string></string>
-				<key>titleOffsetKey</key>
+				<key>titleOffset</key>
 				<dict>
-					<key>xKey</key>
+					<key>horizontal</key>
 					<real>0</real>
-					<key>yKey</key>
+					<key>vertical</key>
 					<real>0</real>
 				</dict>
 			</dict>
 		</dict>
 		<key>kSmallTitleAdaptiveState</key>
 		<dict>
-			<key>UIControlState.Normal</key>
+			<key>UIControlStateNormal</key>
 			<dict>
-				<key>backgroundColorKey</key>
+				<key>backgroundColor</key>
 				<dict>
-					<key>alphaColor</key>
+					<key>alpha</key>
 					<real>0</real>
-					<key>blueColor</key>
+					<key>blue</key>
 					<real>0</real>
-					<key>greenColor</key>
+					<key>green</key>
 					<real>0</real>
-					<key>redColor</key>
+					<key>red</key>
 					<real>0</real>
 				</dict>
-				<key>backgroundImageNameKey</key>
-				<string></string>
-				<key>colorKey</key>
+				<key>color</key>
 				<dict>
-					<key>alphaColor</key>
+					<key>alpha</key>
 					<real>1</real>
-					<key>blueColor</key>
+					<key>blue</key>
 					<real>1</real>
-					<key>greenColor</key>
+					<key>green</key>
 					<real>1</real>
-					<key>redColor</key>
+					<key>red</key>
 					<real>1</real>
 				</dict>
-				<key>fontKey</key>
+				<key>font</key>
 				<dict>
-					<key>fontNameKey</key>
+					<key>fontName</key>
 					<string>Helvetica</string>
-					<key>fontSizeKey</key>
+					<key>fontSize</key>
 					<real>10</real>
 				</dict>
-				<key>imageInsetsKey</key>
+				<key>imageInsets</key>
 				<dict>
-					<key>bottomKey</key>
+					<key>bottom</key>
 					<real>0</real>
-					<key>leftKey</key>
+					<key>left</key>
 					<real>0</real>
-					<key>rightKey</key>
+					<key>right</key>
 					<real>0</real>
-					<key>topKey</key>
+					<key>top</key>
 					<real>0</real>
 				</dict>
-				<key>imageNameKey</key>
+				<key>imageName</key>
 				<string>more_smalltitle</string>
 				<key>title</key>
 				<string>more</string>
-				<key>titleOffsetKey</key>
+				<key>titleOffset</key>
 				<dict>
-					<key>xKey</key>
+					<key>horizontal</key>
 					<real>0</real>
-					<key>yKey</key>
+					<key>vertical</key>
 					<real>0</real>
 				</dict>
 			</dict>

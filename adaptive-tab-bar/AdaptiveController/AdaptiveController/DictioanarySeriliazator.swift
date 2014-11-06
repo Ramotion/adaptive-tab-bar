@@ -12,39 +12,7 @@ public class DictioanarySeriliazator: NSObject {
     let rootKey:NSString = "Root"
     public typealias DictionaryObject = Dictionary <String,AnyObject>
     
-    func readDictionaryFromFile(filePath:String) -> Dictionary<String,AnyObject!>? {
-        var anError : NSError?
-        
-        let data : NSData! = NSData(contentsOfFile:filePath, options: NSDataReadingOptions.DataReadingUncached, error: &anError)
-        
-        if let theError = anError{
-            return nil
-        }
-        
-        let dict : AnyObject! = NSPropertyListSerialization.propertyListWithData(data, options: 0,format: nil, error: &anError)
-        
-        if (dict != nil){
-            if let ocDictionary = dict as? NSDictionary {
-                var swiftDict : Dictionary<String,AnyObject!> = Dictionary<String,AnyObject!>()
-                for key : AnyObject in ocDictionary.allKeys{
-                    let stringKey : String = key as String
-                    
-                    if let keyValue : AnyObject = ocDictionary.valueForKey(stringKey){
-                        swiftDict[stringKey] = keyValue
-                    }
-                }
-                return swiftDict
-            } else {
-                return nil
-            }
-        } else if let theError = anError {
-            println("Sorry, couldn't read the file \(filePath.lastPathComponent):\n\t"+theError.localizedDescription)
-        }
-        return nil
-    }
-
-    
-
+   
     public func buttonApperancesToArrayDictionary(buttonApearances:[AdaptiveButtonAppearance]) -> Array<Dictionary<String, AnyObject>>{
         var buttonsAperancesDictionaryArray  =  Array<Dictionary<String, AnyObject>>()
         for appeareance in buttonApearances{
@@ -55,13 +23,19 @@ public class DictioanarySeriliazator: NSObject {
     
     public func saveStateDictionary(buttonApearances:[AdaptiveButtonAppearance],filePath:String){
         
-       // var paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
-        var path = filePath//.stringByAppendingPathComponent(fileName)
+        var paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
+        var path = paths.stringByAppendingPathComponent("appearances.plist")
         println(path)
+        println(filePath)
         var dataArray =  buttonApperancesToArrayDictionary(buttonApearances)
         var data : NSArray = dataArray as NSArray
         var fileManager = NSFileManager.defaultManager()
-        data.writeToFile(path, atomically: true)
+        if (!(fileManager.fileExistsAtPath(paths)))
+        {
+            println("error")
+        }
+        
+        data.writeToFile(filePath, atomically: true)
         
     }
     

@@ -16,9 +16,9 @@ public class ControlStateValue:ControlStateProtocol{
     public typealias DictionaryObject = Dictionary <String,AnyObject>
     public var controlStates: Dictionary <String,StateObject> = Dictionary <String,ControlStateAppearance>()
   
-    private var contolStatesMappingDictionary = ["\((UIControlState.Normal).rawValue)":"UIControlState.Normal",
-                                                "\((UIControlState.Highlighted).rawValue)":"UIControlState.Highlighted",
-                                                "\((UIControlState.Selected).rawValue)":"UIControlState.Selected"]
+    private var contolStatesMappingDictionary = ["\((UIControlState.Normal).rawValue)":"UIControlStateNormal",
+                                                "\((UIControlState.Highlighted).rawValue)":"UIControlStateHighlighted",
+                                                "\((UIControlState.Selected).rawValue)":"UIControlStateSelected"]
     
     public init(){
           self.controlStates = Dictionary<String,ControlStateAppearance>()

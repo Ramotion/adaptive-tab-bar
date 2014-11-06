@@ -9,31 +9,31 @@
 import UIKit
 
 let titleKey = "title"
-let fontKey = "fontKey"
-let imageNameKey = "imageNameKey"
-let backgroundImageNameKey = "backgroundImageNameKey"
-let titleOffsetKey = "titleOffsetKey"
-let imageInsetsKey = "imageInsetsKey"
-let colorKey = "colorKey"
-let backgroundColorKey = "backgroundColorKey"
+let fontKey = "font"
+let imageNameKey = "imageName"
+let backgroundImageNameKey = "backgroundImageName"
+let titleOffsetKey = "titleOffset"
+let imageInsetsKey = "imageInsets"
+let colorKey = "color"
+let backgroundColorKey = "backgroundColor"
 
-let xKey = "xKey"
-let yKey = "yKey"
-let heightKey = "heightKey"
-let widthKey = "widthKey"
+let horizontalKey = "horizontal"
+let verticalKey = "vertical"
+let heightKey = "height"
+let widthKey = "width"
 
-let leftKey = "leftKey"
-let topKey =  "topKey"
-let rightKey = "rightKey"
-let bottomKey = "bottomKey"
+let leftKey = "left"
+let topKey =  "top"
+let rightKey = "right"
+let bottomKey = "bottom"
 
-let fontNameKey = "fontNameKey"
-let fontSizeKey = "fontSizeKey"
+let fontNameKey = "fontName"
+let fontSizeKey = "fontSize"
 
-let redColor = "redColor"
-let greenColor = "greenColor"
-let blueColor = "blueColor"
-let alphaColor = "alphaColor"
+let redColor = "red"
+let greenColor = "green"
+let blueColor = "blue"
+let alphaColor = "alpha"
 
 public class ControlStateAppearance: AppearanceSerializationProtocol{
  
@@ -88,7 +88,6 @@ public class ControlStateAppearance: AppearanceSerializationProtocol{
     
     func colorToDctionary(color:UIColor) -> Dictionary<String,AnyObject>{
         
-        //var rgbClor = color.)
         var  components = CGColorGetComponents(color.CGColor)
         
         var  colorDictionary =  Dictionary<String,AnyObject>()
@@ -176,13 +175,13 @@ public class ControlStateAppearance: AppearanceSerializationProtocol{
         
         var horizontal:CGFloat  = 0
         
-        if let horizontalFromDictionary = offsetDictionary![xKey]{
+        if let horizontalFromDictionary = offsetDictionary![horizontalKey]{
             horizontal = horizontalFromDictionary
         }
         
         var vertical:CGFloat = 0
         
-        if let verticalFromDictionary = offsetDictionary![yKey]{
+        if let verticalFromDictionary = offsetDictionary![verticalKey]{
             vertical = verticalFromDictionary
         }
         
@@ -221,7 +220,12 @@ public class ControlStateAppearance: AppearanceSerializationProtocol{
     
     func getObjectDictionary() -> Dictionary<String,DictionaryObject>{
         var controlStateDictionary =  Dictionary<String,AnyObject>()
-        controlStateDictionary[titleKey] = title!
+        
+        if  title != nil {
+          controlStateDictionary[titleKey] = title!
+        }else{
+             controlStateDictionary[titleKey] = ""
+        }
         
         var fontDictionary =  Dictionary<String,AnyObject>()
         fontDictionary[fontNameKey] = font?.fontName
@@ -229,8 +233,8 @@ public class ControlStateAppearance: AppearanceSerializationProtocol{
         controlStateDictionary[fontKey] = fontDictionary
         
         var offsetDictionary =  Dictionary<String,AnyObject>()
-        offsetDictionary[xKey] = titleOffset?.horizontal
-        offsetDictionary[yKey] = titleOffset?.vertical
+        offsetDictionary[horizontalKey] = titleOffset?.horizontal
+        offsetDictionary[verticalKey] = titleOffset?.vertical
         controlStateDictionary[titleOffsetKey] = offsetDictionary
         
         
@@ -242,8 +246,13 @@ public class ControlStateAppearance: AppearanceSerializationProtocol{
         insetsDictionary[rightKey] = imageInsets?.right
         
         controlStateDictionary[imageInsetsKey] = insetsDictionary
+        if titleColor != nil{
+          controlStateDictionary[colorKey] = colorToDctionary(titleColor!)
+        }else{
+             controlStateDictionary[colorKey] = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
+        }
         
-        controlStateDictionary[colorKey] = colorToDctionary(titleColor!)
+       
         controlStateDictionary[backgroundColorKey] = colorToDctionary(backgroundColor!)
         controlStateDictionary[imageNameKey] = imageName
         controlStateDictionary[backgroundImageNameKey] = backgroundImageName

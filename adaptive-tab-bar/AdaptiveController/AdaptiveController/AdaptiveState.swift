@@ -9,7 +9,7 @@
 import UIKit
 
 
-public let kDefaultAdaptiveState:String = "DefaultAdaptiveState"
+public let kDefaultAdaptiveState:String = "kDefaultAdaptiveState"
 
 
 public class AdaptiveState: NSObject {
