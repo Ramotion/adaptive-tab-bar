@@ -1,0 +1,3 @@
+language: swift
+xcode_workspace: SamplesAdaptiveController.xcworkspace # path to your xcodeproj folder
+xcode_scheme: AdaptiveControllerTests
