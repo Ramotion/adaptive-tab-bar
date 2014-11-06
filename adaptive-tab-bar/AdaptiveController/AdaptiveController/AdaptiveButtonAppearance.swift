@@ -83,7 +83,7 @@ public class AdaptiveButtonAppearance: NSObject,AppearanceSerializationProtocol 
                 controlStateValueObject.setControlApearence(stateObject,state: controlState)
                 return stateObject
             }else{
-                var stateObject = ControlStateAppearance()
+                let stateObject = ControlStateAppearance()
                 stateObject.titleColor = nil
                 stateObject.title = nil
                 controlStateValueObject.setControlApearence(stateObject,state: controlState)
@@ -105,22 +105,22 @@ public class AdaptiveButtonAppearance: NSObject,AppearanceSerializationProtocol 
     
     public  func setButonTitle(title:NSString, state:String, controlState:UIControlState){
         
-        var controlStateValueObject = getOrCreateStateObjectForState(state)
-        var controlStateAppearanceObject = getOrCreateStateAppearenceObject(controlStateValueObject,controlState: controlState)
+        let controlStateValueObject = getOrCreateStateObjectForState(state)
+        let controlStateAppearanceObject = getOrCreateStateAppearenceObject(controlStateValueObject,controlState: controlState)
         controlStateAppearanceObject.title = title
 
     }
     
     public func getButonTitleForState(state:NSString ,controlState:UIControlState)->String!{
         
-        var controlStateValueObject = getOrCreateStateObjectForState(state)
-        var controlStateAppearanceObject = controlStateValueObject.getControlApearenceFor(controlState)
+        let controlStateValueObject = getOrCreateStateObjectForState(state)
+        let controlStateAppearanceObject = controlStateValueObject.getControlApearenceFor(controlState)
        
         if let title = controlStateAppearanceObject.title{
             return title
         }else{
-            var controlStateValueObject = getOrCreateStateObjectForState(kDefaultAdaptiveState)
-            var controlStateAppearanceObject = controlStateValueObject.getControlApearenceFor(controlState)
+            let controlStateValueObject = getOrCreateStateObjectForState(kDefaultAdaptiveState)
+            let controlStateAppearanceObject = controlStateValueObject.getControlApearenceFor(controlState)
             return controlStateAppearanceObject.title!
         }
         
@@ -145,7 +145,7 @@ public class AdaptiveButtonAppearance: NSObject,AppearanceSerializationProtocol 
     
     
     public func getButonTitleFontForState(state:NSString ,controlState:UIControlState)->UIFont!{
-        var controlStateValueObject = getOrCreateStateObjectForState(state)
+        let controlStateValueObject = getOrCreateStateObjectForState(state)
         let controlStateAppearanceObject = controlStateValueObject.getControlApearenceFor(controlState)
         return controlStateAppearanceObject.font!
             
@@ -153,8 +153,8 @@ public class AdaptiveButtonAppearance: NSObject,AppearanceSerializationProtocol 
     
     public  func setButonTitleFont(font:UIFont, state:String, controlState:UIControlState){
         
-        var controlStateValueObject = getOrCreateStateObjectForState(state)
-        var controlStateAppearanceObject = getOrCreateStateAppearenceObject(controlStateValueObject,controlState: controlState)
+        let controlStateValueObject = getOrCreateStateObjectForState(state)
+        let controlStateAppearanceObject = getOrCreateStateAppearenceObject(controlStateValueObject,controlState: controlState)
         controlStateAppearanceObject.font = font
        
     }
@@ -170,8 +170,8 @@ public class AdaptiveButtonAppearance: NSObject,AppearanceSerializationProtocol 
     
     public func setButtonImage(image:UIImage, state:String, controlState:UIControlState){
         
-        var controlStateValueObject = getOrCreateStateObjectForState(state)
-        var controlStateAppearanceObject = getOrCreateStateAppearenceObject(controlStateValueObject,controlState: controlState)
+        let controlStateValueObject = getOrCreateStateObjectForState(state)
+        let controlStateAppearanceObject = getOrCreateStateAppearenceObject(controlStateValueObject,controlState: controlState)
         controlStateAppearanceObject.image = image
         
         print("set State \(state)")
@@ -185,8 +185,8 @@ public class AdaptiveButtonAppearance: NSObject,AppearanceSerializationProtocol 
  
     public func setButtonImageName(imageName:String, state:String, controlState:UIControlState){
         
-        var controlStateValueObject = getOrCreateStateObjectForState(state)
-        var controlStateAppearanceObject = getOrCreateStateAppearenceObject(controlStateValueObject,controlState: controlState)
+        let controlStateValueObject = getOrCreateStateObjectForState(state)
+        let controlStateAppearanceObject = getOrCreateStateAppearenceObject(controlStateValueObject,controlState: controlState)
         controlStateAppearanceObject.imageName = imageName
         
         print("set State \(state)")
@@ -240,8 +240,8 @@ public class AdaptiveButtonAppearance: NSObject,AppearanceSerializationProtocol 
     
     public func setBackgroundButtonImage(image:UIImage, state:String, controlState:UIControlState){
        
-        var controlStateValueObject = getOrCreateStateObjectForState(state)
-        var controlStateAppearanceObject = getOrCreateStateAppearenceObject(controlStateValueObject,controlState: controlState)
+        let controlStateValueObject = getOrCreateStateObjectForState(state)
+        let controlStateAppearanceObject = getOrCreateStateAppearenceObject(controlStateValueObject,controlState: controlState)
         controlStateAppearanceObject.backgroundImage = image
         
         print("set State \(state)")
@@ -277,8 +277,8 @@ public class AdaptiveButtonAppearance: NSObject,AppearanceSerializationProtocol 
     
     
     public func setImageInsets(insets:UIEdgeInsets, state:String, controlState:UIControlState){
-        var controlStateValueObject = getOrCreateStateObjectForState(state)
-        var controlStateAppearanceObject = getOrCreateStateAppearenceObject(controlStateValueObject,controlState: controlState)
+        let controlStateValueObject = getOrCreateStateObjectForState(state)
+        let controlStateAppearanceObject = getOrCreateStateAppearenceObject(controlStateValueObject,controlState: controlState)
         controlStateAppearanceObject.imageInsets = insets
     }
     
@@ -291,9 +291,9 @@ public class AdaptiveButtonAppearance: NSObject,AppearanceSerializationProtocol 
     
     public func getImageInsetsForState(state:NSString ,controlState:UIControlState)->UIEdgeInsets!{
         
-        var controlStateValueObject = getOrCreateStateObjectForState(state)
+        let controlStateValueObject = getOrCreateStateObjectForState(state)
         
-        var controlStateAppearanceObject = controlStateValueObject.getControlApearenceFor(controlState)
+        let controlStateAppearanceObject = controlStateValueObject.getControlApearenceFor(controlState)
         return controlStateAppearanceObject.imageInsets!
         
     }
@@ -304,8 +304,8 @@ public class AdaptiveButtonAppearance: NSObject,AppearanceSerializationProtocol 
     }
     
     public func setTitleOffset(offset:UIOffset, state:String, controlState:UIControlState){
-        var controlStateValueObject = getOrCreateStateObjectForState(state)
-        var controlStateAppearanceObject = getOrCreateStateAppearenceObject(controlStateValueObject,controlState: controlState)
+        let controlStateValueObject = getOrCreateStateObjectForState(state)
+        let controlStateAppearanceObject = getOrCreateStateAppearenceObject(controlStateValueObject,controlState: controlState)
         controlStateAppearanceObject.titleOffset = offset
     }
     
@@ -315,9 +315,8 @@ public class AdaptiveButtonAppearance: NSObject,AppearanceSerializationProtocol 
     
     public func getTitleOffsetForState(state:NSString ,controlState:UIControlState)->UIOffset!{
         
-        var controlStateValueObject = getOrCreateStateObjectForState(state)
-        
-        var controlStateAppearanceObject = controlStateValueObject.getControlApearenceFor(controlState)
+        let controlStateValueObject = getOrCreateStateObjectForState(state)
+        let controlStateAppearanceObject = controlStateValueObject.getControlApearenceFor(controlState)
         return controlStateAppearanceObject.titleOffset!
         
     }
@@ -332,8 +331,8 @@ public class AdaptiveButtonAppearance: NSObject,AppearanceSerializationProtocol 
     }
     
     public func setTitleColor(color:UIColor, state:String, controlState:UIControlState){
-        var controlStateValueObject = getOrCreateStateObjectForState(state)
-        var controlStateAppearanceObject = getOrCreateStateAppearenceObject(controlStateValueObject,controlState: controlState)
+        let controlStateValueObject = getOrCreateStateObjectForState(state)
+        let controlStateAppearanceObject = getOrCreateStateAppearenceObject(controlStateValueObject,controlState: controlState)
         controlStateAppearanceObject.titleColor = color
     }
    
@@ -351,21 +350,19 @@ public class AdaptiveButtonAppearance: NSObject,AppearanceSerializationProtocol 
         if let curentTitleColor = controlStateAppearanceObject.titleColor{
             return curentTitleColor
         }else{
-            var controlStateValueObject = getStateObjectForState(kDefaultAdaptiveState)
+            let controlStateValueObject = getStateObjectForState(kDefaultAdaptiveState)
             println(controlStateValueObject)
-            var controlStateAppearanceObject = controlStateValueObject.getControlApearenceFor(controlState)
+            let controlStateAppearanceObject = controlStateValueObject.getControlApearenceFor(controlState)
             return controlStateAppearanceObject.titleColor!
         }
     
-      
-        
     }
     
     public func setObjectDictionary(dictionary:Dictionary <String,DictionaryObject>){
         
         for (key,object ) in dictionary{
-            var appearanceDictionary = object as Dictionary <String,DictionaryObject>
-            var appearanceObject = ControlStateValue()
+            let appearanceDictionary = object as Dictionary <String,DictionaryObject>
+            let appearanceObject = ControlStateValue()
             appearanceObject.setObjectDictionary(appearanceDictionary)
             stateDictionary.updateValue(appearanceObject, forKey: key)
         }
@@ -376,8 +373,8 @@ public class AdaptiveButtonAppearance: NSObject,AppearanceSerializationProtocol 
         var controlStatesDictionary =   Dictionary<String,DictionaryObject>()
         
         for (key,object ) in stateDictionary{
-            var appearance = object as ControlStateValue
-            var appearanceDictionary =  appearance.getObjectDictionary()
+            let appearance = object as ControlStateValue
+            let appearanceDictionary =  appearance.getObjectDictionary()
             controlStatesDictionary.updateValue(appearanceDictionary, forKey: key)
         }
         
