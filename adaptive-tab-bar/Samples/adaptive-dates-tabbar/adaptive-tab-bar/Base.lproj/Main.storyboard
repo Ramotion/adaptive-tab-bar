@@ -84,7 +84,7 @@
                             <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n" customClass="AdaptiveTabBarItem" customModule="example_date_adaptive_tab_bar" customModuleProvider="target"/>
+                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n" customClass="AdaptiveTabBarItem" customModule="example_count_launches_adaptive_tabbar"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>

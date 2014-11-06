@@ -50,12 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var arrayButtons = tabBar.items as [AdaptiveTabBarItem]
        
         AdaptiveButtonsStateManager(state: adaptiveState,buttonsAray:arrayButtons ,buttonsAppearance: buttonsAppearances)
-        
-        var seriliazator = DictioanarySeriliazator()
-        var paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
-        paths = paths.stringByAppendingPathComponent("appearances.plist")
-        seriliazator.saveStateDictionary(buttonsAppearances,filePath:paths)
-       
+              
         return true
     }
     
