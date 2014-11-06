@@ -93,6 +93,8 @@ public class AdaptiveButtonAppearance: NSObject,AppearanceSerializationProtocol 
             }else{
                 var stateObject = ControlStateAppearance()
                 stateObject.titleColor = nil
+                stateObject.title = nil
+               // stateObject
                 controlStateValueObject.setControlApearence(stateObject,state: controlState)
                 return stateObject
             }
@@ -120,9 +122,16 @@ public class AdaptiveButtonAppearance: NSObject,AppearanceSerializationProtocol 
     
     public func getButonTitleForState(state:NSString ,controlState:UIControlState)->String!{
         
-           var controlStateValueObject = getOrCreateStateObjectForState(state)
+        var controlStateValueObject = getOrCreateStateObjectForState(state)
+        var controlStateAppearanceObject = controlStateValueObject.getControlApearenceFor(controlState)
+       
+        if let title = controlStateAppearanceObject.title{
+            return title
+        }else{
+            var controlStateValueObject = getOrCreateStateObjectForState(kDefaultAdaptiveState)
             var controlStateAppearanceObject = controlStateValueObject.getControlApearenceFor(controlState)
             return controlStateAppearanceObject.title!
+        }
         
        
     }

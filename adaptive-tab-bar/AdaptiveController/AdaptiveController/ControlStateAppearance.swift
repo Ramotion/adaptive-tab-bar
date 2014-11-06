@@ -80,7 +80,7 @@ public class ControlStateAppearance: AppearanceSerializationProtocol{
         imageInsets = appearanceStyle?.imageInsets
         titleColor = appearanceStyle?.titleColor
         backgroundColor = appearanceStyle?.backgroundColor
-    
+        title = nil
     }
     
     
