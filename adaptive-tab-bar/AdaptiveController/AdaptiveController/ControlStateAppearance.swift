@@ -246,7 +246,7 @@ public class ControlStateAppearance: AppearanceSerializationProtocol{
         controlStateDictionary[colorKey] = colorToDctionary(titleColor!)
         controlStateDictionary[backgroundColorKey] = colorToDctionary(backgroundColor!)
         controlStateDictionary[imageNameKey] = imageName
-        controlStateDictionary[backgroundImageNameKey] = ""
+        controlStateDictionary[backgroundImageNameKey] = backgroundImageName
         
         return controlStateDictionary
     }

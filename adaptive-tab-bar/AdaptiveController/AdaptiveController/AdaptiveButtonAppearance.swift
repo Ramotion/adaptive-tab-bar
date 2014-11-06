@@ -51,8 +51,6 @@ public class AdaptiveButtonAppearance: NSObject,AppearanceSerializationProtocol 
             self.setButtonImageName(imageName,state: state ,controlState:controlState)
         }
         
-        
-        
     }
     
     func getStateObjectForState(state:String) -> ControlStateValue!{
@@ -67,15 +65,9 @@ public class AdaptiveButtonAppearance: NSObject,AppearanceSerializationProtocol 
         if let stateObject = stateDictionary[state] {
             return stateObject
         }else{
-            
-           // if let stateObject = stateDictionary[kDefaultAdaptiveState] {
-             //   return stateObject
-            //}else{
                 var stateObject = ControlStateValue()
-                
                 stateDictionary.updateValue(stateObject, forKey: state)
                 return stateObject
-            //}
         }
     }
     
@@ -94,7 +86,6 @@ public class AdaptiveButtonAppearance: NSObject,AppearanceSerializationProtocol 
                 var stateObject = ControlStateAppearance()
                 stateObject.titleColor = nil
                 stateObject.title = nil
-               // stateObject
                 controlStateValueObject.setControlApearence(stateObject,state: controlState)
                 return stateObject
             }
@@ -212,7 +203,14 @@ public class AdaptiveButtonAppearance: NSObject,AppearanceSerializationProtocol 
         var controlStateValueObject = getOrCreateStateObjectForState(state)
         
          if var controlStateAppearanceObject = controlStateValueObject.getControlApearenceFor(controlState){
-            return controlStateAppearanceObject.image
+            if let image =  controlStateAppearanceObject.image{
+                return image
+            }else{
+                var controlStateValueObject = getOrCreateStateObjectForState(kDefaultAdaptiveState)
+                var controlStateAppearanceObject = controlStateValueObject.getControlApearenceFor(controlState)
+                return controlStateAppearanceObject.image!
+            }
+            
         }else{
             return nil
         }
@@ -259,7 +257,14 @@ public class AdaptiveButtonAppearance: NSObject,AppearanceSerializationProtocol 
         var controlStateValueObject = getOrCreateStateObjectForState(state)
         
         if var controlStateAppearanceObject = controlStateValueObject.getControlApearenceFor(controlState){
-            return controlStateAppearanceObject.image
+            if let image =  controlStateAppearanceObject.backgroundImage{
+                return image
+            }else{
+                var controlStateValueObject = getOrCreateStateObjectForState(kDefaultAdaptiveState)
+                var controlStateAppearanceObject = controlStateValueObject.getControlApearenceFor(controlState)
+                return controlStateAppearanceObject.backgroundImage!
+            }
+
         }else{
             return nil
         }
