@@ -39,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         tabBar.barTintColor = tabColor
         tabBar.clipsToBounds = true
         
-        var curentCountLaunches = 20
+        var curentCountLaunches = 2
         
         var adaptiveState = AdaptiveLaunchesState(curentCountLaunches:curentCountLaunches,countLaunchesToSmallTextState:countDaysForSmaltextState,countLaunchesToImageState:countDaysForImageModeState)
         
@@ -72,7 +72,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         watchAppearance.setButonTitle("watch", state: kSmallTitleAdaptiveState)
         watchAppearance.setButonTitle("", state: kImageAdaptiveState)
         watchAppearance.setTitleColor(UIColor.whiteColor(), state: kDefaultAdaptiveState)
-        watchAppearance.setTitleColor(UIColor.whiteColor(), state: kSmallTitleAdaptiveState)
+      //  watchAppearance.setTitleColor(UIColor.whiteColor(), state: kSmallTitleAdaptiveState)
         
         watchAppearance.setButonTitleFontForState(defaultFont!, state: kDefaultAdaptiveState)
         

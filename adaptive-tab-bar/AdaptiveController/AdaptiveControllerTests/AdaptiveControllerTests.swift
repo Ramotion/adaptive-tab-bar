@@ -129,8 +129,8 @@ class AdaptiveControllerTests: XCTestCase {
         watchAppearance.setButonTitle("watch2", state: kSmallTitleAdaptiveState)
         watchAppearance.setButonTitle("", state: kImageAdaptiveState)
         watchAppearance.setTitleColor(UIColor.whiteColor(), state: kDefaultAdaptiveState)
-         watchAppearance.setTitleColor(UIColor.whiteColor(), state: kSmallTitleAdaptiveState)
-         watchAppearance.setTitleColor(UIColor.whiteColor(), state: kImageAdaptiveState)
+        // watchAppearance.setTitleColor(UIColor.whiteColor(), state: kSmallTitleAdaptiveState)
+         //watchAppearance.setTitleColor(UIColor.whiteColor(), state: kImageAdaptiveState)
         
         watchAppearance.setButonTitleFontForState(defaultFont!, state: kDefaultAdaptiveState)
         

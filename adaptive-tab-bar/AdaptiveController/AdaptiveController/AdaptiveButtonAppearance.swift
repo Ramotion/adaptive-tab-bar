@@ -55,14 +55,27 @@ public class AdaptiveButtonAppearance: NSObject,AppearanceSerializationProtocol 
         
     }
     
+    func getStateObjectForState(state:String) -> ControlStateValue!{
+        if let stateObject = stateDictionary[state] {
+            return stateObject
+        }else{
+            return nil
+        }
+    }
+    
     func getOrCreateStateObjectForState(state:String) -> ControlStateValue!{
         if let stateObject = stateDictionary[state] {
             return stateObject
         }else{
-            var stateObject = ControlStateValue()
-
-            stateDictionary.updateValue(stateObject, forKey: state)
-            return stateObject
+            
+           // if let stateObject = stateDictionary[kDefaultAdaptiveState] {
+             //   return stateObject
+            //}else{
+                var stateObject = ControlStateValue()
+                
+                stateDictionary.updateValue(stateObject, forKey: state)
+                return stateObject
+            //}
         }
     }
     
@@ -79,6 +92,7 @@ public class AdaptiveButtonAppearance: NSObject,AppearanceSerializationProtocol 
                 return stateObject
             }else{
                 var stateObject = ControlStateAppearance()
+                stateObject.titleColor = nil
                 controlStateValueObject.setControlApearence(stateObject,state: controlState)
                 return stateObject
             }
@@ -317,9 +331,17 @@ public class AdaptiveButtonAppearance: NSObject,AppearanceSerializationProtocol 
     
     public func getTitleColorForState(state:NSString ,controlState:UIControlState)->UIColor!{
         
-      var controlStateValueObject = getOrCreateStateObjectForState(state)
-      var controlStateAppearanceObject = controlStateValueObject.getControlApearenceFor(controlState)
-      return controlStateAppearanceObject.titleColor!
+        var controlStateValueObject = getOrCreateStateObjectForState(state)
+        var controlStateAppearanceObject = controlStateValueObject.getControlApearenceFor(controlState)
+        
+        if let curentTitleColor = controlStateAppearanceObject.titleColor{
+            return curentTitleColor
+        }else{
+            var controlStateValueObject = getStateObjectForState(kDefaultAdaptiveState)
+            println(controlStateValueObject)
+            var controlStateAppearanceObject = controlStateValueObject.getControlApearenceFor(controlState)
+            return controlStateAppearanceObject.titleColor!
+        }
     
       
         
