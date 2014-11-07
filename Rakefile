@@ -2,6 +2,8 @@ def run(command)
   system(command) or raise "RAKE TASK FAILED: #{command}"
 end
 
+exec( "pwd" )
+
 namespace "test" do
   desc "Run unit tests for all iOS targets"
   task :ios do |t|
