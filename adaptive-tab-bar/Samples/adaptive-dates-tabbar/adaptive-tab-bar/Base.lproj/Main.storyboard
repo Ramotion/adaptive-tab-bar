@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--First-->
@@ -29,16 +30,20 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="bTY-b5-lYl">
-                                <rect key="frame" x="0.0" y="0.0" width="640" height="550"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="bTY-b5-lYl">
+                                <rect key="frame" x="0.0" y="0.0" width="640" height="551"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="bTY-b5-lYl" secondAttribute="bottom" id="57C-0I-UhP"/>
                             <constraint firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="6BV-lF-sBN"/>
                             <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="8" symbolic="YES" id="cfb-er-3JN"/>
                             <constraint firstItem="A5M-7J-77L" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="e1l-AV-tCB"/>
                             <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
+                            <constraint firstItem="bTY-b5-lYl" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="kWQ-y6-H6g"/>
+                            <constraint firstAttribute="trailing" secondItem="bTY-b5-lYl" secondAttribute="trailing" constant="-40" id="sYy-Hj-V1a"/>
+                            <constraint firstItem="bTY-b5-lYl" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="ueh-EO-Puf"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="First" id="acW-dT-cKf" customClass="AdaptiveTabBarItem" customModule="example_date_adaptive_tab_bar" customModuleProvider="target"/>
@@ -72,16 +77,20 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="d3m-k5-qah">
-                                <rect key="frame" x="0.0" y="0.0" width="640" height="550"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="d3m-k5-qah">
+                                <rect key="frame" x="0.0" y="0.0" width="640" height="551"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="d3m-k5-qah" secondAttribute="trailing" constant="-40" id="8KS-iG-8XT"/>
                             <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
                             <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
+                            <constraint firstItem="d3m-k5-qah" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="X9o-k0-h62"/>
                             <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
                             <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
+                            <constraint firstItem="d3m-k5-qah" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" id="tA2-Eh-fSb"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="d3m-k5-qah" secondAttribute="bottom" id="zws-Zn-RsZ"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n" customClass="AdaptiveTabBarItem" customModule="example_count_launches_adaptive_tabbar"/>
@@ -124,11 +133,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="jtr-dW-8XE">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="jtr-dW-8XE">
                                 <rect key="frame" x="0.0" y="0.0" width="640" height="555"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="jtr-dW-8XE" secondAttribute="trailing" constant="-40" id="68Q-YE-GnZ"/>
+                            <constraint firstItem="jtr-dW-8XE" firstAttribute="leading" secondItem="Z9a-At-6Ll" secondAttribute="leading" id="9Lc-1F-lVY"/>
+                            <constraint firstAttribute="bottom" secondItem="jtr-dW-8XE" secondAttribute="bottom" constant="45" id="iHg-vq-ehR"/>
+                            <constraint firstItem="jtr-dW-8XE" firstAttribute="top" secondItem="Z9a-At-6Ll" secondAttribute="top" id="zds-Uy-hOW"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="g86-Lf-lWF" customClass="AdaptiveTabBarItem" customModule="example_date_adaptive_tab_bar" customModuleProvider="target"/>
                 </viewController>
@@ -148,11 +163,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="GGw-pn-6CX">
-                                <rect key="frame" x="0.0" y="0.0" width="640" height="550"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="GGw-pn-6CX">
+                                <rect key="frame" x="0.0" y="0.0" width="640" height="551"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GGw-pn-6CX" firstAttribute="top" secondItem="UyR-nf-sp6" secondAttribute="topMargin" id="JNr-AP-tWr"/>
+                            <constraint firstItem="GGw-pn-6CX" firstAttribute="top" secondItem="UyR-nf-sp6" secondAttribute="topMargin" id="MSj-7q-ac7"/>
+                            <constraint firstItem="GGw-pn-6CX" firstAttribute="leading" secondItem="UyR-nf-sp6" secondAttribute="leading" id="SZF-JG-V57"/>
+                            <constraint firstItem="aNR-L8-QaD" firstAttribute="top" secondItem="GGw-pn-6CX" secondAttribute="bottom" id="YDT-AA-Wjy"/>
+                            <constraint firstItem="aNR-L8-QaD" firstAttribute="top" secondItem="GGw-pn-6CX" secondAttribute="bottom" id="nys-sX-kRN"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="RnB-fU-3RS" customClass="AdaptiveTabBarItem" customModule="example_date_adaptive_tab_bar" customModuleProvider="target"/>
                 </viewController>
@@ -172,11 +194,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="fel-JW-y8K">
-                                <rect key="frame" x="0.0" y="0.0" width="640" height="550"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="fel-JW-y8K">
+                                <rect key="frame" x="16" y="0.0" width="568" height="551"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mju-qR-F4m" firstAttribute="top" secondItem="fel-JW-y8K" secondAttribute="bottom" id="czL-kW-Gi5"/>
+                            <constraint firstItem="fel-JW-y8K" firstAttribute="top" secondItem="dgq-yB-Neb" secondAttribute="top" id="h6H-Nt-0EU"/>
+                            <constraint firstItem="fel-JW-y8K" firstAttribute="leading" secondItem="dgq-yB-Neb" secondAttribute="leading" constant="16" id="lvq-kK-shl"/>
+                            <constraint firstAttribute="trailing" secondItem="fel-JW-y8K" secondAttribute="trailing" constant="16" id="mnN-oR-w60"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="uWZ-JL-cND" customClass="AdaptiveTabBarItem" customModule="example_date_adaptive_tab_bar" customModuleProvider="target"/>
                 </viewController>
