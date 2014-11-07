@@ -1,4 +1,4 @@
 language: objective-c
-script: "rake test:ios"
-#xcode_workspace: adaptive-tab-bar/SamplesAdaptiveController.xcworkspace # path to your xcodeproj folder
-#xcode_scheme: AdaptiveControllerTests
+#script: "rake test:ios"
+xcode_project: AdaptiveController/AdaptiveController.xcodeproj # path to your xcodeproj folder
+xcode_scheme: AdaptiveControllerTests
