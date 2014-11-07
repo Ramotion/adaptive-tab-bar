@@ -72,16 +72,13 @@ public class ControlStateValue:ControlStateProtocol{
         var stateKey = "\(state.rawValue)"
         var mapedKey = contolStatesMappingDictionary[stateKey]
         self.controlStates.updateValue(appearance, forKey: mapedKey!)
-        println(self.controlStates)
-        println(stateKey)
-        
+    
     }
     
     public func getControlApearenceFor(state:UIControlState) -> ControlStateAppearance!{
         
       var stateKey:String = "\(state.rawValue)"
       var mapedKey = contolStatesMappingDictionary[stateKey]
-      println(self.controlStates)
       var stateObject =  self.controlStates[mapedKey!]
       return stateObject
     }

@@ -346,7 +346,6 @@ public class AdaptiveButtonAppearance: NSObject,AppearanceSerializationProtocol 
             return curentTitleColor
         }else{
             let controlStateValueObject = getStateObjectForState(kDefaultAdaptiveState)
-            println(controlStateValueObject)
             let controlStateAppearanceObject = controlStateValueObject.getControlApearenceFor(controlState)
             return controlStateAppearanceObject.titleColor!
         }

@@ -23,18 +23,8 @@ public class DictioanarySeriliazator: NSObject {
     
     public func saveStateDictionary(buttonApearances:[AdaptiveButtonAppearance],filePath:String){
         
-        var paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
-        var path = paths.stringByAppendingPathComponent("appearances.plist")
-        println(path)
-        println(filePath)
         var dataArray =  buttonApperancesToArrayDictionary(buttonApearances)
         var data : NSArray = dataArray as NSArray
-        var fileManager = NSFileManager.defaultManager()
-        if (!(fileManager.fileExistsAtPath(paths)))
-        {
-            println("error")
-        }
-        
         data.writeToFile(filePath, atomically: true)
         
     }

@@ -49,15 +49,12 @@ public class AdaptiveButtonsStateManager: NSObject {
         
         var countElements = buttonsAray.count > buttonsAppearance.count ? buttonsAppearance.count : buttonsAray.count
         for var index = 0; index < countElements; ++index {
-            println("index is \(index)")
-            println("buttons count array is \(buttonsAray.count)")
-            
+          
             var button :AdaptiveApperanceProtocol = buttonsAray[index]
             var buttonApperance = buttonsAppearance[index]
             
             let title = buttonApperance.getButonTitleForState(state)
-            println("title: /(title)")
-            println(NSString(format:"title  %@",title))
+           
             button.setTitleToAdaptiveButton!(title)
             
             
