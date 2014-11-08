@@ -5,8 +5,8 @@ end
 namespace "test" do
   desc "Run unit tests for all iOS targets"
   task :ios do |t|
-  	run "xcodebuild -workspace adaptive-tab-bar/SamplesAdaptiveController.xcworkspace -scheme AdaptiveController"
-    run "xcodebuild -workspace adaptive-tab-bar/SamplesAdaptiveController.xcworkspace -scheme AdaptiveControllerTests  test"
+  	run "xcodebuild -project AdaptiveController/AdaptiveController.xcodeproj  -scheme AdaptiveController"
+    run "xcodebuild -project AdaptiveController/AdaptiveController.xcodeproj  -scheme AdaptiveControllerTests  test"
   end
 
 end

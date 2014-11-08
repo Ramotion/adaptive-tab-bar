@@ -1,6 +1,6 @@
 language: objective-c
-#script: "rake test:ios"
-xcode_project: AdaptiveController/AdaptiveController.xcodeproj # path to your xcodeproj folder
-xcode_scheme: AdaptiveController
-xcode_project: AdaptiveController/AdaptiveController.xcodeproj # path to your xcodeproj folder
-xcode_scheme: AdaptiveControllerTests
+script: "rake test:ios"
+#xcode_project: AdaptiveController/AdaptiveController.xcodeproj # path to your xcodeproj folder
+#xcode_scheme: AdaptiveController
+#xcode_project: AdaptiveController/AdaptiveController.xcodeproj # path to your xcodeproj folder
+#xcode_scheme: AdaptiveControllerTests
