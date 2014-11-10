@@ -44,8 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var adaptiveState = AdaptiveLaunchesState(curentCountLaunches:curentCountLaunches,countLaunchesToSmallTextState:countDaysForSmaltextState,countLaunchesToImageState:countDaysForImageModeState)
         
         
-        var buttonsAppearances = buttonsAppearancesGenerate() //func butonsApprencesGenerate() -> [AdaptiveButtonApperance]
-        
+        var buttonsAppearances = buttonsAppearancesGenerate()         
      
         var arrayButtons = tabBar.items as [AdaptiveTabBarItem]
        

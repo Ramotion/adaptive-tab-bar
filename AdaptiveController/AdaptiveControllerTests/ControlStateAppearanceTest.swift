@@ -57,8 +57,7 @@ class ControlStateAppearanceTest: XCTestCase {
         XCTAssert(UIEdgeInsetsEqualToEdgeInsets(appearance.imageInsets!, appearance1.imageInsets!), "Fail insets")
         
         
-        // XCTAssert(tabBarItem.font!.isEqual(defaultSmallTitleModeFont), "Fail  font")
-    }
+}
 
     func testPerformanceExample() {
         // This is an example of a performance test case.

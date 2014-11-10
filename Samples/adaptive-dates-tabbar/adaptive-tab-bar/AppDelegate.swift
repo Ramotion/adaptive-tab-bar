@@ -44,10 +44,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let path = NSBundle.mainBundle().pathForResource("appearances", ofType: "plist")
         
-        var seriliazator = DictioanarySeriliazator()
+        var serializer = DictioanarySerializer()
       
         
-        var butonsApperances = seriliazator.getButtonApperances(path!)
+        var butonsApperances = serializer.parseFromPlistToButtonApperances(path!)
         
      
         var arrayButtons = tabBar.items as [UITabBarItem]
