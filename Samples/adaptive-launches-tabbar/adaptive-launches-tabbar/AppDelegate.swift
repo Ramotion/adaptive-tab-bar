@@ -48,7 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
      
         var arrayButtons = tabBar.items as [AdaptiveTabBarItem]
        
-        AdaptiveButtonsStateManager(state: adaptiveState,buttonsAray:arrayButtons ,buttonsAppearance: buttonsAppearances)
+        AdaptiveButtonsStateManager.setupButtonsAppearanceFromState(adaptiveState,buttonsAray:arrayButtons ,buttonsAppearance: buttonsAppearances)
               
         return true
     }

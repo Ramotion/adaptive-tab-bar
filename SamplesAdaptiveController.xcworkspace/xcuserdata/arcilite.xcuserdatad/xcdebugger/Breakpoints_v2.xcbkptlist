@@ -9,14 +9,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AdaptiveController/AdaptiveController/DictioanarySeriliazator.swift"
+            filePath = "AdaptiveController/AdaptiveController/DictioanarySerializer.swift"
             timestampString = "437068109.505856"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "saveStateDictionary(_:filePath:)"
-            landmarkType = "5">
+            endingLineNumber = "25">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -25,14 +23,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AdaptiveController/AdaptiveController/DictioanarySeriliazator.swift"
+            filePath = "AdaptiveController/AdaptiveController/DictioanarySerializer.swift"
             timestampString = "437068109.505856"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "saveStateDictionary(_:filePath:)"
-            landmarkType = "5">
+            endingLineNumber = "27">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

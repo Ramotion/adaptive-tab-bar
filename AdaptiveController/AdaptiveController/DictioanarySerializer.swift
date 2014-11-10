@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class DictioanarySeriliazator: NSObject {
+public class DictioanarySerializer: NSObject {
     let rootKey:NSString = "Root"
     public typealias DictionaryObject = Dictionary <String,AnyObject>
     
@@ -40,7 +40,7 @@ public class DictioanarySeriliazator: NSObject {
     }
     
     
-    public func getButtonApperances(filePath:String)->[AdaptiveButtonAppearance] {
+    public func parseFromPlistToButtonApperances(filePath:String)->[AdaptiveButtonAppearance] {
         
         if countElements(filePath) > 0 {
             // The file saved previously
@@ -48,7 +48,6 @@ public class DictioanarySeriliazator: NSObject {
             // Check for existence of the file
             if NSFileManager.defaultManager().fileExistsAtPath(filePath){
                 let resultArray = NSArray(contentsOfFile: filePath)
-             //   var arrayAppearencesDictionary: NSArray? = resultDictionary?.objectForKey(rootKey) as? NSArray
                 var appearancesDictionaryArray = resultArray as Array<Dictionary<String, DictionaryObject>>
                 
                 return dictionaryApperancesToArrayApperances(appearancesDictionaryArray)

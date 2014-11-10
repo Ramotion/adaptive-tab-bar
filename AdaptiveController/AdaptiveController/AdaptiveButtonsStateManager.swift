@@ -36,14 +36,12 @@ public let tabColor = UIColor(red: 169/255, green: 79/255, blue: 152/255, alpha:
 public let selected = "Selected"
 public let highlighted = "Higlihted"
 
-public class AdaptiveButtonsStateManager: NSObject {
+public class AdaptiveButtonsStateManager {
+  
     
-    public convenience init (state:AdaptiveState,buttonsAray:[AdaptiveApperanceProtocol],buttonsAppearance:[AdaptiveButtonAppearance]){
-        self.init()
-        self.setButtonsState(state, buttonsAray: buttonsAray, buttonsAppearance: buttonsAppearance)
-    }
+
     
-     public func setButtonsState(state:AdaptiveState,buttonsAray:[AdaptiveApperanceProtocol],buttonsAppearance:[AdaptiveButtonAppearance]){
+     public class func  setupButtonsAppearanceFromState(state:AdaptiveState,buttonsAray:[AdaptiveApperanceProtocol],buttonsAppearance:[AdaptiveButtonAppearance]){
         
         var state:String = state.currentItemState!
         
