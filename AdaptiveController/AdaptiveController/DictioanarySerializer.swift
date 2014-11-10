@@ -14,11 +14,11 @@ public class DictioanarySerializer: NSObject {
     
    
     public func buttonApperancesToArrayDictionary(buttonApearances:[AdaptiveButtonAppearance]) -> Array<Dictionary<String, AnyObject>>{
-        var buttonsAperancesDictionaryArray  =  Array<Dictionary<String, AnyObject>>()
+        var buttonsApearancesDictionaryArray  =  Array<Dictionary<String, AnyObject>>()
         for appeareance in buttonApearances{
-             buttonsAperancesDictionaryArray.append(appeareance.getObjectDictionary())
+             buttonsApearancesDictionaryArray.append(appeareance.getObjectDictionary())
         }
-        return buttonsAperancesDictionaryArray
+        return buttonsApearancesDictionaryArray
     }
     
     public func saveStateDictionary(buttonApearances:[AdaptiveButtonAppearance],filePath:String){
@@ -29,18 +29,18 @@ public class DictioanarySerializer: NSObject {
         
     }
     
-    public func dictionaryApperancesToArrayApperances(buttonApearancesDictionary:Array<Dictionary<String, DictionaryObject>>) -> [AdaptiveButtonAppearance]{
-        var buttonsAperancesDictionaryArray  = [AdaptiveButtonAppearance]()
+    public func dictionaryAppearancesToArrayApperances(buttonApearancesDictionary:Array<Dictionary<String, DictionaryObject>>) -> [AdaptiveButtonAppearance]{
+        var buttonsApearancesDictionaryArray  = [AdaptiveButtonAppearance]()
         for appeareanceDictionary in buttonApearancesDictionary{
             var appearance = AdaptiveButtonAppearance()
             appearance.setObjectDictionary(appeareanceDictionary)
-            buttonsAperancesDictionaryArray.append(appearance)
+            buttonsApearancesDictionaryArray.append(appearance)
         }
-        return buttonsAperancesDictionaryArray
+        return buttonsApearancesDictionaryArray
     }
     
     
-    public func parseFromPlistToButtonApperances(filePath:String)->[AdaptiveButtonAppearance] {
+    public func parseFromPlistToButtonAppearances(filePath:String)->[AdaptiveButtonAppearance] {
         
         if countElements(filePath) > 0 {
             // The file saved previously
@@ -50,7 +50,7 @@ public class DictioanarySerializer: NSObject {
                 let resultArray = NSArray(contentsOfFile: filePath)
                 var appearancesDictionaryArray = resultArray as Array<Dictionary<String, DictionaryObject>>
                 
-                return dictionaryApperancesToArrayApperances(appearancesDictionaryArray)
+                return dictionaryAppearancesToArrayApperances(appearancesDictionaryArray)
                 
             }
         }

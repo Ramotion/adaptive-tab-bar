@@ -41,15 +41,15 @@ public class AdaptiveButtonsStateManager {
     
 
     
-     public class func  setupButtonsAppearanceFromState(state:AdaptiveState,buttonsAray:[AdaptiveApperanceProtocol],buttonsAppearance:[AdaptiveButtonAppearance]){
+     public class func  setupButtonsAppearanceFromState(state:AdaptiveState,buttonsAray:[AdaptiveApperanceProtocol],buttonsAppearances:[AdaptiveButtonAppearance]){
         
         var state:String = state.currentItemState!
         
-        var countElements = buttonsAray.count > buttonsAppearance.count ? buttonsAppearance.count : buttonsAray.count
+        var countElements = buttonsAray.count > buttonsAppearances.count ? buttonsAppearances.count : buttonsAray.count
         for var index = 0; index < countElements; ++index {
           
             var button :AdaptiveApperanceProtocol = buttonsAray[index]
-            var buttonApperance = buttonsAppearance[index]
+            var buttonApperance = buttonsAppearances[index]
             
             let title = buttonApperance.getButonTitleForState(state)
            

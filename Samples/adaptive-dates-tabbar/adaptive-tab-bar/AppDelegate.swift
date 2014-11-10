@@ -54,7 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
       
         
-        AdaptiveButtonsStateManager.setupButtonsAppearanceFromState(adaptiveState,buttonsAray:arrayButtons ,buttonsAppearance: butonsApperances)
+        AdaptiveButtonsStateManager.setupButtonsAppearanceFromState(adaptiveState,buttonsAray:arrayButtons ,buttonsAppearances: butonsApperances)
         
         
         return true
