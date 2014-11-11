@@ -8,18 +8,6 @@
 
 import UIKit
 
-public let countDaysToSmallTextState = 14
-public let countDaysToImageState = 30
-
-public let defaultInsets = UIEdgeInsetsMake(0, 0,0, 0)
-public let defaultSmallTitleModeFont = UIFont(name: "Helvetica", size: 10.0)
-public let defaultSmallTitleModeImageInsets = UIEdgeInsetsMake(0,  0,  0,  0)
-public let defaultImageModeInsets = UIEdgeInsetsMake(6,  0,  -6,  0)
-public let defaultSmallTitleModeOffset = UIOffsetMake(0, 20)
-public let defaultOffset = UIOffsetMake(0, 00)
-public let tabColor = UIColor(red: 169/255, green: 79/255, blue: 152/255, alpha: 1.0)
-
-
 
  @objc public protocol AdaptiveApperanceProtocol {
     optional func setFontToAdaptiveButton(font: UIFont)
@@ -33,17 +21,13 @@ public let tabColor = UIColor(red: 169/255, green: 79/255, blue: 152/255, alpha:
     optional func setTitleColorToAdaptiveButton(titleColor: UIColor)
 }
 
-public let selected = "Selected"
-public let highlighted = "Higlihted"
 
-public class AdaptiveButtonsStateManager {
-  
-    
+public class AdaptiveButtonsStateManager <AdaptiveStateClass: AdaptiveState> {
 
     
-     public class func  setupButtonsAppearanceFromState(state:AdaptiveState,buttonsAray:[AdaptiveApperanceProtocol],buttonsAppearances:[AdaptiveButtonAppearance]){
+     public class func  setupButtonsAppearanceFromState(adaptiveState:AdaptiveStateClass,buttonsAray:[AdaptiveApperanceProtocol],buttonsAppearances:[AdaptiveButtonAppearance]){
         
-        var state:String = state.currentItemState!
+        var state = adaptiveState.currentItemState
         
         var countElements = buttonsAray.count > buttonsAppearances.count ? buttonsAppearances.count : buttonsAray.count
         for var index = 0; index < countElements; ++index {

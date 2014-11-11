@@ -10,17 +10,20 @@ import UIKit
 
 
 
-public class ControlStateValue:ControlStateProtocol{
+public class ControlStateValue:NSObject,ControlStateProtocol{
    
+   
+    
     public typealias StateObject = ControlStateAppearance
     public typealias DictionaryObject = Dictionary <String,AnyObject>
-    public var controlStates: Dictionary <String,StateObject> = Dictionary <String,ControlStateAppearance>()
+    public var controlStates = Dictionary <String,ControlStateAppearance>()
   
     private var contolStatesMappingDictionary = ["\((UIControlState.Normal).rawValue)":"UIControlStateNormal",
                                                 "\((UIControlState.Highlighted).rawValue)":"UIControlStateHighlighted",
                                                 "\((UIControlState.Selected).rawValue)":"UIControlStateSelected"]
     
-    public init(){
+    public override  init(){
+        // self.init()
           self.controlStates = Dictionary<String,ControlStateAppearance>()
     }
     

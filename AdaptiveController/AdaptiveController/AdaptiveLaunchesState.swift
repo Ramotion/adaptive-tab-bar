@@ -5,16 +5,20 @@
 //  Created by Arcilite on 04.10.14.
 //  Copyright (c) 2014 Ramotion. All rights reserved.
 //
-public let countDaysForSmaltextState = 3
-public let countDaysForImageModeState = 7
+
 
 import UIKit
 
+typealias StateType = AdaptiveStateEnum
+
 public class AdaptiveLaunchesState : AdaptiveState {
+
     
-    public override init(){
-        super.init()
-        super.addNewCustomAdaptiveStates([kSmallTitleAdaptiveState,kImageAdaptiveState])
+    typealias StateType = AdaptiveStateEnum
+   
+    
+    override init(){
+
     }
     
     
@@ -25,13 +29,13 @@ public class AdaptiveLaunchesState : AdaptiveState {
         
     }
     
-    internal func stateRemainDays (curentCountLaunches:Int,countLaunchesToSmallTextState:Int,countLaunchesToImageState:Int)->String{
-        var mode:String = kDefaultAdaptiveState
+    internal func stateRemainDays (curentCountLaunches:Int,countLaunchesToSmallTextState:Int,countLaunchesToImageState:Int)->StateType{
+        var mode:StateType = .DefaultAdaptiveState
         
         if curentCountLaunches > countLaunchesToSmallTextState && curentCountLaunches < countLaunchesToImageState{
-            mode = kSmallTitleAdaptiveState
+            mode = .SmallTitleAdaptiveState
         }else if curentCountLaunches > countLaunchesToImageState {
-            mode = kImageAdaptiveState
+            mode = .ImageAdaptiveState
         }
         
         return mode;

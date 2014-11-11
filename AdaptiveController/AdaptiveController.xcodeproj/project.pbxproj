@@ -36,6 +36,7 @@
 		6AE723411A04F7ED003416B6 /* ControlStateAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD4002819F792FA00630034 /* ControlStateAppearance.swift */; };
 		6AE723431A078071003416B6 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE723421A078071003416B6 /* ColorExtension.swift */; };
 		6AE723451A07C8E1003416B6 /* AdaptiveButtonAppearanceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE723441A07C8E1003416B6 /* AdaptiveButtonAppearanceTest.swift */; };
+		6AF450671A10F99A00AC30A4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF450661A10F99A00AC30A4 /* Constants.swift */; };
 		6AFBC6D719D313D600D42578 /* AdaptiveController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AFBC6D619D313D600D42578 /* AdaptiveController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6AFBC6E119D313D600D42578 /* AdaptiveControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFBC6E019D313D600D42578 /* AdaptiveControllerTests.swift */; };
 /* End PBXBuildFile section */
@@ -60,6 +61,7 @@
 		6AE723341A04EE6F003416B6 /* ControlStateAppearanceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlStateAppearanceTest.swift; sourceTree = "<group>"; };
 		6AE723421A078071003416B6 /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		6AE723441A07C8E1003416B6 /* AdaptiveButtonAppearanceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdaptiveButtonAppearanceTest.swift; sourceTree = "<group>"; };
+		6AF450661A10F99A00AC30A4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6AFBC6D119D313D600D42578 /* AdaptiveController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdaptiveController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AFBC6D519D313D600D42578 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6AFBC6D619D313D600D42578 /* AdaptiveController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdaptiveController.h; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 		6AFBC6D319D313D600D42578 /* AdaptiveController */ = {
 			isa = PBXGroup;
 			children = (
+				6AF450661A10F99A00AC30A4 /* Constants.swift */,
 				6AE723421A078071003416B6 /* ColorExtension.swift */,
 				6A156E3C1A08B322002A69AD /* Serializator */,
 				6AD4002C19F7A12200630034 /* Protocols */,
@@ -318,6 +321,7 @@
 				6AD4002B19F7A0B800630034 /* AppearanceSerializationProtocol.swift in Sources */,
 				6AD1EC2619EFA9BA003F36A4 /* ControlStateValue.swift in Sources */,
 				6AAE857919D329C6005672CA /* AdaptiveDateState.swift in Sources */,
+				6AF450671A10F99A00AC30A4 /* Constants.swift in Sources */,
 				6AD1EC2919EFB8E2003F36A4 /* ControlStateProtocol.swift in Sources */,
 				6A156E3E1A08B38E002A69AD /* DictioanarySerializer.swift in Sources */,
 				6AAE857A19D329C6005672CA /* AdaptiveState.swift in Sources */,

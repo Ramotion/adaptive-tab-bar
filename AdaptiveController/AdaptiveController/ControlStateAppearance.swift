@@ -103,7 +103,7 @@ public class ControlStateAppearance: AppearanceSerializationProtocol{
             colorDictionary[blueColor] = components[2]
             colorDictionary[alphaColor] = components[3]
         }
-        print(colorDictionary)
+
         return colorDictionary
     }
     

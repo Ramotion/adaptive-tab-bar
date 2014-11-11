@@ -9,7 +9,7 @@
 import UIKit
 
 public class DictioanarySerializer: NSObject {
-    let rootKey:NSString = "Root"
+
     public typealias DictionaryObject = Dictionary <String,AnyObject>
     
    

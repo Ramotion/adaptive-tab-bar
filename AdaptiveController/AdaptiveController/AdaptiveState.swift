@@ -11,28 +11,22 @@ import UIKit
 
 public let kDefaultAdaptiveState:String = "kDefaultAdaptiveState"
 
+public enum AdaptiveStateEnum{
+    case DefaultAdaptiveState
+    case SmallTitleAdaptiveState
+    case ImageAdaptiveState
+    
+}
 
-public class AdaptiveState: NSObject {
-   
-    var currentItemState:NSString? 
-    
 
-    var  buttonStates:[String] = [String]()
-     
+public class  AdaptiveState {
     
-    public override init(){
-        super.init()
-        self.currentItemState = kDefaultAdaptiveState
-        self.addNewCustomAdaptiveStates([kDefaultAdaptiveState])
+    public typealias StateType = AdaptiveStateEnum
+    var currentItemState:StateType?
+    
+    init(){
+        
     }
-    
-    internal func addNewCustomAdaptiveStates(customAdaptiveStates:Array<String>){
-         self.buttonStates+customAdaptiveStates
-    }
-    
-   
-    
-    
- 
+
     
 }

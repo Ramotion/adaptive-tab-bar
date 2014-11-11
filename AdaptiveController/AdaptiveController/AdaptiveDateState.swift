@@ -14,17 +14,12 @@ public let kImageAdaptiveState = "kImageAdaptiveState"
 public class AdaptiveDateState: AdaptiveState {
    
     
-    public override init(){
-        super.init()
-        super.addNewCustomAdaptiveStates([kSmallTitleAdaptiveState,kImageAdaptiveState])
-    }
-    
    public convenience init(installDate:NSDate, currentDate:NSDate,countDaysToSmallTextState:Int,countDaysToImageState:Int) {
         self.init()
         
         var remainsDays = self.daysBetweenDates(installDate,currentDate: currentDate)
         self.currentItemState =  self.stateRemainDays(remainsDays,countDaysToSmallTextState:countDaysToSmallTextState,countDaysToImageState:countDaysToImageState)
-        print(currentItemState)
+      
     }
     
     
@@ -39,16 +34,19 @@ public class AdaptiveDateState: AdaptiveState {
         return components.day+1;
     }
     
-     func stateRemainDays (remainDays:Int,countDaysToSmallTextState:Int,countDaysToImageState:Int)->String{
+     func stateRemainDays (remainDays:Int,countDaysToSmallTextState:Int,countDaysToImageState:Int)->StateType{
         
-        var mode:String = kDefaultAdaptiveState
+        var mode:StateType = .DefaultAdaptiveState
         print(" DAYS \(remainDays) ")
         if remainDays > countDaysToSmallTextState && remainDays < countDaysToImageState{
-            mode = kSmallTitleAdaptiveState
+            mode = .SmallTitleAdaptiveState
         }else if remainDays > countDaysToImageState {
-            mode = kImageAdaptiveState
+            mode = .ImageAdaptiveState
         }
-        print(mode)
+        
         return mode
     }
+    
+   
+    
 }
