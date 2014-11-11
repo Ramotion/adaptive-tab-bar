@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import UIKit
 //Default apearence settings
 public let countDaysForSmaltextState = 3
 public let countDaysForImageModeState = 7

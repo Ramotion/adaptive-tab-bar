@@ -10,6 +10,7 @@ import Foundation
 
 protocol AppearanceSerializationProtocol {
     typealias DictionaryObject
+    
     func getObjectDictionary() -> Dictionary<String,DictionaryObject>
     func setObjectDictionary(dictionary:Dictionary<String,DictionaryObject>)
 

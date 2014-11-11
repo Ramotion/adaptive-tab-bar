@@ -58,54 +58,53 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        
         
         var imageExtensionsForStates:Dictionary = [ kSmallTitleAdaptiveState:"_smalltitle",
-                                                    kImageAdaptiveState:"_bigimage",
-                                                    kSmallTitleAdaptiveState+selected :"_smalltitle",
-                                                    kImageAdaptiveState+selected:"_bigimage" ]
+                                                    kImageAdaptiveState:"_bigimage"
+                                                   ]
         
         
         var watchAppearance = AdaptiveButtonAppearance();
         
-        watchAppearance.setButonTitle("watch", state: kDefaultAdaptiveState)
+       // watchAppearance.setButonTitle("watch", state: kDefaultAdaptiveState)
        
-        watchAppearance.setButonTitle("", state: kImageAdaptiveState)
-        watchAppearance.setTitleColor(UIColor.whiteColor(), state: kDefaultAdaptiveState)
+       // watchAppearance.setButonTitle("", state: kImageAdaptiveState)
+       // watchAppearance.setTitleColor(UIColor.whiteColor(), state: kDefaultAdaptiveState)
         
-        watchAppearance.setButonTitleFontForState(defaultFont!, state: kDefaultAdaptiveState)
+       // watchAppearance.setButonTitleFontForState(defaultFont!, state: kDefaultAdaptiveState)
         
-        watchAppearance.setButonTitleFontForState(defaultSmallTitleModeFont!, state: kSmallTitleAdaptiveState)
+        //watchAppearance.setButonTitleFontForState(defaultSmallTitleModeFont!, state: kSmallTitleAdaptiveState)
         
       
-        watchAppearance.setImageNamesForStatesImageExtesions("watch", imageExtensionsForState:imageExtensionsForStates)
+        //watchAppearance.setImageNamesForStatesImageExtesions("watch", imageExtensionsForState:imageExtensionsForStates)
 
         
-        watchAppearance.setImageInsets(defaultInsets, state: kDefaultAdaptiveState);
+        //watchAppearance.setImageInsets(defaultInsets, state: kDefaultAdaptiveState);
         
-        watchAppearance.setImageInsets(defaultSmallTitleModeImageInsets, state: kSmallTitleAdaptiveState)
-        watchAppearance.setTitleOffset(defaultOffset, state: kDefaultAdaptiveState)
-        watchAppearance.setImageInsets(defaultImageModeInsets, state: kImageAdaptiveState);
+        //watchAppearance.setImageInsets(defaultSmallTitleModeImageInsets, state: kSmallTitleAdaptiveState)
+        //watchAppearance.setTitleOffset(defaultOffset, state: kDefaultAdaptiveState)
+        //watchAppearance.setImageInsets(defaultImageModeInsets, state: kImageAdaptiveState);
         
         
         var userAperance = AdaptiveButtonAppearance();
         
        
-        userAperance.setAllCommonApperanceFrom(watchAppearance)
+        //userAperance.setAllCommonApperanceFrom(watchAppearance)
        
-        userAperance.setButonTitle("user", state: kDefaultAdaptiveState)
+        //userAperance.setButonTitle("user", state: kDefaultAdaptiveState)
        
-        userAperance.setButonTitle("", state: kImageAdaptiveState)
-        userAperance.setImageNamesForStatesImageExtesions("man", imageExtensionsForState:imageExtensionsForStates)
+      //  userAperance.setButonTitle("", state: kImageAdaptiveState)
+       // userAperance.setImageNamesForStatesImageExtesions("man", imageExtensionsForState:imageExtensionsForStates)
        
         
         
         var messageAperance = AdaptiveButtonAppearance();
         
-        messageAperance.setAllCommonApperanceFrom((watchAppearance))
+        //messageAperance.setAllCommonApperanceFrom((watchAppearance))
 
-        messageAperance.setButonTitle("message", state: kDefaultAdaptiveState)
+      //  messageAperance.setButonTitle("message", state: kDefaultAdaptiveState)
        
-        messageAperance.setButonTitle("", state: kImageAdaptiveState)
+        //messageAperance.setButonTitle("", state: kImageAdaptiveState)
         
-        messageAperance.setImageNamesForStatesImageExtesions("messages", imageExtensionsForState:imageExtensionsForStates)
+        //messageAperance.setImageNamesForStatesImageExtesions("messages", imageExtensionsForState:imageExtensionsForStates)
        
        
         
@@ -113,24 +112,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var menuAperance = AdaptiveButtonAppearance();
         
         
-        menuAperance.setAllCommonApperanceFrom((watchAppearance))
-        
-        menuAperance.setButonTitle("dial", state: kDefaultAdaptiveState)
-     
-        menuAperance.setButonTitle("", state: kImageAdaptiveState)
-        menuAperance.setImageNamesForStatesImageExtesions("menu", imageExtensionsForState:imageExtensionsForStates)
+//        menuAperance.setAllCommonApperanceFrom((watchAppearance))
+//        
+//        menuAperance.setButonTitle("dial", state: kDefaultAdaptiveState)
+//     
+//        menuAperance.setButonTitle("", state: kImageAdaptiveState)
+//        menuAperance.setImageNamesForStatesImageExtesions("menu", imageExtensionsForState:imageExtensionsForStates)
         
         
      
         var moreAperance = AdaptiveButtonAppearance();
         
-        moreAperance.setAllCommonApperanceFrom((watchAppearance))
-        
-        moreAperance.setButonTitle("more", state: kDefaultAdaptiveState)
-        
-        moreAperance.setButonTitle("", state: kImageAdaptiveState)
-        
-        moreAperance.setImageNamesForStatesImageExtesions("more", imageExtensionsForState:imageExtensionsForStates)
+//        moreAperance.setAllCommonApperanceFrom((watchAppearance))
+//        
+//        moreAperance.setButonTitle("more", state: kDefaultAdaptiveState)
+//        
+//        moreAperance.setButonTitle("", state: kImageAdaptiveState)
+//        
+//        moreAperance.setImageNamesForStatesImageExtesions("more", imageExtensionsForState:imageExtensionsForStates)
       
         
         

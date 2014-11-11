@@ -35,45 +35,46 @@ public class AdaptiveButtonsStateManager <AdaptiveStateClass: AdaptiveState> {
             var button :AdaptiveApperanceProtocol = buttonsAray[index]
             var buttonApperance = buttonsAppearances[index]
             
-            let title = buttonApperance.getButonTitleForState(state)
-           
-            button.setTitleToAdaptiveButton!(title)
-            
-            
-            button.setFontToAdaptiveButton!(buttonApperance.getButonTitleFontForState(state))
-            
-            if let image = buttonApperance.getButonImageForState(state) {
-                button.setImageToAdaptiveButton?(image)
-            }
-            
-            if let backgroundImage = buttonApperance.getButonImageForState(state) {
-                button.setBackgroundImageToAdaptiveButton?(backgroundImage)
-            }
-            
-            if let imageInset = buttonApperance.getImageInsetsForState(state) {
-                button.setImageInsetsToAdaptiveButton?(imageInset)
-            }
-            
-            if let titleOffset = buttonApperance.getTitleOffsetForState(state) {
-                button.setTitleOffsetToAdaptiveButton?(titleOffset)
-            }
-            
-            if let titleColor = buttonApperance.getTitleColorForState(state) {
-                button.setTitleColorToAdaptiveButton?(titleColor)
-            }
-            
-            
-            if let selectedImage = buttonApperance.getButonImageForState(state,controlState:UIControlState.Selected){
-                button.setSelectedImageToAdaptiveButton?(selectedImage)
-            }else{
-                if let selectedImage = buttonApperance.getButonImageForState(state,controlState:UIControlState.Normal){
-                    button.setSelectedImageToAdaptiveButton?(selectedImage)
-                }
-            }
-            
-            if let highlightedImage = buttonApperance.getButonImageForState(state,controlState:UIControlState.Highlighted) {
-                button.setHighlightedToAdaptiveButton?(highlightedImage)
-            }
+              let statesValues = buttonApperance.stateDictionary[state!]
+//            let title = buttonApperance.getButonTitleForState(state)
+//           
+//            button.setTitleToAdaptiveButton!(title)
+//
+//            
+//            button.setFontToAdaptiveButton!(buttonApperance.getButonTitleFontForState(state))
+//            
+//            if let image = buttonApperance.getButonImageForState(state) {
+//                button.setImageToAdaptiveButton?(image)
+//            }
+//            
+//            if let backgroundImage = buttonApperance.getButonImageForState(state) {
+//                button.setBackgroundImageToAdaptiveButton?(backgroundImage)
+//            }
+//            
+//            if let imageInset = buttonApperance.getImageInsetsForState(state) {
+//                button.setImageInsetsToAdaptiveButton?(imageInset)
+//            }
+//            
+//            if let titleOffset = buttonApperance.getTitleOffsetForState(state) {
+//                button.setTitleOffsetToAdaptiveButton?(titleOffset)
+//            }
+//            
+//            if let titleColor = buttonApperance.getTitleColorForState(state) {
+//                button.setTitleColorToAdaptiveButton?(titleColor)
+//            }
+//            
+//            
+//            if let selectedImage = buttonApperance.getButonImageForState(state,controlState:UIControlState.Selected){
+//                button.setSelectedImageToAdaptiveButton?(selectedImage)
+//            }else{
+//                if let selectedImage = buttonApperance.getButonImageForState(state,controlState:UIControlState.Normal){
+//                    button.setSelectedImageToAdaptiveButton?(selectedImage)
+//                }
+//            }
+//            
+//            if let highlightedImage = buttonApperance.getButonImageForState(state,controlState:UIControlState.Highlighted) {
+//                button.setHighlightedToAdaptiveButton?(highlightedImage)
+//            }
 
         }
 

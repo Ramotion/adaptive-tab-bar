@@ -11,13 +11,14 @@ import UIKit
 
 public let kDefaultAdaptiveState:String = "kDefaultAdaptiveState"
 
-public enum AdaptiveStateEnum{
-    case DefaultAdaptiveState
-    case SmallTitleAdaptiveState
-    case ImageAdaptiveState
+public enum AdaptiveStateEnum:String{
+    case DefaultAdaptiveState = "DefaultAdaptiveState"
+    case SmallTitleAdaptiveState  = "SmallTitleAdaptiveState"
+    case ImageAdaptiveState  = "ImageAdaptiveState"
     
 }
 
+public typealias StateKey =  AdaptiveStateEnum
 
 public class  AdaptiveState {
     

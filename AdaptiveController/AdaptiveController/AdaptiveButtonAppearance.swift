@@ -11,13 +11,17 @@ import UIKit
 
 
 
-public class AdaptiveButtonAppearance: NSObject,AppearanceSerializationProtocol{
+public class AdaptiveButtonAppearance: AppearanceSerializationProtocol{
     
 
     public typealias StateObject = ControlStateValue
+   // public typealias StateKey = AdaptiveStateEnum
     public typealias DictionaryObject = Dictionary <String,AnyObject>
-    private let stateDictionary:Dictionary <AdaptiveStateEnum,ControlStateValue> = Dictionary<AdaptiveStateEnum,ControlStateValue>()
+    public let stateDictionary:Dictionary <StateKey,ControlStateValue> = Dictionary<AdaptiveStateEnum,ControlStateValue>()
     
+    public init(){
+        
+    }
 //    public func setAllCommonApperanceFrom(adaptiveButtonApperance:AdaptiveButtonAppearance){
 //        
 //        for (state, object) in adaptiveButtonApperance.stateDictionary {
@@ -351,27 +355,27 @@ public class AdaptiveButtonAppearance: NSObject,AppearanceSerializationProtocol{
 //    
 //    }
     
-    public func setObjectDictionary(dictionary:Dictionary <AdaptiveStateEnum,DictionaryObject>){
+    public func setObjectDictionary(dictionary:Dictionary <String,DictionaryObject>){
         
-        var controlStatesDictionary =   Dictionary<AdaptiveStateEnum,DictionaryObject>()
+        var controlStatesDictionary =   Dictionary<StateKey,ControlStateValue>()
         
         for (key,object ) in dictionary{
             let appearanceDictionary = object as Dictionary <String,DictionaryObject>
             let appearanceObject = ControlStateValue()
             appearanceObject.setObjectDictionary(appearanceDictionary)
-            controlStatesDictionary.updateValue(appearanceObject, forKey: key)
+            controlStatesDictionary.updateValue(appearanceObject, forKey: StateKey(rawValue: key)!)
         }
         
     }
     
-    public func getObjectDictionary() -> Dictionary<AdaptiveStateEnum,DictionaryObject>{
+    public func getObjectDictionary() -> Dictionary<String,DictionaryObject>{
         
-        var controlStatesDictionary =   Dictionary<AdaptiveStateEnum,DictionaryObject>()
+        var controlStatesDictionary =   Dictionary<String,DictionaryObject>()
         
         for (key,object ) in stateDictionary{
             let appearance = object as ControlStateValue
             let appearanceDictionary =  appearance.getObjectDictionary()
-            controlStatesDictionary.updateValue(appearanceDictionary, forKey: key)
+            controlStatesDictionary.updateValue(appearanceDictionary, forKey: key.rawValue)
         }
         
         return controlStatesDictionary

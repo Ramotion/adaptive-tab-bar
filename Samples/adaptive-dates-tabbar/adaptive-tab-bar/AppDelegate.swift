@@ -47,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var serializer = DictioanarySerializer()
       
         
-        var butonsApperances = serializer.parseFromPlistToButtonApperances(path!)
+        var butonsApperances = serializer.parseFromPlistToButtonAppearances(path!)
         
      
         var arrayButtons = tabBar.items as [UITabBarItem]
