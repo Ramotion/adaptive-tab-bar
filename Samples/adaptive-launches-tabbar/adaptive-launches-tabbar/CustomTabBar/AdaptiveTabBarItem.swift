@@ -17,10 +17,17 @@ class AdaptiveTabBarItem: UITabBarItem , AdaptiveApperanceProtocol {
        
     }
     
-    func setFontToAdaptiveButton(font: UIFont){
+    func setFontToAdaptiveButton(font: UIFont , controlState:UIControlState){
         
-        self.setTitleTextAttributes(NSDictionary(objects: [font], forKeys: [NSFontAttributeName]), forState: UIControlState.Normal)
+        self.setTitleTextAttributes(NSDictionary(objects: [font], forKeys: [NSFontAttributeName]), forState: controlState)
        
+    }
+    
+    func setTitleColorToAdaptiveButton(color: UIColor, controlState:UIControlState){
+        if var dictionary = self.titleTextAttributesForState(controlState){
+            dictionary.updateValue(color, forKey: NSForegroundColorAttributeName)
+            self.setTitleTextAttributes(dictionary, forState: controlState)
+        }
     }
     
     func setTitleToAdaptiveButton(text: NSString){
@@ -43,11 +50,7 @@ class AdaptiveTabBarItem: UITabBarItem , AdaptiveApperanceProtocol {
         self.setTitlePositionAdjustment(offset)
     }
     
-    func setTitleColorToAdaptiveButton(color: UIColor){
-      var dictionary = self.titleTextAttributesForState(UIControlState.Normal)
-        dictionary.updateValue(color, forKey: NSForegroundColorAttributeName)
-      self.setTitleTextAttributes(dictionary, forState: UIControlState.Normal)
-    }
+    
    
     
     

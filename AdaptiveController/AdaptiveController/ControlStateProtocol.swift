@@ -10,9 +10,9 @@ import Foundation
 
 protocol ControlStateProtocol:AppearanceSerializationProtocol {
     
-    typealias StateType: Hashable
     typealias StateObject
+    typealias ControlStateType:Hashable
     
-    var controlStates: Dictionary <StateType, StateObject>{get set}
+    var controlStates: Dictionary <ControlStateType, StateObject>{get }
     
 }

@@ -17,9 +17,28 @@ public class AdaptiveButtonAppearance: AppearanceSerializationProtocol{
     public typealias StateObject = ControlStateValue
    // public typealias StateKey = AdaptiveStateEnum
     public typealias DictionaryObject = Dictionary <String,AnyObject>
-    public let stateDictionary:Dictionary <StateKey,ControlStateValue> = Dictionary<AdaptiveStateEnum,ControlStateValue>()
+    public let stateDictionary:Dictionary <StateKey,ControlStateValue> = Dictionary <StateKey,ControlStateValue>()
     
     public init(){
+        
+    }
+    
+    public init (values:Dictionary<StateKey,ControlStateValue>) {
+        stateDictionary = values
+
+    }
+    
+    // a convenience initializer
+//    convenience init(someInt: Int) {
+//        // must call self.init
+//        self.init(someValue: "Hello")
+//    }
+    public convenience init(states:Dictionary<StateKey,ControlStateValue>) {
+        self.init(values:states)
+      
+        //  self.setControlApearence(valueForNormalState, state: UIControlState.Normal)
+        // self.setControlApearence(valueForNormalState, state: UIControlState.Highlighted)
+        // self.setControlApearence(valueForNormalState, state: UIControlState.Selected)
         
     }
 //    public func setAllCommonApperanceFrom(adaptiveButtonApperance:AdaptiveButtonAppearance){

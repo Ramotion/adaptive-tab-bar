@@ -61,10 +61,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                                     kImageAdaptiveState:"_bigimage"
                                                    ]
         
+        var controlDefaultStyleStateAppearence = ControlStateAppearance()
+        controlDefaultStyleStateAppearence.title = "watch"
+        controlDefaultStyleStateAppearence.imageName = "watch"
+       
+        var controlSmallTitleStyleStateAppearence = ControlStateAppearance(appearanceStyle: controlDefaultStyleStateAppearence)
+       
+        controlDefaultStyleStateAppearence.font = defaultSmallTitleModeFont
+        controlDefaultStyleStateAppearence.imageInsets = defaultSmallTitleModeImageInsets
         
-        var watchAppearance = AdaptiveButtonAppearance();
+        var controlImageStyleStateAppearence = ControlStateAppearance(appearanceStyle: controlDefaultStyleStateAppearence)
+      
+        controlImageStyleStateAppearence.imageInsets = defaultImageModeInsets
+        controlImageStyleStateAppearence.title = ""
         
-       // watchAppearance.setButonTitle("watch", state: kDefaultAdaptiveState)
+        let controlStatesValues = [UIControlState.Normal.rawValue:controlDefaultStyleStateAppearence]
+        
+        let controlStateValue =  ControlStateValue(values: controlStatesValues)
+        
+
+        
+        let appearanceStates = [AdaptiveStateEnum.DefaultAdaptiveState:controlStateValue,
+                                AdaptiveStateEnum.SmallTitleAdaptiveState:controlStateValue,
+                                AdaptiveStateEnum.ImageAdaptiveState:controlStateValue]
+        
+        var watchAppearance =   AdaptiveButtonAppearance(states:appearanceStates)
+        
+        // watchAppearance.setButonTitle("watch", state: kDefaultAdaptiveState)
        
        // watchAppearance.setButonTitle("", state: kImageAdaptiveState)
        // watchAppearance.setTitleColor(UIColor.whiteColor(), state: kDefaultAdaptiveState)
@@ -84,7 +107,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //watchAppearance.setImageInsets(defaultImageModeInsets, state: kImageAdaptiveState);
         
         
-        var userAperance = AdaptiveButtonAppearance();
+        var userAperance = AdaptiveButtonAppearance(states:appearanceStates);
         
        
         //userAperance.setAllCommonApperanceFrom(watchAppearance)
@@ -96,7 +119,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        
         
         
-        var messageAperance = AdaptiveButtonAppearance();
+        var messageAperance = AdaptiveButtonAppearance(states:appearanceStates);
         
         //messageAperance.setAllCommonApperanceFrom((watchAppearance))
 
@@ -109,7 +132,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        
         
         
-        var menuAperance = AdaptiveButtonAppearance();
+        var menuAperance = AdaptiveButtonAppearance(states:appearanceStates);
         
         
 //        menuAperance.setAllCommonApperanceFrom((watchAppearance))
@@ -121,7 +144,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
      
-        var moreAperance = AdaptiveButtonAppearance();
+        var moreAperance = AdaptiveButtonAppearance(states:appearanceStates);
         
 //        moreAperance.setAllCommonApperanceFrom((watchAppearance))
 //        

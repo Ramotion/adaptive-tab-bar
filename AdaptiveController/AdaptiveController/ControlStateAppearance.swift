@@ -57,7 +57,7 @@ public class ControlStateAppearance: AppearanceSerializationProtocol{
         font = defaultFont
         titleOffset = defaultOffset
         imageInsets = defaultImageModeInsets
-        titleColor = UIColor.blackColor()
+        titleColor = UIColor.whiteColor()
         backgroundColor = UIColor.clearColor()
     }
     public convenience init(appearanceFullStyle:ControlStateAppearance?){
@@ -80,7 +80,7 @@ public class ControlStateAppearance: AppearanceSerializationProtocol{
         imageInsets = appearanceStyle?.imageInsets
         titleColor = appearanceStyle?.titleColor
         backgroundColor = appearanceStyle?.backgroundColor
-        title = nil
+        title = appearanceStyle?.title
     }
     
     

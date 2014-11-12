@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIControlState : Hashable {
+extension UIControlState   {
     
     init(string:StringLiteralType){
         switch(string){
@@ -23,33 +23,16 @@ extension UIControlState : Hashable {
                   }
     }
 
-    public var hashValue: Int {
-     return Int(self.rawValue)
-    }
+    func getStringKey()->String{
+        switch(self){
+            case UIControlState.Normal: return "UIControlStateNormal"
+            case UIControlState.Highlighted: return "UIControlStateHighlighted"
+            case UIControlState.Selected: return "UIControlStateSelected"
+            default: return "None"
+        }
     
-//    func getStringKey()->String{
-//        switch(self){
-//            case UIControlState.Normal: return "UIControlStateNormal"
-//            case UIControlState.Highlighted: return "UIControlStateHighlighted"
-//            case UIControlState.Selected: return "UIControlStateSelected"
-//            default: return "None"
-//        }
-//    
-//    }
-//    
-//    public static func controlStateForString(string:String) ->UIControlState{
-//        switch(string){
-//            case "UIControlStateNormal" : return UIControlState.Normal
-//            case "UIControlStateHighlighted": return  UIControlState.Highlighted
-//            case"UIControlStateHighlighted": return  UIControlState.Selected
-//            default: return UIControlState.Disabled
-//        }
-//        
-//    }
-}
+    }
 
-func ==(lhs: UIControlState, rhs: UIControlState) -> Bool{
-    return lhs.rawValue == rhs.rawValue
 }
 
 
@@ -57,30 +40,35 @@ func ==(lhs: UIControlState, rhs: UIControlState) -> Bool{
 public class ControlStateValue:ControlStateProtocol{
    
    
-    
+    public typealias ControlStateType = UInt
+   
     public typealias StateObject = ControlStateAppearance
     public typealias DictionaryObject = Dictionary <String,AnyObject>
     
-    public var controlStates = Dictionary <String,ControlStateAppearance>()
+    public var controlStates :Dictionary <ControlStateType,ControlStateAppearance>
   
-  /*  private var contolStatesMappingDictionary = [((UIControlState.Normal).rawValue):"UIControlStateNormal",
-                                                ((UIControlState.Highlighted).rawValue):"UIControlStateHighlighted",
-                                                ((UIControlState.Selected).rawValue):"UIControlStateSelected"]
-    */
-    public  init(){
-      //  self.init()
-          self.controlStates = Dictionary<String,ControlStateAppearance>()
+     public  init(){
+         self.controlStates = Dictionary<ControlStateType,ControlStateAppearance>()
     }
     
-    public convenience init(valueForNormalState:ControlStateAppearance) {
+    public convenience init(values:Dictionary<ControlStateType,ControlStateAppearance>) {
         self.init()
-        
+        controlStates = values
       //  self.setControlApearence(valueForNormalState, state: UIControlState.Normal)
        // self.setControlApearence(valueForNormalState, state: UIControlState.Highlighted)
        // self.setControlApearence(valueForNormalState, state: UIControlState.Selected)
         
     }
     
+//    public convenience init(valueForNormalState:ControlStateAppearance) {
+//        self.init()
+//       // controlStates = values
+//          self.setControlApearence(valueForNormalState, state: UIControlState.Normal)
+//          self.setControlApearence(valueForNormalState, state: UIControlState.Highlighted)
+//          self.setControlApearence(valueForNormalState, state: UIControlState.Selected)
+//        
+//    }
+//    
     public convenience init(styleValueStates:ControlStateValue) {
         self.init()
     
@@ -98,8 +86,8 @@ public class ControlStateValue:ControlStateProtocol{
         for (key,object ) in controlStates{
             var appearance = object as ControlStateAppearance
             var appearanceDictionary =  appearance.getObjectDictionary()
-            
-            controlStatesDictionary.updateValue(appearanceDictionary, forKey:key)
+            let controlKey = UIControlState(key).getStringKey()
+            controlStatesDictionary.updateValue(appearanceDictionary, forKey:controlKey )
         }
         
         return controlStatesDictionary
@@ -107,29 +95,24 @@ public class ControlStateValue:ControlStateProtocol{
     
   
     public func setObjectDictionary(dictionary:Dictionary <String,DictionaryObject>){
-        
+        var controlStatesDictionary =   Dictionary<ControlStateType,ControlStateAppearance>()
         for (key,object ) in dictionary{
             var appearanceDictionary = object as Dictionary <String,AnyObject>
             var appearanceObject = ControlStateAppearance()
             appearanceObject.setObjectDictionary(appearanceDictionary)
-           // var valueKey = contolStatesMappingDictionary.к
-           controlStates.updateValue(appearanceObject, forKey: key)
+            controlStatesDictionary.updateValue(appearanceObject, forKey: UIControlState(string:key).rawValue)
         }
     }
     
 //   public func setControlApearence(appearance:ControlStateAppearance,state:UIControlState){
-//        
-//        var stateKey = "\(state.rawValue)"
-//        var mapedKey = contolStatesMappingDictionary[stateKey]
-//        self.controlStates.updateValue(appearance, forKey: mapedKey!)
+//    
+//        self.controlStates.updateValue(appearance, forKey: state.rawValue)
 //    
 //    }
 //    
 //    public func getControlApearenceFor(state:UIControlState) -> ControlStateAppearance!{
 //        
-//      var stateKey:String = "\(state.rawValue)"
-//      var mapedKey = contolStatesMappingDictionary[stateKey]
-//      var stateObject =  self.controlStates[mapedKey!]
+//      var stateObject =  self.controlStates[state.rawValue]
 //      return stateObject
 //    }
 
