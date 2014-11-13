@@ -39,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         tabBar.barTintColor = tabColor
         tabBar.clipsToBounds = true
         
-        var curentCountLaunches = 1
+        var curentCountLaunches = 15
         
         var adaptiveState = AdaptiveLaunchesState(curentCountLaunches:curentCountLaunches,countLaunchesToSmallTextState:countDaysForSmaltextState,countLaunchesToImageState:countDaysForImageModeState)
         
@@ -72,6 +72,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         controlSmallTitleStyleStateAppearence.font = defaultSmallTitleModeFont
         controlSmallTitleStyleStateAppearence.imageInsets = defaultSmallTitleModeImageInsets
         controlSmallTitleStyleStateAppearence.imageName = "watch_smalltitle"
+     
         let controSmallTitleStatesValues = [UIControlState.Normal.rawValue:controlSmallTitleStyleStateAppearence]
         let controlSmallTitleStateValue =  ControlStateValue(values: controSmallTitleStatesValues)
         
@@ -81,6 +82,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         controlImageStyleStateAppearence.imageInsets = defaultImageModeInsets
         controlImageStyleStateAppearence.title = ""
         controlSmallTitleStyleStateAppearence.imageName = "watch_bigimage"
+       
         let controlImageStatesValues = [UIControlState.Normal.rawValue:controlImageStyleStateAppearence]
         let controlImageStateValue =  ControlStateValue(values: controlImageStatesValues)
        
@@ -94,8 +96,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         var userControlDefaultStyleStateAppearence = ControlStateAppearance(appearanceStyle: controlDefaultStyleStateAppearence)
-        controlDefaultStyleStateAppearence.title = "user"
-        controlDefaultStyleStateAppearence.imageName = "man"
+        userControlDefaultStyleStateAppearence.title = "user"
+        userControlDefaultStyleStateAppearence.imageName = "man"
         
         let userСontrolDefaultStatesValues = [UIControlState.Normal.rawValue:userControlDefaultStyleStateAppearence]
         let userСontrolDefaultStateValue =  ControlStateValue(values: userСontrolDefaultStatesValues)
@@ -106,17 +108,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        
         userControlSmallTitleStyleStateAppearence.imageName = "man_smalltitle"
         userControlSmallTitleStyleStateAppearence.title = "user"
+      
         let userControSmallTitleStatesValues = [UIControlState.Normal.rawValue:userControlSmallTitleStyleStateAppearence]
         let userControlSmallTitleStateValue =  ControlStateValue(values: userControSmallTitleStatesValues)
         
         
         
         var userControlImageStyleStateAppearence = ControlStateAppearance(appearanceStyle: userControlSmallTitleStyleStateAppearence)
-        userControlImageStyleStateAppearence.imageInsets = defaultImageModeInsets
-        userControlImageStyleStateAppearence.title = ""
         userControlImageStyleStateAppearence.imageName = "man_bigimage"
        
-        let userControlImageStatesValues = [UIControlState.Normal.rawValue:controlImageStyleStateAppearence]
+        let userControlImageStatesValues = [UIControlState.Normal.rawValue:userControlImageStyleStateAppearence]
         let userControlImageStateValue =  ControlStateValue(values: userControlImageStatesValues)
         
         

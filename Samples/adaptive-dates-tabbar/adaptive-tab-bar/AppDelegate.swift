@@ -37,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         tabBar.barTintColor = tabColor
         tabBar.clipsToBounds = true
         
-        var installDate = NSDate(dateString:"2014-9-22")
+        var installDate = NSDate(dateString:"2014-10-22")
 
        
         var adaptiveState = AdaptiveDateState(installDate: installDate,currentDate:NSDate(),countDaysToSmallTextState:countDaysToSmallTextState,countDaysToImageState:countDaysToImageState)
