@@ -1,0 +1,6 @@
+framework module AdaptiveController {
+  umbrella header "AdaptiveController.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,13 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': '/Users/arcilite/adaptive-tab-bar/DerivedData/SamplesAdaptiveController/Build/Products/Debug-iphonesimulator/AdaptiveController.framework/Modules'
+    'contents': [{
+      'type': 'file',
+      'name': 'module.modulemap',
+      'external-contents': '/Users/arcilite/adaptive-tab-bar/DerivedData/SamplesAdaptiveController/Build/Intermediates/AdaptiveController.build/Debug-iphonesimulator/AdaptiveController.build/unextended-module.modulemap',
+    }]
+  }]
+}

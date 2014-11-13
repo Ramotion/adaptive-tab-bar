@@ -1,0 +1,1 @@
+ const unsigned char AdaptiveControllerVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:AdaptiveController  PROJECT:AdaptiveController-1" "\n"; const double AdaptiveControllerVersionNumber __attribute__ ((used)) = (double)1.;

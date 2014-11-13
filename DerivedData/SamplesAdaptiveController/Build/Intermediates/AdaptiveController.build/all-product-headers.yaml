@@ -1,0 +1,33 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/arcilite/adaptive-tab-bar/DerivedData/SamplesAdaptiveController/Build/Products/Debug-iphonesimulator/AdaptiveController.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "AdaptiveController-Swift.h",
+          'external-contents': "/Users/arcilite/adaptive-tab-bar/DerivedData/SamplesAdaptiveController/Build/Products/Debug-iphonesimulator/AdaptiveController.framework/Headers/AdaptiveController-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "AdaptiveController.h",
+          'external-contents': "/Users/arcilite/adaptive-tab-bar/AdaptiveController/AdaptiveController/AdaptiveController.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/arcilite/adaptive-tab-bar/DerivedData/SamplesAdaptiveController/Build/Products/Debug-iphonesimulator/AdaptiveController.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/arcilite/adaptive-tab-bar/DerivedData/SamplesAdaptiveController/Build/Products/Debug-iphonesimulator/AdaptiveController.framework/Modules/module.modulemap"
+        }
+      ]
+    }
+  ]
+}

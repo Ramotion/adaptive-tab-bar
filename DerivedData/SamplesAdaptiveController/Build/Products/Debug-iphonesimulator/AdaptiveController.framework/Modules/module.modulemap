@@ -1,0 +1,10 @@
+framework module AdaptiveController {
+  umbrella header "AdaptiveController.h"
+
+  export *
+  module * { export * }
+}
+
+module AdaptiveController.Swift {
+    header "AdaptiveController-Swift.h"
+}
