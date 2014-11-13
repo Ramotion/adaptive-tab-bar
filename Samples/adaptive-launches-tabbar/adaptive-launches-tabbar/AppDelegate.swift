@@ -39,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         tabBar.barTintColor = tabColor
         tabBar.clipsToBounds = true
         
-        var curentCountLaunches = 6
+        var curentCountLaunches = 1
         
         var adaptiveState = AdaptiveLaunchesState(curentCountLaunches:curentCountLaunches,countLaunchesToSmallTextState:countDaysForSmaltextState,countLaunchesToImageState:countDaysForImageModeState)
         
@@ -57,10 +57,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func buttonsAppearancesGenerate() -> [AdaptiveButtonAppearance]{
        
         
-        var imageExtensionsForStates:Dictionary = [ kSmallTitleAdaptiveState:"_smalltitle",
-                                                    kImageAdaptiveState:"_bigimage"
-                                                   ]
-        
         var controlDefaultStyleStateAppearence = ControlStateAppearance()
         controlDefaultStyleStateAppearence.title = "watch"
         controlDefaultStyleStateAppearence.imageName = "watch"
@@ -75,7 +71,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var controlSmallTitleStyleStateAppearence = ControlStateAppearance(appearanceStyle: controlDefaultStyleStateAppearence)
         controlSmallTitleStyleStateAppearence.font = defaultSmallTitleModeFont
         controlSmallTitleStyleStateAppearence.imageInsets = defaultSmallTitleModeImageInsets
-        
+        controlSmallTitleStyleStateAppearence.imageName = "watch_smalltitle"
         let controSmallTitleStatesValues = [UIControlState.Normal.rawValue:controlSmallTitleStyleStateAppearence]
         let controlSmallTitleStateValue =  ControlStateValue(values: controSmallTitleStatesValues)
         
@@ -84,7 +80,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var controlImageStyleStateAppearence = ControlStateAppearance(appearanceStyle: controlSmallTitleStyleStateAppearence)
         controlImageStyleStateAppearence.imageInsets = defaultImageModeInsets
         controlImageStyleStateAppearence.title = ""
-        
+        controlSmallTitleStyleStateAppearence.imageName = "watch_bigimage"
         let controlImageStatesValues = [UIControlState.Normal.rawValue:controlImageStyleStateAppearence]
         let controlImageStateValue =  ControlStateValue(values: controlImageStatesValues)
        
@@ -96,75 +92,57 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var watchAppearance =   AdaptiveButtonAppearance(states:appearanceStates)
         
         
-        // watchAppearance.setButonTitle("watch", state: kDefaultAdaptiveState)
+        
+        var userControlDefaultStyleStateAppearence = ControlStateAppearance(appearanceStyle: controlDefaultStyleStateAppearence)
+        controlDefaultStyleStateAppearence.title = "user"
+        controlDefaultStyleStateAppearence.imageName = "man"
+        
+        let userСontrolDefaultStatesValues = [UIControlState.Normal.rawValue:userControlDefaultStyleStateAppearence]
+        let userСontrolDefaultStateValue =  ControlStateValue(values: userСontrolDefaultStatesValues)
+        
+        
+        
+        var userControlSmallTitleStyleStateAppearence = ControlStateAppearance(appearanceStyle: controlDefaultStyleStateAppearence)
        
-       // watchAppearance.setButonTitle("", state: kImageAdaptiveState)
-       // watchAppearance.setTitleColor(UIColor.whiteColor(), state: kDefaultAdaptiveState)
+        userControlSmallTitleStyleStateAppearence.imageName = "man_smalltitle"
+        userControlSmallTitleStyleStateAppearence.title = "user"
+        let userControSmallTitleStatesValues = [UIControlState.Normal.rawValue:userControlSmallTitleStyleStateAppearence]
+        let userControlSmallTitleStateValue =  ControlStateValue(values: userControSmallTitleStatesValues)
         
-       // watchAppearance.setButonTitleFontForState(defaultFont!, state: kDefaultAdaptiveState)
         
-        //watchAppearance.setButonTitleFontForState(defaultSmallTitleModeFont!, state: kSmallTitleAdaptiveState)
         
-      
-        //watchAppearance.setImageNamesForStatesImageExtesions("watch", imageExtensionsForState:imageExtensionsForStates)
+        var userControlImageStyleStateAppearence = ControlStateAppearance(appearanceStyle: userControlSmallTitleStyleStateAppearence)
+        userControlImageStyleStateAppearence.imageInsets = defaultImageModeInsets
+        userControlImageStyleStateAppearence.title = ""
+        userControlImageStyleStateAppearence.imageName = "man_bigimage"
+       
+        let userControlImageStatesValues = [UIControlState.Normal.rawValue:controlImageStyleStateAppearence]
+        let userControlImageStateValue =  ControlStateValue(values: userControlImageStatesValues)
+        
+        
+        let userAppearanceStates = [AdaptiveStateEnum.DefaultAdaptiveState:userСontrolDefaultStateValue,
+                                    AdaptiveStateEnum.SmallTitleAdaptiveState:userControlSmallTitleStateValue,
+                                    AdaptiveStateEnum.ImageAdaptiveState:userControlImageStateValue]
+        
+        
+        var userAperance = AdaptiveButtonAppearance(states:userAppearanceStates)
+        
+       
 
         
-        //watchAppearance.setImageInsets(defaultInsets, state: kDefaultAdaptiveState);
+        var messageAperance = AdaptiveButtonAppearance(states:appearanceStates)
         
-        //watchAppearance.setImageInsets(defaultSmallTitleModeImageInsets, state: kSmallTitleAdaptiveState)
-        //watchAppearance.setTitleOffset(defaultOffset, state: kDefaultAdaptiveState)
-        //watchAppearance.setImageInsets(defaultImageModeInsets, state: kImageAdaptiveState);
-        
-        
-        var userAperance = AdaptiveButtonAppearance(states:appearanceStates);
-        
-       
-        //userAperance.setAllCommonApperanceFrom(watchAppearance)
-       
-        //userAperance.setButonTitle("user", state: kDefaultAdaptiveState)
-       
-      //  userAperance.setButonTitle("", state: kImageAdaptiveState)
-       // userAperance.setImageNamesForStatesImageExtesions("man", imageExtensionsForState:imageExtensionsForStates)
-       
-        
-        
-        var messageAperance = AdaptiveButtonAppearance(states:appearanceStates);
-        
-        //messageAperance.setAllCommonApperanceFrom((watchAppearance))
 
-      //  messageAperance.setButonTitle("message", state: kDefaultAdaptiveState)
-       
-        //messageAperance.setButonTitle("", state: kImageAdaptiveState)
+    
         
-        //messageAperance.setImageNamesForStatesImageExtesions("messages", imageExtensionsForState:imageExtensionsForStates)
-       
-       
-        
-        
-        var menuAperance = AdaptiveButtonAppearance(states:appearanceStates);
-        
-        
-//        menuAperance.setAllCommonApperanceFrom((watchAppearance))
-//        
-//        menuAperance.setButonTitle("dial", state: kDefaultAdaptiveState)
-//     
-//        menuAperance.setButonTitle("", state: kImageAdaptiveState)
-//        menuAperance.setImageNamesForStatesImageExtesions("menu", imageExtensionsForState:imageExtensionsForStates)
+        var menuAperance = AdaptiveButtonAppearance(states:appearanceStates)
         
         
      
-        var moreAperance = AdaptiveButtonAppearance(states:appearanceStates);
+        var moreAperance = AdaptiveButtonAppearance(states:appearanceStates)
         
-//        moreAperance.setAllCommonApperanceFrom((watchAppearance))
-//        
-//        moreAperance.setButonTitle("more", state: kDefaultAdaptiveState)
-//        
-//        moreAperance.setButonTitle("", state: kImageAdaptiveState)
-//        
-//        moreAperance.setImageNamesForStatesImageExtesions("more", imageExtensionsForState:imageExtensionsForStates)
-      
-        
-        
+
+    
         return [watchAppearance ,messageAperance,userAperance,menuAperance,moreAperance]
 
     }

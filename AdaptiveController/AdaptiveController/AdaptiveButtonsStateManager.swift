@@ -48,10 +48,11 @@ public class AdaptiveButtonsStateManager <AdaptiveStateClass: AdaptiveState> {
                 button.setTitleToAdaptiveButton?(title)
             }
                 
-            let imageName = normalStateAppearenceObject?.imageName!
-          
-            if let image = UIImage(named: imageName!) {
-                button.setImageToAdaptiveButton?(image)
+            if let imageName = normalStateAppearenceObject?.imageName?{
+                    
+                    if let image = UIImage(named: imageName) {
+                        button.setImageToAdaptiveButton?(image)
+                    }
             }
             
             
