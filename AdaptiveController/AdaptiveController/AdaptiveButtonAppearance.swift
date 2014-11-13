@@ -16,7 +16,7 @@ public class AdaptiveButtonAppearance: AppearanceSerializationProtocol{
 
     public typealias StateObject = ControlStateValue
     public typealias DictionaryObject = Dictionary <String,AnyObject>
-    public let stateDictionary:Dictionary <StateKey,ControlStateValue> = Dictionary <StateKey,ControlStateValue>()
+    public var stateDictionary:Dictionary <StateKey,ControlStateValue> = Dictionary <StateKey,ControlStateValue>()
     
     public init(){
         
@@ -43,7 +43,7 @@ public class AdaptiveButtonAppearance: AppearanceSerializationProtocol{
             appearanceObject.setObjectDictionary(appearanceDictionary)
             controlStatesDictionary.updateValue(appearanceObject, forKey: StateKey(rawValue: key)!)
         }
-        
+        stateDictionary = controlStatesDictionary
     }
     
     public func getObjectDictionary() -> Dictionary<String,DictionaryObject>{

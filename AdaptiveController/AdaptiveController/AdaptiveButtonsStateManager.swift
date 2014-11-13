@@ -31,22 +31,23 @@ public class AdaptiveButtonsStateManager <AdaptiveStateClass: AdaptiveState> {
      public class func  setupButtonsAppearanceFromState(adaptiveState:AdaptiveStateClass,buttonsAray:[AdaptiveApperanceProtocol],buttonsAppearances:[AdaptiveButtonAppearance]){
         
         var state = adaptiveState.currentItemState
-        
+        println(state?.rawValue)
         var countElements = buttonsAray.count > buttonsAppearances.count ? buttonsAppearances.count : buttonsAray.count
         for var index = 0; index < countElements; ++index {
           
             var button :AdaptiveApperanceProtocol = buttonsAray[index]
             var buttonApperance = buttonsAppearances[index]
-            
+            println(buttonApperance.stateDictionary)
             if let controlStateValue = buttonApperance.stateDictionary[state!] {
+                
+                println(controlStateValue)
             let normalStateAppearenceObject = controlStateValue.controlStates[UIControlState.Normal.rawValue]
             
-            
-           
             
             if let title = normalStateAppearenceObject?.title {
                 button.setTitleToAdaptiveButton?(title)
             }
+                
             let imageName = normalStateAppearenceObject?.imageName!
           
             if let image = UIImage(named: imageName!) {
@@ -79,22 +80,6 @@ public class AdaptiveButtonsStateManager <AdaptiveStateClass: AdaptiveState> {
                 
             }
             }
-//            if let titleColor = normalStateAppearenceObject?.titleColor {
-//                button.setTitleColorToAdaptiveButton?(titleColor)
-//            }
-//
-//            
-//            if let selectedImage = buttonApperance.getButonImageForState(state,controlState:UIControlState.Selected){
-//                button.setSelectedImageToAdaptiveButton?(selectedImage)
-//            }else{
-//                if let selectedImage = buttonApperance.getButonImageForState(state,controlState:UIControlState.Normal){
-//                    button.setSelectedImageToAdaptiveButton?(selectedImage)
-//                }
-//            }
-//            
-//            if let highlightedImage = buttonApperance.getButonImageForState(state,controlState:UIControlState.Highlighted) {
-//                button.setHighlightedToAdaptiveButton?(highlightedImage)
-//            }
 
         }
 
