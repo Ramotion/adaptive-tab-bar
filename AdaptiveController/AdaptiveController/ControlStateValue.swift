@@ -84,13 +84,17 @@ public class ControlStateValue:ControlStateProtocol{
     
   
     public func setObjectDictionary(dictionary:Dictionary <String,DictionaryObject>){
+        
         var controlStatesDictionary =   Dictionary<ControlStateType,ControlStateAppearance>()
+        
         for (key,object ) in dictionary{
             var appearanceDictionary = object as Dictionary <String,AnyObject>
             var appearanceObject = ControlStateAppearance()
             appearanceObject.setObjectDictionary(appearanceDictionary)
             controlStatesDictionary.updateValue(appearanceObject, forKey: UIControlState(string:key).rawValue)
         }
+        
+        self.controlStates = controlStatesDictionary
     }
     
 
