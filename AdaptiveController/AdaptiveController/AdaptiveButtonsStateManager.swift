@@ -42,22 +42,14 @@ public class AdaptiveButtonsStateManager <AdaptiveStateClass: AdaptiveState> {
             let normalStateAppearenceObject = controlStateValue.controlStates[UIControlState.Normal.rawValue]
             
             
-            for (key, controlStateValue) in controlStateValue.controlStates{
-                
-                if let titleColor = controlStateValue.titleColor{
-                    button.setTitleColorToAdaptiveButton?(titleColor, controlState:UIControlState(key) )
-                }
-                
-                if let titleFont = controlStateValue.font{
-                    button.setFontToAdaptiveButton(titleFont , controlState:UIControlState(key))
-                }
-            }
+           
             
             if let title = normalStateAppearenceObject?.title {
                 button.setTitleToAdaptiveButton?(title)
             }
-            
-            if let image = normalStateAppearenceObject?.image {
+            let imageName = normalStateAppearenceObject?.imageName!
+          
+            if let image = UIImage(named: imageName!) {
                 button.setImageToAdaptiveButton?(image)
             }
             
@@ -74,6 +66,18 @@ public class AdaptiveButtonsStateManager <AdaptiveStateClass: AdaptiveState> {
                 button.setTitleOffsetToAdaptiveButton?(titleOffset)
             }
             
+            for (key, controlStateValue) in controlStateValue.controlStates{
+               
+                if let titleFont = controlStateValue.font{
+                    println(UIControlState(key).getStringKey())
+                    button.setFontToAdaptiveButton(titleFont , controlState:UIControlState(key))
+                }
+                
+                if let titleColor = controlStateValue.titleColor{
+                    button.setTitleColorToAdaptiveButton?(titleColor, controlState:UIControlState(key) )
+                }
+                
+            }
 //            if let titleColor = normalStateAppearenceObject?.titleColor {
 //                button.setTitleColorToAdaptiveButton?(titleColor)
 //            }

@@ -24,10 +24,10 @@ class AdaptiveTabBarItem: UITabBarItem , AdaptiveApperanceProtocol {
     }
     
     func setTitleColorToAdaptiveButton(color: UIColor, controlState:UIControlState){
-        if var dictionary = self.titleTextAttributesForState(controlState){
-            dictionary.updateValue(color, forKey: NSForegroundColorAttributeName)
-            self.setTitleTextAttributes(dictionary, forState: controlState)
-        }
+        var dictionary = self.titleTextAttributesForState(UIControlState.Normal)
+        dictionary.updateValue(color, forKey: NSForegroundColorAttributeName)
+        self.setTitleTextAttributes(dictionary, forState: controlState)
+        
     }
     
     func setTitleToAdaptiveButton(text: NSString){

@@ -32,6 +32,7 @@ extension UIControlState   {
         }
     
     }
+    
 
 }
 
@@ -54,28 +55,16 @@ public class ControlStateValue:ControlStateProtocol{
     public convenience init(values:Dictionary<ControlStateType,ControlStateAppearance>) {
         self.init()
         controlStates = values
-      //  self.setControlApearence(valueForNormalState, state: UIControlState.Normal)
-       // self.setControlApearence(valueForNormalState, state: UIControlState.Highlighted)
-       // self.setControlApearence(valueForNormalState, state: UIControlState.Selected)
         
     }
     
-//    public convenience init(valueForNormalState:ControlStateAppearance) {
-//        self.init()
-//       // controlStates = values
-//          self.setControlApearence(valueForNormalState, state: UIControlState.Normal)
-//          self.setControlApearence(valueForNormalState, state: UIControlState.Highlighted)
-//          self.setControlApearence(valueForNormalState, state: UIControlState.Selected)
-//        
-//    }
-//    
+  
     public convenience init(styleValueStates:ControlStateValue) {
         self.init()
     
         for (state, object) in styleValueStates.controlStates {
              self.controlStates.updateValue( ControlStateAppearance(appearanceStyle: object), forKey: state)
         }
-      //  self.setControlApearence(valueForNormalState!, state: UIControlState.Normal)
    
     }
     
@@ -104,17 +93,6 @@ public class ControlStateValue:ControlStateProtocol{
         }
     }
     
-//   public func setControlApearence(appearance:ControlStateAppearance,state:UIControlState){
-//    
-//        self.controlStates.updateValue(appearance, forKey: state.rawValue)
-//    
-//    }
-//    
-//    public func getControlApearenceFor(state:UIControlState) -> ControlStateAppearance!{
-//        
-//      var stateObject =  self.controlStates[state.rawValue]
-//      return stateObject
-//    }
 
    
 }

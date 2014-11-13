@@ -64,28 +64,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var controlDefaultStyleStateAppearence = ControlStateAppearance()
         controlDefaultStyleStateAppearence.title = "watch"
         controlDefaultStyleStateAppearence.imageName = "watch"
-       
-        var controlSmallTitleStyleStateAppearence = ControlStateAppearance(appearanceStyle: controlDefaultStyleStateAppearence)
-       
-        controlDefaultStyleStateAppearence.font = defaultSmallTitleModeFont
-        controlDefaultStyleStateAppearence.imageInsets = defaultSmallTitleModeImageInsets
-        
-        var controlImageStyleStateAppearence = ControlStateAppearance(appearanceStyle: controlDefaultStyleStateAppearence)
+        controlDefaultStyleStateAppearence.titleColor = UIColor.whiteColor()
+        controlDefaultStyleStateAppearence.imageInsets = defaultInsets
       
+        let controlDefaultStatesValues = [UIControlState.Normal.rawValue:controlDefaultStyleStateAppearence]
+        let controlDefaultStateValue =  ControlStateValue(values: controlDefaultStatesValues)
+        
+      
+        
+        var controlSmallTitleStyleStateAppearence = ControlStateAppearance(appearanceStyle: controlDefaultStyleStateAppearence)
+        controlSmallTitleStyleStateAppearence.font = defaultSmallTitleModeFont
+        controlSmallTitleStyleStateAppearence.imageInsets = defaultSmallTitleModeImageInsets
+        
+        let controSmallTitleStatesValues = [UIControlState.Normal.rawValue:controlSmallTitleStyleStateAppearence]
+        let controlSmallTitleStateValue =  ControlStateValue(values: controSmallTitleStatesValues)
+        
+       
+        
+        var controlImageStyleStateAppearence = ControlStateAppearance(appearanceStyle: controlSmallTitleStyleStateAppearence)
         controlImageStyleStateAppearence.imageInsets = defaultImageModeInsets
         controlImageStyleStateAppearence.title = ""
         
-        let controlStatesValues = [UIControlState.Normal.rawValue:controlDefaultStyleStateAppearence]
+        let controlImageStatesValues = [UIControlState.Normal.rawValue:controlImageStyleStateAppearence]
+        let controlImageStateValue =  ControlStateValue(values: controlImageStatesValues)
+       
         
-        let controlStateValue =  ControlStateValue(values: controlStatesValues)
-        
-
-        
-        let appearanceStates = [AdaptiveStateEnum.DefaultAdaptiveState:controlStateValue,
-                                AdaptiveStateEnum.SmallTitleAdaptiveState:controlStateValue,
-                                AdaptiveStateEnum.ImageAdaptiveState:controlStateValue]
+        let appearanceStates = [AdaptiveStateEnum.DefaultAdaptiveState:controlDefaultStateValue,
+                                AdaptiveStateEnum.SmallTitleAdaptiveState:controlSmallTitleStateValue,
+                                AdaptiveStateEnum.ImageAdaptiveState:controlImageStateValue]
         
         var watchAppearance =   AdaptiveButtonAppearance(states:appearanceStates)
+        
         
         // watchAppearance.setButonTitle("watch", state: kDefaultAdaptiveState)
        
