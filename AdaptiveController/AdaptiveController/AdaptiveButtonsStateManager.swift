@@ -38,7 +38,7 @@ public class AdaptiveButtonsStateManager <AdaptiveStateClass: AdaptiveState> {
             var button :AdaptiveApperanceProtocol = buttonsAray[index]
             var buttonApperance = buttonsAppearances[index]
             
-            let controlStateValue = buttonApperance.stateDictionary[state!]! as ControlStateValue
+            if let controlStateValue = buttonApperance.stateDictionary[state!] {
             let normalStateAppearenceObject = controlStateValue.controlStates[UIControlState.Normal.rawValue]
             
             
@@ -77,6 +77,7 @@ public class AdaptiveButtonsStateManager <AdaptiveStateClass: AdaptiveState> {
                     button.setTitleColorToAdaptiveButton?(titleColor, controlState:UIControlState(key) )
                 }
                 
+            }
             }
 //            if let titleColor = normalStateAppearenceObject?.titleColor {
 //                button.setTitleColorToAdaptiveButton?(titleColor)

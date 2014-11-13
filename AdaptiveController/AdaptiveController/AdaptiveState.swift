@@ -12,9 +12,9 @@ import UIKit
 public let kDefaultAdaptiveState:String = "kDefaultAdaptiveState"
 
 public enum AdaptiveStateEnum:String{
-    case DefaultAdaptiveState = "DefaultAdaptiveState"
-    case SmallTitleAdaptiveState  = "SmallTitleAdaptiveState"
-    case ImageAdaptiveState  = "ImageAdaptiveState"
+    case DefaultAdaptiveState = "kDefaultAdaptiveState"
+    case SmallTitleAdaptiveState  = "kSmallTitleAdaptiveState"
+    case ImageAdaptiveState  = "kImageAdaptiveState"
     
 }
 
