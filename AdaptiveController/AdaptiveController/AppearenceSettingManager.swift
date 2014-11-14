@@ -16,6 +16,18 @@ public class AppearenceSettingManager{
     }
 
     
-    public getDefault
+    public func defaultStyleValuesForNormalState(state:StateKey, title:String, imageName:String) -> ControlStateValue {
+        
+        var defaultStateValue = defaultAppearencesStyles[state] as ControlStateValue?
+        var normalDefaultAppearance = defaultStateValue?.controlStates[UIControlState.Normal.rawValue]
+        var controlSmallTitleStyleStateAppearence = ControlStateAppearance(appearanceStyle:normalDefaultAppearance)
+        
+        controlSmallTitleStyleStateAppearence.imageName = imageName
+        controlSmallTitleStyleStateAppearence.title = title
+        
+        let controSmallTitleStatesValues = [UIControlState.Normal.rawValue:controlSmallTitleStyleStateAppearence]
+        let controlSmallTitleStateValue =  ControlStateValue(values: controSmallTitleStatesValues)
+        return controlSmallTitleStateValue
+    }
 
 }
