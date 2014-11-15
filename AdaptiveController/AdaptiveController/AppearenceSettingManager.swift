@@ -9,12 +9,29 @@
 import Foundation
 
 public class AppearenceSettingManager{
-    private let defaultAppearencesStyles:Dictionary<StateKey,ControlStateValue>
+    private var defaultAppearencesStyles:Dictionary<StateKey,ControlStateValue>
+    
+    public init(){
+        defaultAppearencesStyles = Dictionary<StateKey,ControlStateValue>()
+    }
     
     public init(stylesAppearances:Dictionary<StateKey,ControlStateValue>){
         defaultAppearencesStyles = stylesAppearances
     }
 
+    public func defaultStyleSettingsForNormalState(state:StateKey, titleOffset:UIOffset, imageInsets:UIEdgeInsets, titleColor:UIColor, font:UIFont, backgroundColor:UIColor ){
+        var controlDefaultStyleStateAppearence = ControlStateAppearance()
+        
+        controlDefaultStyleStateAppearence.titleColor = titleColor
+        controlDefaultStyleStateAppearence.imageInsets = imageInsets
+        controlDefaultStyleStateAppearence.font = font
+        controlDefaultStyleStateAppearence.backgroundColor = backgroundColor
+        controlDefaultStyleStateAppearence.titleOffset = titleOffset
+        let controlStatesValues = [UIControlState.Normal.rawValue:controlDefaultStyleStateAppearence]
+        let controlStateValue =  ControlStateValue(values: controlStatesValues)
+        
+        defaultAppearencesStyles.updateValue(controlStateValue,forKey:state)
+    }
     
     public func defaultStyleValuesForNormalState(state:StateKey, title:String, imageName:String) -> ControlStateValue {
         

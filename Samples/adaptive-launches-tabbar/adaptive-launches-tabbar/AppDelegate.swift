@@ -39,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         tabBar.barTintColor = tabColor
         tabBar.clipsToBounds = true
         
-        var curentCountLaunches = 1
+        var curentCountLaunches = 10
         
         var adaptiveState = AdaptiveLaunchesState(curentCountLaunches:curentCountLaunches,countLaunchesToSmallTextState:countDaysForSmaltextState,countLaunchesToImageState:countDaysForImageModeState)
         
@@ -56,44 +56,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func buttonsAppearancesGenerate() -> [AdaptiveButtonAppearance]{
        
+       var settingsManager = AppearenceSettingManager()
+//       
+        settingsManager.defaultStyleSettingsForNormalState(AdaptiveStateEnum.DefaultAdaptiveState,titleOffset:defaultOffset, imageInsets:defaultInsets, titleColor:UIColor.whiteColor(), font:defaultFont!, backgroundColor:UIColor.clearColor())
+         settingsManager.defaultStyleSettingsForNormalState(AdaptiveStateEnum.SmallTitleAdaptiveState,titleOffset:defaultOffset, imageInsets:defaultSmallTitleModeImageInsets, titleColor:UIColor.whiteColor(), font:defaultSmallTitleModeFont!, backgroundColor:UIColor.clearColor())
         
-        var controlDefaultStyleStateAppearence = ControlStateAppearance()
-    
-        controlDefaultStyleStateAppearence.titleColor = UIColor.whiteColor()
-        controlDefaultStyleStateAppearence.imageInsets = defaultInsets
-      
-        let controlDefaultStatesValues = [UIControlState.Normal.rawValue:controlDefaultStyleStateAppearence]
-        let controlDefaultStateValue =  ControlStateValue(values: controlDefaultStatesValues)
+         settingsManager.defaultStyleSettingsForNormalState(AdaptiveStateEnum.ImageAdaptiveState,titleOffset:defaultOffset, imageInsets:defaultImageModeInsets, titleColor:UIColor.whiteColor(), font:defaultFont!, backgroundColor:UIColor.clearColor())
+   
         
-      
-        
-        var controlSmallTitleStyleStateAppearence = ControlStateAppearance(appearanceStyle: controlDefaultStyleStateAppearence)
-        controlSmallTitleStyleStateAppearence.font = defaultSmallTitleModeFont
-        controlSmallTitleStyleStateAppearence.imageInsets = defaultSmallTitleModeImageInsets
-        
-        let controSmallTitleStatesValues = [UIControlState.Normal.rawValue:controlSmallTitleStyleStateAppearence]
-        let controlSmallTitleStateValue =  ControlStateValue(values: controSmallTitleStatesValues)
-        
-       
-        
-        var controlImageStyleStateAppearence = ControlStateAppearance(appearanceStyle: controlSmallTitleStyleStateAppearence)
-        controlImageStyleStateAppearence.imageInsets = defaultImageModeInsets
-        controlImageStyleStateAppearence.title = ""
-       
-        let controlImageStatesValues = [UIControlState.Normal.rawValue:controlImageStyleStateAppearence]
-        let controlImageStateValue =  ControlStateValue(values: controlImageStatesValues)
-        
-        let appearanceStates = [AdaptiveStateEnum.DefaultAdaptiveState:controlDefaultStateValue,
-            AdaptiveStateEnum.SmallTitleAdaptiveState:controlSmallTitleStateValue,
-            AdaptiveStateEnum.ImageAdaptiveState:controlImageStateValue]
-        
-        var settingsManager = AppearenceSettingManager(stylesAppearances:appearanceStates)
         
         
         var watchControlDefaultStateValue = settingsManager.defaultStyleValuesForNormalState(AdaptiveStateEnum.DefaultAdaptiveState, title:"watch", imageName:"watch")
         
-        var watchControlSmallTitleStateValue = settingsManager.defaultStyleValuesForNormalState(AdaptiveStateEnum.DefaultAdaptiveState, title:"watch", imageName:"watch_smalltitle")
-        var watchControlImageStateValue = settingsManager.defaultStyleValuesForNormalState(AdaptiveStateEnum.DefaultAdaptiveState, title:"watch", imageName:"watch_smalltitle")
+        var watchControlSmallTitleStateValue = settingsManager.defaultStyleValuesForNormalState(AdaptiveStateEnum.SmallTitleAdaptiveState, title:"watch", imageName:"watch_smalltitle")
+        var watchControlImageStateValue = settingsManager.defaultStyleValuesForNormalState(AdaptiveStateEnum.ImageAdaptiveState, title:"", imageName:"watch_bigimage")
         
         let watchAppearanceStates = [AdaptiveStateEnum.DefaultAdaptiveState:watchControlDefaultStateValue,
             AdaptiveStateEnum.SmallTitleAdaptiveState:watchControlSmallTitleStateValue,
@@ -107,9 +83,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         var userСontrolDefaultStateValue = settingsManager.defaultStyleValuesForNormalState(AdaptiveStateEnum.DefaultAdaptiveState, title:"user", imageName:"man")
         
-        var userControlSmallTitleStateValue = settingsManager.defaultStyleValuesForNormalState(AdaptiveStateEnum.DefaultAdaptiveState, title:"user", imageName:"man_smalltitle")
+        var userControlSmallTitleStateValue = settingsManager.defaultStyleValuesForNormalState(AdaptiveStateEnum.SmallTitleAdaptiveState, title:"user", imageName:"man_smalltitle")
       
-        var userControlImageStateValue = settingsManager.defaultStyleValuesForNormalState(AdaptiveStateEnum.DefaultAdaptiveState, title:"", imageName:"man_smalltitle")
+        var userControlImageStateValue = settingsManager.defaultStyleValuesForNormalState(AdaptiveStateEnum.ImageAdaptiveState, title:"", imageName:"man_bigimage")
         
         let userappearanceStates = [AdaptiveStateEnum.DefaultAdaptiveState:watchControlDefaultStateValue,
             AdaptiveStateEnum.SmallTitleAdaptiveState:watchControlSmallTitleStateValue,
@@ -130,9 +106,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         var messageСontrolDefaultStateValue = settingsManager.defaultStyleValuesForNormalState(AdaptiveStateEnum.DefaultAdaptiveState, title:"messages", imageName:"messages")
         
-        var messageControlSmallTitleStateValue = settingsManager.defaultStyleValuesForNormalState(AdaptiveStateEnum.DefaultAdaptiveState, title:"messages", imageName:"messages_smalltitle")
+        var messageControlSmallTitleStateValue = settingsManager.defaultStyleValuesForNormalState(AdaptiveStateEnum.SmallTitleAdaptiveState, title:"messages", imageName:"messages_smalltitle")
         
-        var messageControlImageStateValue = settingsManager.defaultStyleValuesForNormalState(AdaptiveStateEnum.DefaultAdaptiveState, title:"", imageName:"messages_bigimage")
+        var messageControlImageStateValue = settingsManager.defaultStyleValuesForNormalState(AdaptiveStateEnum.ImageAdaptiveState, title:"", imageName:"messages_bigimage")
         
         
         let messageAppearanceStates = [AdaptiveStateEnum.DefaultAdaptiveState:messageСontrolDefaultStateValue,
@@ -147,9 +123,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         var menuСontrolDefaultStateValue = settingsManager.defaultStyleValuesForNormalState(AdaptiveStateEnum.DefaultAdaptiveState, title:"dial", imageName:"menu")
         
-        var menuControlSmallTitleStateValue = settingsManager.defaultStyleValuesForNormalState(AdaptiveStateEnum.DefaultAdaptiveState, title:"dial", imageName:"menu_smalltitle")
+        var menuControlSmallTitleStateValue = settingsManager.defaultStyleValuesForNormalState(AdaptiveStateEnum.SmallTitleAdaptiveState, title:"dial", imageName:"menu_smalltitle")
         
-        var menuControlImageStateValue = settingsManager.defaultStyleValuesForNormalState(AdaptiveStateEnum.DefaultAdaptiveState, title:"", imageName:"menu_bigimage")
+        var menuControlImageStateValue = settingsManager.defaultStyleValuesForNormalState(AdaptiveStateEnum.ImageAdaptiveState, title:"", imageName:"menu_bigimage")
         
         
         
@@ -164,9 +140,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         var moreСontrolDefaultStateValue = settingsManager.defaultStyleValuesForNormalState(AdaptiveStateEnum.DefaultAdaptiveState, title:"more", imageName:"more")
         
-        var moreControlSmallTitleStateValue = settingsManager.defaultStyleValuesForNormalState(AdaptiveStateEnum.DefaultAdaptiveState, title:"more", imageName:"more_smalltitle")
+        var moreControlSmallTitleStateValue = settingsManager.defaultStyleValuesForNormalState(AdaptiveStateEnum.SmallTitleAdaptiveState, title:"more", imageName:"more_smalltitle")
         
-        var moreControlImageStateValue = settingsManager.defaultStyleValuesForNormalState(AdaptiveStateEnum.DefaultAdaptiveState, title:"", imageName:"more_bigimage")
+        var moreControlImageStateValue = settingsManager.defaultStyleValuesForNormalState(AdaptiveStateEnum.ImageAdaptiveState, title:"", imageName:"more_bigimage")
         
         
         
