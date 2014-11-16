@@ -49,52 +49,32 @@ And then you should setup an array of appearances. You should setup button image
 
 And then you should setup an array of items Appearance object. You should set the button's image for each state for each appearance object.
 
-First, you should setup a dictionary for the extension of the image for each UI state:
+First, you should setup a style for each UI state:
 		
-```swift
-    var imageExtensionsForStates:Dictionary = [ kSmallTitleAdaptiveState:"_smalltitle", kImageAdaptiveState:"_bigimage"]
+```swift 
+ var settingsManager = AppearenceSettingManager()      
+        settingsManager.defaultStyleSettingsForNormalState(AdaptiveStateEnum.DefaultAdaptiveState,titleOffset:defaultOffset, imageInsets:defaultInsets, titleColor:UIColor.whiteColor(), font:defaultFont!, backgroundColor:UIColor.clearColor())
+         settingsManager.defaultStyleSettingsForNormalState(AdaptiveStateEnum.SmallTitleAdaptiveState,titleOffset:defaultOffset, imageInsets:defaultSmallTitleModeImageInsets, titleColor:UIColor.whiteColor(), font:defaultSmallTitleModeFont!, backgroundColor:UIColor.clearColor())
 ```
- Then you should set the Appearance for each UITabBarItem title for each state, fonts for each state, a default image if you describe an extension for each state, or if you do not describe an extension, you should setup each image for each state.
+ Then you should set the Appearance for each UITabBarItem title for each state and image for each state
  
- First, init the appearance object and setup the text for each state. If the text is the same for each state, you can set text for the default state:
+ First, init the appearance values with title and image with presetes appearances style :
  
-```swift
-    var watchAppearance = AdaptiveButtonAppearance(); 
-    watchAppearance.setButonTitle("watch", state: kDefaultAdaptiveState)
-    watchAppearance.setButonTitle("watch", state: kSmallTitleAdaptiveState)
-    watchAppearance.setButonTitle("", state: kImageAdaptiveState)
+```swift 
+var messageСontrolDefaultStateValue = settingsManager.defaultStyleValuesForNormalState(AdaptiveStateEnum.DefaultAdaptiveState, title:"messages", imageName:"messages")
+ var messageControlSmallTitleStateValue = settingsManager.defaultStyleValuesForNormalState(AdaptiveStateEnum.SmallTitleAdaptiveState, title:"messages", imageName:"messages_smalltitle")
+ 	var messageControlImageStateValue = settingsManager.defaultStyleValuesForNormalState(AdaptiveStateEnum.ImageAdaptiveState, title:"", imageName:"messages_bigimage")
 ```
-
-Then you should setup your fonts for each state:
+then init appearace opject with aprerance object for each state
 
 ```swift
-    watchAppearance.setButonTitleFontForState(yourDefaultFont, state: kDefaultAdaptiveState)
-    watchAppearance.setButonTitleFontForState(yourDefaultSmallTitleModeFont, state: kSmallTitleAdaptiveState)
+let messageAppearanceStates = [AdaptiveStateEnum.DefaultAdaptiveState:messageСontrolDefaultStateValue,
+            AdaptiveStateEnum.SmallTitleAdaptiveState:messageControlSmallTitleStateValue,
+            AdaptiveStateEnum.ImageAdaptiveState:messageControlImageStateValue]        
+        var messageAperance = AdaptiveButtonAppearance(states:messageAppearanceStates)
+          es)
 ```
 
-Then you should set the default image and extensions for each state a function which automaticaly sets images for each state: 
-
-```swift
-    watchAppearance.setImageNamesForStatesImageExtesions("watch", imageExtensionsForState:imageExtensionsForStates)
-```
-
-Then you should setup the appearance insets for each state: 
-
-```swift
-    watchAppearance.setImageInsets(defaultInsets, state: kDefaultAdaptiveState);
-    watchAppearance.setImageInsets(defaultSmallTitleModeImageInsets, state: kSmallTitleAdaptiveState)
-    watchAppearance.setTitleOffset(defaultOffset, state: kDefaultAdaptiveState)
-    watchAppearance.setImageInsets(defaultImageModeInsets, state: kImageAdaptiveState);
-```
-
-And you can setup the appearance insets for each Control state but this setting is optional: 
-
-```swift
-    watchAppearance.setImageInsets(defaultInsets, state: kDefaultAdaptiveState controlState:UIControlState.Highlighted);
-    watchAppearance.setImageInsets(defaultSmallTitleModeImageInsets, state: kSmallTitleAdaptiveState controlState:UIControlState.Highlighted)
-    watchAppearance.setTitleOffset(defaultOffset, state: kDefaultAdaptiveState controlState:UIControlState.Highlighted)
-    watchAppearance.setImageInsets(defaultImageModeInsets, state: kImageAdaptiveState controlState:UIControlState.Highlighted);
-```
 
 In alternative way you can setup all appearances settings in plist like on image
 
