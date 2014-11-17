@@ -31,9 +31,10 @@ class ControlStateValueTest: XCTestCase {
         appearance.titleColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
         appearance.backgroundColor = UIColor(red: 0, green: 7, blue: 0, alpha: 1)
  
-        var value = ControlStateValue(valueForNormalState: appearance)
-        value.setControlApearence(appearance,state:UIControlState.Normal)
-        var object:ControlStateAppearance = value.getControlApearenceFor(UIControlState.Normal)
+        var value = ControlStateValue(values: [UIControlState.Normal.rawValue:appearance])
+       // value.setControlApearence(appearance,state:UIControlState.Normal)
+        var object:ControlStateAppearance = value.controlStates[UIControlState.Normal.rawValue]!
+
         
         XCTAssert(object.title! == appearance.title , "Pass")
         
@@ -50,16 +51,16 @@ class ControlStateValueTest: XCTestCase {
         appearance.titleOffset = UIOffsetMake(2, 2)
         appearance.titleColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
         appearance.backgroundColor = UIColor(red: 0, green: 7, blue: 0, alpha: 1)
-        
-        var value = ControlStateValue(valueForNormalState: appearance)
-        value.setControlApearence(appearance,state:UIControlState.Normal)
-        var object:ControlStateAppearance = value.getControlApearenceFor(UIControlState.Normal)
+        //
+        var value = ControlStateValue(values: [UIControlState.Normal.rawValue:appearance])
+       
+        var object:ControlStateAppearance = value.controlStates[UIControlState.Normal.rawValue]!
         
         XCTAssert(object.title! == appearance.title , "Pass")
         
         var value1 = ControlStateValue()
         value1.setObjectDictionary(value.getObjectDictionary())
-        var object1:ControlStateAppearance = value.getControlApearenceFor(UIControlState.Normal)
+        var object1:ControlStateAppearance = value.controlStates[UIControlState.Normal.rawValue]!
         XCTAssert(object1.title! == appearance.title , "Pass")
         
         

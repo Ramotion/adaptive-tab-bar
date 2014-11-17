@@ -29,7 +29,8 @@ class AdaptiveLaunchesStateTest: XCTestCase {
         
         adaptiveLaunchState = AdaptiveLaunchesState(curentCountLaunches:curentCountLaunches,countLaunchesToSmallTextState:countDaysForSmaltextState,countLaunchesToImageState:countDaysForImageModeState)
         // This is an example of a functional test case.
-        XCTAssert(!adaptiveLaunchState!.isEqual(kDefaultAdaptiveState), "Fail DefaultState")
+        // This is an example of a functional test case.
+        XCTAssert(adaptiveLaunchState?.currentItemState?.rawValue == AdaptiveStateEnum.DefaultAdaptiveState.rawValue, "Fail DefaultState")
     }
     
     func testSmallTextState() {
@@ -38,7 +39,7 @@ class AdaptiveLaunchesStateTest: XCTestCase {
         
         adaptiveLaunchState = AdaptiveLaunchesState(curentCountLaunches:curentCountLaunches,countLaunchesToSmallTextState:countDaysForSmaltextState,countLaunchesToImageState:countDaysForImageModeState)
         
-        XCTAssert(!adaptiveLaunchState!.isEqual(kSmallTitleAdaptiveState), "Fail SmallTitleState")
+       XCTAssert(adaptiveLaunchState?.currentItemState?.rawValue == AdaptiveStateEnum.SmallTitleAdaptiveState.rawValue, "Fail SmaltitleState")
     }
     
     func testImageState() {
@@ -47,9 +48,8 @@ class AdaptiveLaunchesStateTest: XCTestCase {
         
         adaptiveLaunchState = AdaptiveLaunchesState(curentCountLaunches:curentCountLaunches,countLaunchesToSmallTextState:countDaysForSmaltextState,countLaunchesToImageState:countDaysForImageModeState)
         
-       
-        XCTAssert(!adaptiveLaunchState!.isEqual(kImageAdaptiveState), "Fail ImageAdaptiveState")
-        
+        XCTAssert(adaptiveLaunchState?.currentItemState?.rawValue == AdaptiveStateEnum.ImageAdaptiveState.rawValue, "Fail ImageAdaptiveState")
+              
     }
     
    

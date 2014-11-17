@@ -34,7 +34,7 @@ class AdaptiveDateStateTest: XCTestCase {
 
     func testDefaultState() {
         // This is an example of a functional test case.
-        XCTAssert(!adaptiveDateState!.isEqual(kDefaultAdaptiveState), "Fail DefaultState")
+        XCTAssert(adaptiveDateState?.currentItemState?.rawValue == AdaptiveStateEnum.DefaultAdaptiveState.rawValue, "Fail DefaultState")
     }
     
     func testSmallTextState() {
@@ -43,7 +43,7 @@ class AdaptiveDateStateTest: XCTestCase {
         
         adaptiveDateState = AdaptiveDateState(installDate: installDate!,currentDate:NSDate(),countDaysToSmallTextState:countDaysToSmallTextState,countDaysToImageState:countDaysToImageState)
         
-        XCTAssert(!adaptiveDateState!.isEqual(kSmallTitleAdaptiveState), "Fail SmallTitleState")
+        XCTAssert(adaptiveDateState?.currentItemState?.rawValue == AdaptiveStateEnum.SmallTitleAdaptiveState.rawValue, "Fail SmallTitleState")
     }
     
     func testImageState() {
@@ -52,7 +52,7 @@ class AdaptiveDateStateTest: XCTestCase {
         
         adaptiveDateState = AdaptiveDateState(installDate: installDate!,currentDate:NSDate(),countDaysToSmallTextState:countDaysToSmallTextState,countDaysToImageState:countDaysToImageState)
         
-        XCTAssert(!adaptiveDateState!.isEqual(kImageAdaptiveState), "Fail ImageAdaptiveState")
+        XCTAssert(adaptiveDateState?.currentItemState?.rawValue == AdaptiveStateEnum.ImageAdaptiveState.rawValue, "Fail ImageAdaptiveState")
     }
 
    

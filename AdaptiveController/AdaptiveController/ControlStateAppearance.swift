@@ -54,9 +54,9 @@ public class ControlStateAppearance: AppearanceSerializationProtocol{
     
     public init(){
         title = ""
-        font = defaultFont
-        titleOffset = defaultOffset
-        imageInsets = defaultImageModeInsets
+        //font = defaultFont
+       // titleOffset = defaultOffset
+        //imageInsets = defaultImageModeInsets
         titleColor = UIColor.whiteColor()
         backgroundColor = UIColor.clearColor()
     }

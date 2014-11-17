@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 public class AppearenceSettingManager{
     private var defaultAppearencesStyles:Dictionary<StateKey,ControlStateValue>
