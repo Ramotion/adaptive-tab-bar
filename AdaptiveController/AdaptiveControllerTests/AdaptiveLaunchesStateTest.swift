@@ -44,7 +44,7 @@ class AdaptiveLaunchesStateTest: XCTestCase {
     
     func testImageState() {
         // This is an example of a functional test case.
-        var curentCountLaunches = 7
+        var curentCountLaunches = 10
         
         adaptiveLaunchState = AdaptiveLaunchesState(curentCountLaunches:curentCountLaunches,countLaunchesToSmallTextState:countDaysForSmaltextState,countLaunchesToImageState:countDaysForImageModeState)
         
