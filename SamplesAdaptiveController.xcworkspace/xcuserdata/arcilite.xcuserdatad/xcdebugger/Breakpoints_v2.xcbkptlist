@@ -350,7 +350,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AdaptiveController/AdaptiveControllerTests/AdaptiveDateStateTest.swift"
@@ -363,13 +363,13 @@
             landmarkType = "5">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "AdaptiveControllerTests.AdaptiveDateStateTest.testDefaultState (AdaptiveControllerTests.AdaptiveDateStateTest)() -&gt; ()"
                   moduleName = "AdaptiveControllerTests"
                   urlString = "file:///Users/arcilite/adaptive-tab-bar/AdaptiveController/AdaptiveControllerTests/AdaptiveDateStateTest.swift"
-                  timestampString = "437912165.115871"
+                  timestampString = "437915565.762825"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "37"
@@ -377,13 +377,13 @@
                   offsetFromSymbolStart = "46">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "AdaptiveControllerTests.AdaptiveDateStateTest.(testDefaultState (AdaptiveControllerTests.AdaptiveDateStateTest) -&gt; () -&gt; ()).(implicit closure #1)"
                   moduleName = "AdaptiveControllerTests"
                   urlString = "file:///Users/arcilite/adaptive-tab-bar/AdaptiveController/AdaptiveControllerTests/AdaptiveDateStateTest.swift"
-                  timestampString = "437912165.116033"
+                  timestampString = "437915565.763012"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "37"
@@ -399,13 +399,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AdaptiveController/AdaptiveControllerTests/TestTabBarItem.swift"
-            timestampString = "437912119.172819"
+            filePath = "AdaptiveController/AdaptiveControllerTests/AdaptiveLaunchesStateTest.swift"
+            timestampString = "437915542.065597"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
-            landmarkName = "setTitleColorToAdaptiveButton(_:controlState:)"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "testImageState()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
