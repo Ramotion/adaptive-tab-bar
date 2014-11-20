@@ -163,7 +163,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="GGw-pn-6CX">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="GGw-pn-6CX">
                                 <rect key="frame" x="0.0" y="0.0" width="640" height="551"/>
                             </imageView>
                         </subviews>
@@ -195,15 +195,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="fel-JW-y8K">
-                                <rect key="frame" x="16" y="0.0" width="568" height="551"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="mju-qR-F4m" firstAttribute="top" secondItem="fel-JW-y8K" secondAttribute="bottom" id="czL-kW-Gi5"/>
                             <constraint firstItem="fel-JW-y8K" firstAttribute="top" secondItem="dgq-yB-Neb" secondAttribute="top" id="h6H-Nt-0EU"/>
-                            <constraint firstItem="fel-JW-y8K" firstAttribute="leading" secondItem="dgq-yB-Neb" secondAttribute="leading" constant="16" id="lvq-kK-shl"/>
-                            <constraint firstAttribute="trailing" secondItem="fel-JW-y8K" secondAttribute="trailing" constant="16" id="mnN-oR-w60"/>
+                            <constraint firstItem="fel-JW-y8K" firstAttribute="leading" secondItem="dgq-yB-Neb" secondAttribute="leading" id="lvq-kK-shl"/>
+                            <constraint firstAttribute="trailing" secondItem="fel-JW-y8K" secondAttribute="trailing" id="mnN-oR-w60"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="uWZ-JL-cND" customClass="AdaptiveTabBarItem" customModule="example_count_launches_adaptive_tabbar" customModuleProvider="target"/>
