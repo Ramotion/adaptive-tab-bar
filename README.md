@@ -52,9 +52,10 @@ And then you should setup an array of items Appearance object. You should set th
 First, you should setup a style for each UI state:
 		
 ```swift 
- var settingsManager = AppearenceSettingManager()      
+var settingsManager = AppearenceSettingManager()      
         settingsManager.defaultStyleSettingsForNormalState(AdaptiveStateEnum.DefaultAdaptiveState,titleOffset:defaultOffset, imageInsets:defaultInsets, titleColor:UIColor.whiteColor(), font:defaultFont!, backgroundColor:UIColor.clearColor())
          settingsManager.defaultStyleSettingsForNormalState(AdaptiveStateEnum.SmallTitleAdaptiveState,titleOffset:defaultOffset, imageInsets:defaultSmallTitleModeImageInsets, titleColor:UIColor.whiteColor(), font:defaultSmallTitleModeFont!, backgroundColor:UIColor.clearColor())
+         settingsManager.defaultStyleSettingsForNormalState(AdaptiveStateEnum.ImageAdaptiveState,titleOffset:defaultOffset, imageInsets:defaultImageModeInsets, titleColor:UIColor.whiteColor(), font:defaultFont!, backgroundColor:UIColor.clearColor())
 ```
  Then you should set the Appearance for each UITabBarItem title for each state and image for each state
  
@@ -74,7 +75,6 @@ let messageAppearanceStates = [AdaptiveStateEnum.DefaultAdaptiveState:messageСo
         var messageAperance = AdaptiveButtonAppearance(states:messageAppearanceStates)
           es)
 ```
-
 
 In alternative way you can setup all appearances settings in plist like on image
 
