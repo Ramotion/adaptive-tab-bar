@@ -338,12 +338,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AdaptiveController/AdaptiveControllerTests/AdaptiveButtonAppearanceTest.swift"
-            timestampString = "437912119.172819"
+            timestampString = "438276611.63638"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "testExample()"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "testAppearanceSetup()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -407,6 +407,52 @@
             endingLineNumber = "52"
             landmarkName = "testImageState()"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdaptiveController/AdaptiveControllerTests/AdaptiveButtonAppearanceTest.swift"
+            timestampString = "438277726.218459"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "testAppearanceSetup()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdaptiveControllerTests.AdaptiveButtonAppearanceTest.testAppearanceSetup (AdaptiveControllerTests.AdaptiveButtonAppearanceTest)() -&gt; ()"
+                  moduleName = "AdaptiveControllerTests"
+                  urlString = "file:///Users/arcilite/adaptive-tab-bar/AdaptiveController/AdaptiveControllerTests/AdaptiveButtonAppearanceTest.swift"
+                  timestampString = "438277726.876122"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "4712">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdaptiveControllerTests.AdaptiveButtonAppearanceTest.(testAppearanceSetup (AdaptiveControllerTests.AdaptiveButtonAppearanceTest) -&gt; () -&gt; ()).(implicit closure #2)"
+                  moduleName = "AdaptiveControllerTests"
+                  urlString = "file:///Users/arcilite/adaptive-tab-bar/AdaptiveController/AdaptiveControllerTests/AdaptiveButtonAppearanceTest.swift"
+                  timestampString = "438277726.876251"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

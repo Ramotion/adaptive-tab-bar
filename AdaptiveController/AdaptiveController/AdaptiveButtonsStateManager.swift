@@ -31,16 +31,16 @@ public class AdaptiveButtonsStateManager <AdaptiveStateClass: AdaptiveState> {
      public class func  setupButtonsAppearanceFromState(adaptiveState:AdaptiveStateClass,buttonsAray:[AdaptiveApperanceProtocol],buttonsAppearances:[AdaptiveButtonAppearance]){
         
         var state = adaptiveState.currentItemState
-        println(state?.rawValue)
+       
         var countElements = buttonsAray.count > buttonsAppearances.count ? buttonsAppearances.count : buttonsAray.count
         for var index = 0; index < countElements; ++index {
           
             var button :AdaptiveApperanceProtocol = buttonsAray[index]
             var buttonApperance = buttonsAppearances[index]
-            println(buttonApperance.stateDictionary)
+           
             if let controlStateValue = buttonApperance.stateDictionary[state!] {
                 
-                println(controlStateValue)
+                
             let normalStateAppearenceObject = controlStateValue.controlStates[UIControlState.Normal.rawValue]
             
             
@@ -71,7 +71,7 @@ public class AdaptiveButtonsStateManager <AdaptiveStateClass: AdaptiveState> {
             for (key, controlStateValue) in controlStateValue.controlStates{
                
                 if let titleFont = controlStateValue.font{
-                    println(UIControlState(key).getStringKey())
+                   
                     button.setFontToAdaptiveButton(titleFont , controlState:UIControlState(key))
                 }
                 

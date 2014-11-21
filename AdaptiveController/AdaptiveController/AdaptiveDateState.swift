@@ -37,7 +37,7 @@ public class AdaptiveDateState: AdaptiveState {
      func stateRemainDays (remainDays:Int,countDaysToSmallTextState:Int,countDaysToImageState:Int)->StateType{
         
         var mode:StateType = .DefaultAdaptiveState
-        print(" DAYS \(remainDays) ")
+        
         if remainDays > countDaysToSmallTextState && remainDays < countDaysToImageState{
             mode = .SmallTitleAdaptiveState
         }else if remainDays > countDaysToImageState {

@@ -14,23 +14,11 @@ import AdaptiveController
 
 class AdaptiveButtonAppearanceTest: XCTestCase {
 
-    override func setUp() {
-        
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-
-    func testExample() {
-        // This is an example of a functional test case.
+    func testAppearanceSetup() {
         
         var settingsManager = AppearenceSettingManager()
         //
-        settingsManager.defaultStyleSettingsForNormalState(AdaptiveStateEnum.DefaultAdaptiveState,titleOffset:defaultOffset, imageInsets:defaultInsets, titleColor:UIColor.whiteColor(), font:defaultFont!, backgroundColor:UIColor.clearColor())
+        settingsManager.defaultStyleSettingsForNormalState(AdaptiveStateEnum.DefaultAdaptiveState,titleOffset:defaultOffset, imageInsets:defaultInsets, titleColor:UIColor(red: 1, green: 1, blue: 1, alpha: 1), font:defaultFont!, backgroundColor:UIColor.clearColor())
         settingsManager.defaultStyleSettingsForNormalState(AdaptiveStateEnum.SmallTitleAdaptiveState,titleOffset:defaultOffset, imageInsets:defaultSmallTitleModeImageInsets, titleColor:UIColor.whiteColor(), font:defaultSmallTitleModeFont!, backgroundColor:UIColor.clearColor())
         
         settingsManager.defaultStyleSettingsForNormalState(AdaptiveStateEnum.ImageAdaptiveState,titleOffset:defaultOffset, imageInsets:defaultImageModeInsets, titleColor:UIColor.whiteColor(), font:defaultFont!, backgroundColor:UIColor.clearColor())
@@ -59,21 +47,26 @@ class AdaptiveButtonAppearanceTest: XCTestCase {
         
         testAppearance.setObjectDictionary(appearanceDictionary)
         
-       // XCTAssert(testAppearance.getTitleColorForState(kDefaultAdaptiveState) ==  UIColor.whiteColor(), "Fail color")
-        //XCTAssert(UIOffsetEqualToOffset(testAppearance.getTitleOffsetForState(kDefaultAdaptiveState),defaultOffset), "Fail offset")
-       // XCTAssert(UIEdgeInsetsEqualToEdgeInsets(defaultInsets, testAppearance.getImageInsetsForState(kDefaultAdaptiveState)), "Fail insets")
-//    
-//        XCTAssert(tabBarItem.text!.isEqualToString(""), "Fail  text")
-//        XCTAssert(tabBarItem.font!.isEqual(defaultFont), "Fail  font")
         
-        XCTAssert(true, "Pass")
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock() {
-            // Put the code you want to measure the time of here.
+        if let controlStateValue = testAppearance.stateDictionary[AdaptiveStateEnum.DefaultAdaptiveState]{
+        
+            if let normalStateAppearenceObject = controlStateValue.controlStates[UIControlState.Normal.rawValue]{
+            XCTAssert(normalStateAppearenceObject.titleColor == UIColor(red: 1, green: 1, blue: 1, alpha: 1), "Fail color")
+            XCTAssert(UIOffsetEqualToOffset(normalStateAppearenceObject.titleOffset!,defaultOffset), "Fail offset")
+            XCTAssert(UIEdgeInsetsEqualToEdgeInsets(defaultInsets, normalStateAppearenceObject.imageInsets!), "Fail insets")
+            }
+        
+            
         }
     }
+        
+        
+            
+            
+       
+        
+    
+
+    
 
 }
