@@ -168,4 +168,4 @@ You can customize different UI components if they adopt to the AdaptiveApperance
 
 [Ramotion](http://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=adaptive-tab-bar) is an iPhone app design and development company. We are ready for new interesting iOS App Development projects.
 
-Follow us on [twitter](http://twitter.com/ramotion).
+Follow us on [Twitter](http://twitter.com/ramotion).
