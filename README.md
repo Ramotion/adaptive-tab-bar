@@ -164,7 +164,7 @@ In AdaptiveDateState, we add custom init methods which decided what states have 
 
 You can customize different UI components if they adopt to the AdaptiveApperanceProtocol.
 
-##About us
+##[About Us](http://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=adaptive-tab-bar)
 
 [Ramotion](http://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=adaptive-tab-bar) is an iPhone app design and development company. We are ready for new interesting iOS App Development projects.
 
