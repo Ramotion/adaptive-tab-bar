@@ -1,3 +1,4 @@
+![Badge](/Users/juriv/tmp/adaptive-tab-bar/adaptive-tab-bar.svg)
 # Adaptive Tab Bar
 [![CocoaPods](https://img.shields.io/cocoapods/p/AdaptiveController.svg)](https://cocoapods.org/pods/AdaptiveController)
 [![CocoaPods](https://img.shields.io/cocoapods/v/RAMPaperSwitch.svg)](http://cocoapods.org/pods/AdaptiveController)
@@ -168,6 +169,9 @@ In AdaptiveDateState, we add custom init methods which decided what states have 
 ```
 
 You can customize different UI components if they adopt to the AdaptiveApperanceProtocol.
+
+## Licence
+Adaptive tab bar is released under the MIT license.See [LICENSE](./LICENSE.md) for details.
 
 
 ## About
