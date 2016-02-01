@@ -1,3 +1,4 @@
+![Header](https://cdn.rawgit.com/Ramotion/adaptive-tab-bar/header.svg)
 # Adaptive Tab Bar
 [![CocoaPods](https://img.shields.io/cocoapods/p/AdaptiveController.svg)](https://cocoapods.org/pods/AdaptiveController)
 [![CocoaPods](https://img.shields.io/cocoapods/v/RAMPaperSwitch.svg)](http://cocoapods.org/pods/AdaptiveController)
