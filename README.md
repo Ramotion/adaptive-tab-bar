@@ -1,4 +1,4 @@
-![Badge](/Users/juriv/tmp/adaptive-tab-bar/adaptive-tab-bar.svg)
+![Badge](./adaptive-tab-bar.svg)
 # Adaptive Tab Bar
 [![CocoaPods](https://img.shields.io/cocoapods/p/AdaptiveController.svg)](https://cocoapods.org/pods/AdaptiveController)
 [![CocoaPods](https://img.shields.io/cocoapods/v/RAMPaperSwitch.svg)](http://cocoapods.org/pods/AdaptiveController)
@@ -171,11 +171,14 @@ In AdaptiveDateState, we add custom init methods which decided what states have 
 You can customize different UI components if they adopt to the AdaptiveApperanceProtocol.
 
 ## Licence
-Adaptive tab bar is released under the MIT license.See [LICENSE](./LICENSE.md) for details.
+
+Adaptive tab bar is released under the MIT license.
+See [LICENSE](./LICENSE.md) for details.
 
 
 ## About
-The project maintained by [app development agency](http://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=paper-switch) [Ramotion Inc.](http://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=adaptive-tab-bar)]See our other [open-source projects](https://github.com/ramotion) or [hire](http://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=adaptive-tab-bar) us to design, develop, and grow your product.
+The project maintained by [app development agency](http://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=paper-switch) [Ramotion Inc.](http://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=adaptive-tab-bar)]
+See our other [open-source projects](https://github.com/ramotion) or [hire](http://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=adaptive-tab-bar) us to design, develop, and grow your product.
 
 [![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=https://github.com/ramotion/adaptive-tab-bar)
 [![Twitter Follow](https://img.shields.io/twitter/follow/ramotion.svg?style=social)](https://twitter.com/ramotion)
