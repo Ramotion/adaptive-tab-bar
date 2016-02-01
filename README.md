@@ -1,4 +1,10 @@
+![Header](https://cdn.rawgit.com/Ramotion/adaptive-tab-bar/header.svg)
 # Adaptive Tab Bar
+[![CocoaPods](https://img.shields.io/cocoapods/p/AdaptiveController.svg)](https://cocoapods.org/pods/AdaptiveController)
+[![CocoaPods](https://img.shields.io/cocoapods/v/RAMPaperSwitch.svg)](http://cocoapods.org/pods/AdaptiveController)
+[![Twitter](https://img.shields.io/badge/Twitter-@Ramotion-blue.svg?style=flat)](http://twitter.com/Ramotion)
+[![Travis](https://img.shields.io/travis/Ramotion/adaptive-tab-bar.svg)](https://travis-ci.org/Ramotion/adaptive-tab-bar)
+
 
 AdaptiveController is a 'Progressive Reduction' Swift module for adding custom states to Native or Custom UI elements.
 
@@ -164,12 +170,16 @@ In AdaptiveDateState, we add custom init methods which decided what states have 
 
 You can customize different UI components if they adopt to the AdaptiveApperanceProtocol.
 
+## Licence
 
-## Developer Information
+Adaptive tab bar is released under the MIT license.
+See [LICENSE](./LICENSE.md) for details.
 
-Designed & Developed in [Ramotion - Digital Design Agency](http://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=adaptive-tab-bar)
 
-Visit our [iPhone mockup](https://store.ramotion.com/product/iphone-6-mockups?utm_source=gthb&utm_medium=special&utm_campaign=adaptive-tab-bar) store [here](https://store.ramotion.com/product/iphone-6-mockups?utm_source=gthb&utm_medium=special&utm_campaign=adaptive-tab-bar).
+## About
+The project maintained by [app development agency](http://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=paper-switch) [Ramotion Inc.](http://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=adaptive-tab-bar)]
+See our other [open-source projects](https://github.com/ramotion) or [hire](http://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=adaptive-tab-bar) us to design, develop, and grow your product.
 
-Follow us on [Twitter](http://twitter.com/ramotion).
+[![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=https://github.com/ramotion/adaptive-tab-bar)
+[![Twitter Follow](https://img.shields.io/twitter/follow/ramotion.svg?style=social)](https://twitter.com/ramotion)
 
