@@ -8,7 +8,7 @@
 
 AdaptiveController is a 'Progressive Reduction' Swift module for adding custom states to Native or Custom UI elements.
 
-[![Mou icon](https://d13yacurqjgara.cloudfront.net/users/25514/screenshots/1320024/viber-ios7-concept-navigation-bar-ramotion.gif)](https://www.behance.net/gallery/12269245/Viber-iPhone-iOS-7-Concept)
+[![Mou icon](https://d13yacurqjgara.cloudfront.net/users/25514/screenshots/1320024/viber-ios7-concept-navigation-bar-ramotion.gif)](https://dribbble.com/shots/1320024-Tab-Bar-Concept-GIF)
 
 ##Tab Bar After Install
 ![Mou icon](http://i.imgur.com/7V6M7z6.png?1)
