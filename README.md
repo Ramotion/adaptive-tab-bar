@@ -1,4 +1,4 @@
-[![Header](https://cdn.rawgit.com/Ramotion/adaptive-tab-bar/docs_update/header.svg)](https://business.ramotion.com)
+[![Header](https://cdn.rawgit.com/Ramotion/adaptive-tab-bar/docs_update/header.svg)](https://business.ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=adaptive-tab-bar-logo)
 # Adaptive Tab Bar
 [![CocoaPods](https://img.shields.io/cocoapods/p/AdaptiveController.svg)](https://cocoapods.org/pods/AdaptiveController)
 [![CocoaPods](https://img.shields.io/cocoapods/v/RAMPaperSwitch.svg)](http://cocoapods.org/pods/AdaptiveController)
@@ -177,7 +177,7 @@ See [LICENSE](./LICENSE.md) for details.
 
 
 ## About
-The project maintained by [app development agency](https://business.ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=paper-switch) [Ramotion Inc.](https://business.ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=adaptive-tab-bar)
+The project maintained by [app development agency](https://business.ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=adaptive-tab-bar) [Ramotion Inc.](https://business.ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=adaptive-tab-bar)
 See our other [open-source projects](https://github.com/ramotion) or [hire](https://business.ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=adaptive-tab-bar) us to design, develop, and grow your product.
 
 [![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=https://github.com/ramotion/adaptive-tab-bar)
