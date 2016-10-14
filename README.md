@@ -5,6 +5,9 @@
 [![Twitter](https://img.shields.io/badge/Twitter-@Ramotion-blue.svg?style=flat)](http://twitter.com/Ramotion)
 [![Travis](https://img.shields.io/travis/Ramotion/adaptive-tab-bar.svg)](https://travis-ci.org/Ramotion/adaptive-tab-bar)
 
+## About
+This project is maintained by Ramotion, Inc.<br>
+We specialize in the designing and coding of custom UI for Mobile Apps and Websites.<br><br>**Looking for developers for your project?** [[▶︎CONTACT OUR TEAM◀︎](http://business.ramotion.com/#Get_in_Touch?utm_source=gthb&utm_medium=special&utm_campaign=adaptive-tab-bar-contact-us)]
 
 AdaptiveController is a 'Progressive Reduction' Swift module for adding custom states to Native or Custom UI elements.
 
@@ -176,9 +179,6 @@ Adaptive tab bar is released under the MIT license.
 See [LICENSE](./LICENSE.md) for details.
 
 
-## About
-The project maintained by [app development agency](https://business.ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=adaptive-tab-bar) [Ramotion Inc.](https://business.ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=adaptive-tab-bar)
-See our other [open-source projects](https://github.com/ramotion) or [hire](https://business.ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=adaptive-tab-bar) us to design, develop, and grow your product.
 
 [![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=https://github.com/ramotion/adaptive-tab-bar)
 [![Twitter Follow](https://img.shields.io/twitter/follow/ramotion.svg?style=social)](https://twitter.com/ramotion)
