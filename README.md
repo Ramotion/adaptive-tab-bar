@@ -9,7 +9,7 @@
 This project is maintained by Ramotion, Inc.<br>
 We specialize in the designing and coding of custom UI for Mobile Apps and Websites.<br><br>**Looking for developers for your project?** 
 
-<a href="http://business.ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=adaptive-tab-bar-contact-us/#Get_in_Touch" > <img src="https://github.com/Ramotion/navigation-stack/raw/master/contact_our_team@2x.png" width="150" height="30"></a>
+<a href="https://business.ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=adaptive-tab-bar-contact-us/#Get_in_Touch" > <img src="https://github.com/Ramotion/navigation-stack/raw/master/contact_our_team@2x.png" width="150" height="30"></a>
 
 [![Mou icon](https://d13yacurqjgara.cloudfront.net/users/25514/screenshots/1320024/viber-ios7-concept-navigation-bar-ramotion.gif)](https://dribbble.com/shots/1320024-Tab-Bar-Concept-GIF)
 
