@@ -22,27 +22,27 @@ This project is maintained by Ramotion, Inc. We specialize in the designing and 
 <a href="https://itunes.apple.com/app/apple-store/id1182360240?pt=550053&ct=gthb-adaptive-tab-bar&mt=8" > <img src="https://github.com/Ramotion/navigation-stack/raw/master/Download_on_the_App_Store_Badge_US-UK_135x40.png" width="170" height="58"></a>
 
 
-##Tab Bar After Install
+## Tab Bar After Install
 ![Animation](http://i.imgur.com/7V6M7z6.png?1)
 
 ##Tab Bar After Two Weeks
 ![Animation](http://i.imgur.com/KTZIC4Z.png?1)
 
-##Tab Bar After a Month
+## Tab Bar After a Month
 ![Animation](http://i.imgur.com/TNQMGTf.png?1)
 
-##Overview
+## Overview
 
 AdaptiveController is module for adding custom states to Native or Custom UI elements. The UI elements evolve over time as the user becomes accustomed to them. An example AdaptiveTabBar is provided.
 
-##How to import the control to your project
+## How to import the control to your project
 
 1. First, drag and drop the AdaptiveController project file into your project or select "add existing file" and choose the AdaptiveController project
 2. Add AdaptiveController to your Target Dependences in the Build Phase of your project.
 3. Add the AdaptiveController framework in Link Binary With Libraries in Build Phases
 4. Import AdaptiveController where needed.
 
-##Using AdaptiveController 
+## Using AdaptiveController 
 
 First, you should set the install date, current date, count of days to transition to small text state, and count of days to transition to big image state. The AdaptiveDateState object automatically determines what UI state to show:
 
