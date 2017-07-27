@@ -25,7 +25,7 @@ This project is maintained by Ramotion, Inc. We specialize in the designing and 
 ## Tab Bar After Install
 ![Animation](http://i.imgur.com/7V6M7z6.png?1)
 
-##Tab Bar After Two Weeks
+## Tab Bar After Two Weeks
 ![Animation](http://i.imgur.com/KTZIC4Z.png?1)
 
 ## Tab Bar After a Month
