@@ -1,4 +1,6 @@
 [![Header](https://cdn.rawgit.com/Ramotion/adaptive-tab-bar/docs_update/header.svg)](https://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=adaptive-tab-bar-logo)
+[![Animation](https://d13yacurqjgara.cloudfront.net/users/25514/screenshots/1320024/viber-ios7-concept-navigation-bar-ramotion.gif)](https://dribbble.com/shots/1320024-Tab-Bar-Concept-GIF)
+
 # Adaptive Tab Bar
 [![CocoaPods](https://img.shields.io/cocoapods/p/AdaptiveController.svg)](https://cocoapods.org/pods/AdaptiveController)
 [![CocoaPods](https://img.shields.io/cocoapods/v/RAMPaperSwitch.svg)](http://cocoapods.org/pods/AdaptiveController)
@@ -7,11 +9,13 @@
 
 ## About
 This project is maintained by Ramotion, Inc.<br>
-We specialize in the designing and coding of custom UI for Mobile Apps and Websites.<br><br>**Looking for developers for your project?** 
+We specialize in the designing and coding of custom UI for Mobile Apps and Websites.<br>
 
-<a href="https://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=adaptive-tab-bar-contact-us/#Get_in_Touch" > <img src="https://github.com/Ramotion/navigation-stack/raw/master/contact_our_team@2x.png" width="150" height="30"></a>
+**Looking for developers for your project?**<br>
+This project is maintained by Ramotion, Inc. We specialize in the designing and coding of custom UI for Mobile Apps and Websites.
 
-[![Mou icon](https://d13yacurqjgara.cloudfront.net/users/25514/screenshots/1320024/viber-ios7-concept-navigation-bar-ramotion.gif)](https://dribbble.com/shots/1320024-Tab-Bar-Concept-GIF)
+<a href="https://ramotion.com/?utm_source=gthb&utm_medium=special&utm_campaign=adaptive-tab-bar-contact-us/#Get_in_Touch"> 
+<img src="https://github.com/ramotion/gliding-collection/raw/master/contact_our_team@2x.png" width="187" height="34"></a> <br>
 
 ## Try this UI control in action
 
@@ -19,15 +23,13 @@ We specialize in the designing and coding of custom UI for Mobile Apps and Websi
 
 
 ##Tab Bar After Install
-![Mou icon](http://i.imgur.com/7V6M7z6.png?1)
+![Animation](http://i.imgur.com/7V6M7z6.png?1)
 
 ##Tab Bar After Two Weeks
-
-![Mou icon](http://i.imgur.com/KTZIC4Z.png?1)
+![Animation](http://i.imgur.com/KTZIC4Z.png?1)
 
 ##Tab Bar After a Month
-
-![Mou icon](http://i.imgur.com/TNQMGTf.png?1)
+![Animation](http://i.imgur.com/TNQMGTf.png?1)
 
 ##Overview
 
@@ -183,8 +185,19 @@ You can customize different UI components if they adopt to the AdaptiveApperance
 Adaptive tab bar is released under the MIT license.
 See [LICENSE](./LICENSE.md) for details.
 
+<br>
 
+# Get the Showroom App for iOS to give it a try
+Try this UI component and more like this in our iOS app. Contact us if interested.
 
+<a href="https://itunes.apple.com/app/apple-store/id1182360240?pt=550053&ct=adaptive-tab-bar&mt=8" > 
+<img src="https://github.com/ramotion/gliding-collection/raw/master/app_store@2x.png" width="117" height="34"></a>
+<a href="https://ramotion.com/?utm_source=gthb&utm_medium=special&utm_campaign=adaptive-tab-bar-contact-us/#Get_in_Touch"> 
+<img src="https://github.com/ramotion/gliding-collection/raw/master/contact_our_team@2x.png" width="187" height="34"></a>
+<br>
+<br>
+
+Follow us for the latest updates<br>
 [![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=https://github.com/ramotion/adaptive-tab-bar)
 [![Twitter Follow](https://img.shields.io/twitter/follow/ramotion.svg?style=social)](https://twitter.com/ramotion)
 
