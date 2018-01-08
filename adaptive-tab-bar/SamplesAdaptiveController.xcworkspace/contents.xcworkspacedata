@@ -2,10 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Samples/adaptive-dates-tabbar/example-date-adaptive-tab-bar.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Samples/adaptive-launches-tabbar/example-count-launches-adaptive-tabbar.xcodeproj">
+      location = "group:/Users/xorosho/Documents/GIT/Ramotion/AdaptiveTabBar/adaptive-tab-bar/Samples/adaptive-dates-tabbar/Example.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:AdaptiveController/AdaptiveController.xcodeproj">
