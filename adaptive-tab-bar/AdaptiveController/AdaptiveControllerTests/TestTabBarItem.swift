@@ -24,7 +24,6 @@ class TestTabBarItem: AdaptiveApperanceProtocol {
     init() {}
 
     func setFontToAdaptiveButton(font: UIFont) {
-
         self.font = font
     }
 
