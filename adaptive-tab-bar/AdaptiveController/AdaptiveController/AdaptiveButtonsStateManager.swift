@@ -22,15 +22,15 @@ public let tabColor = UIColor(red: 169/255, green: 79/255, blue: 152/255, alpha:
 
 
  @objc public protocol AdaptiveApperanceProtocol {
-    optional func setFontToAdaptiveButton(font: UIFont)
-    optional func setTitleToAdaptiveButton(text: NSString)
-    optional func setImageToAdaptiveButton(image: UIImage?)
-    optional func setHighlightedToAdaptiveButton(image: UIImage?)
-    optional func setBackgroundImageToAdaptiveButton(image: UIImage?)
-    optional func setSelectedImageToAdaptiveButton(image: UIImage?)
-    optional func setImageInsetsToAdaptiveButton(insets: UIEdgeInsets)
-    optional func setTitleOffsetToAdaptiveButton(offset: UIOffset)
-    optional func setTitleColorToAdaptiveButton(titleColor: UIColor)
+    @objc optional func setFontToAdaptiveButton(font: UIFont)
+    @objc optional func setTitleToAdaptiveButton(text: String)
+    @objc optional func setImageToAdaptiveButton(image: UIImage?)
+    @objc optional func setHighlightedToAdaptiveButton(image: UIImage?)
+    @objc optional func setBackgroundImageToAdaptiveButton(image: UIImage?)
+    @objc optional func setSelectedImageToAdaptiveButton(image: UIImage?)
+    @objc optional func setImageInsetsToAdaptiveButton(insets: UIEdgeInsets)
+    @objc optional func setTitleOffsetToAdaptiveButton(offset: UIOffset)
+    @objc optional func setTitleColorToAdaptiveButton(titleColor: UIColor)
 }
 
 public let selected = "Selected"
@@ -40,24 +40,20 @@ public class AdaptiveButtonsStateManager: NSObject {
     
     public convenience init (state:AdaptiveState,buttonsAray:[AdaptiveApperanceProtocol],buttonsAppearance:[AdaptiveButtonAppearance]){
         self.init()
-        self.setButtonsState(state, buttonsAray: buttonsAray, buttonsAppearance: buttonsAppearance)
+        self.setButtonsState(state: state, buttonsAray: buttonsAray, buttonsAppearance: buttonsAppearance)
     }
     
      public func setButtonsState(state:AdaptiveState,buttonsAray:[AdaptiveApperanceProtocol],buttonsAppearance:[AdaptiveButtonAppearance]){
         
-        var state:String = state.currentItemState!
+        var state: String = state.currentItemState
         
         var countElements = buttonsAray.count > buttonsAppearance.count ? buttonsAppearance.count : buttonsAray.count
         for var index = 0; index < countElements; ++index {
-            println("index is \(index)")
-            println("buttons count array is \(buttonsAray.count)")
             
             var button :AdaptiveApperanceProtocol = buttonsAray[index]
             var buttonApperance = buttonsAppearance[index]
             
             let title = buttonApperance.getButonTitleForState(state)
-            println("title: /(title)")
-            println(NSString(format:"title  %@",title))
             button.setTitleToAdaptiveButton!(title)
             
             
@@ -69,27 +65,27 @@ public class AdaptiveButtonsStateManager: NSObject {
                 
             }
             
-            if let selectedImage = buttonApperance.getButonImageForState(state+selected) {
+            if let selectedImage = buttonApperance.getButonImageForState(state: state + selected) {
                 button.setSelectedImageToAdaptiveButton?(selectedImage)
             }
           
-            if let highlightedImage = buttonApperance.getButonImageForState(state+highlighted) {
-                 button.setHighlightedToAdaptiveButton?(highlightedImage)
+            if let highlightedImage = buttonApperance.getButonImageForState(state: state + highlighted) {
+                button.setHighlightedToAdaptiveButton?(image: highlightedImage)
             }
             
-            if let backgroundImage = buttonApperance.getButonImageForState(state) {
-                button.setBackgroundImageToAdaptiveButton?(backgroundImage)
+            if let backgroundImage = buttonApperance.getButonImageForState(state: state) {
+                button.setBackgroundImageToAdaptiveButton?(image: backgroundImage)
             }
             
-            if let imageInset = buttonApperance.getImageInsetsForState(state) {
+            if let imageInset = buttonApperance.getImageInsetsForState(state: state) {
                 button.setImageInsetsToAdaptiveButton?(imageInset)
             }
             
-            if let titleOffset = buttonApperance.getTitleOffsetForState(state) {
+            if let titleOffset = buttonApperance.getTitleOffsetForState(state: state) {
                 button.setTitleOffsetToAdaptiveButton?(titleOffset)
             }
             
-            if let titleColor = buttonApperance.getTitleColorForState(state) {
+            if let titleColor = buttonApperance.getTitleColorForState(state: state) {
                 button.setTitleColorToAdaptiveButton?(titleColor)
             }
             

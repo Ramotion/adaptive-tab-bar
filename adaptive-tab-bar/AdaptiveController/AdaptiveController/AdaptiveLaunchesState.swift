@@ -14,17 +14,14 @@ public class AdaptiveLaunchesState : AdaptiveState {
     
     public override init(){
         super.init()
-        super.addNewCustomAdaptiveStates([kSmallTitleAdaptiveState,kImageAdaptiveState])
+        super.addNewCustomAdaptiveStates(customAdaptiveStates: [kSmallTitleAdaptiveState,kImageAdaptiveState])
     }
     
     
     public convenience init(curentCountLaunches:Int,countLaunchesToSmallTextState:Int,countLaunchesToImageState:Int) {
         self.init()
         
-        
-        self.currentItemState = stateRemainDays(curentCountLaunches,countLaunchesToSmallTextState: countLaunchesToSmallTextState,countLaunchesToImageState: countLaunchesToImageState);
-        
-        //print(currentItemState)
+        self.currentItemState = stateRemainDays(curentCountLaunches: curentCountLaunches,countLaunchesToSmallTextState: countLaunchesToSmallTextState,countLaunchesToImageState: countLaunchesToImageState);
     }
     
     internal func stateRemainDays (curentCountLaunches:Int,countLaunchesToSmallTextState:Int,countLaunchesToImageState:Int)->String{

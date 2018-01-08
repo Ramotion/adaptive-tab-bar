@@ -23,7 +23,7 @@ class AdaptiveTabBarItem: UITabBarItem , AdaptiveApperanceProtocol {
        
     }
     
-    func setTitleToAdaptiveButton(text: NSString){
+    func setTitleToAdaptiveButton(text: String){
         self.title = text
     }
     

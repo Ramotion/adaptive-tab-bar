@@ -11,58 +11,44 @@ import UIKit
 import AdaptiveController
 import XCTest
 
-class TestTabBarItem:   AdaptiveApperanceProtocol {
+class TestTabBarItem: AdaptiveApperanceProtocol {
     
-    var font:UIFont?
-    var text:NSString?
-    var image:UIImage?
-    var selectedImage:UIImage?
-    var insets:UIEdgeInsets?
-    var color:UIColor?
-    var offset :UIOffset?
+    var font: UIFont?
+    var text: String?
+    var image: UIImage?
+    var selectedImage: UIImage?
+    var insets: UIEdgeInsets?
+    var color: UIColor?
+    var offset: UIOffset?
     
-    init(){
-        
-    }
+    init(){}
     
     func setFontToAdaptiveButton(font: UIFont){
  
         self.font = font
     }
     
-    func setTitleToAdaptiveButton(text: NSString){
-        
-        self.text = text;
-         
+    func setTitleToAdaptiveButton(text: String){
+        self.text = text
     }
     
     func setImageToAdaptiveButton(image: UIImage?){
-       // XCTAssertNotNil(image)
         self.image = image
-        
     }
     
     func setSelectedImageToAdaptiveButton(image: UIImage){
         self.selectedImage = image;
-        
     }
     
     func setImageInsetsToAdaptiveButton(insets: UIEdgeInsets){
         self.insets = insets
-       
     }
     
     func setTitleOffsetToAdaptiveButton(offset: UIOffset){
-      
         self.offset = offset;
-       
     }
     
     func setTitleColorToAdaptiveButton(color: UIColor){
         self.color = color;
-      
     }
-    
-    
-    
 }
