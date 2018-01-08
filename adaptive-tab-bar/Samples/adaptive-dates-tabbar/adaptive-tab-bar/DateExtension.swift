@@ -8,26 +8,25 @@
 
 import UIKit
 
-extension NSDate{
+extension NSDate {
     convenience
-    
-    init(dateString:String) {
+
+    init(dateString: String) {
         let dateStringFormatter = NSDateFormatter()
         dateStringFormatter.dateFormat = "yyyy-MM-dd"
         dateStringFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
         let d = dateStringFormatter.dateFromString(dateString)
-        self.init(timeInterval:0, sinceDate:d!)
+        self.init(timeInterval: 0, sinceDate: d!)
     }
-    
-    func daysBetween(dayFrom:NSDate,dayTo:NSDate) -> Int{
-        
+
+    func daysBetween(dayFrom: NSDate, dayTo: NSDate) -> Int {
+
         let cal = NSCalendar.currentCalendar()
-        
-        let unit:NSCalendarUnit = .DayCalendarUnit
-        
+
+        let unit: NSCalendarUnit = .DayCalendarUnit
+
         let components = cal.components(unit, fromDate: dayFrom, toDate: dayTo, options: nil)
-        
-        return components.day+1;
+
+        return components.day + 1
     }
-    
 }

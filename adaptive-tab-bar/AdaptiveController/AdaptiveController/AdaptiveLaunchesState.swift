@@ -10,30 +10,28 @@ public let countDaysForImageModeState = 7
 
 import UIKit
 
-public class AdaptiveLaunchesState : AdaptiveState {
-    
-    public override init(){
+public class AdaptiveLaunchesState: AdaptiveState {
+
+    public override init() {
         super.init()
-        super.addNewCustomAdaptiveStates(customAdaptiveStates: [kSmallTitleAdaptiveState,kImageAdaptiveState])
+        super.addNewCustomAdaptiveStates(customAdaptiveStates: [kSmallTitleAdaptiveState, kImageAdaptiveState])
     }
-    
-    
-    public convenience init(curentCountLaunches:Int,countLaunchesToSmallTextState:Int,countLaunchesToImageState:Int) {
+
+    public convenience init(curentCountLaunches: Int, countLaunchesToSmallTextState: Int, countLaunchesToImageState: Int) {
         self.init()
-        
-        self.currentItemState = stateRemainDays(curentCountLaunches: curentCountLaunches,countLaunchesToSmallTextState: countLaunchesToSmallTextState,countLaunchesToImageState: countLaunchesToImageState);
+
+        currentItemState = stateRemainDays(curentCountLaunches: curentCountLaunches, countLaunchesToSmallTextState: countLaunchesToSmallTextState, countLaunchesToImageState: countLaunchesToImageState)
     }
-    
-    internal func stateRemainDays (curentCountLaunches:Int,countLaunchesToSmallTextState:Int,countLaunchesToImageState:Int)->String{
-        var mode:String = kDefaultAdaptiveState
-        
-        if curentCountLaunches > countLaunchesToSmallTextState && curentCountLaunches < countLaunchesToImageState{
+
+    internal func stateRemainDays(curentCountLaunches: Int, countLaunchesToSmallTextState: Int, countLaunchesToImageState: Int) -> String {
+        var mode: String = kDefaultAdaptiveState
+
+        if curentCountLaunches > countLaunchesToSmallTextState && curentCountLaunches < countLaunchesToImageState {
             mode = kSmallTitleAdaptiveState
-        }else if curentCountLaunches > countLaunchesToImageState {
+        } else if curentCountLaunches > countLaunchesToImageState {
             mode = kImageAdaptiveState
         }
-        
-        return mode;
+
+        return mode
     }
-   
 }

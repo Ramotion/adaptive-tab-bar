@@ -6,49 +6,43 @@
 //  Copyright (c) 2014 Ramotion. All rights reserved.
 //
 
-import UIKit
 import AdaptiveController
+import UIKit
 
-class AdaptiveTabBarItem: UITabBarItem , AdaptiveApperanceProtocol {
-    
-    
-    override init(){
+class AdaptiveTabBarItem: UITabBarItem, AdaptiveApperanceProtocol {
+
+    override init() {
         super.init()
-       
     }
-    
-    func setFontToAdaptiveButton(font: UIFont){
-        
-        self.setTitleTextAttributes(NSDictionary(objects: [font], forKeys: [NSFontAttributeName]), forState: UIControlState.Normal)
-       
+
+    func setFontToAdaptiveButton(font: UIFont) {
+
+        setTitleTextAttributes(NSDictionary(objects: [font], forKeys: [NSFontAttributeName]), forState: UIControlState.Normal)
     }
-    
-    func setTitleToAdaptiveButton(text: String){
-        self.title = text
+
+    func setTitleToAdaptiveButton(text: String) {
+        title = text
     }
-    
-    func setImageToAdaptiveButton(image: UIImage){
+
+    func setImageToAdaptiveButton(image: UIImage) {
         self.image = image
     }
-    
-    func setSelectedImageToAdaptiveButton(image: UIImage?){
-         self.selectedImage = image
+
+    func setSelectedImageToAdaptiveButton(image: UIImage?) {
+        selectedImage = image
     }
-    
-    func setImageInsetsToAdaptiveButton(insets: UIEdgeInsets){
-          self.imageInsets = insets
+
+    func setImageInsetsToAdaptiveButton(insets: UIEdgeInsets) {
+        imageInsets = insets
     }
-    
-    func setTitleOffsetToAdaptiveButton(offset: UIOffset){
-        self.setTitlePositionAdjustment(offset)
+
+    func setTitleOffsetToAdaptiveButton(offset: UIOffset) {
+        setTitlePositionAdjustment(offset)
     }
-    
-    func setTitleColorToAdaptiveButton(color: UIColor){
-      var dictionary = self.titleTextAttributesForState(UIControlState.Normal)
+
+    func setTitleColorToAdaptiveButton(color: UIColor) {
+        var dictionary = titleTextAttributesForState(UIControlState.Normal)
         dictionary.updateValue(color, forKey: NSForegroundColorAttributeName)
-      self.setTitleTextAttributes(dictionary, forState: UIControlState.Normal)
+        setTitleTextAttributes(dictionary, forState: UIControlState.Normal)
     }
-   
-    
-    
 }

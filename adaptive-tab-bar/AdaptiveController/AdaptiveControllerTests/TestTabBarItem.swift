@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 Ramotion. All rights reserved.
 //
 
+import AdaptiveController
 import Foundation
 import UIKit
-import AdaptiveController
 import XCTest
 
 class TestTabBarItem: AdaptiveApperanceProtocol {
-    
+
     var font: UIFont?
     var text: String?
     var image: UIImage?
@@ -20,35 +20,35 @@ class TestTabBarItem: AdaptiveApperanceProtocol {
     var insets: UIEdgeInsets?
     var color: UIColor?
     var offset: UIOffset?
-    
-    init(){}
-    
-    func setFontToAdaptiveButton(font: UIFont){
- 
+
+    init() {}
+
+    func setFontToAdaptiveButton(font: UIFont) {
+
         self.font = font
     }
-    
-    func setTitleToAdaptiveButton(text: String){
+
+    func setTitleToAdaptiveButton(text: String) {
         self.text = text
     }
-    
-    func setImageToAdaptiveButton(image: UIImage?){
+
+    func setImageToAdaptiveButton(image: UIImage?) {
         self.image = image
     }
-    
-    func setSelectedImageToAdaptiveButton(image: UIImage){
-        self.selectedImage = image;
+
+    func setSelectedImageToAdaptiveButton(image: UIImage) {
+        selectedImage = image
     }
-    
-    func setImageInsetsToAdaptiveButton(insets: UIEdgeInsets){
+
+    func setImageInsetsToAdaptiveButton(insets: UIEdgeInsets) {
         self.insets = insets
     }
-    
-    func setTitleOffsetToAdaptiveButton(offset: UIOffset){
-        self.offset = offset;
+
+    func setTitleOffsetToAdaptiveButton(offset: UIOffset) {
+        self.offset = offset
     }
-    
-    func setTitleColorToAdaptiveButton(color: UIColor){
-        self.color = color;
+
+    func setTitleColorToAdaptiveButton(color: UIColor) {
+        self.color = color
     }
 }

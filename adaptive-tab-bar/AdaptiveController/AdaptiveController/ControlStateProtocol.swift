@@ -9,11 +9,10 @@
 import Foundation
 
 protocol ControlStateProtocol {
-    
+
     associatedtype StateEnum
-    
-    var normalState: StateEnum? {get set}
-    var selectedState: StateEnum? {get set}
-    var highlightedState: StateEnum? {get set}
-    
+
+    var normalState: StateEnum? { get set }
+    var selectedState: StateEnum? { get set }
+    var highlightedState: StateEnum? { get set }
 }

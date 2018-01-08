@@ -8,31 +8,21 @@
 
 import UIKit
 
-
-let kDefaultAdaptiveState:String = "DefaultAdaptiveState"
-
+let kDefaultAdaptiveState: String = "DefaultAdaptiveState"
 
 class AdaptiveState: NSObject {
-   
-    var currentItemState:NSString? 
-    
 
-    var  buttonStates:[String] = [String]()
-     
-    
-    override init(){
+    var currentItemState: NSString?
+
+    var buttonStates: [String] = [String]()
+
+    override init() {
         super.init()
-        self.currentItemState = kDefaultAdaptiveState
-        self.addNewCustomAdaptiveStates([kDefaultAdaptiveState])
+        currentItemState = kDefaultAdaptiveState
+        addNewCustomAdaptiveStates([kDefaultAdaptiveState])
     }
-    
-    internal func addNewCustomAdaptiveStates(customAdaptiveStates:Array<String>){
-         self.buttonStates+customAdaptiveStates
+
+    internal func addNewCustomAdaptiveStates(customAdaptiveStates: Array<String>) {
+        buttonStates + customAdaptiveStates
     }
-    
-   
-    
-    
- 
-    
 }
