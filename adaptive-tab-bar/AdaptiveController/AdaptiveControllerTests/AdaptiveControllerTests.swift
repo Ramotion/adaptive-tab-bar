@@ -40,7 +40,7 @@ class AdaptiveControllerTests: XCTestCase {
         AdaptiveButtonsStateManager(state: adaptiveDateState, buttonsAray: arrayButtons, buttonsAppearance: buttonsAppearances)
         // assert
 
-        XCTAssert(tabBarItem.color!.isEqual(UIColor.whiteColor()), "Fail color")
+        XCTAssert(tabBarItem.color!.isEqual(UIColor.white), "Fail color")
         XCTAssert(UIOffsetEqualToOffset(tabBarItem.offset!, defaultOffset), "Fail offset")
         XCTAssert(UIEdgeInsetsEqualToEdgeInsets(defaultInsets, tabBarItem.insets!), "Fail insets")
         let bundle = NSBundle(forClass: AdaptiveButtonAppearance.self)
@@ -66,7 +66,7 @@ class AdaptiveControllerTests: XCTestCase {
 
         AdaptiveButtonsStateManager(state: adaptiveDateState, buttonsAray: arrayButtons, buttonsAppearance: buttonsAppearances)
 
-        XCTAssert(tabBarItem.color!.isEqual(UIColor.whiteColor()), "Fail color")
+        XCTAssert(tabBarItem.color!.isEqual(UIColor.white), "Fail color")
         XCTAssert(UIOffsetEqualToOffset(tabBarItem.offset!, defaultOffset), "Fail offset")
         XCTAssert(UIEdgeInsetsEqualToEdgeInsets(defaultInsets, tabBarItem.insets!), "Fail insets")
         var image: MockUIImage = tabBarItem.image as MockUIImage
@@ -91,7 +91,7 @@ class AdaptiveControllerTests: XCTestCase {
 
         AdaptiveButtonsStateManager(state: adaptiveDateState, buttonsAray: arrayButtons, buttonsAppearance: buttonsAppearances)
 
-        XCTAssert(tabBarItem.color!.isEqual(UIColor.whiteColor()), "Fail color")
+        XCTAssert(tabBarItem.color!.isEqual(UIColor.white), "Fail color")
         XCTAssert(UIOffsetEqualToOffset(tabBarItem.offset!, defaultOffset), "Fail offset")
         XCTAssert(UIEdgeInsetsEqualToEdgeInsets(defaultImageModeInsets, tabBarItem.insets!), "Fail insets")
         var image: MockUIImage = tabBarItem.image as MockUIImage
@@ -114,7 +114,7 @@ class AdaptiveControllerTests: XCTestCase {
         watchAppearance.setButonTitle("watch", state: kDefaultAdaptiveState)
         watchAppearance.setButonTitle("watch2", state: kSmallTitleAdaptiveState)
         watchAppearance.setButonTitle("", state: kImageAdaptiveState)
-        watchAppearance.setTitleColor(UIColor.whiteColor(), state: kDefaultAdaptiveState)
+        watchAppearance.setTitleColor(UIColor.white, state: kDefaultAdaptiveState)
 
         watchAppearance.setButonTitleFontForState(defaultFont, state: kDefaultAdaptiveState)
 

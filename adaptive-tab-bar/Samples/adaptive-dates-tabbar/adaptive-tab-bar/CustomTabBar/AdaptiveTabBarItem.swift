@@ -10,21 +10,16 @@ import AdaptiveController
 import UIKit
 
 class AdaptiveTabBarItem: UITabBarItem, AdaptiveApperanceProtocol {
-
-    override init() {
-        super.init()
-    }
-
+    
     func setFontToAdaptiveButton(font: UIFont) {
-
-        setTitleTextAttributes(NSDictionary(objects: [font], forKeys: [NSFontAttributeName]), forState: UIControlState.Normal)
+        setTitleTextAttributes([NSAttributedStringKey.font : font], for: UIControlState.normal)
     }
 
-    func setTitleToAdaptiveButton(text: NSString) {
+    func setTitleToAdaptiveButton(text: String) {
         title = text
     }
 
-    func setImageToAdaptiveButton(image: UIImage) {
+    func setImageToAdaptiveButton(image: UIImage?) {
         self.image = image
     }
 
@@ -37,12 +32,18 @@ class AdaptiveTabBarItem: UITabBarItem, AdaptiveApperanceProtocol {
     }
 
     func setTitleOffsetToAdaptiveButton(offset: UIOffset) {
-        setTitlePositionAdjustment(offset)
+        titlePositionAdjustment = offset
     }
 
     func setTitleColorToAdaptiveButton(color: UIColor) {
-        var dictionary = titleTextAttributesForState(UIControlState.Normal)
-        dictionary.updateValue(color, forKey: NSForegroundColorAttributeName)
-        setTitleTextAttributes(dictionary, forState: UIControlState.Normal)
+        let dictionary = titleTextAttributes(for: UIControlState.normal)
+        
+        var attributes: [NSAttributedStringKey: Any] = [:]
+        dictionary?.forEach { key, value in
+            attributes[NSAttributedStringKey(key)] = value
+        }
+        
+        attributes[NSAttributedStringKey.foregroundColor] = color
+        setTitleTextAttributes(attributes, for: UIControlState.normal)
     }
 }

@@ -8,8 +8,9 @@
 
 import UIKit
 
-public let defaultFont = UIFont(name: "Helvetica", size: 14.0)
+public let defaultFont: UIFont = UIFont(name: "Helvetica", size: 14.0)!
 public let kNotTitle = ""
+
 public class AdaptiveButtonAppearance: NSObject {
 
     private var butonsTitleForStateDictionary: Dictionary<String, String> = Dictionary<String, String>()
@@ -21,11 +22,9 @@ public class AdaptiveButtonAppearance: NSObject {
     private var buttonsTitleInsetsForStateDictionary: Dictionary<String, UIOffset> = Dictionary<String, UIOffset>()
     private var buttonsTitleColorsForStateDictionary: Dictionary<String, UIColor> = Dictionary<String, UIColor>()
 
-    func setInsetsFromAdaptiveButtonApperance(adaptiveButtonApperance: AdaptiveButtonAppearance) {
-
-        buttonsImageInsetsForStateDictionary = adaptiveButtonApperance.buttonsImageInsetsForStateDictionary
-
-        buttonsTitleInsetsForStateDictionary = adaptiveButtonApperance.buttonsTitleInsetsForStateDictionary
+    func setInsetsFromAdaptiveButtonApperance(_ apperance: AdaptiveButtonAppearance) {
+        buttonsImageInsetsForStateDictionary = apperance.buttonsImageInsetsForStateDictionary
+        buttonsTitleInsetsForStateDictionary = apperance.buttonsTitleInsetsForStateDictionary
     }
 
     public func setFontsFromAdaptiveButtonApperance(_ apperance: AdaptiveButtonAppearance) {
@@ -67,8 +66,7 @@ public class AdaptiveButtonAppearance: NSObject {
     }
 
     public func getButonTitleFontForState(state: String) -> UIFont {
-        var font: UIFont? = butonsTitleFontForStateDictionary[state]
-
+        
         if let font = butonsTitleFontForStateDictionary[state] {
             return font
         } else {
@@ -80,11 +78,11 @@ public class AdaptiveButtonAppearance: NSObject {
         }
     }
 
-    public func setButtonImage(image: UIImage, state: String) {
-        buttonsImageForStateDictionary.updateValue(image, forKey: state)
+    public func setButtonImage(image: UIImage?, state: String) {
+        buttonsImageForStateDictionary[state] = image
     }
 
-    public func getButonImageForState(state: String) -> UIImage! {
+    public func getButonImageForState(state: String) -> UIImage? {
 
         if let image = buttonsImageForStateDictionary[state] {
             return image
@@ -113,9 +111,9 @@ public class AdaptiveButtonAppearance: NSObject {
     public func getImageInsetsForState(state: String) -> UIEdgeInsets {
 
         if let insets = buttonsImageInsetsForStateDictionary[state] {
-            return buttonsImageInsetsForStateDictionary[state]!
+            return insets
         } else {
-            return buttonsImageInsetsForStateDictionary[kDefaultAdaptiveState]
+            return buttonsImageInsetsForStateDictionary[kDefaultAdaptiveState] ?? UIEdgeInsets.zero
         }
     }
 
@@ -123,27 +121,25 @@ public class AdaptiveButtonAppearance: NSObject {
         buttonsTitleInsetsForStateDictionary.updateValue(insets, forKey: state)
     }
 
-    public func getTitleOffsetForState(state: String) -> UIOffset! {
+    public func getTitleOffsetForState(state: String) -> UIOffset {
 
-        var offset: UIOffset? = buttonsTitleInsetsForStateDictionary[state]
-        if offset == nil {
-            offset = buttonsTitleInsetsForStateDictionary[kDefaultAdaptiveState]?
+        if let offset: UIOffset = buttonsTitleInsetsForStateDictionary[state] {
+            return offset
+        } else {
+            return buttonsTitleInsetsForStateDictionary[kDefaultAdaptiveState] ?? UIOffset.zero
         }
-
-        return offset!
     }
 
     public func setTitleColor(color: UIColor, state: String) {
         buttonsTitleColorsForStateDictionary.updateValue(color, forKey: state)
     }
 
-    public func getTitleColorForState(state: String) -> UIColor {
+    public func getTitleColorForState(state: String) -> UIColor? {
 
-        var offset: UIColor? = buttonsTitleColorsForStateDictionary[state]
-        if offset == nil {
-            offset = buttonsTitleColorsForStateDictionary[kDefaultAdaptiveState]?
+        if let color: UIColor = buttonsTitleColorsForStateDictionary[state] {
+            return color
+        } else {
+            return buttonsTitleColorsForStateDictionary[kDefaultAdaptiveState]
         }
-
-        return offset!
     }
 }

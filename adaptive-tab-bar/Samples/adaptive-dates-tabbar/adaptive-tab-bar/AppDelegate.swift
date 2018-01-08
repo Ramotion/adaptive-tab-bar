@@ -16,39 +16,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    func application(application _: UIApplication, didFinishLaunchingWithOptions _: [NSObject: AnyObject]?) -> Bool {
+    private func application(application _: UIApplication, didFinishLaunchingWithOptions _: [NSObject: AnyObject]?) -> Bool {
+        
         // Override point for customization after application launch.
-
-        UITabBar.appearance().selectedImageTintColor = tabColor
-        UITabBar.appearance().barTintColor = UIColor.clearColor()
+        UITabBar.appearance().tintColor = tabColor
+        UITabBar.appearance().barTintColor = UIColor.clear
         UITabBar.appearance().shadowImage = UIImage()
         UITabBar.appearance().selectionIndicatorImage = UIImage(named: "backgroud_tab")
-        UITabBar.appearance().itemPositioning = UITabBarItemPositioning.Fill
-        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.whiteColor()], forState: UIControlState.Normal)
-        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: tabColor], forState: UIControlState.Selected)
+        UITabBar.appearance().itemPositioning = UITabBarItemPositioning.fill
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.white], for: UIControlState.normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: tabColor], for: UIControlState.selected)
 
-        var tabBarController: UITabBarController = window?.rootViewController as UITabBarController
+        let tabBarController: UITabBarController? = window?.rootViewController as? UITabBarController
 
-        var tabBar: UITabBar = tabBarController.tabBar
-        tabBar.barTintColor = tabColor
-        tabBar.clipsToBounds = true
+        let tabBar: UITabBar? = tabBarController?.tabBar
+        tabBar?.barTintColor = tabColor
+        tabBar?.clipsToBounds = true
 
-        var installDate = NSDate(dateString: "2014-07-7")
+        let installDate = Date(dateString: "2014-07-7")
 
-        var adaptiveState = AdaptiveDateState(installDate: installDate, currentDate: NSDate(), countDaysToSmallTextState: countDaysToSmallTextState, countDaysToImageState: countDaysToImageState)
+        let adaptiveState = AdaptiveDateState(installDate: installDate, currentDate: Date(), countDaysToSmallTextState: countDaysToSmallTextState, countDaysToImageState: countDaysToImageState)
 
-        var butonsApperances = buttonsAppearancesGenerate()
+        let butonsApperances = buttonsAppearancesGenerate()
 
-        var arrayButtons = tabBar.items as [AdaptiveTabBarItem]
-
-        AdaptiveButtonsStateManager(state: adaptiveState, buttonsAray: arrayButtons, buttonsAppearance: butonsApperances)
+        if let arrayButtons = tabBar?.items as? [AdaptiveTabBarItem] {
+            AdaptiveButtonsStateManager.configureButtonsState(state: adaptiveState, buttonsAray: arrayButtons, buttonsAppearance: butonsApperances)
+        }
 
         return true
     }
 
     func buttonsAppearancesGenerate() -> [AdaptiveButtonAppearance] {
-
-        var imageExtensionsForStates: Dictionary = [
+        let imageExtensionsForStates: Dictionary = [
             kDefaultAdaptiveState: "",
             kSmallTitleAdaptiveState: "_smalltitle",
             kImageAdaptiveState: "_bigimage",
@@ -56,58 +55,47 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             kImageAdaptiveState + selected: "_bigimage",
         ]
 
-        var watchAperance = AdaptiveButtonAppearance()
+        
+        let watchAperance = AdaptiveButtonAppearance()
+        watchAperance.setButonTitle(title: "watch", state: kDefaultAdaptiveState)
+        watchAperance.setButonTitle(title: "watch", state: kSmallTitleAdaptiveState)
+        watchAperance.setButonTitle(title: "", state: kImageAdaptiveState)
+        watchAperance.setTitleColor(color: UIColor.white, state: kDefaultAdaptiveState)
+        watchAperance.setButonTitleFontForState(font: defaultFont, state: kDefaultAdaptiveState)
+        watchAperance.setButonTitleFontForState(font: defaultSmallTitleModeFont, state: kSmallTitleAdaptiveState)
+        watchAperance.setImageNamesForStatesImageExtesions(imageName: "watch", imageExtensionsForState: imageExtensionsForStates)
+        watchAperance.setImageInsets(insets: defaultInsets, state: kDefaultAdaptiveState)
+        watchAperance.setImageInsets(insets: defaultSmallTitleModeImageInsets, state: kSmallTitleAdaptiveState)
+        watchAperance.setTitleOffset(insets: defaultOffset, state: kDefaultAdaptiveState)
+        watchAperance.setImageInsets(insets: defaultImageModeInsets, state: kImageAdaptiveState)
 
-        watchAperance.setButonTitle("watch", state: kDefaultAdaptiveState)
-        watchAperance.setButonTitle("watch", state: kSmallTitleAdaptiveState)
-        watchAperance.setButonTitle("", state: kImageAdaptiveState)
-        watchAperance.setTitleColor(UIColor.whiteColor(), state: kDefaultAdaptiveState)
+        
+        let userAperance = AdaptiveButtonAppearance()
+        userAperance.setAllCommonApperanceFrom(adaptiveButtonApperance: watchAperance)
+        userAperance.setButonTitle(title: "user", state: kDefaultAdaptiveState)
+        userAperance.setButonTitle(title: "", state: kImageAdaptiveState)
+        userAperance.setImageNamesForStatesImageExtesions(imageName: "man", imageExtensionsForState: imageExtensionsForStates)
 
-        watchAperance.setButonTitleFontForState(defaultFont, state: kDefaultAdaptiveState)
+        
+        let messageAperance = AdaptiveButtonAppearance()
+        messageAperance.setAllCommonApperanceFrom(adaptiveButtonApperance: watchAperance)
+        messageAperance.setButonTitle(title: "message", state: kDefaultAdaptiveState)
+        messageAperance.setButonTitle(title: "", state: kImageAdaptiveState)
+        messageAperance.setImageNamesForStatesImageExtesions(imageName: "messages", imageExtensionsForState: imageExtensionsForStates)
 
-        watchAperance.setButonTitleFontForState(defaultSmallTitleModeFont, state: kSmallTitleAdaptiveState)
+        
+        let menuAperance = AdaptiveButtonAppearance()
+        menuAperance.setAllCommonApperanceFrom(adaptiveButtonApperance: watchAperance)
+        menuAperance.setButonTitle(title: "dial", state: kDefaultAdaptiveState)
+        menuAperance.setButonTitle(title: "", state: kImageAdaptiveState)
+        menuAperance.setImageNamesForStatesImageExtesions(imageName: "menu", imageExtensionsForState: imageExtensionsForStates)
 
-        watchAperance.setImageNamesForStatesImageExtesions("watch", imageExtensionsForState: imageExtensionsForStates)
-
-        watchAperance.setImageInsets(defaultInsets, state: kDefaultAdaptiveState)
-
-        watchAperance.setImageInsets(defaultSmallTitleModeImageInsets, state: kSmallTitleAdaptiveState)
-        watchAperance.setTitleOffset(defaultOffset, state: kDefaultAdaptiveState)
-        watchAperance.setImageInsets(defaultImageModeInsets, state: kImageAdaptiveState)
-
-        var userAperance = AdaptiveButtonAppearance()
-
-        userAperance.setAllCommonApperanceFrom(watchAperance)
-
-        userAperance.setButonTitle("user", state: kDefaultAdaptiveState)
-        userAperance.setButonTitle("", state: kImageAdaptiveState)
-        userAperance.setImageNamesForStatesImageExtesions("man", imageExtensionsForState: imageExtensionsForStates)
-
-        var messageAperance = AdaptiveButtonAppearance()
-
-        messageAperance.setAllCommonApperanceFrom(watchAperance)
-
-        messageAperance.setButonTitle("message", state: kDefaultAdaptiveState)
-        messageAperance.setButonTitle("", state: kImageAdaptiveState)
-
-        messageAperance.setImageNamesForStatesImageExtesions("messages", imageExtensionsForState: imageExtensionsForStates)
-
-        var menuAperance = AdaptiveButtonAppearance()
-
-        menuAperance.setAllCommonApperanceFrom(watchAperance)
-
-        menuAperance.setButonTitle("dial", state: kDefaultAdaptiveState)
-        menuAperance.setButonTitle("", state: kImageAdaptiveState)
-        menuAperance.setImageNamesForStatesImageExtesions("menu", imageExtensionsForState: imageExtensionsForStates)
-
-        var moreAperance = AdaptiveButtonAppearance()
-
-        moreAperance.setAllCommonApperanceFrom(watchAperance)
-
-        moreAperance.setButonTitle("more", state: kDefaultAdaptiveState)
-        moreAperance.setButonTitle("", state: kImageAdaptiveState)
-
-        moreAperance.setImageNamesForStatesImageExtesions("more", imageExtensionsForState: imageExtensionsForStates)
+        
+        let moreAperance = AdaptiveButtonAppearance()
+        moreAperance.setAllCommonApperanceFrom(adaptiveButtonApperance: watchAperance)
+        moreAperance.setButonTitle(title: "more", state: kDefaultAdaptiveState)
+        moreAperance.setButonTitle(title: "", state: kImageAdaptiveState)
+        moreAperance.setImageNamesForStatesImageExtesions(imageName: "more", imageExtensionsForState: imageExtensionsForStates)
 
         return [watchAperance, messageAperance, userAperance, menuAperance, moreAperance]
     }
