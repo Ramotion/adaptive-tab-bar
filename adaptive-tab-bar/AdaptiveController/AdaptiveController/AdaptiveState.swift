@@ -21,6 +21,6 @@ public class AdaptiveState: NSObject {
     }
 
     internal func addNewCustomAdaptiveStates(customAdaptiveStates: Array<String>) {
-        buttonStates + customAdaptiveStates
+        buttonStates += customAdaptiveStates
     }
 }
