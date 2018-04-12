@@ -1,5 +1,6 @@
 [![Header](https://cdn.rawgit.com/Ramotion/adaptive-tab-bar/docs_update/header.svg)](https://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=adaptive-tab-bar-logo)
 [![Animation](https://d13yacurqjgara.cloudfront.net/users/25514/screenshots/1320024/viber-ios7-concept-navigation-bar-ramotion.gif)](https://dribbble.com/shots/1320024-Tab-Bar-Concept-GIF)
+<img src="https://github.com/Ramotion/adaptive-tab-bar/blob/master/adaptive_tab_bar.gif" width="600" height="450" />
 
 # Adaptive Tab Bar
 [![CocoaPods](https://img.shields.io/cocoapods/p/AdaptiveController.svg)](https://cocoapods.org/pods/AdaptiveController)
