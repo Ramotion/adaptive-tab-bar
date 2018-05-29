@@ -18,6 +18,8 @@ This project is maintained by Ramotion, Inc. We specialize in the designing and 
 <a href="https://dev.ramotion.com/?utm_source=gthb&utm_medium=special&utm_campaign=adaptive-tab-bar-contact-us"> 
 <img src="https://github.com/ramotion/gliding-collection/raw/master/contact_our_team@2x.png" width="187" height="34"></a> <br>
 
+The [iPhone mockup](https://store.ramotion.com/product/iphone-x-clay-mockups?utm_source=gthb&utm_medium=special&utm_campaign=adaptive-tab-bar) available [here](https://store.ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=adaptive-tab-bar).
+
 ## Try this UI control in action
 
 <a href="https://itunes.apple.com/app/apple-store/id1182360240?pt=550053&ct=gthb-adaptive-tab-bar&mt=8" > <img src="https://github.com/Ramotion/navigation-stack/raw/master/Download_on_the_App_Store_Badge_US-UK_135x40.png" width="170" height="58"></a>
