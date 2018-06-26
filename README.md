@@ -183,6 +183,9 @@ In AdaptiveDateState, we add custom init methods which decided what states have 
 
 You can customize different UI components if they adopt to the AdaptiveApperanceProtocol.
 
+
+This library is a part of a <a href="https://github.com/Ramotion/swift-ui-animation-components-and-libraries"><b>selection of our best UI open-source projects.</b></a>
+
 ## Licence
 
 Adaptive tab bar is released under the MIT license.
