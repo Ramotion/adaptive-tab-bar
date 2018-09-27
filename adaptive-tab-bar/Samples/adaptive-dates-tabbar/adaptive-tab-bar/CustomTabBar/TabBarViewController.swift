@@ -15,7 +15,7 @@ class TabBarViewController: UITabBarController {
 
         if let version = Float(UIDevice().systemVersion), version >= 7.0 {
             tabBar.items?.forEach { tbi in
-                tbi.image = tbi.image?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+                tbi.image = tbi.image?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
             }
         }
     }

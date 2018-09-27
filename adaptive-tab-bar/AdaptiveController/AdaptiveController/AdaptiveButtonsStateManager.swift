@@ -11,12 +11,12 @@ import UIKit
 public let countDaysToSmallTextState = 14
 public let countDaysToImageState = 30
 
-public let defaultInsets = UIEdgeInsetsMake(0, 0, 0, 0)
+public let defaultInsets = UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: 0)
 public let defaultSmallTitleModeFont = UIFont(name: "Helvetica", size: 10.0)!
-public let defaultSmallTitleModeImageInsets = UIEdgeInsetsMake(0, 0, 0, 0)
-public let defaultImageModeInsets = UIEdgeInsetsMake(6, 0, -6, 0)
-public let defaultSmallTitleModeOffset = UIOffsetMake(0, 20)
-public let defaultOffset = UIOffsetMake(0, 00)
+public let defaultSmallTitleModeImageInsets = UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: 0)
+public let defaultImageModeInsets = UIEdgeInsets.init(top: 6, left: 0, bottom: -6, right: 0)
+public let defaultSmallTitleModeOffset = UIOffset.init(horizontal: 0, vertical: 20)
+public let defaultOffset = UIOffset.init(horizontal: 0, vertical: 00)
 public let tabColor = UIColor(red: 169 / 255, green: 79 / 255, blue: 152 / 255, alpha: 1.0)
 
 @objc public protocol AdaptiveApperanceProtocol {

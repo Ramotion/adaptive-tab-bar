@@ -12,7 +12,7 @@ import UIKit
 class AdaptiveTabBarItem: UITabBarItem, AdaptiveApperanceProtocol {
     
     func setFontToAdaptiveButton(font: UIFont) {
-        setTitleTextAttributes([NSAttributedStringKey.font : font], for: UIControlState.normal)
+        setTitleTextAttributes([NSAttributedString.Key.font : font], for: UIControl.State.normal)
     }
 
     func setTitleToAdaptiveButton(text: String) {
@@ -36,14 +36,20 @@ class AdaptiveTabBarItem: UITabBarItem, AdaptiveApperanceProtocol {
     }
 
     func setTitleColorToAdaptiveButton(color: UIColor) {
-        let dictionary = titleTextAttributes(for: UIControlState.normal)
+        let dictionary = convertFromOptionalNSAttributedStringKeyDictionary(titleTextAttributes(for: UIControl.State.normal))
         
-        var attributes: [NSAttributedStringKey: Any] = [:]
+        var attributes: [NSAttributedString.Key: Any] = [:]
         dictionary?.forEach { key, value in
-            attributes[NSAttributedStringKey(key)] = value
+            attributes[NSAttributedString.Key(key)] = value
         }
         
-        attributes[NSAttributedStringKey.foregroundColor] = color
-        setTitleTextAttributes(attributes, for: UIControlState.normal)
+        attributes[NSAttributedString.Key.foregroundColor] = color
+        setTitleTextAttributes(attributes, for: UIControl.State.normal)
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromOptionalNSAttributedStringKeyDictionary(_ input: [NSAttributedString.Key: Any]?) -> [String: Any]? {
+	guard let input = input else { return nil }
+	return Dictionary(uniqueKeysWithValues: input.map {key, value in (key.rawValue, value)})
 }

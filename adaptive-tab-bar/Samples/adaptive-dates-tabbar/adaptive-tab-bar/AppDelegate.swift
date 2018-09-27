@@ -16,16 +16,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         
         // Override point for customization after application launch.
         UITabBar.appearance().tintColor = tabColor
         UITabBar.appearance().barTintColor = UIColor.clear
         UITabBar.appearance().shadowImage = UIImage()
         UITabBar.appearance().selectionIndicatorImage = UIImage(named: "backgroud_tab")
-        UITabBar.appearance().itemPositioning = UITabBarItemPositioning.fill
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.white], for: UIControlState.normal)
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: tabColor], for: UIControlState.selected)
+        UITabBar.appearance().itemPositioning = UITabBar.ItemPositioning.fill
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: UIControl.State.normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: tabColor], for: UIControl.State.selected)
         
         
         let tabBarController: UITabBarController? = window?.rootViewController as? UITabBarController
