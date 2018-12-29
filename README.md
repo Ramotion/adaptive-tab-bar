@@ -189,7 +189,7 @@ You can customize different UI components if they adopt to the AdaptiveApperance
 
 ## 📄 License
 
-Folding cell is released under the MIT license.
+Adaptive Tab Bar is released under the MIT license.
 See [LICENSE](./LICENSE) for details.
 
 This library is a part of a <a href="https://github.com/Ramotion/swift-ui-animation-components-and-libraries"><b>selection of our best UI open-source projects.</b></a>
