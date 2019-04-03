@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		394EAFF02004078F00F5A3CE /* AdaptiveController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 394EAFEF2004078F00F5A3CE /* AdaptiveController.framework */; };
-		394EAFF12004078F00F5A3CE /* AdaptiveController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 394EAFEF2004078F00F5A3CE /* AdaptiveController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6A55590F19E2CF7C00ED3B5C /* AdaptiveTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A55590D19E2CF7C00ED3B5C /* AdaptiveTabBarItem.swift */; };
 		6A55591019E2CF7C00ED3B5C /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A55590E19E2CF7C00ED3B5C /* TabBarViewController.swift */; };
 		6A87F54D19C8532500E8F31B /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A87F54B19C8532500E8F31B /* DateExtension.swift */; };
@@ -25,7 +23,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				394EAFF12004078F00F5A3CE /* AdaptiveController.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -33,7 +30,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		394EAFEF2004078F00F5A3CE /* AdaptiveController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AdaptiveController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A55590D19E2CF7C00ED3B5C /* AdaptiveTabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdaptiveTabBarItem.swift; path = CustomTabBar/AdaptiveTabBarItem.swift; sourceTree = "<group>"; };
 		6A55590E19E2CF7C00ED3B5C /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarViewController.swift; path = CustomTabBar/TabBarViewController.swift; sourceTree = "<group>"; };
 		6A87F54B19C8532500E8F31B /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
@@ -50,7 +46,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				394EAFF02004078F00F5A3CE /* AdaptiveController.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,7 +82,6 @@
 			children = (
 				6AD5A2F519C6C95E00606826 /* adaptive-tab-bar */,
 				6AD5A2F419C6C95E00606826 /* Products */,
-				394EAFEF2004078F00F5A3CE /* AdaptiveController.framework */,
 			);
 			sourceTree = "<group>";
 		};
