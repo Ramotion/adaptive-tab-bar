@@ -37,7 +37,7 @@ let package = Package(
     ],
     targets: [
         .target(name: "AdaptiveController",
-            path: "adaptive-tab-bar/AdaptiveController")
+            path: "adaptive-tab-bar/AdaptiveController/AdaptiveController")
     ],
     swiftLanguageVersions: [.v5]
 )
