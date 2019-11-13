@@ -10,7 +10,7 @@ import AdaptiveController
 import UIKit
 
 class AdaptiveTabBarItem: UITabBarItem, AdaptiveApperanceProtocol {
-    
+        
     func setFontToAdaptiveButton(font: UIFont) {
         setTitleTextAttributes([NSAttributedString.Key.font : font], for: UIControl.State.normal)
     }

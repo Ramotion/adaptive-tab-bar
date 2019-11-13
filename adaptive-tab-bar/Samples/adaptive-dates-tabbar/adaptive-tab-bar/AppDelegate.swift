@@ -22,7 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().tintColor = tabColor
         UITabBar.appearance().barTintColor = UIColor.clear
         UITabBar.appearance().shadowImage = UIImage()
-        UITabBar.appearance().selectionIndicatorImage = UIImage(named: "backgroud_tab")
         UITabBar.appearance().itemPositioning = UITabBar.ItemPositioning.fill
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: UIControl.State.normal)
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: tabColor], for: UIControl.State.selected)

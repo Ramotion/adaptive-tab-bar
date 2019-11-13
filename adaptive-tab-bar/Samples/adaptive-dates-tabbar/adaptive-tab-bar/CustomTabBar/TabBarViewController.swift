@@ -9,7 +9,7 @@
 import QuartzCore
 import UIKit
 class TabBarViewController: UITabBarController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,5 +18,28 @@ class TabBarViewController: UITabBarController {
                 tbi.image = tbi.image?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
             }
         }
+    }
+      
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        updateSelectionIndicatorImage()
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        
+        super.viewWillTransition(to: size, with: coordinator)
+        DispatchQueue.main.async {
+            self.updateSelectionIndicatorImage()
+        }
+    }
+    
+    private func updateSelectionIndicatorImage() {
+        let selectionImageHorizontalOverlap: CGFloat = 6
+        
+        guard let sourceImage = UIImage(named: "backgroud_tab"),
+         let itemFrame = tabBar.getFrameForTabAt(index: selectedIndex),
+         let resizedImage = sourceImage.resized(width: itemFrame.width + selectionImageHorizontalOverlap, height: sourceImage.size.height) else { return }
+        
+        tabBar.selectionIndicatorImage = resizedImage
     }
 }
